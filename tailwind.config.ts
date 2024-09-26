@@ -31,10 +31,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // title: ["var(--font-poppins)"],
-        // body: ["var(--font-montserrat)"],
-        title: ["var(--font-lato)"],
-        body: ["var(--font-lato)"],
+        title: ["var(--font-poppins)"],
+        body: ["var(--font-montserrat)"],
+        // title: ["var(--font-lato)"],
+        // body: ["var(--font-lato)"],
       },
 
       fontSize: {

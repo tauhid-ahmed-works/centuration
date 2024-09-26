@@ -5,8 +5,7 @@ export const businessCategories = [
     available: true,
     resume: "A brief guide to modern technological advancements.",
     thumbnailImage: "/assets/images/business/tec.webp",
-    // bannerImage: "/assets/images/business/technology-banner.webp",
-    bannerImage: "",
+    bannerImage: "/assets/images/business/technology-banner.webp",
     bannerVideo:
       "https://player.vimeo.com/video/893303552?background=1&h=7f9e933e6f&autoplay=1&loop=1&title=0&byline=0&portrait=1",
     descriptions: {
