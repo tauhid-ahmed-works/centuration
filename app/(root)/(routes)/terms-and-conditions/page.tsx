@@ -1,7 +1,7 @@
 export default function TermsAndConditions() {
   return (
     <div className="p-24 max-w-screen-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">Groupcenturions.com</h1>
+      <h1 className="text-3xl font-semibold mb-4">Groupcenturions.com</h1>
       <h1 className="text-2xl font-semibold mb-2">Terms and Conditions</h1>
       <p className="mb-4">Last updated: August 04, 2022</p>
       <p className="mb-8">

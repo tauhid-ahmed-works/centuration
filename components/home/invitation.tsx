@@ -22,7 +22,7 @@ export default function Invitation() {
             />
           </div>
           <div className="md:flex-1 mt-10 md:mt-0">
-            <h3 className="text-xl lg:text-3xl font-bold leading-tight font-title">
+            <h3 className="text-xl lg:text-3xl font-semibold leading-tight font-title">
               A Digital Agency That Broadens Your Horizons
             </h3>
             <div className="text-sm font-semibold mt-4 space-y-2">

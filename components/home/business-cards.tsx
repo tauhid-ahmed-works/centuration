@@ -26,7 +26,7 @@ export default function BusinessCards() {
                       className="size-full object-cover"
                     />
                   </div>
-                  <h3 className="font-bold font-title text-sm text-center py-4 text-gray-850">
+                  <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">
                     {card.businessName}
                   </h3>
                 </Link>

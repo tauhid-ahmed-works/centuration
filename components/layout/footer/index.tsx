@@ -30,10 +30,10 @@ export default function Footer() {
           {/* Links */}
           {footerData.sections.map((section) => (
             <div className="space-y-3" key={section.title}>
-              <h3 className="font-bold text-lg text-gray-100">
+              <h3 className="font-semibold text-lg text-gray-100">
                 {section.title}
               </h3>
-              <ul className="space-y-1 font-bold text-white/70">
+              <ul className="space-y-1 font-semibold text-white/70">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -52,7 +52,7 @@ export default function Footer() {
             <h3 className="font-semibold mb-2 text-lg text-gray-100">
               Contact Info
             </h3>
-            <ul className="space-y-1 font-bold text-white/70">
+            <ul className="space-y-1 font-semibold text-white/70">
               <li>{footerData.contactInfo.email}</li>
               <li>{footerData.contactInfo.street}</li>
               <li>{footerData.contactInfo.city}</li>

@@ -60,7 +60,7 @@ export function MobileNavbar() {
             openMobileNav ? "animate-slideIn" : "animate-slideOut"
           )}
         >
-          <ul className="space-y-4 font-bold text-sm">
+          <ul className="space-y-4 font-semibold text-sm">
             {navigationData.map((item) => (
               <li
                 className="transition-all duration-300 relative"

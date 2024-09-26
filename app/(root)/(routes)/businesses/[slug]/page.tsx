@@ -74,7 +74,7 @@ export default function Business({ params }: { params: { slug: string } }) {
         <h2 className="text-4.5xl font-semibold font-title text-gray-850 leading-none mb-6">
           {data?.descriptions.long.title}
         </h2>
-        <div className="max-w-[80ch] space-y-2 text-sm font-bold">
+        <div className="max-w-[80ch] space-y-2 text-sm font-semibold">
           {data.descriptions.long.paragraphs.map((item) => (
             <p key={item}>{item}</p>
           ))}

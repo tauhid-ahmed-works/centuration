@@ -19,7 +19,7 @@ export default function JustCareer() {
             <h3 className="text-xl lg:text-5xl font-medium font-title">
               More than just a career
             </h3>
-            <p className="font-bold text-base">
+            <p className="font-semibold text-base">
               Working with the Centurion Group is more than just a career; it’s
               meaningful work that improves the lives of millions of people.
             </p>

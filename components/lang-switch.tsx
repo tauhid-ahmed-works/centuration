@@ -17,7 +17,7 @@ export default function LangSwitch() {
       : Icons.France;
   return (
     <Select.Root onValueChange={async (e) => setLocale(e)}>
-      <Select.Trigger className="data-[state=open]:outline-none text-sm font-bold">
+      <Select.Trigger className="data-[state=open]:outline-none text-sm font-semibold">
         <Select.Value placeholder={<Flag className="size-6" />} />
       </Select.Trigger>
       <Select.Portal>
@@ -25,7 +25,7 @@ export default function LangSwitch() {
           <Select.Viewport className="space-y-2 p-2">
             <Select.Item
               value="en"
-              className="cursor-pointer text-xs font-bold"
+              className="cursor-pointer text-xs font-semibold"
             >
               <Select.ItemText>
                 {
@@ -36,7 +36,7 @@ export default function LangSwitch() {
             </Select.Item>
             <Select.Item
               value="fr"
-              className="cursor-pointer text-xs font-bold"
+              className="cursor-pointer text-xs font-semibold"
             >
               <Select.ItemText>
                 <Icons.France className="w-6 inline-block align-middle" /> FR

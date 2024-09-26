@@ -72,10 +72,10 @@ export default function Businesses() {
                   height={300}
                 />
                 <div className="absolute inset-0 flex flex-col justify-center p-8 z-10 space-y-4">
-                  <h3 className="text-xl font-bold px-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">
+                  <h3 className="text-xl font-semibold px-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">
                     {item.businessName?.toUpperCase()}
                   </h3>
-                  <span className="self-start pl-4 font-bold flex group">
+                  <span className="self-start pl-4 font-semibold flex group">
                     Read More
                     <span className="border-black flex ml-2 group-hover:animate-bouncex mt-0.5">
                       <Icons.ArrowLong className="size-5" />

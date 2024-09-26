@@ -66,7 +66,7 @@ export function DesktopNavbar() {
           </Link>
           <ul
             className={cn(
-              "flex items-center gap-4 h-full relative ml-auto text-sm font-bold"
+              "flex items-center gap-4 h-full relative ml-auto text-sm font-semibold"
             )}
           >
             {navigationData.map((item) => (

@@ -51,7 +51,7 @@ export default function Page() {
           <div className="bg-transparent ml-auto max-w-[60ch] p-10 relative z-10 rounded backdrop-blur-3xl mb-20 md:mb-0">
             <div className="text-white w-full relative">
               <h2 className="h2">Our Mission & Vision</h2>
-              <div className="font-bold text-sm mt-6">
+              <div className="font-semibold text-sm mt-6">
                 <p>
                   Centurion Group continues to grow its focus of becoming the
                   leading provider of essential needs in Services, Technologies,
@@ -78,7 +78,7 @@ export default function Page() {
                 alt="about team"
               />
               <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
+                <h3 className="text-lg font-semibold">Sani Dangote</h3>
                 <p className="text-sm">Group Vice President</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function Page() {
                 alt="about team"
               />
               <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
+                <h3 className="text-lg font-semibold">Sani Dangote</h3>
                 <p className="text-sm">Group Vice President</p>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function Page() {
                 alt="about team"
               />
               <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
+                <h3 className="text-lg font-semibold">Sani Dangote</h3>
                 <p className="text-sm">Group Vice President</p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Page() {
                 alt="about team"
               />
               <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
+                <h3 className="text-lg font-semibold">Sani Dangote</h3>
                 <p className="text-sm">Group Vice President</p>
               </div>
             </div>
@@ -135,7 +135,9 @@ export default function Page() {
               }`}
             >
               <div className="md:flex-1 max-w-[60ch] space-y-6">
-                <h3 className="text-3xl md:text-4xl font-bold">{card.title}</h3>
+                <h3 className="text-3xl md:text-4xl font-semibold">
+                  {card.title}
+                </h3>
                 <p>{card.description}</p>
                 <Button>About Me</Button>
               </div>

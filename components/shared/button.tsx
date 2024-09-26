@@ -33,7 +33,7 @@ export default function Button({
   return (
     <Comp
       className={cn(
-        "inline-flex px-4 py-2 items-center justify-center whitespace-nowrap rounded text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none shadow disabled:opacity-50",
+        "inline-flex px-4 py-2 items-center justify-center whitespace-nowrap rounded text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none shadow disabled:opacity-50",
         buttonVariants[variant],
         className
       )}

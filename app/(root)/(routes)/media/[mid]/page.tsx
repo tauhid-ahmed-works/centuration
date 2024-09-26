@@ -24,7 +24,7 @@ export default function Media({ params }: { params: { mid: string } }) {
         <div className="relative w-full">
           <Wrapper>
             <div className="max-w-screen-md w-full text-white space-y-4">
-              <h1 className="text-5.5xl font-bold font-title">
+              <h1 className="text-5.5xl font-semibold font-title">
                 {t("media_page_title")}
               </h1>
             </div>
