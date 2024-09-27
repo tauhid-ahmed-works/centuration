@@ -16,6 +16,7 @@ export type BusinessCategory = {
   path: string;
   businessCategory?: string;
 };
+
 export const businessCategories = [
   {
     id: 1,

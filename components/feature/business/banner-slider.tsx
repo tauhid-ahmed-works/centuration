@@ -66,7 +66,7 @@ export default function Slider({
         clearInterval(slideInterval.current);
       }
     };
-  }, [nextSlide]);
+  }, [activeIndex]);
 
   return (
     <div className={cn("h-screen", className)}>

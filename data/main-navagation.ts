@@ -1,10 +1,11 @@
+import { businessCategories } from "./business-category";
+
 interface NavigationItem {
   name: string;
   path: string;
-  children: NavigationItem[];
+  children?: NavigationItem[];
+  hasChildren?: boolean;
 }
-
-import { businessCategories } from "@/data/business-category";
 
 export const navigationData: NavigationItem[] = [
   {
@@ -15,34 +16,21 @@ export const navigationData: NavigationItem[] = [
   {
     name: "Our Businesses",
     path: "/businesses",
-    children: [
-      ...businessCategories.map((item) => ({
-        name: item.businessName,
-        path: item.path,
-        children: [],
-      })),
-    ],
+    children: businessCategories.map((item) => ({
+      name: item.businessName,
+      path: item.path,
+      children: [],
+    })),
   },
   {
     name: "Sustainability",
     path: "/sustainability",
     children: [],
   },
-  // {
-  //   name: "Location",
-  //   path: "/location",
-  //   children: [],
-  // },
   {
     name: "Media",
     path: "/media",
-    children: [
-      ...businessCategories.map((item) => ({
-        name: item.businessName,
-        path: item.path,
-        children: [],
-      })),
-    ],
+    children: [],
   },
   {
     name: "Career",

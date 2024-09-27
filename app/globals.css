@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --header: 3.5rem;
+    --gutter: 1rem;
+    --allocateHeader: var(--header);
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header: 5rem;
+      --gutter: 2rem;
+    }
+  }
+
   html {
     @apply text-gray-900 bg-white;
   }

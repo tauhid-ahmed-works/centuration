@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import color from "tailwindcss/colors";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
   content: [
@@ -10,23 +10,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gray: {
-          50: "#f8f8f8",
-          100: "#f0f0f0",
-          200: "#e4e4e4",
-          300: "#d1d1d1",
-          400: "#b4b4b4",
-          500: "#808080",
-          600: "#6d6d6d",
-          700: "#4f4f4f",
-          800: "#212529",
-          850: "#11274b",
-          900: "#1c1e21",
-          950: "#000024",
-        },
+        // gray: {
+        //   50: "#f8f8f8",
+        //   100: "#f0f0f0",
+        //   200: "#e4e4e4",
+        //   300: "#d1d1d1",
+        //   400: "#b4b4b4",
+        //   500: "#808080",
+        //   600: "#6d6d6d",
+        //   700: "#4f4f4f",
+        //   800: "#212529",
+        //   850: "#11274b",
+        //   900: "#1c1e21",
+        //   950: "#000024",
+        // },
+        grag: colors.slate,
         brand: {
-          // 500: "#98c73d",
-          //  #159957
           500: "#65a30d",
         },
       },
@@ -55,6 +54,9 @@ const config: Config = {
         // container: "87.5rem",
         container: "75rem",
         "container-sm": "56.25rem",
+        header: "var(--header)",
+        allocateHeader: "var(--allocateHeader)",
+        gutter: "var(--gutter)",
       },
 
       backgroundImage: {

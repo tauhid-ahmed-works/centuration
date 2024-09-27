@@ -12,7 +12,7 @@ export default function Wrapper({
   return (
     <div
       className={cn(
-        "w-full mx-auto px-8",
+        "w-full mx-auto px-gutter",
         size === "default" && "max-w-container",
         size === "sm" && "max-w-container-sm",
         className

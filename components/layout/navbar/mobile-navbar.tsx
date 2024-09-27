@@ -56,7 +56,7 @@ export function MobileNavbar() {
       {
         <nav
           className={cn(
-            "absolute top-16 p-4 h-[calc(100vh-4rem)] bg-gray-850 backdrop-blur-lg w-60 text-white z-300 overflow-y-scroll",
+            "absolute top-16 p-4 h-[calc(100vh-var(--allocateHeader))] bg-gray-850 backdrop-blur-lg w-60 text-white z-300 overflow-y-scroll",
             openMobileNav ? "animate-slideIn" : "animate-slideOut"
           )}
         >
