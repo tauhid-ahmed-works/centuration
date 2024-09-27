@@ -11,8 +11,4 @@ export const aboutCards = [
     title: "Teamwork",
     description: `Teamwork is the driving force behind our success. We believe that collaboration fosters creativity, innovation, and efficiency. By working together, we leverage the diverse skills and strengths of every team member to deliver the best possible outcomes for our clients. Open communication and mutual respect are at the core of our teamwork philosophy, ensuring that all ideas are valued, and challenges are tackled collectively. When we unite our efforts, we create a dynamic and supportive environment where everyone is motivated to contribute. Together, we achieve more than any individual could alone, making teamwork essential to reaching our shared goals.`,
   },
-  {
-    title: "Innovation and entrepreneurial spirit",
-    description: `Innovation and entrepreneurial spirit are at the heart of our approach to business. We embrace new ideas and continuously seek creative solutions to meet evolving market demands. By fostering an environment where innovation thrives, we empower our team to think outside the box and pursue bold strategies that drive growth. Our entrepreneurial mindset encourages risk-taking and a proactive attitude, allowing us to adapt swiftly to challenges and seize new opportunities. Through innovation, we push the boundaries of what's possible, while our entrepreneurial spirit fuels our passion to make a lasting impact in our industry.`,
-  },
 ];
