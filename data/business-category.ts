@@ -1,3 +1,21 @@
+export type BusinessCategory = {
+  id: number;
+  businessName: string;
+  available: boolean;
+  resume: string;
+  thumbnailImage: string;
+  bannerImage: string;
+  bannerVideo: string;
+  descriptions: {
+    short: string;
+    long: {
+      title: string;
+      paragraphs: string[];
+    };
+  };
+  path: string;
+  businessCategory?: string;
+};
 export const businessCategories = [
   {
     id: 1,

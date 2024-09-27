@@ -1,5 +1,8 @@
 "use client";
-import { businessCategories } from "@/data/business-category";
+import {
+  businessCategories,
+  type BusinessCategory,
+} from "@/data/business-category";
 import { cn } from "@/libs/utils/cn";
 import {
   createContext,
@@ -15,15 +18,29 @@ import Link from "next/link";
 import Wrapper from "@/components/layout/wrapper";
 import * as Icons from "@/components/icons";
 
-const SliderContext = createContext<Record<string, any>>({});
+interface SliderContextType {
+  data: BusinessCategory[];
+  activeIndex: number;
+  goToSlide: (index: number) => void;
+  direction: "next" | "prev";
+}
+
+const SliderContext = createContext<SliderContextType>({
+  data: [],
+  activeIndex: 0,
+  goToSlide: () => {},
+  direction: "next",
+});
+
+interface SliderProps {
+  className?: string;
+  data?: BusinessCategory[];
+}
 
 export default function Slider({
   className,
   data = businessCategories.slice(0, 6),
-}: {
-  className?: string;
-  data?: any[];
-}) {
+}: SliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<"next" | "prev">("next");
   const slideInterval = useRef<NodeJS.Timeout | null>(null);
@@ -74,7 +91,7 @@ export function SliderContent() {
       <MotionConfig transition={{ duration: 0.5, type: "tween" }}>
         <AnimatePresence custom={direction}>
           {data.map(
-            (item: any, index: number) =>
+            (item: BusinessCategory, index: number) =>
               index === activeIndex && (
                 <motion.div
                   key={index}
@@ -134,7 +151,7 @@ export function SliderIndicatorGroup() {
   const { data } = useContext(SliderContext);
   return (
     <div className="flex gap-1 mt-4">
-      {data.map((item: any, index: number) => (
+      {data.map((item: BusinessCategory, index: number) => (
         <SliderIndicator index={index} key={index} />
       ))}
     </div>
