@@ -32,7 +32,7 @@ const config: Config = {
       },
       fontFamily: {
         title: ["var(--font-poppins)"],
-        body: ["var(--font-montserrat)"],
+        body: ["var(--font-poppins)"],
         // title: ["var(--font-lato)"],
         // body: ["var(--font-lato)"],
       },
@@ -60,6 +60,8 @@ const config: Config = {
       backgroundImage: {
         "pattern-1": "linear-gradient(to right, #100d54, #11274b)",
         "pattern-2": "linear-gradient(43deg, #11274b 0%,  #100d54 100%)",
+        "shade-1":
+          "linear-gradient(to top,  rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8),  rgb(0, 0, 0, 0.1))",
       },
       zIndex: {
         background: "0",

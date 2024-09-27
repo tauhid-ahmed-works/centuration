@@ -22,7 +22,7 @@ export default function NewsLetter() {
               <p className="pb-4 text-white">
                 For receiving our news and updates in your inbox directly
               </p>
-              <div className="relative bg-gray-100 outline-transparent outline focus-within:outline-brand-500 focus-within:ring-1 focus-within:shadow-lg rounded flex items-center transition-transform focus-within:translate-y-px">
+              <div className="relative bg-gray-100 outline-transparent outline focus-within:outline-brand-500 focus-within:ring-1 focus-within:shadow-lg rounded flex items-center transition-transform">
                 <input
                   className="w-full focus:ring-0 border-transparent focus:border-transparent rounded text-gray-800 bg-transparent outline-transparent ring-transparent"
                   placeholder="Your email address"

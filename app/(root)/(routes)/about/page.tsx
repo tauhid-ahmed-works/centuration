@@ -19,19 +19,20 @@ export default function Page() {
   return (
     <>
       <div className="h-screen text-white relative flex items-center">
-        <Image
-          src={aboutBannerImage}
-          className="w-full h-full object-cover absolute"
-          alt="about team"
-        />
-        <div className="absolute inset-0 w-full h-full bg-black/70"></div>
+        <div className="absolute inset-0 size-full after:absolute after:inset-0 after:bg-shade-1">
+          <Image
+            src={aboutBannerImage}
+            className="w-full h-full object-cover absolute"
+            alt="about team"
+          />
+        </div>
         <Wrapper className="relative text-white font-semibold z-10">
-          <div className="max-w-[65ch] rounded bg-transparent backdrop-blur-sm">
+          <div className="max-w-[65ch]">
             <h1 className="">About Us</h1>
             <h2 className="text-4.5xl mt-2 leading-none">
               Premier Service Provider
             </h2>
-            <p className="text-md leading-tight mt-4">
+            <p className="text-md font-medium mt-4">
               Providing Your Basic Needs With our transformational projects and
               businesses across food, shelter and construction, Centurion Group
               continues to grow its vision of becoming the leading provider of
@@ -51,7 +52,7 @@ export default function Page() {
           <div className="bg-transparent ml-auto max-w-[60ch] p-10 relative z-10 rounded backdrop-blur-3xl mb-20 md:mb-0">
             <div className="text-white w-full relative">
               <h2 className="h2">Our Mission & Vision</h2>
-              <div className="font-semibold text-sm mt-6">
+              <div className="text-sm mt-6">
                 <p>
                   Centurion Group continues to grow its focus of becoming the
                   leading provider of essential needs in Services, Technologies,
@@ -85,6 +86,7 @@ export default function Page() {
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
                 src={executiveImage}
+                sizes="50vw"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />

@@ -25,7 +25,7 @@ export default function Invitation() {
             <h3 className="text-xl lg:text-3xl font-semibold leading-tight font-title">
               A Digital Agency That Broadens Your Horizons
             </h3>
-            <div className="text-sm font-semibold mt-4 space-y-2">
+            <div className="text-sm mt-4 space-y-2">
               <p>
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
