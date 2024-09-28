@@ -12,15 +12,7 @@ export default function Invitation() {
           Join Our World of Innovation
         </SectionTitle>
         <div className="md:flex md:gap-10 items-center">
-          <div className="md:flex-1 w-full">
-            <Image
-              src="/assets/images/homepage/invitation.webp"
-              alt="image"
-              width={590}
-              height={590}
-              className="rounded aspect-square w-full h-full object-cover"
-            />
-          </div>
+
           <div className="md:flex-1 mt-10 md:mt-0">
             <h3 className="text-xl lg:text-3xl font-bold leading-tight font-title">
               A Digital Agency That Broadens Your Horizons
@@ -40,6 +32,16 @@ export default function Invitation() {
             <Button className="mt-4" variant="primary">
               Read More
             </Button>
+          </div>
+
+          <div className="md:flex-1 w-full">
+            <Image
+              src="/assets/images/homepage/invitation.webp"
+              alt="image"
+              width={590}
+              height={590}
+              className="rounded aspect-square w-full h-full object-cover"
+            />
           </div>
         </div>
       </Wrapper>

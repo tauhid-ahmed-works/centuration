@@ -33,15 +33,23 @@ export const businessCategories = [
     bannerImage: "/assets/images/business/med.webp",
     descriptions: {
       short:
-        "An overview of the exceptional medical care and facilities provided by our healthcare team.",
+        "YOU PROFIT FROM",
       long: {
-        title: "PrimeCare Medical Center",
+        title: "SIMPLY BUY OR RENT -CT SCANNER IN A CONTAINER",
         paragraphs: [
-          "At PrimeCare Medical Center, we are dedicated to offering the best healthcare services to our community. Our team of highly trained medical professionals is committed to ensuring your well-being through personalized and compassionate care. Whether you're in need of routine check-ups, emergency care, or specialized treatments, we have you covered.",
+          "The CT-CUBE is a modular, mobile CT unit with treatment room, switch room and patient entrance room. You can rent the CT-CUBE for your clinic or practice worldwide and according to your needs. The rental period is flexible – from just two weeks to over a year and longer. Just a few hours after delivery, the computer tomograph can be put into operation via plug and play. All that is needed is an electricity connection. In order to keep the risk of infection as low as during pandemic times possible, are also separate in all three rooms Air conditioning installed.Upon request, we can manufacture the size, floor plan and equipment of the CT-CUBE also individually according to your wishes. Contact us (CTM) redirect to our contact part",
           "Founded in 2010, PrimeCare has quickly grown into one of the most trusted healthcare providers in the region. Our facilities are equipped with state-of-the-art technology to handle a wide range of medical needs, from diagnostics to complex surgeries. We offer services across various specialties, including pediatrics, cardiology, oncology, and orthopedics.",
           "Our mission is to provide affordable and accessible healthcare without compromising quality. We believe in empowering our patients by providing them with the knowledge and resources they need to maintain their health. Whether it's preventive care or chronic disease management, we stand by our commitment to excellence in medical care.",
         ],
       },
+      // list:[
+      //   "Ready to use quickly (plug and play)",
+      //   "Generous space of 35–48 square meters",
+      //   "Maintenance costs included in the rental price",
+      //   "Flexible rental period",
+      //   "Patient-friendly interior design",
+      //   "Visually appealing integration into the building landscape",
+      // ]
     },
     path: "/businesses/medical-services",
   },

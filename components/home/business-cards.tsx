@@ -11,7 +11,13 @@ export default function BusinessCards() {
   return (
     <div className="min-h-screen py-16 grid place-items-center">
       <Wrapper size="sm" className="max-w-[900px]">
-        <SectionTitle className="mb-10">Our Businesses</SectionTitle>
+        <div className="mb-20">
+          <SectionTitle>OUR VALUES</SectionTitle>
+          <p className="mt-4 px-6 md:text-center text-justify">
+            As a diversified conglomerate, our interest in multiple sectors indicates our determination to cater to our vision of providing basic needs.
+          </p>
+        </div>
+
         <div className="grid gap-4 grid-cols-auto-fit-250">
           {businessCategories.slice(0, 6).map((card, index) => (
             <AnimatedCard key={card.id} index={index}>
