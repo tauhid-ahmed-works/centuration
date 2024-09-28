@@ -35,11 +35,13 @@ const SliderContext = createContext<SliderContextType>({
 interface SliderProps {
   className?: string;
   data?: BusinessCategory[];
+  type: "image" | "video";
 }
 
 export default function Slider({
   className,
   data = businessCategories.slice(0, 6),
+  type = "image",
 }: SliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<"next" | "prev">("next");
@@ -78,13 +80,13 @@ export default function Slider({
           direction,
         }}
       >
-        <SliderContent />
+        <SliderContent type={type} />
       </SliderContext.Provider>
     </div>
   );
 }
 
-export function SliderContent() {
+export function SliderContent({ type }: { type: "image" | "video" }) {
   const { data, direction, activeIndex } = useContext(SliderContext);
   return (
     <div className="size-full relative overflow-x-hidden">
@@ -103,13 +105,15 @@ export function SliderContent() {
                   className="absolute inset-0 w-full h-full flex items-center"
                 >
                   <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
-                    <Image
-                      alt="image"
-                      src={item.bannerImage}
-                      fill
-                      priority
-                      className="object-cover"
-                    />
+                    {type === "image" ? (
+                      <Image
+                        alt="image"
+                        src={item.bannerImage}
+                        fill
+                        priority
+                        className="object-cover"
+                      />
+                    ) : null}
                   </motion.div>
                   <Wrapper className="relative text-white z-10 flex flex-col justify-center h-full">
                     <motion.div

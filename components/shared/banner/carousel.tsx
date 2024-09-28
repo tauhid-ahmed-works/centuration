@@ -1,8 +1,5 @@
 "use client";
-import {
-  businessCategories,
-  type BusinessCategory,
-} from "@/data/business-category";
+
 import { cn } from "@/libs/utils/cn";
 import {
   createContext,
@@ -11,38 +8,58 @@ import {
   useCallback,
   useRef,
   useEffect,
+  ReactNode,
 } from "react";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import Wrapper from "@/components/layout/wrapper";
-import * as Icons from "@/components/icons";
 
-interface SliderContextType {
-  data: BusinessCategory[];
+interface DataProps {
+  tagLine?: string;
+  heading?: string;
+  paragraph?: string;
+  className?: string;
+  children?: ReactNode;
+  imageURL?: string;
+  videoURL?: string;
+  path?: string;
+  // render: (item?: DataProps, index: number) => ReactNode;
+}
+
+interface CarouselProps {
+  className?: string;
+  data: DataProps[];
+  children?: React.ReactNode;
+  duration?: number;
+  indicators?: boolean;
+}
+
+interface CarouselContextProps extends CarouselProps {
+  className?: string;
+  data: DataProps[];
+  children?: React.ReactNode;
+  duration?: number;
+  indicators: boolean;
   activeIndex: number;
   goToSlide: (index: number) => void;
   direction: "next" | "prev";
 }
 
-const SliderContext = createContext<SliderContextType>({
+const CarouselContext = createContext<CarouselContextProps>({
   data: [],
   activeIndex: 0,
   goToSlide: () => {},
   direction: "next",
+  indicators: true,
 });
 
-interface SliderProps {
-  className?: string;
-  data?: BusinessCategory[];
-  type: "image" | "video";
-}
-
-export default function Slider({
+export default function Carousel({
   className,
-  data = businessCategories.slice(0, 6),
-  type = "image",
-}: SliderProps) {
+  children,
+  data,
+  duration = 5,
+  indicators = true,
+}: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<"next" | "prev">("next");
   const slideInterval = useRef<NodeJS.Timeout | null>(null);
@@ -61,7 +78,9 @@ export default function Slider({
   }, [activeIndex, data.length, goToSlide]);
 
   useEffect(() => {
-    slideInterval.current = setInterval(nextSlide, 5000);
+    if (data.length > 1) {
+      slideInterval.current = setInterval(nextSlide, duration * 1000);
+    }
 
     return () => {
       if (slideInterval.current) {
@@ -71,29 +90,34 @@ export default function Slider({
   }, [activeIndex]);
 
   return (
-    <div className={cn("h-screen", className)}>
-      <SliderContext.Provider
+    <div className={cn("text-white h-screen", className)}>
+      <CarouselContext.Provider
         value={{
           data,
           activeIndex,
           goToSlide,
           direction,
+          indicators,
         }}
       >
-        <SliderContent type={type} />
-      </SliderContext.Provider>
+        {children}
+      </CarouselContext.Provider>
     </div>
   );
 }
 
-export function SliderContent({ type }: { type: "image" | "video" }) {
-  const { data, direction, activeIndex } = useContext(SliderContext);
+export function CarouselItem({
+  render,
+}: {
+  render: (item: DataProps, index: number) => ReactNode;
+}) {
+  const { data, direction, activeIndex } = useContext(CarouselContext);
   return (
-    <div className="size-full relative overflow-x-hidden">
+    <div className="size-full relative xoverflow-x-hidden">
       <MotionConfig transition={{ duration: 0.5, type: "tween" }}>
         <AnimatePresence custom={direction}>
           {data.map(
-            (item: BusinessCategory, index: number) =>
+            (item: any, index: number) =>
               index === activeIndex && (
                 <motion.div
                   key={index}
@@ -104,44 +128,7 @@ export function SliderContent({ type }: { type: "image" | "video" }) {
                   exit="exit"
                   className="absolute inset-0 w-full h-full flex items-center"
                 >
-                  <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
-                    {type === "image" ? (
-                      <Image
-                        alt="image"
-                        src={item.bannerImage}
-                        fill
-                        priority
-                        className="object-cover"
-                      />
-                    ) : null}
-                  </motion.div>
-                  <Wrapper className="relative text-white z-10 flex flex-col justify-center h-full">
-                    <motion.div
-                      className="max-w-[65ch] rounded"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ delay: 0.5 }}
-                    >
-                      <h1 className="font-semibold">Our Businesses</h1>
-                      <h2 className="text-4.5xl font-semibold">
-                        {item.businessName}
-                      </h2>
-                      <p className="mt-4 text-md">
-                        {item.descriptions.long.paragraphs[0]}
-                      </p>
-                      <Link
-                        className="mt-4 inline-flex items-center gap-1 hover:translate-x-1 duration-300 transition-transform group"
-                        href={item.path}
-                      >
-                        <span className="group-hover:font-semibold">
-                          Learn More
-                        </span>{" "}
-                        <Icons.ArrowLong size={2} />
-                      </Link>
-                    </motion.div>
-                    <SliderIndicatorGroup />
-                  </Wrapper>
+                  {render(item, index)}
                 </motion.div>
               )
           )}
@@ -151,19 +138,77 @@ export function SliderContent({ type }: { type: "image" | "video" }) {
   );
 }
 
-export function SliderIndicatorGroup() {
-  const { data } = useContext(SliderContext);
+export function CarouselTextBlock({
+  tagLine,
+  heading,
+  paragraph,
+  path,
+  render,
+  children,
+}: DataProps) {
   return (
-    <div className="flex gap-1 mt-4">
-      {data.map((item: BusinessCategory, index: number) => (
-        <SliderIndicator index={index} key={index} />
-      ))}
-    </div>
+    <Wrapper className="relative text-white z-10 flex flex-col justify-center h-full">
+      <motion.div
+        className="max-w-[65ch] rounded"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ delay: 0.5 }}
+      >
+        {render({ tagLine, heading, paragraph, path }, 1)}
+        {children}
+      </motion.div>
+      <CarouselIndicatorGroup />
+    </Wrapper>
   );
 }
 
-export function SliderIndicator({ index }: { index: number }) {
-  const { activeIndex, goToSlide } = useContext(SliderContext);
+function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
+  return (
+    <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
+      <Image
+        alt="image"
+        src={imageURL}
+        fill
+        priority
+        className="object-cover"
+        {...props}
+      />
+    </motion.div>
+  );
+}
+
+function CarouselVideo({ videoURL, ...props }: { videoURL: string }) {
+  return (
+    <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
+      <Image
+        alt="image"
+        src={videoURL}
+        fill
+        priority
+        className="object-cover"
+        {...props}
+      />
+    </motion.div>
+  );
+}
+
+export function CarouselIndicatorGroup() {
+  const { data, indicators } = useContext(CarouselContext);
+  return (
+    data.length > 1 &&
+    indicators && (
+      <div className="flex gap-1 mt-4">
+        {data.map((item: DataProps, index: number) => (
+          <CarouselIndicator index={index} key={index} />
+        ))}
+      </div>
+    )
+  );
+}
+
+export function CarouselIndicator({ index }: { index: number }) {
+  const { activeIndex, goToSlide } = useContext(CarouselContext);
   return (
     <button
       onClick={() => goToSlide(index)}
@@ -190,6 +235,8 @@ const variants = {
   }),
 };
 
-Slider.Content = SliderContent;
-Slider.Indicator = SliderIndicator;
-Slider.IndicatorGroup = SliderIndicatorGroup;
+Carousel.TextBlock = CarouselTextBlock;
+Carousel.Image = CarouselImage;
+Carousel.Video = CarouselVideo;
+Carousel.Item = CarouselItem;
+Carousel.IndicatorGroup = CarouselIndicatorGroup;

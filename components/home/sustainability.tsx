@@ -5,7 +5,7 @@ import Button from "../shared/button";
 
 export default function Sustainability() {
   return (
-    <div className="min-h-screen grid place-items-center py-16">
+    <div className="h-screen grid place-items-center py-16 bg-black">
       <div className="relative w-full min-h-[60vh] grid place-items-center">
         <Image
           src="/assets/images/homepage/sustainability.webp"

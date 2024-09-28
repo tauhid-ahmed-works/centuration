@@ -4,9 +4,12 @@
 
 @layer base {
   :root {
+    scroll-behavior: smooth;
     --header: 3.5rem;
     --gutter: 1.3rem;
     --allocateHeader: var(--header);
+    --headerAnimation: #162648;
+    --headerAnimation-light: #1e222f;
   }
 
   @media (min-width: 768px) {
@@ -53,7 +56,7 @@
   }
 
   a {
-    @apply transition-colors duration-200;
+    /* @apply transition-colors duration-200; */
   }
 }
 

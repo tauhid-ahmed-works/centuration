@@ -3,6 +3,11 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins, Montserrat, Lato } from "next/font/google";
+import ConfigProvider from "@/context/config-context";
+import Head from "next/head";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import { ScrollButton } from "@/components/shared/scroll-button";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,7 +47,12 @@ export default async function RootLayout({
         className={`${poppins.variable} ${monserrat.variable} ${lato.variable} font-body antialiased flex flex-col min-h-screen text-gray-900 overflow-x-hidden font-normal`}
       >
         <NextIntlClientProvider messages={messages}>
-          <main className="flex-1">{children}</main>
+          <ConfigProvider>
+            <Header />
+            <ScrollButton />
+            <main className="flex-1">{children}</main>
+            {/* <Footer /> */}
+          </ConfigProvider>
         </NextIntlClientProvider>
       </body>
     </html>

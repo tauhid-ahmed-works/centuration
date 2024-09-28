@@ -28,6 +28,11 @@ export const navigationData: NavigationItem[] = [
     children: [],
   },
   {
+    name: "Centurion Fondation",
+    path: "/centurion-fondation",
+    children: [],
+  },
+  {
     name: "Media",
     path: "/media",
     children: [],

@@ -8,12 +8,7 @@ interface Props {
   path?: string;
 }
 
-export default function BannerTextBlock({
-  tagLine,
-  heading,
-  paragraph,
-  path,
-}: Props) {
+export function Banner({ tagLine, heading, paragraph, path }: Props) {
   console.log(path);
   return (
     <div className="text-white">

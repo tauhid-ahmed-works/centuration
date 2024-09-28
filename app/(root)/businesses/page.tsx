@@ -3,17 +3,17 @@ import Wrapper from "@/components/layout/wrapper";
 import SectionTitle from "@/components/shared/section-title";
 import Link from "next/link";
 import * as Icons from "@/components/icons";
-import { businessCategories } from "@/data/business-category";
 import Image from "next/image";
 import BusinessCard from "@/components/business/business-card";
 import BannerAnimation from "@/components/shared/banner-animation";
-import Slider from "@/components/feature/business/banner-slider";
+import BusinessCarousel from "@/components/feature/business/business-carousel";
+import { businessCategories } from "@/data/business-category";
 
 export default function Businesses() {
   return (
     <>
       <div className="h-screen">
-        <Slider />
+        <BusinessCarousel />
         <BannerAnimation />
       </div>
       <div className="w-full overflow-x-hidden">

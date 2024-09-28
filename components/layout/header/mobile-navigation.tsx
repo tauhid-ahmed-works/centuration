@@ -12,7 +12,7 @@ export default function MobileNavigation({ openMobileNav }: any) {
       <AnimatePresence>
         {openMobileNav && (
           <motion.div
-            className="absolute left-0 h-[calc(100vh-56px)] bg-gray-950 top-full w-56 px-gutter"
+            className="absolute left-0 h-screen bg-gray-950 top-0 w-56 px-gutter -z-10 pt-allocateHeader shadow"
             initial={{ x: -100, opacity: 0 }}
             animate={{
               x: 0,
@@ -22,8 +22,9 @@ export default function MobileNavigation({ openMobileNav }: any) {
               x: -100,
               opacity: 0,
             }}
+            transition={{ type: "tween", duration: 0.2 }}
           >
-            <div className="h-full flex justify-between text-white p-0">
+            <div className="h-full flex justify-between text-white p-0 pt-4">
               <ul className={cn("space-y-3")}>
                 <Menu data={navigationData} />
               </ul>
