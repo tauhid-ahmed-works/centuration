@@ -12,7 +12,7 @@ export default function MobileNavigation({ openMobileNav }: any) {
       <AnimatePresence>
         {openMobileNav && (
           <motion.div
-            className="absolute left-0 h-[calc(100vh-56px)] bg-gray-950 top-full w-56"
+            className="absolute left-0 h-[calc(100vh-56px)] bg-gray-950 top-full w-56 px-gutter"
             initial={{ x: -100, opacity: 0 }}
             animate={{
               x: 0,
@@ -24,7 +24,7 @@ export default function MobileNavigation({ openMobileNav }: any) {
             }}
           >
             <div className="h-full flex justify-between text-white p-0">
-              <ul className={cn("space-y-3  px-4")}>
+              <ul className={cn("space-y-3")}>
                 <Menu data={navigationData} />
               </ul>
             </div>
@@ -55,7 +55,12 @@ function Menu({ data }: any) {
             )}
           </button>
         ) : (
-          <Link href="">{item.name}</Link>
+          <Link
+            className="active:underline underline-offset-4"
+            href={item.path}
+          >
+            {item.name}
+          </Link>
         )}
 
         {item.children && (
@@ -71,7 +76,7 @@ function Menu({ data }: any) {
             <ul className="pl-5 space-y-3">
               {item.children.length > 0 && (
                 <li className="pt-3">
-                  <Link href="">{item.name}</Link>
+                  <Link href={item.path}>{item.name}</Link>
                 </li>
               )}
               <Menu data={item.children} />

@@ -9,11 +9,11 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <SmoothScrolling>
-        <Navbar />
-        {children}
-        <Footer />
-      </SmoothScrolling>
+      {/* <SmoothScrolling> */}
+      <Navbar />
+      {children}
+      <Footer />
+      {/* </SmoothScrolling> */}
     </>
   );
 }

@@ -24,7 +24,7 @@ export default function Header() {
     <header ref={ref} className={"fixed h-header w-full z-100"}>
       <HeaderBackground />
       <Wrapper className="h-full items-center flex relative z-200">
-        <div className="px-4 mr-auto">
+        <div className="mr-auto">
           <Link className="w-44 flex items-center" href="/">
             <Image
               src={logo}

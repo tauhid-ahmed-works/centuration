@@ -24,8 +24,8 @@ export default function Footer() {
               ))}
             </div>
             {/* <Link href="/">
-              <Image className="w-40" src={playStore} alt="logo" />
-            </Link> */}
+          <Image className="w-40" src={playStore} alt="logo" />
+        </Link> */}
           </div>
           {/* Links */}
           {footerData.sections.map((section) => (

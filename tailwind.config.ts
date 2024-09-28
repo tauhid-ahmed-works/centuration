@@ -24,7 +24,10 @@ const config: Config = {
         //   900: "#1c1e21",
         //   950: "#000024",
         // },
-        grag: colors.slate,
+        gray: {
+          ...colors.slate,
+          850: "#11274b",
+        },
         brand: {
           500: "#65a30d",
         },

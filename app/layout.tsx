@@ -39,7 +39,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <link rel="icon" href="/favicon.webp" />
       <body
-        className={`${poppins.variable} ${monserrat.variable} ${lato.variable} font-body antialiased flex flex-col min-h-screen text-gray-900 overflow-x-hidden`}
+        className={`${poppins.variable} ${monserrat.variable} ${lato.variable} font-body antialiased flex flex-col min-h-screen text-gray-900 overflow-x-hidden font-normal`}
       >
         <NextIntlClientProvider messages={messages}>
           <main className="flex-1">{children}</main>
