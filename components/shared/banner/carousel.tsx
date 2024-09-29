@@ -23,21 +23,21 @@ interface DataProps {
   imageURL?: string;
   videoURL?: string;
   path?: string;
-  // render: (item?: DataProps, index: number) => ReactNode;
+  render: (item?: DataProps, index?: number) => ReactNode;
 }
 
 interface CarouselProps {
   className?: string;
   data: DataProps[];
-  children?: React.ReactNode;
+  children?: ReactNode;
   duration?: number;
   indicators?: boolean;
 }
 
-interface CarouselContextProps extends CarouselProps {
+interface CarouselContextProps {
   className?: string;
   data: DataProps[];
-  children?: React.ReactNode;
+  children?: ReactNode;
   duration?: number;
   indicators: boolean;
   activeIndex: number;
@@ -87,7 +87,7 @@ export default function Carousel({
         clearInterval(slideInterval.current);
       }
     };
-  }, [activeIndex]);
+  }, [nextSlide, duration, data.length]);
 
   return (
     <div className={cn("text-white h-screen", className)}>
@@ -117,7 +117,7 @@ export function CarouselItem({
       <MotionConfig transition={{ duration: 0.5, type: "tween" }}>
         <AnimatePresence custom={direction}>
           {data.map(
-            (item: any, index: number) =>
+            (item: DataProps, index: number) =>
               index === activeIndex && (
                 <motion.div
                   key={index}
@@ -144,19 +144,17 @@ export function CarouselTextBlock({
   paragraph,
   path,
   render,
-  children,
 }: DataProps) {
   return (
     <Wrapper className="relative text-white z-10 flex flex-col justify-center h-full">
       <motion.div
-        className="max-w-[65ch] rounded"
+        className="max-w-[50ch] rounded"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ delay: 0.5 }}
       >
-        {render({ tagLine, heading, paragraph, path }, 1)}
-        {children}
+        {render({ tagLine, heading, paragraph, path } as DataProps)}
       </motion.div>
       <CarouselIndicatorGroup />
     </Wrapper>

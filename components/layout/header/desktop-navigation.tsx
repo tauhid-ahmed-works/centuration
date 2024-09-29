@@ -1,13 +1,17 @@
 // "use client";
 import Link from "next/link";
-import { navigationData } from "@/data/main-navagation";
+import { navigationData, type NavigationItem } from "@/data/main-navagation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { cn } from "@/libs/utils/cn";
 import * as Icons from "@/components/icons";
 import { useClickAway } from "@/hooks";
 
-export default function DesktopNavigation({ isDesktop }: any) {
+export default function DesktopNavigation({
+  isDesktop,
+}: {
+  isDesktop: boolean;
+}) {
   return (
     <>
       {isDesktop && (
@@ -24,11 +28,17 @@ export default function DesktopNavigation({ isDesktop }: any) {
   );
 }
 
-function Menu({ data, isSubmenu = false }: any) {
-  return data.map((item: any) => {
-    const [openSubmenu, setOpenSubmenu] = useState(false);
-    const ref = useRef(null);
-    useClickAway(ref, () => setOpenSubmenu(false));
+function Menu({
+  data,
+  isSubmenu = false,
+}: {
+  data: NavigationItem[];
+  isSubmenu?: boolean;
+}) {
+  const [openSubmenu, setOpenSubmenu] = useState(false);
+  const ref = useRef(null);
+  useClickAway(ref, () => setOpenSubmenu(false));
+  return data.map((item: NavigationItem) => {
     return (
       <li
         ref={ref}
@@ -47,7 +57,7 @@ function Menu({ data, isSubmenu = false }: any) {
         >
           {item.name}
         </Link>
-        {item.children.length > 0 ? (
+        {item.children && item.children.length > 0 ? (
           openSubmenu ? (
             <Icons.ChevronUp className="size-4" />
           ) : (
@@ -55,7 +65,7 @@ function Menu({ data, isSubmenu = false }: any) {
           )
         ) : null}
         <AnimatePresence>
-          {item.children.length > 0 && openSubmenu && (
+          {item.children && item.children?.length > 0 && openSubmenu && (
             <motion.ul
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -63,7 +73,7 @@ function Menu({ data, isSubmenu = false }: any) {
               style={{ "--underline": "black" } as React.CSSProperties}
               className="p-5 absolute top-full w-96 bg-white text-gray-950 flex flex-wrap rounded shadow"
             >
-              <Menu data={item.children} isSubmenu={true} />
+              <Menu data={item.children!} isSubmenu={true} />
             </motion.ul>
           )}
         </AnimatePresence>

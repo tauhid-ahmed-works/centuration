@@ -16,11 +16,11 @@ export default function Footer() {
             <Link href="/" className="w-56 block mx-auto">
               <Image src={logo} alt="logo" className="w-full" />
             </Link>
-            <div className="flex gap-1 justify-around">
+            {/* <div className="flex gap-1 justify-around">
               {footerData.socialLinks.map((item) => (
                 <SocialIcon key={item.name} icon={item.name} />
               ))}
-            </div>
+            </div> */}
             {/* <Link href="/">
           <Image className="w-40" src={playStore} alt="logo" />
         </Link> */}
@@ -59,17 +59,17 @@ export default function Footer() {
   );
 }
 
-function SocialIcon({ icon }: { icon: string }) {
-  const Icon = Icons[icon as keyof typeof Icons];
-  return (
-    <Link
-      className="flex items-center justify-center rounded-full border border-gray-300 size-8 hover:bg-brand-500/50"
-      href="/"
-    >
-      <Icon className="size-5 text-gray-300" />
-    </Link>
-  );
-}
+// function SocialIcon({ icon }: { icon: string }) {
+//   const Icon = Icons[icon as keyof typeof Icons];
+//   return (
+//     <Link
+//       className="flex items-center justify-center rounded-full border border-gray-300 size-8 hover:bg-brand-500/50"
+//       href="/"
+//     >
+//       {/* <Icon className="size-5 text-gray-300" /> */}
+//     </Link>
+//   );
+// }
 
 function Copyright() {
   return (

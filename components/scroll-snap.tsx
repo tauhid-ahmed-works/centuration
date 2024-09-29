@@ -70,8 +70,8 @@ export default function ScrollSnap({ children, className }: ScrollSnapProps) {
     const observe = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.target instanceof HTMLElement) {
-          setActiveIndex(Number(entry.target.dataset?.snap!));
-          setScrollSnapPosition(Number(entry.target.dataset?.snap!));
+          setActiveIndex(Number(entry.target.dataset?.snap));
+          setScrollSnapPosition(Number(entry.target.dataset?.snap));
         }
       });
     };
@@ -92,7 +92,7 @@ export default function ScrollSnap({ children, className }: ScrollSnapProps) {
         observer.unobserve(section);
       });
     };
-  }, []);
+  }, [setScrollSnapPosition]);
 
   return (
     <ScrollSnapContext.Provider
@@ -117,12 +117,12 @@ function SnapGroup({ children }: SnapGroupProps) {
   useEffect(() => {
     const sectionCount = React.Children.count(children);
     setSectionCount(sectionCount);
-  }, []);
+  }, [setSectionCount, children]);
 
   return (
     <div className="h-screen snap-mandatory snap-y overflow-y-scroll relative">
       {React.Children.map(children, (child, index) => (
-        <div data-snap={index} className={cn("min-h-screen snap-end")}>
+        <div data-snap={index} className={cn("min-h-screen  snap-end")}>
           {React.isValidElement(child)
             ? React.cloneElement(child as ReactElement, {})
             : null}

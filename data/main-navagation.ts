@@ -1,6 +1,6 @@
 import { businessCategories } from "./business-category";
 
-interface NavigationItem {
+export interface NavigationItem {
   name: string;
   path: string;
   children?: NavigationItem[];

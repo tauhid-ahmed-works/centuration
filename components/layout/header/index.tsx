@@ -18,7 +18,7 @@ export default function Header() {
   useClickAway(ref, () => setOpenMobileNav(false));
   useEffect(() => {
     if (isDesktop) setOpenMobileNav(false);
-  }, [innerWidth]);
+  }, [innerWidth, isDesktop]);
 
   return (
     <header ref={ref} className={"fixed top-0 left-0 h-header w-full z-100"}>

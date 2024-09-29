@@ -1,12 +1,16 @@
 // "use client";
 import Link from "next/link";
-import { navigationData } from "@/data/main-navagation";
+import { navigationData, type NavigationItem } from "@/data/main-navagation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/libs/utils/cn";
 import * as Icons from "@/components/icons";
 
-export default function MobileNavigation({ openMobileNav }: any) {
+export default function MobileNavigation({
+  openMobileNav,
+}: {
+  openMobileNav: boolean;
+}) {
   return (
     <>
       <AnimatePresence>
@@ -37,13 +41,12 @@ export default function MobileNavigation({ openMobileNav }: any) {
   );
 }
 
-function Menu({ data }: any) {
-  return data.map((item: any) => {
-    const [openSubmenu, setOpenSubmenu] = useState(false);
-
+function Menu({ data }: { data: NavigationItem[] }) {
+  const [openSubmenu, setOpenSubmenu] = useState(false);
+  return data.map((item: NavigationItem) => {
     return (
       <li className="mt-4" key={item.name}>
-        {item.children?.length > 0 ? (
+        {item.children && item.children.length > 0 ? (
           <button
             className="flex items-center gap-1"
             onClick={() => setOpenSubmenu(!openSubmenu)}

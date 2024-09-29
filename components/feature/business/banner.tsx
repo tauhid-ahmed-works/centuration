@@ -1,4 +1,4 @@
-import { Carousel, TextBlock } from "@/components/shared/banner";
+import { BannerTextBlock, Carousel } from "@/components/shared/banner";
 import { businessCategories } from "@/data/business-category";
 
 const carouselData = businessCategories.map((item) => ({
@@ -8,13 +8,14 @@ const carouselData = businessCategories.map((item) => ({
   imageURL: item.bannerImage,
   heading: item.businessName,
   paragraph: item.descriptions.long.paragraphs[0],
+  render: () => null,
 }));
 
 export default function BusinessCarousel() {
   return (
     <Carousel data={carouselData.slice(0, 6)}>
       <Carousel.Item
-        render={(item, index) => (
+        render={(item) => (
           <>
             <Carousel.Image imageURL={item.imageURL!} />
             <Carousel.TextBlock
@@ -22,7 +23,7 @@ export default function BusinessCarousel() {
               heading={item.heading}
               paragraph={item.paragraph}
               path={item.path}
-              render={(props) => <TextBlock.Banner {...props} />}
+              render={(props) => <BannerTextBlock {...props} />}
             />
           </>
         )}

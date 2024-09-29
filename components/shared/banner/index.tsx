@@ -1,2 +1,2 @@
 export { default as Carousel } from "./carousel";
-export * as TextBlock from "./text-block";
+export { BannerTextBlock } from "@/components/shared/text-block";

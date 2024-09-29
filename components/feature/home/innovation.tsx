@@ -1,12 +1,11 @@
 import Image from "next/image";
-
 import Wrapper from "@/components/layout/wrapper";
 import SectionTitle from "@/components/shared/section-title";
 import Button from "@/components/shared/button";
 
 export default function Invitation() {
   return (
-    <div className="py-16 grid place-items-center bg-gray-50">
+    <div className="py-16 grid place-items-center bg-gray-50 min-h-screen">
       <Wrapper className="space-y-6">
         <SectionTitle className="mb-14 leading-tight">
           Join Our World of Innovation
