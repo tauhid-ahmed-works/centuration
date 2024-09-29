@@ -29,7 +29,8 @@ const config: Config = {
           850: "#11274b",
         },
         brand: {
-          500: "#65a30d",
+          // 500: "#65a30d",
+          500: "#84cc16",
         },
       },
       fontFamily: {

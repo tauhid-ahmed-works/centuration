@@ -8,7 +8,7 @@ import NewsLetter from "@/components/news-letter";
 
 export default function Footer() {
   return (
-    <div className="bg-gray-950 w-full">
+    <div className="bg-gray-900 w-full">
       <NewsLetter />
       <Wrapper>
         <footer className="sm:flex sm:flex-wrap sm:justify-between sm:gap-8 py-8 space-y-8 sm:space-y-0">

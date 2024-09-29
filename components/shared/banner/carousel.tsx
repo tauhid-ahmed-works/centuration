@@ -113,7 +113,7 @@ export function CarouselItem({
 }) {
   const { data, direction, activeIndex } = useContext(CarouselContext);
   return (
-    <div className="size-full relative overflow-x-hidden">
+    <div className="size-full relative overflow-x-hidden bg-gray-950">
       <MotionConfig transition={{ duration: 0.5, type: "tween" }}>
         <AnimatePresence custom={direction}>
           {data.map(
@@ -165,7 +165,7 @@ export function CarouselTextBlock({
 
 function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
   return (
-    <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
+    <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1">
       <Image
         alt="image"
         src={imageURL}

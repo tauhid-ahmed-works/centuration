@@ -1,24 +1,17 @@
 import Wrapper from "./layout/wrapper";
 import Button from "./shared/button";
+import * as Typography from "./shared/typography";
 
 export default function NewsLetter() {
   return (
-    <div className="overflow-hidden">
-      <div className="relative z-0 -mx-8 md:mx-0 py-10">
+    <div className="overflow-hidden relative">
+      <div className="relative -mx-8 md:mx-0 mb-10 before:absolute before:bg-white before:h-1/2 before:w-full before:inset-x-0 before:z-0">
         <Wrapper>
-          <div className="flex items-center justify-center h-48 md:h-56 lg:h-64 bg-pattern-1 rounded relative">
-            {/* <Image
-            className="object-cover absolute inset-0 w-full h-full"
-            src="/assets/images/news-letter-pattern.webp"
-            alt="newsletter"
-            width={800}
-            height={400}
-          /> */}
-            <div className="absolute inset-0 w-full h-full bg-black/30"></div>
-            <div className="relative font-medium space-y-1 md:space-y-2 max-w-[500px] mx-auto px-8 md:px-0">
-              <h2 className="text-2xl lg:text-3xl text-white font-semibold">
+          <div className="flex items-center justify-center bg-pattern-1 rounded relative">
+            <div className="relative font-medium space-y-1 md:space-y-2 max-w-[500px] mx-auto px-8 md:px-0 py-14 lg:py-20">
+              <Typography.H2 className="text-white">
                 Subscribe To Centurion
-              </h2>
+              </Typography.H2>
               <p className="pb-4 text-white">
                 For receiving our news and updates in your inbox directly
               </p>
@@ -29,7 +22,9 @@ export default function NewsLetter() {
                   type="text"
                 />
 
-                <Button variant="primary">Subscribe</Button>
+                <Button variant="primary" className="self-stretch">
+                  Subscribe
+                </Button>
               </div>
             </div>
           </div>

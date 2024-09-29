@@ -1,4 +1,5 @@
 import { cn } from "@/libs/utils/cn";
+import * as Typography from "@/components/shared/typography";
 
 export default function SectionTitle({
   children,
@@ -12,9 +13,9 @@ export default function SectionTitle({
   return (
     <div className={cn("text-center text-gray-850", className)}>
       <div className="relative inline-block">
-        <h2 className="h2 mb-2">{children}</h2>
+        <Typography.H2>{children}</Typography.H2>
         {decorator && (
-          <hr className="border-t-2 border-brand-500 absolute bottom-0 inset-x-12" />
+          <hr className="border-t-2 border-brand-500 rounded absolute -bottom-1 inset-x-[20%]" />
         )}
       </div>
     </div>

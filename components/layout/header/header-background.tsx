@@ -17,10 +17,10 @@ export default function HeaderBackground() {
   return (
     <div className="absolute inset-0 z-10">
       <motion.div
-        initial={{ background: "transparent" }}
+        initial={{ background: "var(--transparent)" }}
         animate={{
           background:
-            scrolled >= 100 ? "var(--headerAnimation)" : "transparent",
+            scrolled >= 100 ? "var(--headerAnimation)" : "var(--transparent)",
         }}
         className="absolute inset-0 w-full h-full z-10"
       />
@@ -29,15 +29,17 @@ export default function HeaderBackground() {
         animate={{
           background: matchedPathname
             ? "var(--headerAnimation-light)"
-            : "transparent",
+            : "var(--transparent)",
         }}
         className="absolute inset-0 w-full h-full"
       />
       <motion.div
-        initial={{ background: "transparent" }}
+        initial={{ background: "var(--transparent)" }}
         animate={{
           background:
-            scrollSnapPosition > 0 ? "var(--headerAnimation)" : "transparent",
+            scrollSnapPosition > 0
+              ? "var(--headerAnimation)"
+              : "var(--transparent)",
         }}
         className="absolute inset-0 w-full h-full"
       />
