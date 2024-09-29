@@ -27,11 +27,10 @@ type ConfigProviderProps = {
 // ConfigProvider component
 export default function ConfigProvider({ children }: ConfigProviderProps) {
   const [scrollSnapPosition, setScrollSnapPosition] = useState(0);
-  const [handler, setHandler] = useState(null);
 
   return (
     <ConfigContext.Provider
-      value={{ scrollSnapPosition, setScrollSnapPosition, setHandler, handler }}
+      value={{ scrollSnapPosition, setScrollSnapPosition }}
     >
       {children}
     </ConfigContext.Provider>

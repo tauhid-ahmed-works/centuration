@@ -113,7 +113,7 @@ export function CarouselItem({
 }) {
   const { data, direction, activeIndex } = useContext(CarouselContext);
   return (
-    <div className="size-full relative xoverflow-x-hidden">
+    <div className="size-full relative overflow-x-hidden">
       <MotionConfig transition={{ duration: 0.5, type: "tween" }}>
         <AnimatePresence custom={direction}>
           {data.map(

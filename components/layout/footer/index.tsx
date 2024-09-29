@@ -1,9 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/assets/icons/logo.webp";
-// import playStore from "/public/assets/icons/playstore.svg";
 import * as Icons from "@/components/icons";
-
 import { footerData } from "./data";
 import Wrapper from "../wrapper";
 import NewsLetter from "@/components/news-letter";
@@ -30,10 +28,8 @@ export default function Footer() {
           {/* Links */}
           {footerData.sections.map((section) => (
             <div className="space-y-3" key={section.title}>
-              <h3 className="font-semibold text-lg text-gray-100">
-                {section.title}
-              </h3>
-              <ul className="space-y-1 font-semibold text-white/70">
+              <h3 className="text-lg text-gray-100">{section.title}</h3>
+              <ul className="space-y-1 text-white/70">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -49,10 +45,8 @@ export default function Footer() {
           ))}
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-semibold mb-2 text-lg text-gray-100">
-              Contact Info
-            </h3>
-            <ul className="space-y-1 font-semibold text-white/70">
+            <h3 className="mb-2 text-lg text-gray-100">Contact Info</h3>
+            <ul className="space-y-1 text-white/70">
               <li>{footerData.contactInfo.email}</li>
               <li>{footerData.contactInfo.street}</li>
               <li>{footerData.contactInfo.city}</li>

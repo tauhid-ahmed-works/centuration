@@ -14,32 +14,31 @@ export default function Header() {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const { innerWidth } = useWindowSize();
   const ref = useRef(null);
-  const isDesktop = innerWidth >= 768;
+  const isDesktop = innerWidth >= 1024;
   useClickAway(ref, () => setOpenMobileNav(false));
   useEffect(() => {
     if (isDesktop) setOpenMobileNav(false);
   }, [innerWidth]);
 
   return (
-    <header ref={ref} className={"fixed h-header w-full z-100"}>
+    <header ref={ref} className={"fixed top-0 left-0 h-header w-full z-100"}>
       <HeaderBackground />
       <Wrapper className="h-full items-center flex relative z-200">
         <div className="mr-auto">
-          <Link className="w-44 flex items-center" href="/">
+          <Link className="flex w-44 items-center" href="/">
             <Image
               src={logo}
               alt="logo"
               priority
-              sizes="20vw"
-              className="object-cover"
+              className="object-cover size-full"
             />
           </Link>
         </div>
         <MobileNavigation openMobileNav={openMobileNav} />
         <DesktopNavigation isDesktop={isDesktop} />
-        <div className="ml-auto md:ml-0">
+        <div className="ml-auto lg:ml-0">
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setOpenMobileNav(!openMobileNav)}
           >
             {openMobileNav ? (

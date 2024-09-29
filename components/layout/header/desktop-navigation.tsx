@@ -14,7 +14,7 @@ export default function DesktopNavigation({ isDesktop }: any) {
         <ul
           style={{ "--underline": "white" } as React.CSSProperties}
           className={cn(
-            "px-4 h-full hidden md:flex gap-3 lg:gap-4 ml-auto items-center text-white p-0 text-sm lg:text-base"
+            "px-4 h-full hidden lg:flex gap-1 lg:gap-4 items-center text-white p-0 text-md lg:text-base whitespace-nowrap"
           )}
         >
           <Menu data={navigationData} />

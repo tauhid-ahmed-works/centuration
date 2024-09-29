@@ -4,7 +4,7 @@ import ScrollSnap from "@/components/snapping";
 export default function AnimaPage() {
   return (
     <div className="h-screen relative bg-black z-[50000]">
-      <ScrollSnap>
+      {/* <ScrollSnap>
         <ScrollSnap.Group>
           <SectionOne />
           <SectionTwo />
@@ -13,7 +13,7 @@ export default function AnimaPage() {
         </ScrollSnap.Group>
 
         <ScrollSnap.Indicators />
-      </ScrollSnap>
+      </ScrollSnap> */}
     </div>
   );
 }

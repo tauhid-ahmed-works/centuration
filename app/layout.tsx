@@ -4,9 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins, Montserrat, Lato } from "next/font/google";
 import ConfigProvider from "@/context/config-context";
-import Head from "next/head";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 import { ScrollButton } from "@/components/shared/scroll-button";
 
 const poppins = Poppins({
@@ -51,7 +49,6 @@ export default async function RootLayout({
             <Header />
             <ScrollButton />
             <main className="flex-1">{children}</main>
-            {/* <Footer /> */}
           </ConfigProvider>
         </NextIntlClientProvider>
       </body>

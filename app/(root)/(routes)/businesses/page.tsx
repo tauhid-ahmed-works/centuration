@@ -6,14 +6,14 @@ import * as Icons from "@/components/icons";
 import Image from "next/image";
 import BusinessCard from "@/components/business/business-card";
 import BannerAnimation from "@/components/shared/banner-animation";
-import BusinessCarousel from "@/components/feature/business/business-carousel";
+import Banner from "@/components/feature/business/banner";
 import { businessCategories } from "@/data/business-category";
 
 export default function Businesses() {
   return (
     <>
       <div className="h-screen">
-        <BusinessCarousel />
+        <Banner />
         <BannerAnimation />
       </div>
       <div className="w-full overflow-x-hidden">
