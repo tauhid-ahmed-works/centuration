@@ -307,3 +307,5 @@ export function Envelope({ ...props }) {
     </svg>
   );
 }
+
+export * as Icons from "./icons";

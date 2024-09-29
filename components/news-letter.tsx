@@ -29,7 +29,6 @@ export default function NewsLetter() {
             </div>
           </div>
         </Wrapper>
-        <div className="absolute top-0 w-full h-[50%] bg-white -z-10 pointer-events-none"></div>
       </div>
     </div>
   );

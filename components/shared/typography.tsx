@@ -65,3 +65,5 @@ export function Tag({ className, children, as = "span" }: TagProps) {
   const Tag = as;
   return <Tag className={cn("text-base", className)}>{children}</Tag>;
 }
+
+export * as Typography from "./typography";
