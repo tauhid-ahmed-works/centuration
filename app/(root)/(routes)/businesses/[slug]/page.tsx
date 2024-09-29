@@ -61,7 +61,7 @@ export default function Business({ params }: { params: { slug: string } }) {
         )}
         <div className="absolute inset-0 w-full h-full bg-black/20"></div>
         <div className="absolute flex items-center inset-0 w-full h-full">
-          <Wrapper className="text-center text-white font-semibold animate-revealin">
+          <Wrapper className=" text-white font-semibold animate-revealin">
             <h1 className="font-title text-5.5xl leading-none mb-4">
               {data?.businessName}
             </h1>

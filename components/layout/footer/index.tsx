@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "/public/assets/icons/logo.webp";
-import * as Icons from "@/components/icons";
-import { footerData } from "./data";
+import { Icons } from "@/components/icons";
+import { footerData } from "@/data/footer-navigation";
 import Wrapper from "../wrapper";
 import NewsLetter from "@/components/news-letter";
 
@@ -16,16 +16,15 @@ export default function Footer() {
             <Link href="/" className="w-56 block mx-auto">
               <Image src={logo} alt="logo" className="w-full" />
             </Link>
-            {/* <div className="flex gap-1 justify-around">
+            <div className="flex gap-1 justify-around">
               {footerData.socialLinks.map((item) => (
-                <SocialIcon key={item.name} icon={item.name} />
+                <SocialIcon
+                  key={item.name}
+                  icon={item.name as keyof typeof Icons}
+                />
               ))}
-            </div> */}
-            {/* <Link href="/">
-          <Image className="w-40" src={playStore} alt="logo" />
-        </Link> */}
+            </div>
           </div>
-          {/* Links */}
           {footerData.sections.map((section) => (
             <div className="space-y-3" key={section.title}>
               <h3 className="text-lg text-gray-100">{section.title}</h3>
@@ -61,15 +60,35 @@ export default function Footer() {
 
 // function SocialIcon({ icon }: { icon: string }) {
 //   const Icon = Icons[icon as keyof typeof Icons];
+//   console.log(Icon);
 //   return (
 //     <Link
 //       className="flex items-center justify-center rounded-full border border-gray-300 size-8 hover:bg-brand-500/50"
 //       href="/"
 //     >
-//       {/* <Icon className="size-5 text-gray-300" /> */}
+//       {Icon && <Icon className="size-5 text-gray-300" />}
 //     </Link>
 //   );
 // }
+
+type IconName = keyof typeof Icons;
+
+interface SocialIconProps {
+  icon: IconName;
+}
+
+export function SocialIcon({ icon }: SocialIconProps) {
+  const Icon = Icons[icon] as React.FC<React.SVGProps<SVGSVGElement>>;
+
+  return (
+    <Link
+      className="flex items-center justify-center rounded-full border border-gray-300 size-8 hover:bg-brand-500/50"
+      href="/"
+    >
+      <Icon className="size-5 text-gray-300" />
+    </Link>
+  );
+}
 
 function Copyright() {
   return (

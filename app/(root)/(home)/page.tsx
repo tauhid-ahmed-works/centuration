@@ -9,6 +9,7 @@ import ScrollSnap from "@/components/scroll-snap";
 import { ScrollSnapHome } from "@/components/shared/scroll-button";
 import Sustainability from "@/components/feature/home/sustainability";
 import Innovation from "@/components/feature/home/innovation";
+import CompanyResume from "@/components/feature/home/resume";
 
 export default function Page() {
   return (
@@ -18,7 +19,8 @@ export default function Page() {
           <Banner />
           <BusinessCards />
           <Sustainability />
-          <Video />
+          {/* <Video /> */}
+          <CompanyResume />
           {/* <Invitation /> */}
           <Innovation />
           <div className="flex min-h-screen items-end w-screen">

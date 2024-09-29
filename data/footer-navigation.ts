@@ -1,11 +1,14 @@
-interface Link {
+interface SocialLink {
   name: string;
   url: string;
 }
 
 interface FooterSection {
   title: string;
-  links: Link[];
+  links: Array<{
+    name: string;
+    url: string;
+  }>;
 }
 
 interface ContactInfo {
@@ -15,7 +18,7 @@ interface ContactInfo {
 }
 
 interface FooterData {
-  socialLinks: Link[];
+  socialLinks: SocialLink[];
   sections: FooterSection[];
   contactInfo: ContactInfo;
 }
@@ -48,6 +51,10 @@ export const footerData: FooterData = {
       title: "Menu",
       links: [
         { name: "About Us", url: "/about" },
+        {
+          name: "Centurion Fondation",
+          url: "/centurion-fondation",
+        },
         { name: "Media", url: "/media" },
         { name: "Career", url: "/career" },
         { name: "Our Businesses", url: "/businesses" },

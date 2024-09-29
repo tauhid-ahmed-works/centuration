@@ -35,12 +35,13 @@ function Menu({
   data: NavigationItem[];
   isSubmenu?: boolean;
 }) {
-  const [openSubmenu, setOpenSubmenu] = useState(false);
-  const ref = useRef(null);
-  useClickAway(ref, () => setOpenSubmenu(false));
   return data.map((item: NavigationItem) => {
+    const [openSubmenu, setOpenSubmenu] = useState(false);
+    const ref = useRef(null);
+    useClickAway(ref, () => setOpenSubmenu(false));
     return (
       <li
+        key={item.name}
         ref={ref}
         onClick={() => setOpenSubmenu(false)}
         onPointerLeave={() => setOpenSubmenu(false)}
@@ -48,7 +49,6 @@ function Menu({
           "flex items-center gap-1 relative h-full",
           isSubmenu && "basis-1/2 p-2"
         )}
-        key={item.name}
       >
         <Link
           onPointerEnter={() => setOpenSubmenu(true)}

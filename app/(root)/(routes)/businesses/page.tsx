@@ -26,7 +26,7 @@ export default function Businesses() {
               providing basic needs.
             </p>
           </div>
-          <Wrapper className="grid grid-cols-auto-fit-250 gap-4 !max-w-[900px]">
+          <Wrapper className="grid grid-cols-auto-fit-250 gap-4 !w-container-sm">
             {businessCategories.map((item, index) => (
               <BusinessCard key={item.id} index={index}>
                 <Link
@@ -38,7 +38,7 @@ export default function Businesses() {
                     src={item.thumbnailImage as string}
                     alt={item.businessName}
                     width={300}
-                    height={300}
+                    height={200}
                   />
                   <div className="absolute inset-0 flex flex-col justify-center p-8 z-10 space-y-4">
                     <h3 className="text-xl font-semibold px-4 relative before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-white">

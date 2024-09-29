@@ -57,7 +57,7 @@ const config: Config = {
       spacing: {
         // container: "87.5rem",
         container: "75rem",
-        "container-sm": "56.25rem",
+        "container-sm": "59.375rem",
         header: "var(--header)",
         allocateHeader: "var(--allocateHeader)",
         gutter: "var(--gutter)",
@@ -67,7 +67,7 @@ const config: Config = {
         "pattern-1": "linear-gradient(to right, #100d54, #11274b)",
         "pattern-2": "linear-gradient(43deg, #11274b 0%,  #100d54 100%)",
         "shade-1":
-          "linear-gradient(to top,  rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8),  rgb(0, 0, 0, 0.1))",
+          "linear-gradient(to top,  rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8),  rgb(0, 0, 0, 0.2))",
       },
       zIndex: {
         background: "0",

@@ -1,18 +1,23 @@
-// import Link from "next/link";
-// import { footerData } from "../layout/footer/data";
-// import * as Icons from "@/components/icons";
+import Link from "next/link";
+import { footerData } from "@/data/footer-navigation";
+import { Icons } from "@/components/icons";
+type IconName = keyof typeof Icons;
 
-// function SocialIcon() {
-//   //   const Icon = Icons[icon as keyof typeof Icons];
-//   return (
-//     <Link
-//       className="flex items-center justify-center rounded-full border size-10"
-//       href="/"
-//     >
-//       {/* <Icon className="size-5" /> */}
-//     </Link>
-//   );
-// }
+interface SocialIconProps {
+  icon: IconName;
+}
+
+function SocialIcon({ icon }: SocialIconProps) {
+  const Icon = Icons[icon] as React.FC<React.SVGProps<SVGSVGElement>>;
+  return (
+    <Link
+      className="flex items-center justify-center rounded-full border size-10"
+      href="/"
+    >
+      <Icon className="size-5" />
+    </Link>
+  );
+}
 
 export default function GeneralInquiries() {
   return (
@@ -32,9 +37,12 @@ export default function GeneralInquiries() {
         </span>
         <div>
           <div className="flex gap-2 justify-between">
-            {/* {footerData.socialLinks.map((item) => (
-            //   <SocialIcon key={item.name} icon={item.name} />
-            ))} */}
+            {footerData.socialLinks.map((item) => (
+              <SocialIcon
+                key={item.name}
+                icon={item.name as keyof typeof Icons}
+              />
+            ))}
           </div>
         </div>
       </div>

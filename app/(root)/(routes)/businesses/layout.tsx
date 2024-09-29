@@ -10,5 +10,5 @@ export default function BussinessLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <div className="bg-gray-100">{children}</div>;
 }

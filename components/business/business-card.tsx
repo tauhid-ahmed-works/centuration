@@ -19,7 +19,7 @@ export default function BusinessCard({
   return (
     <motion.div
       ref={ref}
-      className={cn("h-80", className)}
+      className={cn("h-52 rounded overflow-hidden", className)}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
     >
