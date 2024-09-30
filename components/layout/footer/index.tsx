@@ -27,7 +27,9 @@ export default function Footer() {
           </div>
           {footerData.sections.map((section) => (
             <div className="space-y-3" key={section.title}>
-              <h3 className="text-lg text-gray-100">{section.title}</h3>
+              <h3 className="text-lg text-gray-100 uppercase">
+                {section.title}
+              </h3>
               <ul className="space-y-1 text-white/70">
                 {section.links.map((link) => (
                   <li key={link.name}>
@@ -44,11 +46,13 @@ export default function Footer() {
           ))}
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="mb-2 text-lg text-gray-100">Contact Info</h3>
+            <h3 className="mb-2 text-lg text-gray-100 uppercase">
+              General Inquiries
+            </h3>
             <ul className="space-y-1 text-white/70">
-              <li>{footerData.contactInfo.email}</li>
-              <li>{footerData.contactInfo.street}</li>
-              <li>{footerData.contactInfo.city}</li>
+              <li>{footerData["General Inquiries"].email}</li>
+              <li>{footerData["General Inquiries"].street}</li>
+              <li>{footerData["General Inquiries"].city}</li>
             </ul>
           </div>
         </footer>
@@ -92,9 +96,27 @@ export function SocialIcon({ icon }: SocialIconProps) {
 
 function Copyright() {
   return (
-    <div className="text-gray-400 flex items-center gap-1 justify-center py-7 border-t border-t-white/20 text-sm">
-      Copyright <Icons.Copyright className="size-4" />
-      {new Date().getFullYear()} - Centurions
+    <div className="text-gray-400 gap-1  py-7 border-t border-t-white/20 text-sm">
+      <Wrapper className="flex items-center justify-between">
+        <div className="flex items-center">
+          Copyright <Icons.Copyright className="size-4" />
+          {new Date().getFullYear()} - Centurions
+        </div>
+        <div className="flex gap-4 items-center">
+          <Link
+            href="/terTerms & Conditions"
+            className="hover:text-brand-500 transition-colors"
+          >
+            Terms of Use
+          </Link>
+          <Link
+            href="/privacy-policy"
+            className="hover:text-brand-500 transition-colors"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+      </Wrapper>
     </div>
   );
 }

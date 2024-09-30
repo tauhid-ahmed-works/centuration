@@ -67,7 +67,7 @@ const config: Config = {
         "pattern-1": "linear-gradient(to right, #100d54, #11274b)",
         "pattern-2": "linear-gradient(43deg, #11274b 0%,  #100d54 100%)",
         "shade-1":
-          "linear-gradient(to top,  rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8),  rgb(0, 0, 0, 0.2))",
+          "linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3))",
       },
       zIndex: {
         background: "0",

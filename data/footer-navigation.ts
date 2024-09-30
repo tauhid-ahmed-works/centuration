@@ -11,7 +11,7 @@ interface FooterSection {
   }>;
 }
 
-interface ContactInfo {
+interface GeneralInquiries {
   email: string;
   city: string;
   street: string;
@@ -20,7 +20,7 @@ interface ContactInfo {
 interface FooterData {
   socialLinks: SocialLink[];
   sections: FooterSection[];
-  contactInfo: ContactInfo;
+  "General Inquiries": GeneralInquiries;
 }
 
 export const footerData: FooterData = {
@@ -48,7 +48,7 @@ export const footerData: FooterData = {
   ],
   sections: [
     {
-      title: "Menu",
+      title: "COMPANY",
       links: [
         { name: "About Us", url: "/about" },
         {
@@ -62,7 +62,31 @@ export const footerData: FooterData = {
       ],
     },
     {
-      title: "Privacy",
+      title: "BUSINESSES",
+      links: [
+        { name: "Technologies", url: "/businesses/technologies" },
+        { name: "Medical Services", url: "/businesses/medical-services" },
+        { name: "Laundreneets", url: "/businesses/self-service-launderettes" },
+        { name: "Ice Ivoire", url: "/businesses/ice-ivoire" },
+        { name: "Commodities", url: "/businesses/commodities" },
+        { name: "Real Estate", url: "/businesses/real-estate" },
+        { name: "Fertilizer", url: "/businesses/fertilizer" },
+        { name: "Logistics", url: "/businesses/logistics" },
+        { name: "Petrochemicals", url: "/businesses/petrochemicals" },
+      ],
+    },
+  ],
+  "General Inquiries": {
+    email: "contact@groupcenturions.com",
+    street: "2563 High street",
+    city: "Los Angeles, California",
+  },
+};
+
+/*
+
+{
+      title: "BUSINESSES",
       links: [
         { name: "FAQ", url: "/faq" },
         { name: "Contact Us", url: "/contact" },
@@ -70,10 +94,5 @@ export const footerData: FooterData = {
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
-  ],
-  contactInfo: {
-    email: "contact@groupcenturions.com",
-    street: "2563 High street",
-    city: "Los Angeles, California",
-  },
-};
+
+*/

@@ -8,7 +8,7 @@ export default function BannerAnimation({ ...props }) {
         window.scrollTo({ top: innerHeight, behavior: "smooth" });
       }}
       {...props}
-      className="mx-auto z-500 flex flex-col justify-center items-center gap-1 text-brand-500 absolute inset-x-0 bottom-8"
+      className="mx-auto z-100 flex flex-col justify-center items-center gap-1 text-brand-500 absolute inset-x-0 bottom-8"
     >
       <button {...props}>
         <ChevronDown

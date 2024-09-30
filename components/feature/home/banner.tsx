@@ -6,16 +6,17 @@ import Link from "next/link";
 import { Carousel } from "@/components/shared/banner";
 import { BannerTextBlock } from "@/components/shared/banner";
 
+import { homepageBanner } from "@/data/homepage-banner";
+
 export default function HomeCarousel() {
   // const t = useTranslations("HomePage");
   return (
-    <Carousel data={[]}>
+    <Carousel data={homepageBanner} duration={15}>
       <Carousel.Item
         render={(item) => (
           <>
-            <Carousel.Image imageURL={item.imageURL!} />
+            <Carousel.Video videoURL={item.videoURL!} />
             <Carousel.TextBlock
-              tagLine={"Our Bussiness"}
               heading={item.heading}
               paragraph={item.paragraph}
               render={(props) => (

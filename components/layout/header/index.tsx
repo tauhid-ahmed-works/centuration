@@ -21,7 +21,7 @@ export default function Header() {
   }, [innerWidth, isDesktop]);
 
   return (
-    <header ref={ref} className={"fixed top-0 left-0 h-header w-full z-100"}>
+    <header ref={ref} className={"fixed top-0 left-0 h-header w-full z-300"}>
       <HeaderBackground />
       <Wrapper className="h-full items-center flex relative z-200">
         <div className="mr-auto">
@@ -42,9 +42,9 @@ export default function Header() {
             onClick={() => setOpenMobileNav(!openMobileNav)}
           >
             {openMobileNav ? (
-              <Icons.MenuClose className="size-4 text-white" />
+              <Icons.MenuClose className="size-6 text-white" />
             ) : (
-              <Icons.Menu className="size-4 text-white" />
+              <Icons.Menu className="size-6 text-white" />
             )}
           </button>
         </div>

@@ -163,7 +163,7 @@ export function CarouselTextBlock({
 
 function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
   return (
-    <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1">
+    <div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1">
       <Image
         alt="image"
         src={imageURL}
@@ -172,22 +172,21 @@ function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
         className="object-cover"
         {...props}
       />
-    </motion.div>
+    </div>
   );
 }
 
 function CarouselVideo({ videoURL, ...props }: { videoURL: string }) {
   return (
-    <motion.div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
-      <Image
-        alt="image"
+    <div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
+      <video
         src={videoURL}
-        fill
-        priority
-        className="object-cover"
-        {...props}
-      />
-    </motion.div>
+        autoPlay
+        muted
+        loop
+        className="object-cover absolute size-full"
+      ></video>
+    </div>
   );
 }
 

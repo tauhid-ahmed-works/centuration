@@ -1,22 +1,43 @@
+import Image from "next/image";
 import Wrapper from "@/components/layout/wrapper";
-import { TextBlock } from "@/components/shared/text-block";
+import { Typography } from "@/components/shared/typography";
+import Link from "next/link";
 
 export default function CompanyResume() {
   return (
-    <div className="h-screen bg-indigo-600 grid place-items-center">
-      <div className="p-10 w-full h-[500px] relative">
+    <div className="h-screen grid place-items-center bg-gray-300 overflow-x-hidden">
+      <div className="md:p-10 w-full h-[600px] relative flex items-center">
         <img
-          className="size-full absolute inset-0 block object"
-          src="//unsplash.it/id/560/1920/1080"
+          className="size-full absolute inset-0 block object-cover"
+          src="//unsplash.it/id/874/1920/1080"
           alt="image"
         />
         <Wrapper className="z-10 relative rounded">
-          <div className="p-10 bg-white text-red-500 w-1/2">
-            <TextBlock
-              tagLine="We are looking for an experienced and passionate designer to join our team."
-              heading="We are looking for an experienced and passionate designer to join our team."
-              paragraph="We are looking for an experienced and passionate designer to join our team."
+          <div className="py-14 px-10 md:px-20 bg-gray-100 w-full max-w-[600px] space-y-4">
+            <Image
+              src="/assets/icons/logo.webp"
+              alt="centurition"
+              width={100}
+              height={100}
             />
+            <Typography.H2 className="text-gray-800">
+              Impacting <span className="text-red-600">lives</span>
+            </Typography.H2>
+            <p className="text-sm">
+              Since its incorporation in 1994, the Aliko Dangote Foundation has
+              worked hard to enhance opportunities for social change through
+              strategic investments that improve health and wellbeing, promote
+              quality education, and broaden economic empowerment opportunities.
+            </p>
+            <p className="font-bold uppercase flex gap-1 flex-wrap">
+              <span className="text-gray-700">HEALTH.</span>
+              <span className="text-green-600">EDUCATION.</span>{" "}
+              <span className="text-red-600">EMPOWERMENT.</span>
+              <span className="text-orange-600">RELIEF.</span>
+            </p>
+            <Link className="inline-block" href="/">
+              Learn More
+            </Link>
           </div>
         </Wrapper>
       </div>
