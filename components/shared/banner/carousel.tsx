@@ -23,7 +23,7 @@ interface DataProps {
   imageURL?: string;
   videoURL?: string;
   path?: string;
-  render: (item?: DataProps, index?: number) => ReactNode;
+  render?: (item?: DataProps, index?: number) => ReactNode;
 }
 
 interface CarouselProps {
@@ -154,7 +154,7 @@ export function CarouselTextBlock({
         exit={{ opacity: 0, y: -20 }}
         transition={{ delay: 0.5 }}
       >
-        {render({ tagLine, heading, paragraph, path } as DataProps)}
+        {render && render({ tagLine, heading, paragraph, path } as DataProps)}
       </motion.div>
       <CarouselIndicatorGroup />
     </Wrapper>
@@ -176,7 +176,7 @@ function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
   );
 }
 
-function CarouselVideo({ videoURL, ...props }: { videoURL: string }) {
+function CarouselVideo({ videoURL }: { videoURL: string }) {
   return (
     <div className="absolute inset-0 bg-indigo-950 after:absolute after:inset-0 after:bg-shade-1 cafter:backdrop-blur">
       <video

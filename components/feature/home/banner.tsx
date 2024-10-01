@@ -1,7 +1,7 @@
 // import Wrapper from "@/components/layout/wrapper";
 // import BannerAnimation from "@/components/shared/banner-animation";
 import Button from "@/components/shared/button";
-// import { useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Carousel } from "@/components/shared/banner";
 import { BannerTextBlock } from "@/components/shared/banner";
@@ -9,7 +9,7 @@ import { BannerTextBlock } from "@/components/shared/banner";
 import { homepageBanner } from "@/data/homepage-banner";
 
 export default function HomeCarousel() {
-  // const t = useTranslations("HomePage");
+  const t = useTranslations("HomePage");
   return (
     <Carousel data={homepageBanner} duration={15}>
       <Carousel.Item
@@ -17,8 +17,8 @@ export default function HomeCarousel() {
           <>
             <Carousel.Video videoURL={item.videoURL!} />
             <Carousel.TextBlock
-              heading={item.heading}
-              paragraph={item.paragraph}
+              heading={t("home_title")}
+              paragraph={t("paragraph")}
               render={(props) => (
                 <BannerTextBlock {...props}>
                   <div className="space-x-4 mt-10">

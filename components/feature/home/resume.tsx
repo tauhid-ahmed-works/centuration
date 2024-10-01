@@ -7,10 +7,12 @@ export default function CompanyResume() {
   return (
     <div className="h-screen grid place-items-center bg-gray-300 overflow-x-hidden">
       <div className="md:p-10 w-full h-[600px] relative flex items-center">
-        <img
+        <Image
           className="size-full absolute inset-0 block object-cover"
-          src="//unsplash.it/id/874/1920/1080"
+          src="/assets/images/resume.webp"
           alt="image"
+          width={1920}
+          height={1080}
         />
         <Wrapper className="z-10 relative rounded">
           <div className="py-14 px-10 md:px-20 bg-gray-100 w-full max-w-[600px] space-y-4">

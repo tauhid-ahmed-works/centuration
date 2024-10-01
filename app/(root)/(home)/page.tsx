@@ -2,7 +2,6 @@
 import BusinessCards from "@/components/home/business-cards";
 // import Invitation from "@/components/home/invitation";
 // import Sustainability from "@/components/home/sustainability";
-import Video from "@/components/home/video";
 import Footer from "@/components/layout/footer";
 import Banner from "@/components/feature/home/banner";
 import ScrollSnap from "@/components/scroll-snap";

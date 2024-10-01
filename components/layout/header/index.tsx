@@ -9,6 +9,7 @@ import Image from "next/image";
 import logo from "/public/assets/icons/logo.webp";
 import Wrapper from "@/components/layout/wrapper";
 import HeaderBackground from "./header-background";
+import LangSwitch from "@/components/lang-switch";
 
 export default function Header() {
   const [openMobileNav, setOpenMobileNav] = useState(false);
@@ -36,7 +37,8 @@ export default function Header() {
         </div>
         <MobileNavigation openMobileNav={openMobileNav} />
         <DesktopNavigation isDesktop={isDesktop} />
-        <div className="ml-auto lg:ml-0">
+        <div className="ml-auto lg:ml-0 flex gap-2 items-center pl-4">
+          <LangSwitch />
           <button
             className="lg:hidden"
             onClick={() => setOpenMobileNav(!openMobileNav)}

@@ -27,6 +27,7 @@ export function ImageShade({
       <Image
         src={src}
         alt={alt}
+        fill
         {...props}
         className={cn("object-cover  size-full block", className)}
       />

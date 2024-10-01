@@ -31,7 +31,6 @@ export default function LangSwitch() {
                 {
                   <Icons.UnitedStates className="w-6 inline-block align-middle" />
                 }{" "}
-                EN
               </Select.ItemText>
             </Select.Item>
             <Select.Item
@@ -39,7 +38,7 @@ export default function LangSwitch() {
               className="cursor-pointer text-xs font-semibold"
             >
               <Select.ItemText>
-                <Icons.France className="w-6 inline-block align-middle" /> FR
+                <Icons.France className="w-6 inline-block align-middle" />
               </Select.ItemText>
             </Select.Item>
           </Select.Viewport>
