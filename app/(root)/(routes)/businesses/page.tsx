@@ -26,7 +26,7 @@ export default function Businesses() {
               providing basic needs.
             </p>
           </div>
-          <Wrapper className="grid grid-cols-auto-fit-250 gap-4 !w-container-sm">
+          <Wrapper className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 lg:!w-container-sm">
             {businessCategories.map((item, index) => (
               <BusinessCard key={item.id} index={index}>
                 <Link
