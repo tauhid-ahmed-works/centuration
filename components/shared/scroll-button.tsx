@@ -6,7 +6,7 @@ import * as Icons from "@/components/icons";
 export function ScrollButton({ ...props }) {
   return (
     <button
-      className="fixed bottom-4 right-4 z-500 flex flex-col items-center group lg:scale-150 md:scale-125"
+      className="fixed bottom-24 md:right-12 right-2 z-500 flex flex-col items-center group lg:scale-150 md:scale-125"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       {...props}
     >
