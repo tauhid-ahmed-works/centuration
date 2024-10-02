@@ -1,5 +1,5 @@
-import { BannerTextBlock, Carousel } from "@/components/shared/banner";
-import { businessCategories } from "@/data/business-category";
+import { BannerTextBlock, Carousel } from '@/components/shared/banner'
+import { businessCategories } from '@/data/business-category'
 
 const carouselData = businessCategories.map((item) => ({
   tagLine: item.businessName,
@@ -9,7 +9,7 @@ const carouselData = businessCategories.map((item) => ({
   heading: item.businessName,
   paragraph: item.descriptions.long.paragraphs[0],
   render: () => null,
-}));
+}))
 
 export default function BusinessCarousel() {
   return (
@@ -19,7 +19,7 @@ export default function BusinessCarousel() {
           <>
             <Carousel.Image imageURL={item.imageURL!} />
             <Carousel.TextBlock
-              tagLine={"Our Bussiness"}
+              tagLine={'Our Bussiness'}
               heading={item.heading}
               paragraph={item.paragraph}
               path={item.path}
@@ -29,5 +29,5 @@ export default function BusinessCarousel() {
         )}
       />
     </Carousel>
-  );
+  )
 }

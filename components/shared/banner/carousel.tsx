@@ -1,57 +1,57 @@
-"use client";
+'use client'
 
-import { cn } from "@/libs/utils/cn";
+import Wrapper from '@/components/layout/wrapper'
+import { cn } from '@/libs/utils/cn'
+import { AnimatePresence, motion, MotionConfig } from 'framer-motion'
+import Image from 'next/image'
 import {
   createContext,
-  useContext,
-  useState,
-  useCallback,
-  useRef,
-  useEffect,
   ReactNode,
-} from "react";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
-import Image from "next/image";
-import Wrapper from "@/components/layout/wrapper";
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 interface DataProps {
-  tagLine?: string;
-  heading?: string;
-  paragraph?: string;
-  className?: string;
-  children?: ReactNode;
-  imageURL?: string;
-  videoURL?: string;
-  path?: string;
-  render?: (item?: DataProps, index?: number) => ReactNode;
+  tagLine?: string
+  heading?: string
+  paragraph?: string
+  className?: string
+  children?: ReactNode
+  imageURL?: string
+  videoURL?: string
+  path?: string
+  render?: (item?: DataProps, index?: number) => ReactNode
 }
 
 interface CarouselProps {
-  className?: string;
-  data: DataProps[];
-  children?: ReactNode;
-  duration?: number;
-  indicators?: boolean;
+  className?: string
+  data: DataProps[]
+  children?: ReactNode
+  duration?: number
+  indicators?: boolean
 }
 
 interface CarouselContextProps {
-  className?: string;
-  data: DataProps[];
-  children?: ReactNode;
-  duration?: number;
-  indicators: boolean;
-  activeIndex: number;
-  goToSlide: (index: number) => void;
-  direction: "next" | "prev";
+  className?: string
+  data: DataProps[]
+  children?: ReactNode
+  duration?: number
+  indicators: boolean
+  activeIndex: number
+  goToSlide: (index: number) => void
+  direction: 'next' | 'prev'
 }
 
 const CarouselContext = createContext<CarouselContextProps>({
   data: [],
   activeIndex: 0,
   goToSlide: () => {},
-  direction: "next",
+  direction: 'next',
   indicators: true,
-});
+})
 
 export default function Carousel({
   className,
@@ -60,37 +60,37 @@ export default function Carousel({
   duration = 5,
   indicators = true,
 }: CarouselProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [direction, setDirection] = useState<"next" | "prev">("next");
-  const slideInterval = useRef<NodeJS.Timeout | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [direction, setDirection] = useState<'next' | 'prev'>('next')
+  const slideInterval = useRef<NodeJS.Timeout | null>(null)
 
   const goToSlide = useCallback(
     (index: number) => {
-      setDirection(index > activeIndex ? "next" : "prev");
-      setActiveIndex(index);
+      setDirection(index > activeIndex ? 'next' : 'prev')
+      setActiveIndex(index)
     },
     [activeIndex]
-  );
+  )
 
   const nextSlide = useCallback(() => {
-    const nextIndex = (activeIndex + 1) % data.length;
-    goToSlide(nextIndex);
-  }, [activeIndex, data.length, goToSlide]);
+    const nextIndex = (activeIndex + 1) % data.length
+    goToSlide(nextIndex)
+  }, [activeIndex, data.length, goToSlide])
 
   useEffect(() => {
     if (data.length > 1) {
-      slideInterval.current = setInterval(nextSlide, duration * 1000);
+      slideInterval.current = setInterval(nextSlide, duration * 1000)
     }
 
     return () => {
       if (slideInterval.current) {
-        clearInterval(slideInterval.current);
+        clearInterval(slideInterval.current)
       }
-    };
-  }, [nextSlide, duration, data.length]);
+    }
+  }, [nextSlide, duration, data.length])
 
   return (
-    <div className={cn("text-white h-screen", className)}>
+    <div className={cn('text-white h-screen', className)}>
       <CarouselContext.Provider
         value={{
           data,
@@ -103,18 +103,18 @@ export default function Carousel({
         {children}
       </CarouselContext.Provider>
     </div>
-  );
+  )
 }
 
 export function CarouselItem({
   render,
 }: {
-  render: (item: DataProps, index: number) => ReactNode;
+  render: (item: DataProps, index: number) => ReactNode
 }) {
-  const { data, direction, activeIndex } = useContext(CarouselContext);
+  const { data, direction, activeIndex } = useContext(CarouselContext)
   return (
     <div className="size-full relative overflow-x-hidden bg-gray-950">
-      <MotionConfig transition={{ duration: 0.5, type: "tween" }}>
+      <MotionConfig transition={{ duration: 0.5, type: 'tween' }}>
         <AnimatePresence custom={direction}>
           {data.map(
             (item: DataProps, index: number) =>
@@ -135,7 +135,7 @@ export function CarouselItem({
         </AnimatePresence>
       </MotionConfig>
     </div>
-  );
+  )
 }
 
 export function CarouselTextBlock({
@@ -158,7 +158,7 @@ export function CarouselTextBlock({
       </motion.div>
       <CarouselIndicatorGroup />
     </Wrapper>
-  );
+  )
 }
 
 function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
@@ -173,7 +173,7 @@ function CarouselImage({ imageURL, ...props }: { imageURL: string }) {
         {...props}
       />
     </div>
-  );
+  )
 }
 
 function CarouselVideo({ videoURL }: { videoURL: string }) {
@@ -187,11 +187,11 @@ function CarouselVideo({ videoURL }: { videoURL: string }) {
         className="object-cover absolute size-full"
       ></video>
     </div>
-  );
+  )
 }
 
 export function CarouselIndicatorGroup() {
-  const { data, indicators } = useContext(CarouselContext);
+  const { data, indicators } = useContext(CarouselContext)
   return (
     data.length > 1 &&
     indicators && (
@@ -201,39 +201,39 @@ export function CarouselIndicatorGroup() {
         ))}
       </div>
     )
-  );
+  )
 }
 
 export function CarouselIndicator({ index }: { index: number }) {
-  const { activeIndex, goToSlide } = useContext(CarouselContext);
+  const { activeIndex, goToSlide } = useContext(CarouselContext)
   return (
     <button
       onClick={() => goToSlide(index)}
       className={cn(
-        "size-3.5 border-2 border-white/50 relative rounded-full before:absolute before:inset-0.5 before:bg-gray-400 before:rounded-full before:scale-0 before:transition-transform",
+        'size-3.5 border-2 border-white/50 relative rounded-full before:absolute before:inset-0.5 before:bg-gray-400 before:rounded-full before:scale-0 before:transition-transform',
         index === activeIndex &&
-          "before:scale-100 before:bg-white border-white",
+          'before:scale-100 before:bg-white border-white',
         index !== activeIndex &&
-          "hover:before:scale-100 hover:before:bg-white hover:border-white"
+          'hover:before:scale-100 hover:before:bg-white hover:border-white'
       )}
     />
-  );
+  )
 }
 
 const variants = {
   enter: (direction: string) => ({
-    x: direction === "next" ? "100%" : "-100%",
+    x: direction === 'next' ? '100%' : '-100%',
   }),
   center: {
     x: 0,
   },
   exit: (direction: string) => ({
-    x: direction === "next" ? "-100%" : "100%",
+    x: direction === 'next' ? '-100%' : '100%',
   }),
-};
+}
 
-Carousel.TextBlock = CarouselTextBlock;
-Carousel.Image = CarouselImage;
-Carousel.Video = CarouselVideo;
-Carousel.Item = CarouselItem;
-Carousel.IndicatorGroup = CarouselIndicatorGroup;
+Carousel.TextBlock = CarouselTextBlock
+Carousel.Image = CarouselImage
+Carousel.Video = CarouselVideo
+Carousel.Item = CarouselItem
+Carousel.IndicatorGroup = CarouselIndicatorGroup
