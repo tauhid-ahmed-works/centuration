@@ -1,11 +1,11 @@
-import Wrapper from "@/components/layout/wrapper";
+import Wrapper from '@/components/layout/wrapper'
 // import Image from "next/image";
 // import SectionTitle from "@/components/shared/section-title";
 // import Button from "@/components/shared/button";
-import { ImageShade } from "@/components/shared/media-shade";
-import { TextBlock } from "@/components/shared/text-block";
-import { Icons } from "@/components/icons";
-import Link from "next/link";
+import { ImageShade } from '@/components/shared/media-shade'
+import { TextBlock } from '@/components/shared/text-block'
+import { Icons } from '@/components/icons'
+import Link from 'next/link'
 
 export default function Sustainability() {
   return (
@@ -32,8 +32,8 @@ export default function Sustainability() {
           />
         </div>
         <div className="text-white  font-semibold">
-          <h4 className="mb-2 text-md">7 SUSTAINABILITY PILLARS</h4>
-          <div className="max-w-96 grid grid-rows-[repeat(80px)] grid-cols-4 gap-4 uppercase flex-1 h-full text-[10px]">
+          <h4 className="mb-4 text-md">7 SUSTAINABILITY PILLARS</h4>
+          <div className="max-w-96 grid grid-rows-[repeat(80px)] grid-cols-4 gap-5 uppercase flex-1 h-full text-[10px]">
             <div className="">
               <div className="size-16 border rounded grid place-items-center text-white">
                 <Icons.Financial className="size-12" />
@@ -81,7 +81,7 @@ export default function Sustainability() {
                 href="/businesses"
                 className="size-16 border rounded grid place-items-center"
               >
-                <Icons.ChevronRight className="size-8" />
+                <Icons.ChevronRight className="size-6" />
               </Link>
               <span>Read more</span>
             </div>
@@ -89,5 +89,5 @@ export default function Sustainability() {
         </div>
       </Wrapper>
     </div>
-  );
+  )
 }
