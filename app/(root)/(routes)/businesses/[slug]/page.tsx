@@ -39,6 +39,7 @@ import { Typography } from '@/components/shared/typography'
 import { businessCategories } from '@/data/business-category'
 import Image from 'next/image'
 import Link from 'next/link'
+import { removeDash } from '@/libs/utils/removeDash'
 
 export default function Business({ params }: { params: { slug: string } }) {
   if (!routes.includes(params.slug)) notFound()
@@ -74,8 +75,6 @@ export default function Business({ params }: { params: { slug: string } }) {
             />
           </>
         ) : null}
-
-        <div className="absolute inset-0 w-full h-full bg-black/20"></div>
         {params.slug !== 'commodities' &&
         params.slug !== 'fertilizer' &&
         params.slug !== 'technologies' ? (
