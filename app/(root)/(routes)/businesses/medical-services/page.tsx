@@ -27,12 +27,12 @@ export default function MedicalServicePage() {
             </div>
 
             <div className="lg:col-span-5">
-              <Typography.H3>{data?.sections && data?.sections[2].title}</Typography.H3>
+              <Typography.H3>{data?.sections && data?.sections[2]?.title}</Typography.H3>
 
               <div className="space-y-2">
                 <ul className="pt-8 pb-10 space-y-1">
                   {data?.sections &&
-                    data?.sections[2].content.map((item) => (
+                    data?.sections[2]?.content.map((item) => (
                       <li className="flex gap-2" key={item}>
                         <Icons.ArrowRight className="size-5 text-brand-500 mt-1 shrink-0" />
                         {item}
@@ -47,17 +47,17 @@ export default function MedicalServicePage() {
 
         <section className="py-16">
           <Typography.H2 className=" mt-6">
-            {data?.sections && data?.sections[3].title}
+            {data?.sections && data?.sections[3]?.title}
           </Typography.H2>
 
           <p className="max-w-[80ch] space-y-2 mt-5">
-            {data?.sections && data?.sections[3].content}
+            {data?.sections && data?.sections[3]?.content}
           </p>
 
           <div className="max-w-[80ch] space-y-2 text-sm font-normal">
             <ul className="text-left pt-8 pb-10 md:text-lg text-base font-normal">
               {data?.sections &&
-                data?.sections[3].list.map((item) => (
+                data?.sections[3]?.list.map((item) => (
                   <li key={item} className="flex gap-2">
                     <Icons.ArrowRight className="size-5 text-brand-500 mt-1 shrink-0" />
                     <span>

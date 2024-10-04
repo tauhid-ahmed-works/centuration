@@ -225,22 +225,36 @@ export const businessCategories = [
     id: 8,
     businessName: "Logistics",
     available: true,
-    resume: "A brief guide to creating a scalable design system.",
-    thumbnailImage: "/assets/images/business/real-estate.webp",
-    bannerImage: "/assets/images/business/real-estate.webp",
-    bannerImages: [],
+    resume:
+      "A big part of manufacturing is products finding their ways into the consumer hands, the Group makes sure that this is handled end to end.",
+    thumbnailImage: "/assets/images/business/logistics/1.webp",
+    bannerImage: "/assets/images/business/logistics/1.webp",
+    bannerImages: [
+      "/assets/images/business/logistics/1.webp",
+      "/assets/images/business/logistics/2.webp",
+      "/assets/images/business/logistics/3.webp",
+    ],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to design systems and their importance.",
       long: {
+        // dummy
         title: "MHF Properties",
         paragraphs: [
+          // dummy
           "Our goal at MHF is to ensure your living experience in Lagos is luxurious, comfortable and ultimately stress-free! We are a service-oriented company specializing in managing, developing and or renovating luxury properties and apartment homes. We also provide long and short term residential leases in our exquisite list of deluxe properties spread across Ikoyi and Victoria Island, Lagos.",
           "The company was founded in 2011 and offers one of the largest floor areas in the market. Each of our luxury apartments provides spaces to create beautiful memories, extraordinary customer service, with the highest focus on excellence. MHF also offers tailored facility management services to homes, shopping malls, office spaces, schools, sports clubs and more. MHF has overseen major renovation works for clients and is an integral part of the team handling the development of the new Dangote Oil Refinery office located in Ikoyi, Lagos.",
           "Our portfolio of services is constantly growing and we have recently introduced a highly sought function of interior decoration. We will work with you to transform your space into the best version of your imagination. We provide a distinctive level of standard in our facilities as well as excellence in all our services, earning the trust and confidence of our clients as pioneers in luxury apartments in Nigeria.",
         ],
       },
     },
+    sections: {
+      1: {
+        title: "Centurion Logistics",
+        content: `The biggest challenge for manufacturing is to tackle logistics and distribution costs, as products will have to be moved to newer markets from production centers. Apart from ramping up production capabilities across Africa by adding new greenfield projects, clinker grinding plants, and import terminals, we accord top priority to scientific logistics. Our Fleet is a fast and very reliable service provider to thousands of customers nationwide. Our finished products are delivered to our markets nationwide. With a professional team that has a minimum of 15 years of industry experience, our goal is to be the best by helping our customers achieve their delivery schedules and timelines.`,
+      },
+    },
+
     path: "/businesses/logistics",
   },
   {
@@ -248,9 +262,13 @@ export const businessCategories = [
     businessName: "Petrochemicals",
     available: false,
     resume: "A brief guide to creating a scalable design system.",
-    thumbnailImage: "/assets/images/business/real-estate.webp",
-    bannerImage: "/assets/images/business/real-estate.webp",
-    bannerImages: [],
+    thumbnailImage: "/assets/images/business/logistics/1.webp",
+    bannerImage: "/assets/images/business/logistics/1.webp",
+    bannerImages: [
+      "/assets/images/business/logistics/1.webp",
+      "/assets/images/business/logistics/2.webp",
+      "/assets/images/business/logistics/3.webp",
+    ],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to design systems and their importance.",

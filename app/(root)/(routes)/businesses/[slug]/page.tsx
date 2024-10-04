@@ -304,7 +304,7 @@ export default function Business({ params }: { params: { slug: string } }) {
         </div>
 
         {/* logistics */}
-        <div>
+        {/* <div>
           {params.slug === "logistics" && (
             <div>
               <h2 className="text-4.5xl font-semibold font-title text-gray-850 leading-none mb-6">
@@ -327,7 +327,7 @@ export default function Business({ params }: { params: { slug: string } }) {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* fertilizer */}
         <div>
