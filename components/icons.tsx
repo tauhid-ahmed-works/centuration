@@ -686,4 +686,25 @@ export function Values({ ...props }) {
   )
 }
 
+
+
+export function ArrowRight({ ...props }) {
+
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" {...props}>
+
+      <g fill="currentColor">
+        <path d="M489.4 233.4L512 256l-22.6 22.6-128 128-22.6 22.6L293.5 384l22.6-22.6L389.5 288 32 288 0 288l0-64 32 0 357.5 0-73.4-73.4L293.5 128l45.3-45.3 22.6 22.6 128 128z"></path>
+      </g>
+    </svg>
+  );
+};
+
+
+
+
+export default ArrowRight;
+
+
+
 export * as Icons from './icons'
