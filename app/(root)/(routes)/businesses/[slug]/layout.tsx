@@ -1,23 +1,15 @@
-import { removeDash } from '@/libs/utils/removeDash'
+import { removeDash } from "@/libs/utils/removeDash";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title:
-      'Business - ' +
+      "Business - " +
       removeDash(params.slug)
-        .split(' ')
+        .split(" ")
         .map((item) => item[0].toUpperCase() + item.slice(1))
-        .join(' '),
-  }
+        .join(" "),
+  };
 }
-export default function BussinessSlugRoute({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return <>{children}</>
+export default function BussinessSlugRoute({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }
