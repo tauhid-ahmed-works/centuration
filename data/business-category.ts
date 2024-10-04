@@ -5,6 +5,7 @@ export type BusinessCategory = {
   resume: string;
   thumbnailImage: string;
   bannerImage: string;
+  bannerImages: string[];
   bannerVideo: string;
   descriptions: {
     short: string;
@@ -25,6 +26,7 @@ export const businessCategories = [
     resume: "A brief guide to modern technological advancements.",
     thumbnailImage: "/assets/images/business/tec.webp",
     bannerImage: "/assets/images/business/tec.webp",
+    bannerImages: [],
     bannerVideo:
       "https://player.vimeo.com/video/893303552?background=1&h=7f9e933e6f&autoplay=1&loop=1&title=0&byline=0&portrait=1",
     descriptions: {
@@ -47,7 +49,8 @@ export const businessCategories = [
     available: true,
     resume: "A comprehensive guide to providing quality medical care.",
     thumbnailImage: "/assets/images/business/med.webp",
-    bannerImage: [
+    bannerImage: "/assets/images/business/med/1.webp",
+    bannerImages: [
       "/assets/images/business/med/1.webp",
       "/assets/images/business/med/2.webp",
       "/assets/images/business/med/3.webp",
@@ -113,6 +116,7 @@ export const businessCategories = [
     resume: "A brief guide to hassle-free, modern laundry services.",
     thumbnailImage: "/assets/images/business/laun.webp",
     bannerImage: "/assets/images/business/laun.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to convenient and efficient laundry services.",
@@ -134,6 +138,7 @@ export const businessCategories = [
     resume: "A brief guide to premium handcrafted ice cream.",
     thumbnailImage: "/assets/images/business/ice.webp",
     bannerImage: "/assets/images/business/ice.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to delicious, artisanal ice cream creations.",
@@ -155,6 +160,7 @@ export const businessCategories = [
     resume: "A brief guide to global commodities trading and management.",
     thumbnailImage: "/assets/images/business/como.webp",
     bannerImage: "/assets/images/business/como.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to commodities markets and trading strategies.",
@@ -177,6 +183,7 @@ export const businessCategories = [
     resume: "A brief guide to creating a scalable design system.",
     thumbnailImage: "/assets/images/business/real-estate.webp",
     bannerImage: "/assets/images/business/real-estate.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to design systems and their importance.",
@@ -198,6 +205,7 @@ export const businessCategories = [
     resume: "A brief guide to creating a scalable design system.",
     thumbnailImage: "/assets/images/business/real-estate.webp",
     bannerImage: "/assets/images/business/real-estate.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to design systems and their importance.",
@@ -220,6 +228,7 @@ export const businessCategories = [
     resume: "A brief guide to creating a scalable design system.",
     thumbnailImage: "/assets/images/business/real-estate.webp",
     bannerImage: "/assets/images/business/real-estate.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to design systems and their importance.",
@@ -241,6 +250,7 @@ export const businessCategories = [
     resume: "A brief guide to creating a scalable design system.",
     thumbnailImage: "/assets/images/business/real-estate.webp",
     bannerImage: "/assets/images/business/real-estate.webp",
+    bannerImages: [],
     bannerVideo: "",
     descriptions: {
       short: "An introduction to design systems and their importance.",

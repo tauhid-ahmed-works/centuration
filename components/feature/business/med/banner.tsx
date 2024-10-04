@@ -1,26 +1,27 @@
 import { BannerTextBlock, Carousel } from "@/components/shared/banner";
 import { businessCategories } from "@/data/business-category";
 
+const medServiceData = businessCategories[1];
 const data = [
   {
     tagLine: "",
     path: "",
     paragraph: "A comprehensive guide to providing quality medical care.",
-    imageURL: businessCategories[1].bannerImage[0],
+    imageURL: medServiceData.bannerImages[0],
     heading: "Medical Services",
   },
   {
     tagLine: "",
     path: "",
     paragraph: "A comprehensive guide to providing quality medical care.",
-    imageURL: businessCategories[1].bannerImage[1],
+    imageURL: medServiceData.bannerImages[1],
     heading: "Medical Services",
   },
   {
     tagLine: "",
     path: "",
     paragraph: "A comprehensive guide to providing quality medical care.",
-    imageURL: businessCategories[1].bannerImage[2],
+    imageURL: medServiceData.bannerImages[2],
     heading: "Medical Services",
   },
 ];
