@@ -96,11 +96,11 @@ export const businessCategories = [
     descriptions: {
       short: 'An introduction to delicious, artisanal ice cream creations.',
       long: {
-        title: 'Ice Ivoire: The Art of Premium Ice Cream',
+        title: 'Our ice vending machine',
         paragraphs: [
-          'Ice Ivoire is dedicated to crafting the finest artisanal ice cream, using fresh ingredients and time-honored techniques to deliver exceptional flavors. Our ice cream is made in small batches to ensure quality, taste, and texture that stands out.',
-          'We offer a diverse range of flavors, from classic vanilla and chocolate to unique creations like salted caramel, pistachio, and tropical fruit blends. Our commitment to sustainability means we use eco-friendly packaging and source our ingredients locally whenever possible.',
-          "At Ice Ivoire, we believe that ice cream should be an experience to remember. Whether you're enjoying it on a hot summer day or celebrating a special occasion, our premium ice cream will elevate every moment with its rich, creamy texture and unforgettable flavors.",
+          'Our ice vending machine is easy to handle and accepts all forms of payment, including credit cards, bills, coins, cashless and more.It makes ice cubes from purified water, resulting in 100% fresh and safe ice cubes.',
+          'Our ice vending machine is safer than packaged ice, as there is no human factor in the production process.',
+          "To get the ice, customers can fetch a bag that is available at the machine, or use their own icebox.",
         ],
       },
     },
@@ -174,7 +174,7 @@ export const businessCategories = [
   {
     id: 8,
     businessName: 'Logistics',
-    available: false,
+    available: true,
     resume: 'A brief guide to creating a scalable design system.',
     thumbnailImage: '/assets/images/business/real-estate.webp',
     bannerImage: '/assets/images/business/real-estate.webp',
