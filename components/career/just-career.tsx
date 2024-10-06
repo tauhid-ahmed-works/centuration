@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { Icons } from '../icons'
-import Wrapper from '../layout/wrapper'
+import Image from "next/image";
+import { Icons } from "../icons";
+import Wrapper from "../layout/wrapper";
 
 export default function JustCareer() {
   return (
@@ -21,39 +21,33 @@ export default function JustCareer() {
               More than just a career
             </h3>
             <p className="font-semibold text-base">
-              Working with the Centurion Group is more than just a career; it’s
-              meaningful work that improves the lives of millions of people.
+              Working with the Centurion Group is more than just a career; it’s meaningful
+              work that improves the lives of millions of people.
             </p>
 
             <div className="md:flex-row flex-col flex gap-10 justify-center items-center">
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20 h-20">
-                  <Icons.FlexibleWork className="size-16 text-lime-600" />
+                  <Icons.FlexibleWork className="size-16 text-brand-500" />
                 </div>
-                <span className="text-xl mt-5 block font-medium">
-                  Flexible Work
-                </span>
+                <span className="text-xl mt-5 block font-medium">Flexible Work</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20 h-20">
-                  <Icons.Tour className="size-16 text-lime-600" />
+                  <Icons.Tour className="size-16 text-brand-500" />
                 </div>
-                <span className="text-xl mt-5 block font-medium">
-                  Yearly Tour
-                </span>
+                <span className="text-xl mt-5 block font-medium">Yearly Tour</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20 h-20">
-                  <Icons.Holiday className="size-16 text-lime-600" />
+                  <Icons.Holiday className="size-16 text-brand-500" />
                 </div>
-                <span className="text-xl mt-5 block font-medium">
-                  Free Holiday
-                </span>
+                <span className="text-xl mt-5 block font-medium">Free Holiday</span>
               </div>
             </div>
           </div>
         </div>
       </Wrapper>
     </section>
-  )
+  );
 }
