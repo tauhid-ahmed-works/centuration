@@ -1,29 +1,29 @@
-import { BannerTextBlock, Carousel } from '@/components/shared/banner'
+import { BannerTextBlock, Carousel } from "@/components/shared/banner";
 
 const data = [
   {
-    tagLine: '',
-    path: '',
-    description: '',
-    imageURL: '',
-    videoURL: '/assets/video/homepage/tecnology.mp4',
-    heading: 'Technologies',
-    paragraph: 'A brief guide to modern technological advancements.',
+    tagLine: "",
+    path: "",
+    description: "",
+    imageURL: "",
+    videoURL: "/assets/video/homepage/tecnology.mp4",
+    heading: "Technologies",
+    paragraph: "A brief guide to modern technological advancements.",
   },
   {
-    tagLine: '',
-    path: '',
-    description: '',
-    imageURL: '',
-    videoURL: '/assets/video/homepage/tecnology.mp4',
-    heading: 'Technologies',
-    paragraph: 'A brief guide to modern technological advancements.',
+    tagLine: "",
+    path: "",
+    description: "",
+    imageURL: "",
+    videoURL: "/assets/video/homepage/tecnology.mp4",
+    heading: "Technologies",
+    paragraph: "A brief guide to modern technological advancements.",
   },
-]
+];
 
 export default function TecnoCarousel() {
   return (
-    <Carousel data={data}>
+    <Carousel data={data} duration={50}>
       <Carousel.Item
         render={(item) => (
           <>
@@ -32,11 +32,11 @@ export default function TecnoCarousel() {
               heading={item.heading}
               paragraph={item.paragraph}
               path={item.path}
-              render={(props) => <BannerTextBlock {...props}></BannerTextBlock>}
-            ></Carousel.TextBlock>
+              render={(props) => (
+                <BannerTextBlock {...props}></BannerTextBlock>
+              )}></Carousel.TextBlock>
           </>
-        )}
-      ></Carousel.Item>
+        )}></Carousel.Item>
     </Carousel>
-  )
+  );
 }
