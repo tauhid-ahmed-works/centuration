@@ -3,9 +3,9 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins, Montserrat, Lato } from "next/font/google";
-import ConfigProvider from "@/context/config-context";
-import Header from "@/components/layout/header";
-import { ScrollButton } from "@/components/shared/scroll-button";
+// import ConfigProvider from "@/context/config-context";
+// import Header from "@/components/layout/header";
+// import { ScrollButton } from "@/components/shared/scroll-button";
 
 const poppins = Poppins({
   subsets: ["latin"],
