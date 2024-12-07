@@ -1,6 +1,6 @@
 "use client";
 import Wrapper from "../layout/wrapper";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import SectionTitle from "../shared/section-title";
 import { useState } from "react";
 import Image from "next/image";

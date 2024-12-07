@@ -6,7 +6,6 @@ import { useWindowSize, useClickAway } from "@/hooks";
 import * as Icons from "@/components/icons";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "/public/assets/icons/logo.webp";
 import Wrapper from "@/components/layout/wrapper";
 import HeaderBackground from "./header-background";
 import LangSwitch from "@/components/lang-switch";
@@ -28,8 +27,10 @@ export default function Header() {
         <div className="mr-auto">
           <Link className="flex w-44 items-center" href="/">
             <Image
-              src={logo}
+              src="/assets/icons/logo.webp"
               alt="logo"
+              width={200}
+              height={100}
               priority
               className="object-cover size-full"
             />

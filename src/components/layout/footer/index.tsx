@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import logo from "/public/assets/icons/logo.webp";
+// import logo from "@/../assets/icons/logo.webp";
 import { Icons } from "@/components/icons";
 import { footerData } from "@/data/footer-navigation";
 import Wrapper from "../wrapper";
@@ -14,7 +16,13 @@ export default function Footer() {
         <footer className="sm:flex sm:flex-wrap sm:justify-between sm:gap-8 py-8 space-y-8 sm:space-y-0">
           <div className="max-w-56 flex-1 space-y-4">
             <Link href="/" className="w-56 block mx-auto">
-              <Image src={logo} alt="logo" className="w-full" />
+              <Image
+                src="/assets/icons/logo.webp"
+                width={200}
+                height={100}
+                alt="logo"
+                className="w-full"
+              />
             </Link>
             <div className="flex gap-1 justify-around">
               {footerData.socialLinks.map((item) => (

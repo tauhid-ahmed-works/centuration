@@ -1,10 +1,12 @@
+import { use } from "react";
 import { mediaData } from "@/data/media-data";
 import { useTranslations } from "next-intl";
 import Wrapper from "@/components/layout/wrapper";
 import Image from "next/image";
 import BannerAnimation from "@/components/shared/banner-animation";
 
-export default function Media({ params }: { params: { mid: string } }) {
+export default function Media(props: { params: Promise<{ mid: string }> }) {
+  const params = use(props.params);
   const data = mediaData.find((item) => item.id == +params.mid);
   const t = useTranslations("HomePage");
   return (

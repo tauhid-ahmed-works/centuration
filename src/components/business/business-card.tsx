@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/libs/utils/cn";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView } from "motion/react";
+import { RefObject, useRef } from "react";
 
 export default function BusinessCard({
   className,
@@ -12,8 +12,8 @@ export default function BusinessCard({
   children: React.ReactNode;
   index: number;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref as RefObject<Element>, {
     margin: `0px 0px ${(10 * index + 200) * -1}px 0px`,
   });
   return (

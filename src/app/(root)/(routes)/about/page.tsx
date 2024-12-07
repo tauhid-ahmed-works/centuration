@@ -9,9 +9,10 @@ import { aboutCards } from "@/data/about-card";
 
 import Wrapper from "@/components/layout/wrapper";
 import BannerAnimation from "@/components/shared/banner-animation";
-import aboutBannerImage from "/public/assets/images/about/about-team.webp";
-import ceoImage from "/public/assets/images/about/ceo.webp";
-import executiveImage from "/public/assets/images/about/executive.webp";
+
+// import aboutBannerImage from "@/../assets/images/about/about-team.webp";
+// import ceoImage from "@/../assets/images/about/ceo.webp";
+// import executiveImage from "@/../assets/images/about/executive.webp";
 import Button from "@/components/shared/button";
 import SectionTitle from "@/components/shared/section-title";
 
@@ -20,9 +21,11 @@ export default function Page() {
     <>
       <div className="h-screen text-white relative flex items-center">
         <Image
-          src={aboutBannerImage}
+          src="/assets/images/about/about-team.webp"
           className="w-full h-full object-cover absolute"
           alt="about team"
+          width="400"
+          height="400"
         />
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
         <Wrapper className="relative text-white font-semibold z-10">
@@ -62,9 +65,11 @@ export default function Page() {
 
       <div className="h-[80vh] flex items-end lg:items-center justify-center relative mt-20">
         <Image
-          src={ceoImage}
+          src="/assets/images/about/ceo.webp"
           className="w-full h-full object-cover object-[50%] md:object-[30%] lg:object-center absolute inset-0"
           alt="about team"
+          width="400"
+          height="400"
         />
         <Wrapper>
           <div className="bg-transparent ml-auto max-w-[60ch] p-10 relative z-10 rounded backdrop-blur-3xl mb-20 md:mb-0">
@@ -107,7 +112,20 @@ export default function Page() {
           <div className="-mr-4 md:flex flex-wrap">
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
+                className="w-full max-w-96 mx-auto object-cover"
+                alt="about team"
+                width="400"
+                height="400"
+              />
+              <div className="text-center mt-4">
+                <h3 className="text-lg font-bold">Sani Dangote</h3>
+                <p className="text-sm">Group Vice President</p>
+              </div>
+            </div>
+            {/* <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
+              <Image
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -118,7 +136,7 @@ export default function Page() {
             </div>
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -129,7 +147,7 @@ export default function Page() {
             </div>
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -140,7 +158,7 @@ export default function Page() {
             </div>
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -151,7 +169,7 @@ export default function Page() {
             </div>
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -162,7 +180,7 @@ export default function Page() {
             </div>
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -173,7 +191,7 @@ export default function Page() {
             </div>
             <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
               <Image
-                src={executiveImage}
+                src="/assets/images/about/executive.webp"
                 className="w-full max-w-96 mx-auto object-cover"
                 alt="about team"
               />
@@ -181,18 +199,7 @@ export default function Page() {
                 <h3 className="text-lg font-bold">Sani Dangote</h3>
                 <p className="text-sm">Group Vice President</p>
               </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src={executiveImage}
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
+            </div> */}
           </div>
         </Wrapper>
       </section>

@@ -1,7 +1,7 @@
 // "use client";
 import Link from "next/link";
 import { navigationData, type NavigationItem } from "@/data/main-navagation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { cn } from "@/libs/utils/cn";
 import * as Icons from "@/components/icons";

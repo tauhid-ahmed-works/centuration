@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 import Wrapper from "@/components/layout/wrapper";
 // import { useTranslations } from "next-intl";
 import Image from "next/image";
-import coverImage from "/public/assets/images/career/career-coverd-photo.webp";
 import CareerWork from "@/components/career/career-work";
 import JustCareer from "@/components/career/just-career";
 import Accordion from "@/components/career/accordion";
@@ -55,7 +54,7 @@ export default function businesses() {
           <Image
             width={2000}
             height={2000}
-            src={coverImage}
+            src="/assets/images/career/career-coverd-photo.webp"
             className="w-full h-full object-cover"
             alt="career-cover-photo"
           ></Image>

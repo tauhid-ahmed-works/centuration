@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import { notFound } from "next/navigation";
 // export async function generateMetadata({
@@ -40,7 +41,8 @@ import { businessCategories } from "@/data/business-category";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Business({ params }: { params: { slug: string } }) {
+export default function Business(props: { params: Promise<{ slug: string }> }) {
+  const params = use(props.params);
   if (!routes.includes(params.slug)) notFound();
   const data = businessCategories.find((item) => item.path.includes(params.slug));
   if (!data?.available) return <ComingSoon />;

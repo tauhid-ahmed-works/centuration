@@ -1,7 +1,12 @@
 // "use client";
 import Link from "next/link";
 import { navigationData, type NavigationItem } from "@/data/main-navagation";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  // MotionProps,
+  HTMLMotionProps,
+} from "motion/react";
 import { useRef, useState } from "react";
 import { cn } from "@/libs/utils/cn";
 import * as Icons from "@/components/icons";
@@ -122,11 +127,13 @@ function MenuList({
       <AnimatePresence>
         {item.children && item.children?.length > 0 && openSubmenu && (
           <motion.ul
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 20, opacity: 0 }}
-            style={{ "--underline": "black" } as React.CSSProperties}
-            className="p-5 absolute top-full w-96 bg-white text-gray-950 flex flex-wrap rounded shadow"
+            {...({
+              initial: { y: 20, opacity: 0 },
+              animate: { y: 0, opacity: 1 },
+              exit: { y: 20, opacity: 0 },
+              className:
+                "p-5 absolute top-full w-96 bg-white text-gray-950 flex flex-wrap rounded shadow",
+            } as HTMLMotionProps<"ul">)}
           >
             <Menu data={item.children!} isSubmenu={true} />
           </motion.ul>

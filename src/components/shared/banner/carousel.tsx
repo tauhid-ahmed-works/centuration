@@ -2,7 +2,12 @@
 
 import Wrapper from "@/components/layout/wrapper";
 import { cn } from "@/libs/utils/cn";
-import { AnimatePresence, motion, MotionConfig } from "framer-motion";
+import {
+  AnimatePresence,
+  HTMLMotionProps,
+  motion,
+  MotionConfig,
+} from "motion/react";
 import Image from "next/image";
 import {
   createContext,
@@ -98,7 +103,8 @@ export default function Carousel({
           goToSlide,
           direction,
           indicators,
-        }}>
+        }}
+      >
         {children}
       </CarouselContext.Provider>
     </div>
@@ -125,7 +131,8 @@ export function CarouselItem({
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="absolute inset-0 w-full h-full flex items-center">
+                  className="absolute inset-0 w-full h-full flex items-center"
+                >
                   {render(item, index)}
                 </motion.div>
               )
@@ -142,15 +149,19 @@ export function CarouselTextBlock({
   paragraph,
   path,
   render,
-}: DataProps) {
+  className,
+}: DataProps & { className?: string }) {
   return (
     <Wrapper className="relative text-white z-10 flex flex-col justify-center h-full">
       <motion.div
-        className="max-w-[50ch] rounded"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ delay: 0.5 }}>
+        {...({
+          className: cn("max-w-[50ch] rounded", className),
+          initial: { opacity: 0, y: 20 },
+          animate: { opacity: 1, y: 0 },
+          exit: { opacity: 0, y: -20 },
+          transition: { delay: 0.5 },
+        } as HTMLMotionProps<"div">)}
+      >
         {render && render({ tagLine, heading, paragraph, path } as DataProps)}
       </motion.div>
       <CarouselIndicatorGroup />
@@ -181,7 +192,8 @@ function CarouselVideo({ videoURL }: { videoURL: string }) {
         autoPlay
         muted
         loop
-        className="object-cover absolute size-full"></video>
+        className="object-cover absolute size-full"
+      ></video>
     </div>
   );
 }
@@ -207,7 +219,8 @@ export function CarouselIndicator({ index }: { index: number }) {
       onClick={() => goToSlide(index)}
       className={cn(
         "size-3.5 border-2 border-white/50 relative rounded-full before:absolute before:inset-0.5 before:bg-gray-400 before:rounded-full before:scale-0 before:transition-transform",
-        index === activeIndex && "before:scale-100 before:bg-white border-white",
+        index === activeIndex &&
+          "before:scale-100 before:bg-white border-white",
         index !== activeIndex &&
           "hover:before:scale-100 hover:before:bg-white hover:border-white"
       )}
