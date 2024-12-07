@@ -13,12 +13,12 @@ export const businessFertilizer = () => "/our-businesses/fertilizer";
 export const businessLogistics = () => "/our-businesses/logistics";
 export const businessPetrochemicals = () => "/our-businesses/petrochemicals";
 
-export const sustainability = () => "/";
+export const sustainability = () => "/sustainability";
 
-export const centurionFoundation = () => "/";
+export const centurionFoundation = () => "/centurion-foundation";
 
-export const media = () => "/";
+export const media = () => "/media";
 
-export const career = () => "/";
+export const career = () => "/career";
 
-export const contact = () => "/";
+export const contact = () => "/contact";
