@@ -33,7 +33,7 @@ export function Header() {
     <header className="bg-secondary-500 py-4 shadow">
       <div className="container">
         <div className="flex items-center h-10">
-          <Link className="z-30 relative" href={path.home()}>
+          <Link className="z-30 relative mr-auto" href={path.home()}>
             <Image
               src="/assets/icons/logo.svg"
               width="200"
@@ -66,13 +66,22 @@ export function Header() {
             )}
           </AnimatePresence>
 
-          <div className="ml-auto flex gap-4 items-center">
-            <button
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="size-4 text-white relative z-30 ml-auto lg:hidden"
-            >
-              {isSidebarOpen ? <LucideX /> : <LucideAlignRight />}
+          <div className="flex gap-2 items-center">
+            <button className="size-6">
+              <UnitedStates />
             </button>
+            {!desktop && (
+              <button
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                className="size-6 text-white relative lg:hidden"
+              >
+                {isSidebarOpen ? (
+                  <LucideX className="size-6" />
+                ) : (
+                  <LucideAlignRight className="size-6" />
+                )}
+              </button>
+            )}
           </div>
         </div>
       </div>
