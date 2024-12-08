@@ -1,190 +1,184 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { type NavLinks, navLinks } from "@/data/global/navigation";
-import { NavLink } from "./active-navlink";
-import * as path from "@/paths";
-import { LucideAlignRight, LucideChevronRight, LucideX } from "lucide-react";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
+import { LucideAlignRight, LucideChevronRight, LucideX } from "lucide-react";
+import { navigationLinks, type NavigationLink } from "@/data/global/navigation";
+import { NavLink } from "./navlink";
 import { UnitedStates } from "./icons";
-import { useWindowSize } from "@/hooks";
-import Link from "next/link";
-import { useClickAway } from "@/hooks";
+import { cn } from "@/lib/utils";
+import { useWindowSize, useClickAway } from "@/hooks";
+import * as path from "@/paths";
+
+const BREAKPOINT = 1024;
+
+type NavigationMenuProps = {
+  navigationLinks: NavigationLink[];
+  className?: string;
+  isDesktop?: boolean;
+};
+
+const sidebarVariants = {
+  initial: {
+    x: "-100%",
+  },
+  animate: {
+    x: 0,
+  },
+  exit: {
+    x: "-100%",
+  },
+};
+
+const subMenuVariants = {
+  initial: (isDesktop: boolean) => ({
+    height: !isDesktop ? 0 : "auto",
+    y: isDesktop ? 20 : 0,
+    opacity: 0,
+  }),
+  animate: () => ({
+    height: "auto",
+    y: 0,
+    opacity: 1,
+  }),
+  exit: (isDesktop: boolean) => ({
+    height: !isDesktop ? 0 : "auto",
+    y: isDesktop ? 20 : 0,
+    opacity: 0,
+  }),
+};
+
+function Logo() {
+  return (
+    <Link href={path.home()}>
+      <Image
+        src="/assets/icons/logo.svg"
+        width={200}
+        height={60}
+        alt="centurion"
+      />
+    </Link>
+  );
+}
 
 export function Header() {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = React.useState(false);
   const { innerWidth } = useWindowSize();
-  const desktop = innerWidth >= 1024;
+  const isDesktop = innerWidth >= BREAKPOINT;
+  const ref = React.useRef(null);
+
+  useClickAway(ref, () => !isDesktop && setIsMobileNavOpen(false));
 
   React.useEffect(() => {
-    if (desktop) {
-      setIsSidebarOpen(true);
-    } else setIsSidebarOpen(false);
-  }, [innerWidth]);
-  const ref = React.useRef(null);
-  useClickAway(ref, () => {
-    if (!desktop) {
-      setIsSidebarOpen(false);
-    }
-  });
-  return (
-    <header className="bg-secondary-500 py-4 shadow">
-      <div className="container">
-        <div className="flex items-center h-10">
-          <Link className="z-30 relative mr-auto" href={path.home()}>
-            <Image
-              src="/assets/icons/logo.svg"
-              width="200"
-              height="50"
-              alt="Centurion"
-              className="w-32 lg:w-44"
-            />
-          </Link>
-          <AnimatePresence mode="wait" initial={false}>
-            {isSidebarOpen && (
-              <motion.nav
-                ref={ref}
-                transition={{
-                  ease: "linear",
-                  duration: 0.2,
-                }}
-                initial={{
-                  x: desktop ? 0 : "-100%",
-                }}
-                animate={{ x: 0 }}
-                exit={{
-                  x: desktop ? 0 : "-100%",
-                }}
-                className={cn(
-                  "max-lg:h-screen left-0 top-0 max-lg:pt-20 max-lg:fixed max-lg:bg-secondary-500 px-4 text-white h-full max-lg:w-60 lg:ml-auto flex"
-                )}
-              >
-                <Navigation />
-              </motion.nav>
-            )}
-          </AnimatePresence>
+    setIsMobileNavOpen(isDesktop);
+    setIsMobileNavOpen(false);
+  }, [isDesktop]);
 
-          <div className="flex gap-2 items-center">
-            <button className="size-6">
-              <UnitedStates />
-            </button>
-            {!desktop && (
-              <button
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="size-6 text-white relative lg:hidden"
-              >
-                {isSidebarOpen ? (
-                  <LucideX className="size-6" />
-                ) : (
-                  <LucideAlignRight className="size-6" />
-                )}
-              </button>
-            )}
-          </div>
+  return (
+    <header ref={ref} className="bg-secondary-500 text-white">
+      <nav className="flex gap-4 items-center h-14 container">
+        <div className="w-32 mr-auto relative z-30 bg-inherit">
+          <Logo />
         </div>
-      </div>
+        <AnimatePresence>
+          {!isDesktop && isMobileNavOpen && (
+            <motion.div
+              {...sidebarVariants}
+              transition={{
+                ease: "easeOut",
+              }}
+              className="max-lg:h-screen bg-secondary-500 max-lg:fixed top-0 left-0 max-lg:w-60 max-lg:pt-16 px-4"
+            >
+              <NavigationMenu
+                isDesktop={isDesktop}
+                navigationLinks={navigationLinks}
+              />
+            </motion.div>
+          )}
+          {isDesktop && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <NavigationMenu
+                isDesktop={isDesktop}
+                navigationLinks={navigationLinks}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <div className="flex gap-2">
+          <button className="size-5">
+            <UnitedStates />
+          </button>
+          {!isDesktop && (
+            <button
+              onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+              className="size-5"
+            >
+              {isMobileNavOpen ? (
+                <LucideX className="size-full" />
+              ) : (
+                <LucideAlignRight className="size-full" />
+              )}
+            </button>
+          )}
+        </div>
+      </nav>
     </header>
   );
 }
 
-function Navigation() {
-  return <NavMenu navLinks={navLinks} />;
-}
-
-function NavMenu({
-  navLinks,
+function NavigationMenu({
+  navigationLinks,
   className,
-}: {
-  navLinks: NavLinks[];
-  className?: string;
-}) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  isDesktop,
+}: NavigationMenuProps) {
+  const [activeSubmenu, setActiveSubmenu] = React.useState(-1);
   const pathname = usePathname();
-  const { innerWidth } = useWindowSize();
-  const isDesktop = innerWidth >= 1024;
   const ref = React.useRef(null);
-  useClickAway(ref, () => setIsMenuOpen(false));
+  const handleActiveSubmenu = (index: number) =>
+    setActiveSubmenu((prevIndex) => (prevIndex === index ? -1 : index));
+  useClickAway(ref, () => isDesktop && setActiveSubmenu(-1));
+
   return (
-    <ul
-      ref={ref}
-      className={cn(
-        "max-lg:space-y-2 lg:flex lg:items-center lg:gap-4 max-lg:overflow-hidden",
-        className
-      )}
-    >
-      {navLinks.map((navLink) => {
-        const hasSubmenu = Boolean(navLink.children);
+    <ul className={cn("lg:flex lg:gap-3 xl:gap-4", className)}>
+      {navigationLinks.map((path, index) => {
+        const hasSubmenu = path.children;
         return (
-          <li
-            onClick={() => {
-              if (innerWidth >= 1024 && isMenuOpen) {
-                setIsMenuOpen(false);
-              }
-            }}
-            className={cn("relative")}
-            key={navLink.href}
-          >
+          <motion.li ref={ref} className="relative" key={path.name}>
             {hasSubmenu ? (
               <button
-                onClick={() => {
-                  setIsMenuOpen(!isMenuOpen);
-                }}
-                className={cn("flex justify-between items-center w-full", {
-                  "text-primary-500":
-                    isMenuOpen || pathname.startsWith(navLink.href),
-                  "hover:text-primary-500": !isMenuOpen,
+                onClick={() => handleActiveSubmenu(index)}
+                className={cn("flex items-center py-1", {
+                  "text-primary-500": pathname.startsWith(path.href),
                 })}
               >
-                {navLink.name}
-
+                {path.name}{" "}
                 <LucideChevronRight
-                  className={cn("size-4  transition-transform", {
-                    "rotate-90": isMenuOpen,
+                  className={cn("size-4 rotate-0", {
+                    "rotate-90": activeSubmenu === index,
                   })}
                 />
               </button>
             ) : (
               <NavLink
-                className={cn({
-                  "flex items-center justify-between": navLink.children,
-                })}
-                href={navLink.href}
+                className="py-1 inline-block whitespace-nowrap"
+                href={path.href}
               >
-                {navLink.name}
+                {path.name}
               </NavLink>
             )}
-            <AnimatePresence mode="wait">
-              {hasSubmenu && isMenuOpen && (
-                <motion.div
-                  initial={{
-                    height: !isDesktop ? 0 : "auto",
-                    opacity: 0,
-                    y: isDesktop && 20,
-                  }}
-                  animate={{
-                    height: "auto",
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    height: !isDesktop ? 0 : "auto",
-                    opacity: 0,
-                    y: isDesktop && 20,
-                  }}
-                >
-                  <NavMenu
-                    className={cn(
-                      "px-4 lg:absolute lg:w-96 lg:h-64 lg:bg-secondary-500 transition-all lg:grid lg:grid-cols-2 lg:rounded lg:top-[100%] lg:gap-2 lg:p-6 lg:shadow-lg",
-                      isMenuOpen && "max-lg:mt-2 opacity-100"
-                    )}
-                    navLinks={navLink.children as NavLinks[]}
+            <AnimatePresence>
+              {hasSubmenu && activeSubmenu === index && (
+                <motion.div {...subMenuVariants} custom={isDesktop}>
+                  <NavigationMenu
+                    className="px-4 lg:absolute lg:grid lg:grid-cols-2 lg:bg-secondary-500 lg:top-full lg:w-96 lg:rounded lg:shadow-lg lg:gap-0 lg:p-6 xl:gap-0"
+                    navigationLinks={path.children as NavigationLink[]}
                   />
                 </motion.div>
               )}
             </AnimatePresence>
-          </li>
+          </motion.li>
         );
       })}
     </ul>
