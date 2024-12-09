@@ -1,6 +1,6 @@
 export const home = () => "/";
 
-export const aboutUs = () => "/";
+export const aboutUs = () => "/about-us";
 
 export const ourBusinesses = () => "/our-businesses";
 export const businessTechnologies = () => "/our-businesses/technologies";
@@ -22,3 +22,5 @@ export const media = () => "/media";
 export const career = () => "/career";
 
 export const contact = () => "/contact";
+
+export const privacyPolicy = () => "/privacy-policy";

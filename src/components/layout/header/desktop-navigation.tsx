@@ -1,12 +1,7 @@
 // "use client";
 import Link from "next/link";
 import { navigationData, type NavigationItem } from "@/data/main-navagation";
-import {
-  motion,
-  AnimatePresence,
-  // MotionProps,
-  HTMLMotionProps,
-} from "motion/react";
+import { motion, AnimatePresence, HTMLMotionProps } from "motion/react";
 import { useRef, useState } from "react";
 import { cn } from "@/libs/utils/cn";
 import * as Icons from "@/components/icons";

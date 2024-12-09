@@ -11,6 +11,7 @@ import { UnitedStates } from "./icons";
 import { cn } from "@/lib/utils";
 import { useWindowSize, useClickAway } from "@/hooks";
 import * as path from "@/paths";
+import { Button } from "./button";
 
 const BREAKPOINT = 1024;
 
@@ -77,8 +78,8 @@ export function Header() {
   }, [isDesktop]);
 
   return (
-    <header ref={ref} className="bg-secondary-500 text-white">
-      <nav className="flex gap-4 items-center h-14 container">
+    <header ref={ref} className="bg-secondary-500 text-white z-300">
+      <nav className="flex gap-4 items-center h-16 container">
         <div className="w-32 mr-auto relative z-30 bg-inherit">
           <Logo />
         </div>
@@ -89,7 +90,7 @@ export function Header() {
               transition={{
                 ease: "easeOut",
               }}
-              className="max-lg:h-screen bg-secondary-500 max-lg:fixed top-0 left-0 max-lg:w-60 max-lg:pt-16 px-4"
+              className="max-lg:h-screen bg-secondary-500 max-lg:fixed top-0 left-0 max-lg:w-60 max-lg:pt-16 px-4 max-lg:shadow"
             >
               <NavigationMenu
                 isDesktop={isDesktop}
@@ -107,20 +108,22 @@ export function Header() {
           )}
         </AnimatePresence>
         <div className="flex gap-2">
-          <button className="size-5">
+          <Button variant="secondary" size="icon" impact="ghost">
             <UnitedStates />
-          </button>
+          </Button>
           {!isDesktop && (
-            <button
+            <Button
+              variant="secondary"
+              size="icon"
+              impact="ghost"
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-              className="size-5"
             >
               {isMobileNavOpen ? (
                 <LucideX className="size-full" />
               ) : (
                 <LucideAlignRight className="size-full" />
               )}
-            </button>
+            </Button>
           )}
         </div>
       </nav>
@@ -145,7 +148,11 @@ function NavigationMenu({
       {navigationLinks.map((path, index) => {
         const hasSubmenu = path.children;
         return (
-          <motion.li ref={ref} className="relative" key={path.name}>
+          <motion.li
+            ref={ref}
+            className="relative max-lg:overflow-hidden"
+            key={path.name}
+          >
             {hasSubmenu ? (
               <button
                 onClick={() => handleActiveSubmenu(index)}
