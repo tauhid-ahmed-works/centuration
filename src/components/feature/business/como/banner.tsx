@@ -1,32 +1,32 @@
-import { BannerTextBlock, Carousel } from '@/components/shared/banner'
-import Button from '@/components/shared/button'
+import { BannerTextBlock, Carousel } from "@/components/shared/banner";
+import Button from "@/components/shared/button";
 
 const data = [
   {
-    tagLine: 'Our Bussiness',
-    path: '',
-    description: 'Our Bussiness',
-    imageURL: '/assets/images/business/commo/image-2.webp',
-    heading: 'Nutriagro Overseas',
-    paragraph: 'Heritage of Quality . Purity . Trust',
+    tagLine: "Our Bussiness",
+    path: "",
+    description: "Our Bussiness",
+    imageURL: "/assets/images/business/commo/image-2.webp",
+    heading: "Nutriagro Overseas",
+    paragraph: "Heritage of Quality . Purity . Trust",
   },
   {
-    tagLine: 'Our Bussiness',
-    path: '',
-    description: 'Our Bussiness',
-    imageURL: '/assets/images/business/commo/image-1.webp',
-    heading: 'Nutriagro Overseas',
-    paragraph: 'Heritage of Quality . Purity . Trust',
+    tagLine: "Our Bussiness",
+    path: "",
+    description: "Our Bussiness",
+    imageURL: "/assets/images/business/commo/image-1.webp",
+    heading: "Nutriagro Overseas",
+    paragraph: "Heritage of Quality . Purity . Trust",
   },
   {
-    tagLine: 'Our Bussiness',
-    path: '',
-    description: 'Our Bussiness',
-    imageURL: '/assets/images/business/commo/image-3.webp',
-    heading: 'Nutriagro Overseas',
-    paragraph: 'Heritage of Quality . Purity . Trust',
+    tagLine: "Our Bussiness",
+    path: "",
+    description: "Our Bussiness",
+    imageURL: "/assets/images/business/commo/image-3.webp",
+    heading: "Nutriagro Overseas",
+    paragraph: "Heritage of Quality . Purity . Trust",
   },
-]
+];
 
 export default function ComoCarousel() {
   return (
@@ -49,5 +49,5 @@ export default function ComoCarousel() {
         )}
       ></Carousel.Item>
     </Carousel>
-  )
+  );
 }

@@ -12,6 +12,7 @@ import {
   CarouselSlideProps,
 } from "./types";
 import { NEXT, PREV, VIDEO, IMAGE } from "./constant";
+import { useCarousel } from "./hook";
 
 const variants = {
   initial: (direction: string) => ({
@@ -31,34 +32,12 @@ export function Carousel({
   overlay = true,
   className,
 }: CarouselProps) {
-  if (data.length < 1) return;
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [prevIndex, setPrevIndex] = React.useState([-1, activeIndex]);
-
-  const handleCarouselSlide = (payload: CarouselSlideProps) => {
-    const nextIndex =
-      typeof payload.index === "number"
-        ? payload.index
-        : payload.direction === NEXT
-        ? activeIndex + 1
-        : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
-
-  React.useEffect(() => {
-    const intervalId = setInterval(
-      handleCarouselSlide.bind(null, { direction: NEXT }),
-      duration * 1000
-    );
-    return () => clearInterval(intervalId);
-  }, [activeIndex]);
-
-  if (activeIndex !== prevIndex[1]) {
-    setPrevIndex([prevIndex[1], activeIndex]);
-  }
-
-  const direction = prevIndex[0] < prevIndex[1] ? NEXT : PREV;
-  const currentIndex = Math.abs(activeIndex) % data.length;
+  const { direction, currentIndex, handleCarouselSlide }: any = useCarousel(
+    data,
+    {
+      duration,
+    }
+  );
 
   return (
     <>

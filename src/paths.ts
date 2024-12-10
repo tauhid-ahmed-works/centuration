@@ -24,3 +24,9 @@ export const career = () => "/career";
 export const contact = () => "/contact";
 
 export const privacyPolicy = () => "/privacy-policy";
+
+export const facebook = () => "https://facebook.com/groupcenturion";
+export const instagram = () => "https://facebook.com/groupcenturion";
+export const linkedin = () => "https://facebook.com/in/groupcenturion";
+export const twitter = () => "https://facebook.com/groupcenturion";
+export const youtube = () => "https://facebook.com/groupcenturion";
