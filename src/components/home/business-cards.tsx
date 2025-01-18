@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Wrapper from "../layout/wrapper";
 import SectionTitle from "../shared/section-title";
 import { ArrowLong } from "../icons";
 import AnimatedCard from "../shared/animate-card";
@@ -10,7 +9,7 @@ import Link from "next/link";
 export default function BusinessCards() {
   return (
     <div className="min-h-screen py-16 grid place-items-center">
-      <Wrapper size="sm" className="max-w-[900px]">
+      <div className="container px-10 md:px-20">
         <div className="mb-8">
           <div className="max-w-[60ch] mx-auto">
             <SectionTitle className="mb-10">Our Businesses</SectionTitle>
@@ -21,7 +20,7 @@ export default function BusinessCards() {
             </p>
           </div>
         </div>
-        <div className="grid gap-4 grid-cols-auto-fit-250">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {businessCategories.slice(0, 6).map((card, index) => (
             <AnimatedCard key={card.id} index={index}>
               <div className="hover:shadow hover:-translate-y-1 transition-all duration-300 rounded overflow-hidden">
@@ -58,7 +57,7 @@ export default function BusinessCards() {
             </Link>
           </div>
         </div>
-      </Wrapper>
+      </div>
     </div>
   );
 }

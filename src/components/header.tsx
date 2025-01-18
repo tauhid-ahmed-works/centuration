@@ -78,8 +78,11 @@ export function Header() {
   }, [isDesktop]);
 
   return (
-    <header ref={ref} className="bg-secondary-500 text-white z-300">
-      <nav className="flex gap-4 items-center h-16 container">
+    <header
+      ref={ref}
+      className="bg-secondary-500 text-white z-300 fixed inset-x-0"
+    >
+      <nav className="flex gap-4 items-center h-20 container">
         <div className="w-32 mr-auto relative z-30 bg-inherit">
           <Logo />
         </div>

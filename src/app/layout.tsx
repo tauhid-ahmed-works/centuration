@@ -43,11 +43,7 @@ export default async function RootLayout({
           <ConfigProvider>
             <Header />
             <ScrollButton />
-            <main className="flex-1">
-              <Slider />
-
-              {children}
-            </main>
+            <main className="flex-1">{children}</main>
           </ConfigProvider>
         </NextIntlClientProvider>
       </body>

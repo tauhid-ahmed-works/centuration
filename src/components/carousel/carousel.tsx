@@ -9,9 +9,8 @@ import {
   CarouselContentProps,
   CarouselPaginationProps,
   CarouselProps,
-  CarouselSlideProps,
 } from "./types";
-import { NEXT, PREV, VIDEO, IMAGE } from "./constant";
+import { NEXT, VIDEO, IMAGE } from "./constant";
 import { useCarousel } from "./hook";
 
 const variants = {
@@ -44,7 +43,7 @@ export function Carousel({
       <div
         className={cn("relative overflow-hidden size-full h-screen", className)}
       >
-        <AnimatePresence custom={direction}>
+        <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
             variants={variants}
@@ -88,12 +87,10 @@ function CarouselContent({ data, overlay, children }: CarouselContentProps) {
         <CarouselMedia mediaLink={mediaLink} type={type} />
       </div>
       <div className="container relative z-10 text-white">
-        <div className="space-y-4 lg:space-y-6">
-          <Heading>{data.title}</Heading>
-          <p>{data.content}</p>
-          <div className="">
-            <Button variant="secondary">Learn More</Button>
-          </div>
+        <div className="max-w-xl space-y-4 lg:space-y-6">
+          <Heading size="6.5xl">{data.title}</Heading>
+          <p className="pr-4">{data.content}</p>
+          <Button variant="secondary">Learn More</Button>
         </div>
         {children}
       </div>

@@ -44,7 +44,7 @@ const shapeClasses: Record<NonNullable<ButtonProps["shape"]>, string> = {
 };
 
 const sizeClasses: Record<NonNullable<ButtonProps["size"]>, string> = {
-  lg: "px-5 py-3 text-base",
+  lg: "px-6 py-3 text-base",
   md: "px-4 py-3",
   sm: "px-3 py-2 text-xs",
   icon: "[&_svg]:size-5 size-6",

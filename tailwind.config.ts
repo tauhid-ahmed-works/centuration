@@ -102,6 +102,10 @@ const config: Config = {
         "4.5xl": "2.5rem",
         "5.5xl": "3.125rem",
         "5.75xl": "3.375rem",
+        "6.5xl": "4rem",
+      },
+      height: {
+        84: "21rem",
       },
       gridTemplateColumns: {
         "auto-fit-100": "repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr))",

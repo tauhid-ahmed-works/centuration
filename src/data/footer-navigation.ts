@@ -23,56 +23,58 @@ interface FooterData {
   "General Inquiries": GeneralInquiries;
 }
 
+import * as path from "@/paths";
+
 export const footerData: FooterData = {
   socialLinks: [
     {
       name: "Facebook",
-      url: "https://facebook.com/groupcenturions",
+      url: path.facebook(),
     },
     {
       name: "Instagram",
-      url: "https://instagram.com/groupcenturions",
+      url: path.instagram(),
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/company/groupcenturions",
+      url: path.linkedin(),
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/groupcenturions",
+      url: path.twitter(),
     },
     {
       name: "YouTube",
-      url: "https://youtube.com/groupcenturions",
+      url: path.youtube(),
     },
   ],
   sections: [
     {
       title: "COMPANY",
       links: [
-        { name: "About Us", url: "/about" },
+        { name: "About Us", url: path.aboutUs() },
         {
-          name: "Centurion Fondation",
-          url: "/centurion-fondation",
+          name: "Centurion Foundation",
+          url: path.centurionFoundation(),
         },
-        { name: "Media", url: "/media" },
-        { name: "Career", url: "/career" },
-        { name: "Our Businesses", url: "/businesses" },
-        { name: "Sustainability", url: "/sustainability" },
+        { name: "Media", url: path.media() },
+        { name: "Career", url: path.career() },
+        { name: "Our Businesses", url: path.ourBusinesses() },
+        { name: "Sustainability", url: path.sustainability() },
       ],
     },
     {
       title: "BUSINESSES",
       links: [
-        { name: "Technologies", url: "/businesses/technologies" },
-        { name: "Medical Services", url: "/businesses/medical-services" },
-        { name: "Laundreneets", url: "/businesses/self-service-launderettes" },
-        { name: "Ice Ivoire", url: "/businesses/ice-ivoire" },
-        { name: "Commodities", url: "/businesses/commodities" },
-        { name: "Real Estate", url: "/businesses/real-estate" },
-        { name: "Fertilizer", url: "/businesses/fertilizer" },
-        { name: "Logistics", url: "/businesses/logistics" },
-        { name: "Petrochemicals", url: "/businesses/petrochemicals" },
+        { name: "Technologies", url: path.businessTechnologies() },
+        { name: "Medical Services", url: path.businessMedicalServices() },
+        { name: "Launderettes", url: path.businessLaunderettes() },
+        { name: "Ice Ivoire", url: path.businessIceIvoire() },
+        { name: "Commodities", url: path.businessCommodities() },
+        { name: "Real Estate", url: path.businessRealEstate() },
+        { name: "Fertilizer", url: path.businessRealEstate() },
+        { name: "Logistics", url: path.businessLogistics() },
+        { name: "Petrochemicals", url: path.businessPetrochemicals() },
       ],
     },
   ],
@@ -82,17 +84,3 @@ export const footerData: FooterData = {
     city: "Los Angeles, California",
   },
 };
-
-/*
-
-{
-      title: "BUSINESSES",
-      links: [
-        { name: "FAQ", url: "/faq" },
-        { name: "Contact Us", url: "/contact" },
-        { name: "Terms & Conditions", url: "/terms-and-conditions" },
-        { name: "Privacy Policy", url: "/privacy-policy" },
-      ],
-    },
-
-*/

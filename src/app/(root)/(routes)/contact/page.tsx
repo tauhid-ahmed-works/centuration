@@ -9,14 +9,13 @@ import Form from "@/components/contact/form";
 import GeneralInquiries from "@/components/contact/general-inquiries";
 import HeadOffice from "@/components/contact/head-office";
 import Map from "@/components/contact/map";
-import Wrapper from "@/components/layout/wrapper";
 import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const t = useTranslations("HomePage");
   return (
     <section className="pt-28 sm:px-10 md:px-0 md:pt-28 md:mb-20">
-      <Wrapper>
+      <div className="container">
         <div className="md:flex md:gap-10 items-center py-10">
           <div className="md:flex-1 justify-center space-y-6">
             <h3 className="text-center text-2xl md:text-5xl font-medium font-title">
@@ -36,7 +35,7 @@ export default function Contact() {
             <Map />
           </div>
         </div>
-      </Wrapper>
+      </div>
     </section>
   );
 }

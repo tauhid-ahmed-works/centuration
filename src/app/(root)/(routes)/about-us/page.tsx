@@ -6,15 +6,9 @@ export const metadata: Metadata = {
 };
 import Image from "next/image";
 import { aboutCards } from "@/data/about-card";
-
-import Wrapper from "@/components/layout/wrapper";
 import BannerAnimation from "@/components/shared/banner-animation";
-
-// import aboutBannerImage from "@/../assets/images/about/about-team.webp";
-// import ceoImage from "@/../assets/images/about/ceo.webp";
-// import executiveImage from "@/../assets/images/about/executive.webp";
 import Button from "@/components/shared/button";
-import SectionTitle from "@/components/shared/section-title";
+import { Heading } from "@/components/heading";
 
 export default function Page() {
   return (
@@ -24,32 +18,36 @@ export default function Page() {
           src="/assets/images/about/about-team.webp"
           className="w-full h-full object-cover absolute"
           alt="about team"
-          width="400"
-          height="400"
+          width="1920"
+          height="1080"
         />
         <div className="absolute inset-0 w-full h-full bg-black/70"></div>
-        <Wrapper className="relative text-white font-semibold z-10">
-          <div className="max-w-[65ch] rounded">
-            <h1 className="">About Us</h1>
-            <h2 className="text-4.5xl mt-2 leading-none">
+        <div className="container relative text-white z-10">
+          <div className="max-w-[60ch]">
+            <Heading as="h1" size="base">
+              About Us
+            </Heading>
+            <Heading size="4.5xl" as="h2">
               Premier Service Provider
-            </h2>
-            <p className="text-md leading-tight mt-4">
+            </Heading>
+            <p className="mt-4">
               Providing Your Basic Needs With our transformational projects and
               businesses across food, shelter and construction, Centurion Group
               continues to grow its vision of becoming the leading provider of
               essential services and needs in Africa.
             </p>
           </div>
-        </Wrapper>
+        </div>
         <BannerAnimation />
       </div>
 
       <section className="mt-20 mb-40 md:mb-0">
-        <Wrapper>
+        <div className="container">
           <div className="text-center">
-            <SectionTitle>Our Mission & Vision</SectionTitle>
-            <p className="mt-4 px-6 text-left lg:text-center">
+            <Heading as="h2" size="4.5xl">
+              Our Mission & Vision
+            </Heading>
+            <p className="mt-4 max-w-[60ch] mx-auto">
               Centurion Group continues to grow its focus of becoming the
               leading provider of essential needs in Services, Technologies,
               Food and Shelter in Sub-Saharan Africa. Our vision is to be a
@@ -60,196 +58,110 @@ export default function Page() {
               services, Commodities, Self-service launderettes.
             </p>
           </div>
-        </Wrapper>
+        </div>
       </section>
 
-      <div className="h-[80vh] flex items-end lg:items-center justify-center relative mt-20">
+      <section className="h-[80vh] flex items-end lg:items-center justify-center relative mt-20">
         <Image
           src="/assets/images/about/ceo.webp"
-          className="w-full h-full object-cover object-[50%] md:object-[30%] lg:object-center absolute inset-0"
+          className="w-full h-full object-cover object-center absolute inset-0"
           alt="about team"
           width="400"
           height="400"
         />
-        <Wrapper>
+        <div className="container">
           <div className="bg-transparent ml-auto max-w-[60ch] p-10 relative z-10 rounded backdrop-blur-3xl mb-20 md:mb-0">
             <div className="text-white w-full relative">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl">
+              <Heading as="h2" size="4.5xl">
                 CEO Biography
-              </h2>
-              <div className="mt-6">
-                <p className="text-sm">
-                  Mr Bandeira is the CEO of Centurion Group, leading the
-                  organization with a vision for growth and innovation. With
-                  years of experience in the industry, He has successfully
-                  driven strategic initiatives, ensuring sustainable development
-                  and market leadership. Under his leadership, Centurion Group
-                  has achieved significant milestones and continues to pioneer
-                  new advancements.
-                </p>
-                {/* <Button className="mt-4">About More</Button> */}
-              </div>
+              </Heading>
+              <p className="mt-4">
+                Mr Bandeira is the CEO of Centurion Group, leading the
+                organization with a vision for growth and innovation. With years
+                of experience in the industry, He has successfully driven
+                strategic initiatives, ensuring sustainable development and
+                market leadership. Under his leadership, Centurion Group has
+                achieved significant milestones and continues to pioneer new
+                advancements.
+              </p>
             </div>
           </div>
-        </Wrapper>
-      </div>
+        </div>
+      </section>
 
       <section className="mt-20">
-        <Wrapper>
+        <div className="max-w-2xl mx-auto">
           <div className="text-center">
-            <SectionTitle>Centurion group leadership</SectionTitle>
+            <Heading as="h2" size="4xl">
+              Centurion group leadership
+            </Heading>
             <p className="mt-4 px-6">
               Our senior executives bring tremendous experience, visionary
               thinking and a shared commitment to excellence, creativity, and
               innovation to the day to day operation of the company.
             </p>
           </div>
-        </Wrapper>
+        </div>
       </section>
 
       <section className="mt-20">
-        <Wrapper>
+        <div className="container">
           <div className="-mr-4 md:flex flex-wrap">
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-                width="400"
-                height="400"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
+                <Image
+                  src="/assets/images/about/executive.webp"
+                  className="w-full max-w-96 mx-auto object-cover"
+                  alt="about team"
+                  width="400"
+                  height="400"
+                />
+                <div className="text-center mt-4">
+                  <h3 className="text-lg font-bold">Sani Dangote</h3>
+                  <p className="text-sm">Group Vice President</p>
+                </div>
               </div>
-            </div>
-            {/* <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div>
-            <div className="basis-1/2 lg:basis-1/4 pr-4 pb-4">
-              <Image
-                src="/assets/images/about/executive.webp"
-                className="w-full max-w-96 mx-auto object-cover"
-                alt="about team"
-              />
-              <div className="text-center mt-4">
-                <h3 className="text-lg font-bold">Sani Dangote</h3>
-                <p className="text-sm">Group Vice President</p>
-              </div>
-            </div> */}
+            ))}
           </div>
-        </Wrapper>
+        </div>
       </section>
-
-      <section className="py-20 md:py-32 bg-pattern-2 my-20 text-white">
-        <Wrapper className="space-y-4">
-          <SectionTitle className="text-white text-left" decorator={false}>
+      <section className="bg-secondary-500 text-white h-80 p-10 md:p-20 text-center mt-10 flex items-center">
+        <div className="max-w-3xl mx-auto">
+          <Heading as="h2" size="4xl">
             Strategic Tech Partner for Productivity and Growth
-          </SectionTitle>
-          <p className="max-w-[80ch]">
+          </Heading>
+          <p className="text-md leading-tight mt-4">
             We are a company that is at the forefront of technology, becoming a
             strategic ally for your company or business, providing you with the
             best solutions and services that ensure your productivity,
             competitiveness, permanence and excellent service for your clients.
           </p>
-
-          {/* <div className="max-w-[65ch] rounded bg-transparent backdrop-blur-sm">
-            <h1 className="">OUR VALUES</h1>
-            <h2 className="text-4.5xl mt-2 leading-none">
-              Strategic Tech Partner for Productivity and Growth
-            </h2>
-            <p className="text-md leading-tight mt-4">
-              We are a company that is at the forefront of technology, becoming a
-              strategic ally for your company or business, providing you with the
-              best solutions and services that ensure your productivity,
-              competitiveness, permanence and excellent service for your clients.
-            </p>
-          </div> */}
-        </Wrapper>
+        </div>
       </section>
 
       <section className="my-20">
-        <div className="text-center">
-          <SectionTitle>OUR VALUES</SectionTitle>
-          <p className="mt-4 px-6">
+        <div className="container text-center space-y-2">
+          <Heading as="h2" size="4.5xl">
+            OUR VALUES
+          </Heading>
+          <p>
             Our values are the foundation of our company and define who we are
             and how we work.
           </p>
         </div>
 
-        <Wrapper className="mt-14 space-y-10">
+        <div className="container mt-14 space-y-10">
           {aboutCards.map((card, index) => (
             <div
               key={card.title}
-              className={`flex flex-col gap-10 items-center ${
+              className={`flex flex-col gap-10 ${
                 index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
               }`}
             >
-              <div className="md:flex-1 max-w-[60ch] space-y-6">
-                <h3 className="text-3xl md:text-4xl font-bold">{card.title}</h3>
+              <div className="md:flex-1 max-w-[60ch] space-y-6 self-center">
+                <Heading as="h3" size="4xl">
+                  {card.title}
+                </Heading>
                 <p>{card.description}</p>
                 <Button>About Me</Button>
               </div>
@@ -257,14 +169,14 @@ export default function Page() {
                 <Image
                   src="/assets/images/about/about-card.webp"
                   alt="about-card"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
+                  width={300}
+                  height={300}
+                  className="size-full object-cover"
                 />
               </div>
             </div>
           ))}
-        </Wrapper>
+        </div>
       </section>
     </>
   );

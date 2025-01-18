@@ -1,7 +1,6 @@
 import { use } from "react";
 import { mediaData } from "@/data/media-data";
 import { useTranslations } from "next-intl";
-import Wrapper from "@/components/layout/wrapper";
 import Image from "next/image";
 import BannerAnimation from "@/components/shared/banner-animation";
 
@@ -24,17 +23,17 @@ export default function Media(props: { params: Promise<{ mid: string }> }) {
         <div className="absolute inset-0 w-full h-full bg-black/60"></div>
 
         <div className="relative w-full">
-          <Wrapper>
+          <div className="container">
             <div className="max-w-screen-md w-full text-white space-y-4">
               <h1 className="text-5.5xl font-semibold font-title">
                 {t("media_page_title")}
               </h1>
             </div>
-          </Wrapper>
+          </div>
         </div>
         <BannerAnimation />
       </div>
-      <Wrapper>
+      <div className="container">
         <Image
           src={data?.imageUrl as string}
           width={1920}
@@ -45,7 +44,7 @@ export default function Media(props: { params: Promise<{ mid: string }> }) {
         <span className="block">Posted on: 02 June, 2022</span>
         <h1 className="text-4.5xl font-title max-w-[40ch]">{data?.title}</h1>
         <p>{data?.content}</p>
-      </Wrapper>
+      </div>
     </>
   );
 }

@@ -11,6 +11,7 @@ import SustainabilityCommitment from "@/components/sustainability/sustainability
 import CenturionWay from "@/components/sustainability/centurion-way";
 import OurCommitment from "@/components/sustainability/our-commitment";
 import BannerAnimation from "@/components/shared/banner-animation";
+import { Heading } from "@/components/heading";
 
 export default function Sustainability() {
   return (
@@ -25,22 +26,24 @@ export default function Sustainability() {
             alt="Sustainability Image"
           ></Image>
         </div>
-        <div className="absolute inset-0 w-full h-full bg-black/60"></div>
+        <div className="absolute inset-0 w-full h-full bg-black/70"></div>
 
-        <Wrapper className="relative text-white font-semibold">
-          <div className="max-w-[65ch] rounded bg-transparent backdrop-blur-sm">
-            <h1 className="">Sustainability</h1>
-            <h2 className="text-4.5xl mt-2 leading-none">
+        <div className="container relative text-white">
+          <div className="max-w-[60ch]">
+            <Heading as="h1" size="base">
+              Sustainability
+            </Heading>
+            <Heading as="h2" size="4.5xl">
               Nurturing a Sustainable Future
-            </h2>
-            <p className="mt-4 text-md leading-tight">
+            </Heading>
+            <p className="mt-4">
               At Centurion, we believe that small actions lead to big changes.
               Just like nurturing a seed, we are committed to growing
               sustainable solutions that will benefit our planet for generations
               to come.
             </p>
           </div>
-        </Wrapper>
+        </div>
         <BannerAnimation />
       </div>
 

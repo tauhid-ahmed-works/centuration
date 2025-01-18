@@ -66,7 +66,6 @@ export const navigationLinks: NavigationLink[] = [
   {
     name: "Centurion Foundation",
     href: path.centurionFoundation(),
-    children: businessPaths,
   },
   {
     name: "Media",
