@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import AnimatedCard from "../animate-card";
+import AnimatedCard from "../../../../../components/animate-card";
 
 export default function SustainabilityCommitment() {
   const t = useTranslations("HomePage");

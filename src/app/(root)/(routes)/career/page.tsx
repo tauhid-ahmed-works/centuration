@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 // import { useTranslations } from "next-intl";
 import Image from "next/image";
-import CareerWork from "@/components/career/career-work";
-import JustCareer from "@/components/career/just-career";
-import Accordion from "@/components/career/accordion";
+import CareerWork from "@/app/(root)/(routes)/career/_components/career-work";
+import JustCareer from "./_components/just-career";
+import Accordion from "./_components/accordion";
 import BannerAnimation from "@/components/banner-animation";
 
 export default function businesses() {

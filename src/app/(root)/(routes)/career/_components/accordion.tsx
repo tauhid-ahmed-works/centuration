@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
-import { ChevronDown, ChevronUp } from "../icons";
+import { ChevronDown, ChevronUp } from "@/components/icons";
 import { useTranslations } from "next-intl";
 
 export default function Accordion() {

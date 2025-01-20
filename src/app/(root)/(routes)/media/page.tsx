@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 // import { useTranslations } from "next-intl";
 import Image from "next/image";
-import MediaCard from "@/components/media/media-card";
-import MediaGallery from "@/components/media/media-gallery";
+import MediaCard from "@/app/(root)/(routes)/media/_components/media-card";
+import MediaGallery from "@/app/(root)/(routes)/media/_components/media-gallery";
 import BannerAnimation from "@/components/banner-animation";
 
 export default function MediaPage() {

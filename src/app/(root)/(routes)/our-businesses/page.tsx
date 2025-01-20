@@ -3,12 +3,12 @@ import SectionTitle from "@/components/section-title";
 import Link from "next/link";
 import * as Icons from "@/components/icons";
 import Image from "next/image";
-import BusinessCard from "@/components/business/business-card";
+import BusinessCard from "@/app/(root)/(routes)/our-businesses/_components/business-card";
 // import BannerAnimation from "@/components/shared/banner-animation";
 // import Banner from "@/components/feature/business/banner";
 import { businessCategories } from "@/data/business-category";
 import { bannerData } from "@/data/business/our-businesses";
-import * as Banner from "@/features/carousel/banner";
+import * as Banner from "@/components/carousel/banner";
 import { ExternalLinkIcon } from "@/components/icons";
 
 export default function Businesses() {

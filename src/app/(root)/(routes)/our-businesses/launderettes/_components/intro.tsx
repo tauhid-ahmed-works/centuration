@@ -1,5 +1,5 @@
 "use client";
-import * as Banner from "@/features/carousel/banner";
+import * as Banner from "@/components/carousel/banner";
 import { bannerData } from "@/data/business/launderettes";
 import { ExternalLinkIcon } from "@/components/icons";
 

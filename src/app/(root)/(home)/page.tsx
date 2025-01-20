@@ -1,13 +1,13 @@
 "use client";
-import BusinessCards from "@/components/home/business-cards";
+import BusinessCards from "@/app/(root)/(home)/_components/business-cards";
 import Footer from "@/components/footer";
 import ScrollSnap from "@/components/scroll-snap";
 import { ScrollSnapHome } from "@/components/scroll-button";
-import Sustainability from "@/components/home/sustainability";
-import Innovation from "@/components/home/innovation";
-import CompanyResume from "@/components/home/resume";
+import Sustainability from "@/app/(root)/(home)/_components/sustainability";
+import Innovation from "@/app/(root)/(home)/_components/innovation";
+import CompanyResume from "@/app/(root)/(home)/_components/resume";
 import { bannerData } from "@/data/homepage";
-import * as Banner from "@/features/carousel/banner";
+import * as Banner from "@/components/carousel/banner";
 import { ExternalLinkIcon } from "@/components/icons";
 
 export default function Page() {

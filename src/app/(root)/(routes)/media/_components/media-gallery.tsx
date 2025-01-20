@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "motion/react";
-import SectionTitle from "../section-title";
+import SectionTitle from "../../../../../components/section-title";
 import { useState } from "react";
 import Image from "next/image";
 

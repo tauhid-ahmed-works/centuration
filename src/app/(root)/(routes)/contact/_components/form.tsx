@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Input, TextArea } from "./input-filed/input-field";
+import { Input, TextArea } from "./input-field";
 
 export default function Form() {
   return (

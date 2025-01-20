@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Icons } from "../icons";
+import { Icons } from "@/components/icons";
 
 export default function JustCareer() {
   return (

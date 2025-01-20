@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl";
-import SectionTitle from "../section-title";
+import SectionTitle from "../../../../../components/section-title";
 import Image from "next/image";
 // import Button from "../shared/button";
 import Link from "next/link";
 
 import { mediaData } from "@/data/media-data";
-import AnimatedCard from "../animate-card";
+import AnimatedCard from "../../../../../components/animate-card";
 
 export default function MediaCard() {
   const t = useTranslations("HomePage");
