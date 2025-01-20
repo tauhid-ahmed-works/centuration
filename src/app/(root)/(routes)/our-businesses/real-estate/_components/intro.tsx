@@ -1,7 +1,7 @@
 "use client";
 import { ExternalLinkIcon } from "@/components/icons";
 import * as Banner from "@/components/carousel/banner";
-import { bannerData } from "@/data/business/technology";
+import { bannerData } from "@/data/business/real-state";
 
 export function Intro() {
   return (
