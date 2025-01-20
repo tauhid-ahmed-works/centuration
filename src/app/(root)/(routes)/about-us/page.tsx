@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Centuriation About Page",
 };
 import Image from "next/image";
-import { aboutCards } from "@/data/about-card";
+import { aboutCards } from "@/data/about";
 import BannerAnimation from "@/components/banner-animation";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";

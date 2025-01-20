@@ -1,5 +1,5 @@
 import { use } from "react";
-import { mediaData } from "@/data/media-data";
+import { mediaData } from "@/data/media";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import BannerAnimation from "@/components/banner-animation";

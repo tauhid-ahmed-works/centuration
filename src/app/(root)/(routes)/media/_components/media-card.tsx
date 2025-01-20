@@ -4,7 +4,7 @@ import Image from "next/image";
 // import Button from "../shared/button";
 import Link from "next/link";
 
-import { mediaData } from "@/data/media-data";
+import { mediaData } from "@/data/media";
 import AnimatedCard from "../../../../../components/animate-card";
 
 export default function MediaCard() {
