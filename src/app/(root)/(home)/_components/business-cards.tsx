@@ -1,10 +1,10 @@
 import Image from "next/image";
-import SectionTitle from "../../../../components/section-title";
-import { ArrowLong } from "../../../../components/icons";
-import AnimatedCard from "../../../../components/animate-card";
+import { ArrowLong } from "@/components/icons";
+import AnimatedCard from "@/components/animate-card";
 
 import { businessCategories } from "@/data/business-category";
 import Link from "next/link";
+import { Heading } from "@/components/heading";
 
 export default function BusinessCards() {
   return (
@@ -12,7 +12,9 @@ export default function BusinessCards() {
       <div className="container px-10 md:px-20">
         <div className="mb-8">
           <div className="max-w-[60ch] mx-auto">
-            <SectionTitle className="mb-10">Our Businesses</SectionTitle>
+            <Heading as="h2" className="mb-10">
+              Our Businesses
+            </Heading>
             <p>
               As a diversified conglomerate, our interest in multiple sectors
               indicates our determination to cater to our vision of providing

@@ -31,10 +31,11 @@ export function Heading({
     {
       "text-sm": size === "sm",
       "text-base": size === "base",
-      "text-2xl md:3.5xl": size === "3.5xl",
-      "text-3xl md:4xl": size === "4xl",
-      "text-3.5xl md:4.5xl": size === "4.5xl",
-      "text-3xl md:text-4xl lg:text-5xl": size === "5xl",
+      "text-base md:text-2xl lg:text-3xl": size === "3xl",
+      "text-2xl md:text-3.5xl": size === "3.5xl",
+      "text-3xl md:text-4xl": size === "4xl",
+      "text-3.5xl md:text-4.5xl": size === "4.5xl",
+      "text-2xl md:text-4xl lg:text-5xl md:leading-relaxed": size === "5xl",
       "text-4xl md:text-5xl lg:text-6.5xl !leading-snug": size === "6.5xl",
     },
     className

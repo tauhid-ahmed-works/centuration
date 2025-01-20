@@ -1,14 +1,14 @@
 import Image from "next/image";
-import SectionTitle from "@/components/section-title";
 import { Button } from "@/components/ui/button";
+import { Heading } from "@/components/heading";
 
 export default function Invitation() {
   return (
     <div className="py-16 grid place-items-center bg-gray-50 min-h-screen">
       <div className="container space-y-6">
-        <SectionTitle className="mb-14 leading-tight">
+        <Heading as="h2" className="mb-14 leading-tight">
           Join Our World of Innovation
-        </SectionTitle>
+        </Heading>
         <div className="md:flex md:gap-10 items-center">
           <div className="md:flex-1 w-full">
             <Image

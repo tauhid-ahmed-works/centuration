@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Typography } from "@/components/typography";
 import Link from "next/link";
+import { Heading } from "@/components/heading";
 
 export default function CompanyResume() {
   return (
@@ -21,9 +21,9 @@ export default function CompanyResume() {
               width={100}
               height={100}
             />
-            <Typography.H2 className="text-gray-800">
+            <Heading as="h2" className="text-gray-800">
               Impacting <span className="text-red-600">lives</span>
-            </Typography.H2>
+            </Heading>
             <p className="text-sm">
               Since its incorporation in 1994, the Aliko Dangote Foundation has
               worked hard to enhance opportunities for social change through
