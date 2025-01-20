@@ -1,0 +1,38 @@
+export const bannerData = [
+  {
+    id: "1",
+    title: "Nutriagro Overseas",
+    content: "Heritage of Quality . Purity . Trust",
+    imageLink: "/assets/images/business/commodities/banner/image-01.png",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+  {
+    id: "2",
+    title: "Ct-cube mobile ct-solutions for clinics and practices",
+    content: "Medical Service",
+    imageLink: "/assets/images/business/medical-service/banner/image-01.png",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+  {
+    id: "3",
+    title: "Leading the Way in Ice Vending Machine Across the World.",
+    content: "Rebus Ice Vending Machine",
+    imageLink: "/assets/images/business/ice-ivoire/banner/image-01.png",
+    videLink: "/",
+    href: "#",
+    slide: "image",
+  },
+  {
+    id: "4",
+    title: "CHAP-CHAP PARTOUT ET ENTOUT TEMPS!",
+    content: "Chap-chap",
+    imageLink: "/assets/images/business/launderettes/banner/image-01.webp",
+    videLink: "/",
+    href: "#",
+    slide: "image",
+  },
+];

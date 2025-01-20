@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 };
 import Image from "next/image";
 import { aboutCards } from "@/data/about-card";
-import BannerAnimation from "@/components/shared/banner-animation";
-import Button from "@/components/shared/button";
+import BannerAnimation from "@/components/banner-animation";
+import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
 
 export default function Page() {

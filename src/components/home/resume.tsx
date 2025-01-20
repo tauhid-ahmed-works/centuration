@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Wrapper from "@/components/layout/wrapper";
-import { Typography } from "@/components/shared/typography";
+import { Typography } from "@/components/typography";
 import Link from "next/link";
 
 export default function CompanyResume() {
@@ -14,7 +13,7 @@ export default function CompanyResume() {
           width={1920}
           height={1080}
         />
-        <Wrapper className="z-10 relative rounded">
+        <div className="container z-10 relative rounded">
           <div className="py-14 px-10 md:px-20 bg-gray-100 w-full max-w-[600px] space-y-4">
             <Image
               src="/assets/icons/logo.webp"
@@ -41,7 +40,7 @@ export default function CompanyResume() {
               Learn More
             </Link>
           </div>
-        </Wrapper>
+        </div>
       </div>
     </div>
   );

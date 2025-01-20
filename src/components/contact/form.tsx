@@ -1,4 +1,4 @@
-import Button from "../shared/button";
+import { Button } from "@/components/ui/button";
 import { Input, TextArea } from "./input-filed/input-field";
 
 export default function Form() {

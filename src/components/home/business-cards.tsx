@@ -1,7 +1,7 @@
 import Image from "next/image";
-import SectionTitle from "../shared/section-title";
+import SectionTitle from "../section-title";
 import { ArrowLong } from "../icons";
-import AnimatedCard from "../shared/animate-card";
+import AnimatedCard from "../animate-card";
 
 import { businessCategories } from "@/data/business-category";
 import Link from "next/link";

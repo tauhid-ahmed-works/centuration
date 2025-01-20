@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Wrapper from "../layout/wrapper";
-import { cn } from "@/libs/utils/cn";
+import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp } from "../icons";
 import { useTranslations } from "next-intl";
 
@@ -31,7 +30,7 @@ export default function Accordion() {
   const [openAccordion, setOpenAccordion] = useState(1);
 
   return (
-    <Wrapper>
+    <div className="container">
       <div className="max-w-3xl w-full mx-auto my-10 [&>:not(:last-child)]:border-b-2 border-gray-100">
         {accordionsData.map((accordion) => (
           <div className="" key={accordion.id}>
@@ -75,6 +74,6 @@ export default function Accordion() {
           </div>
         ))}
       </div>
-    </Wrapper>
+    </div>
   );
 }

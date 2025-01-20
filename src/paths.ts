@@ -4,7 +4,7 @@ export const aboutUs = () => "/about-us";
 
 export const ourBusinesses = () => "/our-businesses";
 export const businessTechnologies = () => "/our-businesses/technologies";
-export const businessMedicalServices = () => "/our-businesses/";
+export const businessMedicalServices = () => "/our-businesses/medical-services";
 export const businessLaunderettes = () => "/our-businesses/launderettes";
 export const businessIceIvoire = () => "/our-businesses/ice-ivoire";
 export const businessCommodities = () => "/our-businesses/commodities";

@@ -2,7 +2,7 @@ import { use } from "react";
 import { mediaData } from "@/data/media-data";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import BannerAnimation from "@/components/shared/banner-animation";
+import BannerAnimation from "@/components/banner-animation";
 
 export default function Media(props: { params: Promise<{ mid: string }> }) {
   const params = use(props.params);

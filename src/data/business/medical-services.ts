@@ -1,26 +1,25 @@
-export const banner = {
-  section: 1,
-  data: [
-    {
-      id: 1,
-      title: "Ct-cube mobile ct-solutions for clinics and practices",
-      // content: "Rebus Ice Vending Machine",
-      detailsLink: "/",
-      imageLink: "/",
-      videLink: "/",
-      contact: false,
-    },
-    {
-      id: 1,
-      title: "Ct-cube mobile ct-solutions for clinics and practices",
-      // content: "Rebus Ice Vending Machine",
-      detailsLink: "/",
-      imageLink: "/",
-      videLink: "/",
-      contact: false,
-    },
-  ],
-};
+export const bannerData = [
+  {
+    id: "1",
+    title: "Ct-cube mobile ct-solutions for clinics and practices",
+    content: "Medical Service",
+    detailsLink: "/",
+    imageLink: "/assets/images/business/medical-service/banner/image-01.png",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+  {
+    id: "2",
+    title: "Ct-cube mobile ct-solutions for clinics and practices",
+    content: "Medical Service",
+    detailsLink: "/",
+    imageLink: "/assets/images/business/medical-service/banner/image-01.png",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+];
 
 export const rentScanner = {
   section: 2,

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 import { Heading } from "./heading";
 
 export default function NewsLetter() {

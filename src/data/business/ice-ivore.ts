@@ -1,26 +1,23 @@
-export const banner = {
-  section: 1,
-  data: [
-    {
-      id: 1,
-      title: "Leading the Way in Ice Vending Machine Across the World.",
-      content: "Rebus Ice Vending Machine",
-      detailsLink: "/",
-      imageLink: "/",
-      videLink: "/",
-      contact: true,
-    },
-    {
-      id: 2,
-      title: "Leading the Way in Ice Vending Machine Across the World.",
-      content: "Rebus Ice Vending Machine",
-      detailsLink: "/",
-      imageLink: "/",
-      videLink: "/",
-      contact: true,
-    },
-  ],
-};
+export const bannerData = [
+  {
+    id: "1",
+    title: "Leading the Way in Ice Vending Machine Across the World.",
+    content: "Rebus Ice Vending Machine",
+    imageLink: "/assets/images/business/ice-ivoire/banner/image-01.png",
+    videLink: "/",
+    href: "#",
+    slide: "image",
+  },
+  {
+    id: "2",
+    title: "Leading the Way in Ice Vending Machine Across the World.",
+    content: "Rebus Ice Vending Machine",
+    imageLink: "/assets/images/business/ice-ivoire/banner/image-01.png",
+    videLink: "/",
+    href: "#",
+    slide: "image",
+  },
+];
 
 export const whyInvest = {
   section: 2,

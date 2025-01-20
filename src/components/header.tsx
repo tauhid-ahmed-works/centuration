@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import { LucideAlignRight, LucideChevronRight, LucideX } from "lucide-react";
 import { navigationLinks, type NavigationLink } from "@/data/global/navigation";
 import { NavLink } from "./navlink";
@@ -11,7 +11,7 @@ import { UnitedStates } from "./icons";
 import { cn } from "@/lib/utils";
 import { useWindowSize, useClickAway } from "@/hooks";
 import * as path from "@/paths";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 
 const BREAKPOINT = 1024;
 
@@ -33,17 +33,17 @@ const sidebarVariants = {
   },
 };
 
-const subMenuVariants = {
+const subMenuVariants: Variants = {
   initial: (isDesktop: boolean) => ({
     height: !isDesktop ? 0 : "auto",
     y: isDesktop ? 20 : 0,
     opacity: 0,
   }),
-  animate: () => ({
+  animate: {
     height: "auto",
     y: 0,
     opacity: 1,
-  }),
+  },
   exit: (isDesktop: boolean) => ({
     height: !isDesktop ? 0 : "auto",
     y: isDesktop ? 20 : 0,
@@ -111,14 +111,13 @@ export function Header() {
           )}
         </AnimatePresence>
         <div className="flex gap-2">
-          <Button variant="secondary" size="icon" impact="ghost">
+          <Button variant="ghost" size="icon">
             <UnitedStates />
           </Button>
           {!isDesktop && (
             <Button
-              variant="secondary"
+              variant="ghost"
               size="icon"
-              impact="ghost"
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
             >
               {isMobileNavOpen ? (

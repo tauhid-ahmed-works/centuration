@@ -657,6 +657,23 @@ export function ArrowRight({ ...props }) {
     </svg>
   );
 }
+export function ExternalLinkIcon({ ...props }) {
+  return (
+    <svg
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M1.115.412h12.353m0 0v12.353m0-12.353L.292 13.588"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeMiterlimit={10}
+      />
+    </svg>
+  );
+}
 
 export default ArrowRight;
 

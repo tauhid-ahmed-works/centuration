@@ -1,4 +1,4 @@
-import { Typography } from "@/components/shared/typography";
+import { Typography } from "@/components/typography";
 import Link from "next/link";
 
 export default function CenturionFondation() {

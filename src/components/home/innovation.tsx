@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Wrapper from "@/components/layout/wrapper";
-import SectionTitle from "@/components/shared/section-title";
-import Button from "@/components/shared/button";
+import SectionTitle from "@/components/section-title";
+import { Button } from "@/components/ui/button";
 
 export default function Invitation() {
   return (

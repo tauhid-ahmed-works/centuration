@@ -1,18 +1,17 @@
 import { useTranslations } from "next-intl";
-import SectionTitle from "../shared/section-title";
-import Wrapper from "../layout/wrapper";
+import SectionTitle from "../section-title";
 import Image from "next/image";
 // import Button from "../shared/button";
 import Link from "next/link";
 
 import { mediaData } from "@/data/media-data";
-import AnimatedCard from "../shared/animate-card";
+import AnimatedCard from "../animate-card";
 
 export default function MediaCard() {
   const t = useTranslations("HomePage");
   return (
     <section className="py-10 md:pt-20 md:pb-14">
-      <Wrapper>
+      <div className="container">
         <SectionTitle className="mb-10">
           {t("media_page_main_title_news_update")}
         </SectionTitle>
@@ -89,7 +88,7 @@ export default function MediaCard() {
             </AnimatedCard>
           ))}
         </div>
-      </Wrapper>
+      </div>
     </section>
   );
 }

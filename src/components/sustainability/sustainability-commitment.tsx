@@ -1,14 +1,13 @@
 import React from "react";
-import Wrapper from "../layout/wrapper";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import AnimatedCard from "../shared/animate-card";
+import AnimatedCard from "../animate-card";
 
 export default function SustainabilityCommitment() {
   const t = useTranslations("HomePage");
   return (
     <section className="py-10 sm:px-10 md:px-0 md:py-16 md:mb-20">
-      <Wrapper>
+      <div className="container">
         <div className="md:flex md:gap-10 items-center py-10">
           <div className="md:flex-1 my-5">
             <AnimatedCard className="space-y-6" index={0}>
@@ -32,7 +31,7 @@ export default function SustainabilityCommitment() {
             </AnimatedCard>
           </div>
         </div>
-      </Wrapper>
+      </div>
     </section>
   );
 }

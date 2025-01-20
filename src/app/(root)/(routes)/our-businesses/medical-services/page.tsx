@@ -1,11 +1,11 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { businessCategories } from "@/data/business-category";
-import { Icons } from "@/components/icons";
-import { Typography } from "@/components/shared/typography";
-import Wrapper from "@/components/layout/wrapper";
-import CTA from "@/components/shared/cta";
-import MedCarousel from "@/components/feature/business/med/banner";
+import { ExternalLinkIcon, Icons } from "@/components/icons";
+import { Typography } from "@/components/typography";
+import CTA from "@/components/cta";
+import * as Banner from "@/features/carousel/banner";
+import { bannerData } from "@/data/business/medical-services";
 
 export default function MedicalServicePage() {
   const pathname = usePathname();
@@ -13,8 +13,30 @@ export default function MedicalServicePage() {
 
   return (
     <>
-      <MedCarousel />
-      <Wrapper>
+      <Banner.Carousel
+        data={bannerData}
+        duration={3}
+        render={(bannerData: Record<string, string>) => (
+          <Banner.Item>
+            {bannerData.slide === "video" ? (
+              <Banner.MediaVideo mediaLink={bannerData.videoLink} />
+            ) : (
+              <Banner.MediaImage
+                alt={bannerData.title}
+                mediaLink={bannerData.imageLink}
+              />
+            )}
+            <Banner.Container>
+              <Banner.Title>{bannerData.title}</Banner.Title>
+              <Banner.Description>{bannerData.content}</Banner.Description>
+              <Banner.CTA route={bannerData.href}>
+                Learn More <ExternalLinkIcon className="!size-3" />
+              </Banner.CTA>
+            </Banner.Container>
+          </Banner.Item>
+        )}
+      />
+      <div className="container">
         <section className="py-14">
           <Typography.H2 className="max-w-[20ch] mb-4">
             {data?.sections && data?.sections[1].title}
@@ -27,7 +49,9 @@ export default function MedicalServicePage() {
             </div>
 
             <div className="lg:col-span-5">
-              <Typography.H3>{data?.sections && data?.sections[2]?.title}</Typography.H3>
+              <Typography.H3>
+                {data?.sections && data?.sections[2]?.title}
+              </Typography.H3>
 
               <div className="space-y-2">
                 <ul className="pt-8 pb-10 space-y-1">
@@ -74,7 +98,7 @@ export default function MedicalServicePage() {
             </ul>
           </div>
         </section>
-      </Wrapper>
+      </div>
     </>
   );
 }

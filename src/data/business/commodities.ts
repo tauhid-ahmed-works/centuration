@@ -1,26 +1,25 @@
-export const banner = {
-  section: 1,
-  data: [
-    {
-      id: 1,
-      title: "Nutriagro Overseas",
-      content: "Heritage of Quality . Purity . Trust",
-      detailsLink: "/",
-      imageLink: "/",
-      videLink: "/",
-      contact: false,
-    },
-    {
-      id: 1,
-      title: "Nutriagro Overseas",
-      content: "Heritage of Quality . Purity . Trust",
-      detailsLink: "/",
-      imageLink: "/",
-      videLink: "/",
-      contact: false,
-    },
-  ],
-};
+export const bannerData = [
+  {
+    id: "1",
+    title: "Nutriagro Overseas",
+    content: "Heritage of Quality . Purity . Trust",
+    detailsLink: "/",
+    imageLink: "/assets/images/business/commodities/banner/image-01.png",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+  {
+    id: "2",
+    title: "Nutriagro Overseas",
+    content: "Heritage of Quality . Purity . Trust",
+    detailsLink: "/",
+    imageLink: "/assets/images/business/commodities/banner/image-01.png",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+];
 
 export const aboutNutriagro = {
   section: 2,

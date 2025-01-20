@@ -8,7 +8,7 @@ import React, {
   createContext,
   ReactElement,
 } from "react";
-import { cn } from "@/libs/utils/cn";
+import { cn } from "@/lib/utils";
 import { useConfig } from "@/context/config-context";
 
 // Props for ScrollSnap component

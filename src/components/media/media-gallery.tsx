@@ -1,7 +1,6 @@
 "use client";
-import Wrapper from "../layout/wrapper";
 import { AnimatePresence, motion } from "motion/react";
-import SectionTitle from "../shared/section-title";
+import SectionTitle from "../section-title";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -110,7 +109,7 @@ export default function MediaGallery() {
 
   return (
     <div className="py-10 relative">
-      <Wrapper>
+      <div className="container">
         <div className="rounded relative">
           <SectionTitle className="mb-6">Gallery</SectionTitle>
           <ul className="flex gap-2 justify-center mb-14 sticky lg:static top-20 z-20 backdrop-blur-3xl py-4 rounded text-xs sm:text-md md:text-base">
@@ -164,7 +163,7 @@ export default function MediaGallery() {
             </AnimatePresence>
           </div>
         </div>
-      </Wrapper>
+      </div>
     </div>
   );
 }
