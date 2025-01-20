@@ -16,7 +16,7 @@ export function NavLink({ href, children, className = "" }: NavLinkProps) {
   return (
     <Link
       className={cn(
-        "hover:text-primary-500 transition-colors",
+        "hover:text-primary-500 transition-colors cursor-pointer",
         { "text-primary-500": isActive },
         className
       )}

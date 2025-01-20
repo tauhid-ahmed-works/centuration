@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading } from "./heading";
+import Link from "next/link";
 
 export default function NewsLetter() {
   return (
@@ -20,10 +21,15 @@ export default function NewsLetter() {
           <input
             placeholder="Enter your email"
             type="text"
-            className="rounded-full w-60 lg:w-96 bg-transparent"
+            className="rounded-full w-60 lg:w-96 text-white bg-transparent"
           />
-          <Button shape="pill" size="lg">
-            Try Now
+          <Button
+            asChild
+            className="rounded-full"
+            variant="secondary"
+            size="lg"
+          >
+            <Link href="#">Try Now</Link>
           </Button>
         </form>
       </div>

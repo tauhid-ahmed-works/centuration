@@ -1,7 +1,7 @@
 import { Typography } from "@/components/typography";
 import Link from "next/link";
 
-export default function CenturionFondation() {
+export default function CenturionFoundation() {
   return (
     <div className="h-screen bg-gray-950 grid place-items-center">
       <div className="text-white text-center space-y-6">

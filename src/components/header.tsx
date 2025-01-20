@@ -171,7 +171,7 @@ function NavigationMenu({
               </button>
             ) : (
               <NavLink
-                className="py-1 inline-block whitespace-nowrap"
+                className="py-1 inline-block whitespace-nowrap cursor-pointer"
                 href={path.href}
               >
                 {path.name}
