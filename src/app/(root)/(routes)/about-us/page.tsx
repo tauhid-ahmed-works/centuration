@@ -9,38 +9,12 @@ import { aboutCards } from "@/data/about";
 import BannerAnimation from "@/components/banner-animation";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
+import { Intro } from "./_components/intro";
 
 export default function Page() {
   return (
     <>
-      <div className="h-screen text-white relative flex items-center">
-        <Image
-          src="/assets/images/about/about-team.webp"
-          className="w-full h-full object-cover absolute"
-          alt="about team"
-          width="1920"
-          height="1080"
-        />
-        <div className="absolute inset-0 w-full h-full bg-black/70"></div>
-        <div className="container relative text-white z-10">
-          <div className="max-w-[60ch]">
-            <Heading as="h1" size="base">
-              About Us
-            </Heading>
-            <Heading size="4.5xl" as="h2">
-              Premier Service Provider
-            </Heading>
-            <p className="mt-4">
-              Providing Your Basic Needs With our transformational projects and
-              businesses across food, shelter and construction, Centurion Group
-              continues to grow its vision of becoming the leading provider of
-              essential services and needs in Africa.
-            </p>
-          </div>
-        </div>
-        <BannerAnimation />
-      </div>
-
+      <Intro />
       <section className="mt-20 mb-40 md:mb-0">
         <div className="container">
           <div className="text-center">

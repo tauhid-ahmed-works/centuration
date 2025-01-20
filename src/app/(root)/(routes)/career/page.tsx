@@ -6,11 +6,10 @@ export const metadata: Metadata = {
 };
 
 // import { useTranslations } from "next-intl";
-import Image from "next/image";
 import CareerWork from "@/app/(root)/(routes)/career/_components/career-work";
 import JustCareer from "./_components/just-career";
 import Accordion from "./_components/accordion";
-import BannerAnimation from "@/components/banner-animation";
+import { Intro } from "./_components/intro";
 
 export default function businesses() {
   // const t = useTranslations("HomePage");
@@ -48,32 +47,7 @@ export default function businesses() {
 
   return (
     <>
-      <div className="h-screen relative w-full flex items-center">
-        <div className="absolute w-full h-full">
-          <Image
-            width={2000}
-            height={2000}
-            src="/assets/images/career/career-coverd-photo.webp"
-            className="w-full h-full object-cover"
-            alt="career-cover-photo"
-          ></Image>
-        </div>
-        <div className="absolute inset-0 w-full h-full bg-black/60"></div>
-
-        <div className="container relative text-white font-semibold">
-          <div className="max-w-[65ch] rounded font-semibold">
-            <h1 className="">Career</h1>
-            <h2 className="text-4.5xl mt-2 leading-none">
-              Join our world of innovation
-            </h2>
-            <p className="mt-4 text-md leading-tight">
-              Explore limitless career opportunities where innovation and
-              teamwork shape the future
-            </p>
-          </div>
-        </div>
-        <BannerAnimation />
-      </div>
+      <Intro />
 
       <CareerWork />
       <JustCareer />

@@ -111,13 +111,18 @@ export function Header() {
           )}
         </AnimatePresence>
         <div className="flex gap-2">
-          <Button variant="ghost" size="icon">
+          <Button
+            className="hover:bg-white/10 hover:text-white"
+            variant="ghost"
+            size="icon"
+          >
             <UnitedStates />
           </Button>
           {!isDesktop && (
             <Button
               variant="ghost"
               size="icon"
+              className="hover:bg-white/10 hover:text-white"
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
             >
               {isMobileNavOpen ? (

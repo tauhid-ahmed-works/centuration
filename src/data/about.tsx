@@ -1,3 +1,17 @@
+export const bannerData = [
+  {
+    id: "1",
+    title: "Premier Service Provider",
+    content:
+      "Providing Your Basic Needs With our transformational projects and businesses across food, shelter and construction, Centurion Group continues to grow its vision of becoming the leading provider of essential services and needs in Africa.",
+    detailsLink: "/",
+    imageLink: "/assets/images/about/banner/image-01.webp",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+];
+
 export const aboutCards = [
   {
     id: 1,

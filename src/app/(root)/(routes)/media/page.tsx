@@ -6,42 +6,15 @@ export const metadata: Metadata = {
 };
 
 // import { useTranslations } from "next-intl";
-import Image from "next/image";
 import MediaCard from "@/app/(root)/(routes)/media/_components/media-card";
 import MediaGallery from "@/app/(root)/(routes)/media/_components/media-gallery";
-import BannerAnimation from "@/components/banner-animation";
+import { Intro } from "./_components/intro";
 
 export default function MediaPage() {
   // const t = useTranslations("HomePage");
   return (
     <>
-      <div className="h-screen relative w-full flex items-center">
-        <div className="absolute w-full h-full">
-          <Image
-            width={2000}
-            height={2000}
-            src="/assets/images/media/media-page-coverd-photo.webp"
-            className="w-full h-full object-cover"
-            alt={""}
-          ></Image>
-        </div>
-        <div className="absolute inset-0 w-full h-full bg-black/60"></div>
-
-        <div className="container relative text-white">
-          <div className="max-w-[65ch] rounded font-semibold">
-            <h1 className="">Media</h1>
-            <h2 className="text-4.5xl mt-2 leading-none">
-              Stay Informed with Centurion
-            </h2>
-            <p className="mt-4 text-md leading-tight">
-              Explore the latest insights, news, and developments from
-              Centurion. Stay up-to-date with industry trends, business
-              innovations, and our journey towards excellence.
-            </p>
-          </div>
-        </div>
-        <BannerAnimation />
-      </div>
+      <Intro />
       <MediaCard />
       <MediaGallery />
     </>

@@ -1,3 +1,17 @@
+export const bannerData = [
+  {
+    id: "1",
+    title: "Stay Informed with Centurion",
+    content:
+      "Explore the latest insights, news, and developments from Centurion. Stay up-to-date with industry trends, business innovations, and our journey towards excellence.",
+    detailsLink: "/",
+    imageLink: "/assets/images/media/banner/image-01.webp",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+];
+
 export const mediaData = [
   {
     id: 1,

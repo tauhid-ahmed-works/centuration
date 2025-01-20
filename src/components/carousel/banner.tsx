@@ -97,7 +97,7 @@ export function Carousel({
       onPointerEnter={() => setPaused(true)}
       onPointerLeave={() => setPaused(false)}
     >
-      <AnimatePresence custom={direction}>
+      <AnimatePresence initial={false} custom={direction}>
         <motion.div
           dragConstraints={containerRef}
           key={currentIndex}
