@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { businessCategories } from "@/data/business-category";
-import { ExternalLinkIcon, Icons } from "@/components/icons";
+import { Icons } from "@/components/icons";
 import { Typography } from "@/components/typography";
 import CTA from "@/components/cta";
 import { Intro } from "./_components/intro";

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
 };
 import Image from "next/image";
 import { aboutCards } from "@/data/about";
-import BannerAnimation from "@/components/banner-animation";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
 import { Intro } from "./_components/intro";
