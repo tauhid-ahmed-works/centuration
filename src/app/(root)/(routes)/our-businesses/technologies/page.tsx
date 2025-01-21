@@ -1,9 +1,10 @@
-import Intro from "./_components/intro";
+import { bannerData } from "@/data/business/technology";
+import { Hero } from "@/components/hero";
 
 export default function TechnologyPage() {
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
     </>
   );
 }

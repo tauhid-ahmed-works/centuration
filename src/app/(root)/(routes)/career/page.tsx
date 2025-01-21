@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 import CareerWork from "@/app/(root)/(routes)/career/_components/career-work";
 import JustCareer from "./_components/just-career";
 import Accordion from "./_components/accordion";
-import { Intro } from "./_components/intro";
+import { bannerData } from "@/data/career";
+import { Hero } from "@/components/hero";
 
 export default function businesses() {
   // const t = useTranslations("HomePage");
@@ -47,7 +48,7 @@ export default function businesses() {
 
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
 
       <CareerWork />
       <JustCareer />

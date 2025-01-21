@@ -23,12 +23,7 @@ export default function NewsLetter() {
             type="text"
             className="rounded-full w-60 lg:w-96 text-white bg-transparent"
           />
-          <Button
-            asChild
-            className="rounded-full"
-            variant="secondary"
-            size="lg"
-          >
+          <Button asChild variant="primary" shape="pill" size="md">
             <Link href="#">Try Now</Link>
           </Button>
         </form>

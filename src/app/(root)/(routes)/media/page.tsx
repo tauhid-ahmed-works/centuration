@@ -8,13 +8,14 @@ export const metadata: Metadata = {
 // import { useTranslations } from "next-intl";
 import MediaCard from "@/app/(root)/(routes)/media/_components/media-card";
 import MediaGallery from "@/app/(root)/(routes)/media/_components/media-gallery";
-import { Intro } from "./_components/intro";
+import { bannerData } from "@/data/media";
+import { Hero } from "@/components/hero";
 
 export default function MediaPage() {
   // const t = useTranslations("HomePage");
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
       <MediaCard />
       <MediaGallery />
     </>

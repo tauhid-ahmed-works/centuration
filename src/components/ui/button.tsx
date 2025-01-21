@@ -1,77 +1,74 @@
-import * as React from "react";
+import { ComponentProps } from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { cva, type VariantProps } from "class-variance-authority";
-
 import { cn } from "@/lib/utils";
 
-const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 font-semibold align-middle",
-  {
-    variants: {
-      variant: {
-        default:
-          "bg-white text-black uppercase shadow before:absolute before:inset-px before:border before:border-black relative hover:opacity-80",
-        destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-        outline:
-          "border text-white bg-transparent border-white shadow-sm hover:opacity-80",
-        secondary:
-          "bg-primary-500 text-white shadow-sm hover:bg-primary-500/80 shadow",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        primary: {
-          tone: {
-            default: "bg-red-500",
-          },
-        },
-      },
-      size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        md: "h-10 lg:h-12 rounded-md px-4 lg:px-10 text",
-        lg: "h-14 rounded-md px-14",
-        icon: "h-9 w-9",
-      },
-      shape: {
-        default: "rounded-md",
-        square: "rounded-none",
-      },
-      decorate: {
-        default: "outline outline-primary-500 outline-offset-2",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "lg",
-      shape: "square",
-    },
-  }
-);
+// Make all custom props optional by adding ? to each property
+export type ButtonProps = ComponentProps<"button"> & {
+  variant?: "primary" | "secondary" | "danger";
+  contrast?: "bold" | "medium" | "light" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  shape?: "square" | "sm" | "md" | "lg" | "pill";
+};
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+export type ButtonVariants = Partial<
+  Record<
+    NonNullable<ButtonProps["variant"]>,
+    Partial<Record<NonNullable<ButtonProps["contrast"]>, string>>
+  >
+>;
+export type ButtonSizes = Partial<
+  Record<NonNullable<ButtonProps["size"]>, string>
+>;
+export type ButtonShapes = Partial<
+  Record<NonNullable<ButtonProps["shape"]>, string>
+>;
+
+const buttonVariants: ButtonVariants = {
+  primary: {
+    bold: "bg-primary-500 text-white",
+    medium: "bg-white text-green-900",
+    outline: "text-primary-500 border border-primary-500",
+  },
+  secondary: {
+    bold: "bg-white text-black relative before:absolute before:inset-px before:border before:border-black",
+    medium: "bg-white text-black",
+    outline: "text-white border border-white",
+  },
+};
+
+const buttonSizes: ButtonSizes = {
+  sm: "h-10 px-6",
+  md: "h-12 px-8",
+  lg: "h-12 lg:h-14 px-8 lg:px-10",
+};
+
+const buttonShapes: ButtonShapes = {
+  square: "rounded-none",
+  sm: "rounded-sm",
+  md: "rounded",
+  lg: "rounded-lg",
+  pill: "rounded-full",
+};
+
+const baseClasses =
+  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden";
+
+export function Button({
+  variant = "primary",
+  contrast = "bold",
+  size = "lg",
+  shape = "square",
+  className,
+  asChild,
+  ...props
+}: ButtonProps & { asChild?: boolean }) {
+  const Comp = asChild ? Slot : "button";
+  const classnames = cn(
+    baseClasses,
+    buttonVariants[variant]?.[contrast],
+    buttonShapes[shape],
+    buttonSizes[size],
+    className
+  );
+  return <Comp className={classnames} {...props} />;
 }
-
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    { className, variant, size, shape, decorate, asChild = false, ...props },
-    ref
-  ) => {
-    const Comp = asChild ? Slot : "button";
-
-    return (
-      <Comp
-        className={cn(
-          buttonVariants({ variant, size, shape, decorate, className })
-        )}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
-Button.displayName = "Button";
-
-export { Button, buttonVariants };

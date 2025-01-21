@@ -32,7 +32,7 @@ export const bannerData = [
   {
     id: "4",
     imageLink: "",
-    videoLink: "/assets/images/homepage/banner/video-04.mp4",
+    videoLink: "/assets/images/homepage/banner/video-02.mp4",
     title: "African solutions to African challenges",
     content:
       "As an African diversified conglomerate, our interest in multiple industries indicates our determination to cater to our vision of providing basic needs.",

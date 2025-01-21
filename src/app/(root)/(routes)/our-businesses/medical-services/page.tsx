@@ -1,16 +1,16 @@
-import { Icons } from "@/components/icons";
-import { Intro } from "./_components/intro";
 import * as data from "@/data/business/medical-services";
 import { Heading } from "@/components/heading";
 import DecorateLine from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { LucideArrowRight, LucideFileDown } from "lucide-react";
 import Image from "next/image";
+import { bannerData } from "@/data/business/medical-services";
+import { Hero } from "@/components/hero";
 
 export default function MedicalServicePage() {
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
       {/* Scanner Section */}
       <section className="section mt-10 md:mt-20 lg:mt-30">
         <div className="container">
@@ -30,8 +30,8 @@ export default function MedicalServicePage() {
                 {data.rentScanner.description}
               </p>
               <Button
-                size="lg"
-                variant="outline"
+                variant="primary"
+                contrast="outline"
                 className="mt-7 border-primary-500 text-primary-500 font-bold w-48"
               >
                 Contact
@@ -207,13 +207,13 @@ export default function MedicalServicePage() {
                   </li>
                 </ul>
                 <div className="flex gap-2 mt-4">
-                  <Button variant="secondary" size="md">
+                  <Button variant="primary" size="md">
                     Details
                   </Button>
                   <Button
-                    variant="primary"
+                    className="before:inset-0"
+                    variant="secondary"
                     size="md"
-                    className="border border-secondary-900"
                   >
                     Inquire
                   </Button>

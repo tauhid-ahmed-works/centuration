@@ -1,9 +1,10 @@
-import { Intro } from "./_components/intro";
+import { bannerData } from "@/data/business/launderettes";
+import { Hero } from "@/components/hero";
 
 export default function LaunderettesPage() {
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
     </>
   );
 }

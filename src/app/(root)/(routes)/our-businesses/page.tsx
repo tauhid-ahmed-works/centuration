@@ -5,7 +5,7 @@ import Image from "next/image";
 import BusinessCard from "./_components/business-card";
 import { businessCategory } from "@/data/business/our-businesses";
 import { bannerData } from "@/data/business/our-businesses";
-import * as Banner from "@/components/carousel/banner";
+import * as Banner from "@/components/carousel/carousel";
 import { ExternalLinkIcon } from "@/components/icons";
 import { Heading } from "@/components/heading";
 

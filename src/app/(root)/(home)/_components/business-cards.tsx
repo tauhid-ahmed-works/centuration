@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { ArrowLong } from "@/components/icons";
+import Link from "next/link";
 import AnimatedCard from "@/components/animate-card";
 
 import { businessCategory } from "@/data/business/our-businesses";
-import Link from "next/link";
 import { Heading } from "@/components/heading";
+import { Button } from "@/components/ui/button";
+import { ourBusinesses } from "@/paths";
 
 export default function BusinessCards() {
   return (
@@ -45,19 +46,9 @@ export default function BusinessCards() {
           ))}
         </div>
         <div className="text-center pt-10">
-          <div className="inline-block overflow-hidden rounded shadow-xl group">
-            <Link
-              className="bg-white text-gray-850 inline-flex justify-between"
-              href="/businesses"
-            >
-              <span className="inline-flex px-4 items-center text-sm font-semibold">
-                See All
-              </span>
-              <span className="inline-flex items-center justify-center shrink-0 bg-gray-850 text-white size-14">
-                <ArrowLong className="size-5 group-hover:animate-bouncex" />
-              </span>
-            </Link>
-          </div>
+          <Button variant="secondary" contrast="bold" asChild>
+            <Link href={ourBusinesses()}>See All</Link>
+          </Button>
         </div>
       </div>
     </div>

@@ -7,46 +7,14 @@ import Sustainability from "@/app/(root)/(home)/_components/sustainability";
 import Innovation from "@/app/(root)/(home)/_components/innovation";
 import CompanyResume from "@/app/(root)/(home)/_components/resume";
 import { bannerData } from "@/data/homepage";
-import * as Banner from "@/components/carousel/banner";
-import { ExternalLinkIcon } from "@/components/icons";
+import { Hero } from "@/components/hero";
 
 export default function Page() {
   return (
     <div className="z-30">
       <ScrollSnap>
         <ScrollSnap.Group>
-          <>
-            <Banner.Carousel
-              data={bannerData}
-              duration={40}
-              render={(bannerData: Record<string, string>) => (
-                <Banner.Item>
-                  {bannerData.slide === "video" ? (
-                    <Banner.MediaVideo mediaLink={bannerData.videoLink} />
-                  ) : (
-                    <Banner.MediaImage
-                      alt={bannerData.title}
-                      mediaLink={bannerData.imageLink}
-                    />
-                  )}
-                  <Banner.Container>
-                    <Banner.Title>{bannerData.title}</Banner.Title>
-                    <Banner.Description>
-                      {bannerData.content}
-                    </Banner.Description>
-                    <Banner.CTAGroup>
-                      <Banner.CTA route="/">
-                        Learn More <ExternalLinkIcon className="!size-3" />
-                      </Banner.CTA>
-                      <Banner.CTA variant="outline" route="/contact">
-                        Contact Us
-                      </Banner.CTA>
-                    </Banner.CTAGroup>
-                  </Banner.Container>
-                </Banner.Item>
-              )}
-            />
-          </>
+          <Hero data={bannerData} />
           <BusinessCards />
           <Sustainability />
           {/* <Video /> */}

@@ -1,12 +1,11 @@
-import { ArrowLong } from "@/components/icons";
-import Link from "next/link";
-import { Intro } from "./_components/intro";
 import { Heading } from "@/components/heading";
+import { bannerData } from "@/data/business/fertilizer";
+import { Hero } from "@/components/hero";
 
 export default function FertilizerPage() {
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
       <section className="section">
         <div className="container">
           <div className="text-center space-y-4 md:space-y-8 text-sm">

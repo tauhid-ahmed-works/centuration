@@ -4,7 +4,7 @@ import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button, type ButtonProps } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
 import Link from "next/link";
 
@@ -210,12 +210,14 @@ export function MediaImage({
   alt,
 }: Props & { mediaLink: string; alt: string }) {
   return (
-    <Image
-      className={cn("size-full object-cover", className)}
-      src={mediaLink}
-      fill
-      alt={alt}
-    />
+    <div className="relative size-full">
+      <Image
+        className={cn("size-full object-cover", className)}
+        src={mediaLink}
+        fill
+        alt={alt}
+      />
+    </div>
   );
 }
 export function Description({ className, children }: Props) {
@@ -232,11 +234,22 @@ export function CTA({
   children,
   className,
   route = "#",
-  variant = "default",
-}: Props & { route: string; variant?: "default" | "secondary" | "outline" }) {
+  contrast = "bold",
+  size = "lg",
+  shape = "square",
+  variant = "secondary",
+  asChild = true,
+}: ButtonProps & { route?: string; asChild?: boolean }) {
   return (
-    <Button asChild className={cn(className)} variant={variant}>
-      <Link href={route}> {children}</Link>
+    <Button
+      className={cn(className)}
+      variant={variant}
+      contrast={contrast}
+      size={size}
+      shape={shape}
+      asChild={asChild}
+    >
+      <Link href={route}>{children}</Link>
     </Button>
   );
 }

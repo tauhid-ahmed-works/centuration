@@ -8,12 +8,13 @@ export const metadata: Metadata = {
 import SustainabilityCommitment from "@/app/(root)/(routes)/sustainability/_components/sustainability-commitment";
 import CenturionWay from "@/app/(root)/(routes)/sustainability/_components/centurion-way";
 import OurCommitment from "@/app/(root)/(routes)/sustainability/_components/our-commitment";
-import { Intro } from "./_components/intro";
+import { bannerData } from "@/data/sustainability";
+import { Hero } from "@/components/hero";
 
 export default function Sustainability() {
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
       <SustainabilityCommitment />
       <CenturionWay />
       <OurCommitment />

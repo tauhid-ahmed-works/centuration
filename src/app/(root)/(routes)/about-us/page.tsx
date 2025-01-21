@@ -8,12 +8,13 @@ import Image from "next/image";
 import { aboutCards } from "@/data/about";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
-import { Intro } from "./_components/intro";
+import { bannerData } from "@/data/about";
+import { Hero } from "@/components/hero";
 
 export default function Page() {
   return (
     <>
-      <Intro />
+      <Hero data={bannerData} />
       <section className="mt-20 mb-40 md:mb-0">
         <div className="container">
           <div className="text-center">
