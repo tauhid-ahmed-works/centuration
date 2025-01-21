@@ -4,17 +4,16 @@ import { Heading } from "@/components/heading";
 
 export default function CompanyResume() {
   return (
-    <div className="h-screen grid place-items-center bg-gray-300 overflow-x-hidden">
+    <div className="h-screen grid place-items-center bg-gray-300 overflow-x-hidden relative">
+      <Image
+        className="size-full absolute inset-0 block object-cover brightness-50"
+        src="/assets/images/homepage/resume.png"
+        alt="image"
+        fill
+      />
       <div className="md:p-10 w-full h-[600px] relative flex items-center">
-        <Image
-          className="size-full absolute inset-0 block object-cover"
-          src="/assets/images/resume.webp"
-          alt="image"
-          width={1920}
-          height={1080}
-        />
         <div className="container z-10 relative rounded">
-          <div className="py-14 px-10 md:px-20 bg-gray-100 w-full max-w-[600px] space-y-4">
+          <div className="py-14 px-10 md:px-20 bg-gray-100 backdrop-blur w-full max-w-[600px] space-y-4">
             <Image
               src="/assets/icons/logo.webp"
               alt="centurition"

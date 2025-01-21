@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function NewsLetter() {
   return (
-    <div className="h-84 relative flex items-center justify-center text-center before:absolute before:z-10 before:inset-0 before:bg-black/70">
+    <div className="h-84 relative flex items-center justify-center text-center">
       <Image
         width="1020"
         height="334"
         alt="news-letter-bg"
-        src="/assets/images/news-letter.jpeg"
+        src="/assets/images/news-letter.png"
         className="absolute size-full inset-0 object-cover object-right"
       />
       <div className="absolute z-10">
