@@ -152,7 +152,7 @@ export default function MedicalServicePage() {
             height={400}
             src={data.ctCubeModels.image}
             alt="featured-model"
-            className="h-[350px] md:h-[450px] object-cover"
+            className="h-[350px] md:h-[450px] object-cover size-full"
           />
           <div className="mx-auto text-center max-w-lg mt-10 md:mt-20">
             <Heading className="text-secondary-400" as="h2" size="4.5xl">
@@ -206,7 +206,7 @@ export default function MedicalServicePage() {
                     </span>
                   </li>
                 </ul>
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 lg:gap-2 mt-4">
                   <Button variant="primary" size="md">
                     Details
                   </Button>
@@ -217,7 +217,7 @@ export default function MedicalServicePage() {
                   >
                     Inquire
                   </Button>
-                  <button className="size-10 md:size-10 lg:size-12 bg-secondary-900 shrink-0 rounded inline-flex items-center justify-center">
+                  <button className="size-9 lg:size-12 bg-secondary-900 shrink-0 rounded inline-flex items-center justify-center">
                     <LucideFileDown className="text-white size-5 md:size-6" />
                   </button>
                 </div>
