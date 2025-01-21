@@ -206,7 +206,7 @@ export default function MedicalServicePage() {
                     </span>
                   </li>
                 </ul>
-                <div className="flex gap-2 lg:gap-2 mt-4">
+                <div className="flex gap-2 lg:gap-4 mt-4">
                   <Button variant="primary" size="md">
                     Details
                   </Button>
