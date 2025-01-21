@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "motion/react";
-import SectionTitle from "../../../../../components/section-title";
+import { Heading } from "@/components/heading";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -111,7 +111,7 @@ export default function MediaGallery() {
     <div className="py-10 relative">
       <div className="container">
         <div className="rounded relative">
-          <SectionTitle className="mb-6">Gallery</SectionTitle>
+          <Heading className="mb-6">Gallery</Heading>
           <ul className="flex gap-2 justify-center mb-14 sticky lg:static top-20 z-20 backdrop-blur-3xl py-4 rounded text-xs sm:text-md md:text-base">
             <li>
               <button

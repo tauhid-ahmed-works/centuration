@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowLong } from "@/components/icons";
 import AnimatedCard from "@/components/animate-card";
 
-import { businessCategories } from "@/data/business-category";
+import { businessCategory } from "@/data/business/our-businesses";
 import Link from "next/link";
 import { Heading } from "@/components/heading";
 
@@ -11,7 +11,7 @@ export default function BusinessCards() {
     <div className="min-h-screen py-16 grid place-items-center">
       <div className="container px-10 md:px-20">
         <div className="mb-8">
-          <div className="max-w-[60ch] mx-auto">
+          <div className="max-w-[60ch] mx-auto text-center">
             <Heading as="h2" className="mb-10">
               Our Businesses
             </Heading>
@@ -23,13 +23,13 @@ export default function BusinessCards() {
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {businessCategories.slice(0, 6).map((card, index) => (
+          {businessCategory.category.slice(0, 6).map((card, index) => (
             <AnimatedCard key={card.id} index={index}>
               <div className="hover:shadow hover:-translate-y-1 transition-all duration-300 rounded overflow-hidden">
                 <Link href={card.path}>
                   <div className="h-44">
                     <Image
-                      src={card.thumbnailImage}
+                      src={card.imageLink}
                       width={400}
                       height={250}
                       alt="image"
@@ -37,7 +37,7 @@ export default function BusinessCards() {
                     />
                   </div>
                   <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">
-                    {card.businessName}
+                    {card.title}
                   </h3>
                 </Link>
               </div>

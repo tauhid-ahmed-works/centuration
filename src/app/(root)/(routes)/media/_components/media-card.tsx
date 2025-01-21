@@ -1,20 +1,19 @@
 import { useTranslations } from "next-intl";
-import SectionTitle from "../../../../../components/section-title";
+import { Heading } from "@/components/heading";
 import Image from "next/image";
-// import Button from "../shared/button";
 import Link from "next/link";
 
 import { mediaData } from "@/data/media";
-import AnimatedCard from "../../../../../components/animate-card";
+import AnimatedCard from "@/components/animate-card";
 
 export default function MediaCard() {
   const t = useTranslations("HomePage");
   return (
     <section className="py-10 md:pt-20 md:pb-14">
       <div className="container">
-        <SectionTitle className="mb-10">
+        <Heading className="mb-10">
           {t("media_page_main_title_news_update")}
-        </SectionTitle>
+        </Heading>
         <div className="grid gap-4 grid-cols-auto-fit-100 gap-y-20">
           {mediaData.map((data, index) => (
             // <div
