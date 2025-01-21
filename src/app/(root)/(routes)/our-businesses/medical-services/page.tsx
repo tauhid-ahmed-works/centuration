@@ -211,13 +211,13 @@ export default function MedicalServicePage() {
                     Details
                   </Button>
                   <Button
-                    className="before:inset-0"
+                    className="before:inset-0 font-normal"
                     variant="secondary"
                     size="md"
                   >
                     Inquire
                   </Button>
-                  <button className="size-9 lg:size-12 bg-secondary-900 shrink-0 rounded inline-flex items-center justify-center">
+                  <button className="size-9 lg:size-12 bg-secondary-500 shrink-0 rounded inline-flex items-center justify-center">
                     <LucideFileDown className="text-white size-5 md:size-6" />
                   </button>
                 </div>
