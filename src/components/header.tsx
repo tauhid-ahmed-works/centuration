@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { useWindowSize, useClickAway } from "@/hooks";
 import * as path from "@/paths";
 import { Button } from "@/components/ui/button";
+import { IconButton } from "./ui/icon-button";
 
 const BREAKPOINT = 1024;
 
@@ -110,18 +111,12 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="flex gap-2">
-          <Button
-            className="hover:bg-white/10 hover:text-white"
-            variant="ghost"
-            size="icon"
-          >
-            <UnitedStates />
-          </Button>
+        <div className="flex gap-3">
+          <IconButton className="hover:bg-white/10 hover:text-white">
+            <UnitedStates className="size-6" />
+          </IconButton>
           {!isDesktop && (
-            <Button
-              variant="ghost"
-              size="icon"
+            <IconButton
               className="hover:bg-white/10 hover:text-white"
               onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
             >
@@ -130,7 +125,7 @@ export function Header() {
               ) : (
                 <LucideAlignRight className="size-full" />
               )}
-            </Button>
+            </IconButton>
           )}
         </div>
       </nav>
