@@ -35,7 +35,7 @@ export default function Sustainability() {
         alt="sustainability"
       />
       <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-8">
-        <div className="max-w-[40ch] max-md:border-b border-white pb-4 pr-4 md:border-r">
+        <div className="max-w-[80ch] max-md:border-b border-white pb-4 pr-4 md:border-r space-y-4 shrink-0 flex-1">
           <Heading as="h2" size="base">
             Sustainability
           </Heading>
@@ -51,8 +51,8 @@ export default function Sustainability() {
             challenges.
           </p>
         </div>
-        <div className="text-white">
-          <h4 className="mb-4 text-md">7 SUSTAINABILITY PILLARS</h4>
+        <div className="text-white flex items-center flex-col shrink-0 flex-1">
+          <h4 className="mb-4 text-md self-start">7 SUSTAINABILITY PILLARS</h4>
           <ul className="flex flex-wrap gap-6 [&>*]:shrink-0 [&>*]:basis-16 whitespace-nowrap">
             {features.map((item) =>
               item.href ? (
