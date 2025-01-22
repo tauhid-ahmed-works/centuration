@@ -1,6 +1,7 @@
 "use client";
 import * as Banner from "@/components/carousel/carousel";
 import { ExternalLinkIcon } from "@/components/icons";
+import Underline from "./decorate-line";
 
 type HeroProps = {
   data: {
@@ -29,6 +30,7 @@ export function Hero({ data }: HeroProps) {
             )}
             <Banner.Container>
               <Banner.Title>{data.title}</Banner.Title>
+              <Underline size="sm" variant="secondary" />
               <Banner.Description>{data.content}</Banner.Description>
               <Banner.CTA route={data.href}>
                 Learn More <ExternalLinkIcon className="!size-3" />

@@ -1,6 +1,6 @@
 import * as data from "@/data/business/medical-services";
 import { Heading } from "@/components/heading";
-import DecorateLine from "@/components/decorate-line";
+import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { LucideArrowRight, LucideFileDown } from "lucide-react";
 import Image from "next/image";
@@ -24,7 +24,7 @@ export default function MedicalServicePage() {
                 {data.rentScanner.title}
               </Heading>
             </div>
-            <DecorateLine className="mt-8 md:hidden" />
+            <Underline className="mt-8 md:hidden" />
             <div className="mt-6 md:mt-0 flex flex-col justify-center items-center md:items-start">
               <p className="text-secondary-300 text-sm md:text-base text-pretty">
                 {data.rentScanner.description}
@@ -159,7 +159,7 @@ export default function MedicalServicePage() {
               {data.ctCubeModels.title}
             </Heading>
           </div>
-          <DecorateLine className="mt-10" />
+          <Underline className="mt-10" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-10 place-items-center">
             {data.ctCubeModels.models.map((item, i) => (
               <div key={i}>
@@ -229,7 +229,7 @@ export default function MedicalServicePage() {
       {/* Contact us */}
       <section className="section bg-secondary-500 md:py-14 lg:py-20">
         <div className="container">
-          <DecorateLine className="mt-8 justify-start" variant="secondary" />
+          <Underline className="mt-8 justify-start" variant="secondary" />
           <Heading className="mt-6 !leading-relaxed" size="3.5xl">
             <span className="text-white">{data.contactUs.title[0]}</span>
             <br />
@@ -244,7 +244,7 @@ export default function MedicalServicePage() {
             <Heading className="text-secondary-400" size="4.5xl">
               {data.ourSolutions.title}
             </Heading>
-            <DecorateLine className="mt-8" />
+            <Underline className="mt-8" />
           </div>
           <div className="overflow-hidden mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px">
@@ -281,7 +281,7 @@ export default function MedicalServicePage() {
           <Heading className="text-primary-500 lg:px-48" size="4.5xl">
             {data.infectionPrevention.title}
           </Heading>
-          <DecorateLine className="mt-8 md:hidden" />
+          <Underline className="mt-8 md:hidden" />
           <p className="text-white mt-10">{data.infectionPrevention.content}</p>
         </div>
       </section>
