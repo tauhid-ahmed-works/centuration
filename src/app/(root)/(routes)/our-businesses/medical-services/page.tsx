@@ -24,7 +24,7 @@ export default function MedicalServicePage() {
                 {data.rentScanner.title}
               </Heading>
             </div>
-            <Underline className="mt-8 md:hidden" />
+            <Underline align="center" className="mt-8 md:hidden" />
             <div className="mt-6 md:mt-0 flex flex-col justify-center items-center md:items-start">
               <p className="text-secondary-300 text-sm md:text-base text-pretty">
                 {data.rentScanner.description}
@@ -43,7 +43,7 @@ export default function MedicalServicePage() {
       <section className="section bg-gray-300 md:bg-transparent">
         <div className="container">
           <div className="py-6 text-center md:text-left">
-            <Heading className="text-secondary-400" as="h2" size="3.5xl">
+            <Heading className="text-secondary-400" as="h2" size="4xl">
               {data.rentScanner.subtitle}
             </Heading>
           </div>
@@ -123,7 +123,7 @@ export default function MedicalServicePage() {
             <div className="md:row-start-3 md:row-end-4 md:col-start-3">
               <Heading
                 className="text-primary-500 text-center md:text-left md:mt-8 md:ml-4"
-                size="3.5xl"
+                size="4xl"
               >
                 Amenities
               </Heading>
@@ -155,16 +155,16 @@ export default function MedicalServicePage() {
             className="h-[350px] md:h-[450px] object-cover size-full"
           />
           <div className="mx-auto text-center max-w-lg mt-10 md:mt-20">
-            <Heading className="text-secondary-400" as="h2" size="4.5xl">
+            <Heading className="text-secondary-400" as="h2" size="5xl">
               {data.ctCubeModels.title}
             </Heading>
           </div>
-          <Underline className="mt-10" />
+          <Underline align="center" className="mt-10" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-10 place-items-center">
             {data.ctCubeModels.models.map((item, i) => (
               <div key={i}>
                 <Image src={item.image} width={400} height={300} alt="model" />
-                <Heading size="3xl" className="text-primary-500 mt-4">
+                <Heading size="2xl" className="text-primary-500 mt-4">
                   {item.title}
                 </Heading>
 
@@ -225,12 +225,12 @@ export default function MedicalServicePage() {
             ))}
           </div>
         </div>
-      </section>
+    </section>
       {/* Contact us */}
-      <section className="section bg-secondary-500 md:py-14 lg:py-20">
+      <section className="section bg-secondary-500 mt-10" data-padding='lg'>
         <div className="container">
-          <Underline className="mt-8 justify-start" variant="secondary" />
-          <Heading className="mt-6 !leading-relaxed" size="3.5xl">
+          <Underline align="left" variant="secondary" />
+          <Heading className="mt-6 !leading-relaxed" size="4xl">
             <span className="text-white">{data.contactUs.title[0]}</span>
             <br />
             <span className="text-primary-500">{data.contactUs.title[1]}</span>
@@ -238,18 +238,18 @@ export default function MedicalServicePage() {
         </div>
       </section>
       {/*  */}
-      <section className="section">
+      <section className="section mt-10 lg:mt-16">
         <div className="container">
           <div className="max-w-sm mx-auto text-center">
-            <Heading className="text-secondary-400" size="4.5xl">
+            <Heading className="text-secondary-400" size="4xl">
               {data.ourSolutions.title}
             </Heading>
-            <Underline className="mt-8" />
+            <Underline align="center" className="mt-8" />
           </div>
           <div className="overflow-hidden mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px">
               {data.ourSolutions.features.map((item, i) => (
-                <div className="space-y-4 text-center p-8 border" key={i}>
+                <div className="space-y-4 text-center p-8 border border-gray-600" key={i}>
                   <Image
                     className="size-10 mx-auto"
                     src={item.icon}
@@ -278,10 +278,10 @@ export default function MedicalServicePage() {
       {/* Infection */}
       <section className="section bg-secondary-500 text-center md:py-14 lg:py-20">
         <div className="container">
-          <Heading className="text-primary-500 lg:px-48" size="4.5xl">
+          <Heading className="text-primary-500 lg:px-48" size="4xl">
             {data.infectionPrevention.title}
           </Heading>
-          <Underline className="mt-8 md:hidden" />
+          <Underline align="center" className="mt-8 md:hidden" />
           <p className="text-white mt-10">{data.infectionPrevention.content}</p>
         </div>
       </section>

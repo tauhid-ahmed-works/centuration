@@ -225,7 +225,7 @@ export function Description({ className, children }: Props) {
 }
 export function Title({ children, className }: Props) {
   return (
-    <Heading className={cn(className)} size="6.5xl">
+    <Heading className={cn(className)} size="6xl">
       {children}
     </Heading>
   );

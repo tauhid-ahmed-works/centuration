@@ -18,7 +18,7 @@ export default function Page() {
       <section className="mt-20 mb-40 md:mb-0">
         <div className="container">
           <div className="text-center">
-            <Heading as="h2" size="4.5xl">
+            <Heading as="h2" size="4xl">
               Our Mission & Vision
             </Heading>
             <p className="mt-4 max-w-[60ch] mx-auto">
@@ -46,7 +46,7 @@ export default function Page() {
         <div className="container">
           <div className="bg-transparent ml-auto max-w-[60ch] p-10 relative z-10 rounded backdrop-blur-3xl mb-20 md:mb-0">
             <div className="text-white w-full relative">
-              <Heading as="h2" size="4.5xl">
+              <Heading as="h2" size="4xl">
                 CEO Biography
               </Heading>
               <p className="mt-4">
@@ -104,7 +104,7 @@ export default function Page() {
           <Heading as="h2" size="4xl">
             Strategic Tech Partner for Productivity and Growth
           </Heading>
-          <p className="text-md leading-tight mt-4">
+          <p className="text-md leading-tight mt-10">
             We are a company that is at the forefront of technology, becoming a
             strategic ally for your company or business, providing you with the
             best solutions and services that ensure your productivity,
@@ -115,7 +115,7 @@ export default function Page() {
 
       <section className="my-20">
         <div className="container text-center space-y-2">
-          <Heading as="h2" size="4.5xl">
+          <Heading as="h2" size="4xl">
             OUR VALUES
           </Heading>
           <p>

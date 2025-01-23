@@ -1,51 +1,72 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    scroll-behavior: smooth;
-    --transparent: rgba(0, 0, 0, 0);
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
+@theme {
+  --color-primary-50: #f5f9ec;
+  --color-primary-100: #dfeec3;
+  --color-primary-200: #d0e5a6;
+  --color-primary-300: #bad97d;
+  --color-primary-400: #add264;
+  --color-primary-500: #98c73d;
+  --color-primary-600: #8ab538;
+  --color-primary-700: #6c8d2b;
+  --color-primary-800: #546d22;
+  --color-primary-900: #40541a;
+  --color-secondary-50: #e8ebeb;
+  --color-secondary-100: #b7c0c2;
+  --color-secondary-200: #94a2a4;
+  --color-secondary-300: #63787b;
+  --color-secondary-400: #455d61;
+  --color-secondary-500: #16353a;
+  --color-secondary-600: #143035;
+  --color-secondary-700: #102629;
+  --color-secondary-800: #102629;
+  --color-secondary-900: #091618;
+  --color-gray-50: #fefefe;
+  --color-gray-100: #fbfcfc;
+  --color-gray-200: #f9fafa;
+  --color-gray-300: #f7f8f8;
+  --color-gray-400: #f5f7f7;
+  --color-gray-500: #f3f5f5;
+  --color-gray-600: #dddfdf;
+  --color-gray-700: #adaeae;
+  --color-gray-800: #868787;
+  --color-gray-900: #666767;
+
+  --text-tiny: 0.625rem;
+  --text-tiny--line-height: 1.5rem;
+  --text-tiny--letter-spacing: 0.125rem;
+  --text-tiny--font-weight: 500;
+
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-6xl: 4rem;
+
+  --text-xl--line-height: 1.5;
+  --text-2xl--line-height: 1.5;
+  --text-3xl--line-height: 1.5;
+  --text-4xl--line-height: 1.5;
+  --text-5xl--line-height: 1.5;
+  --text-6xl--line-height: 1.5;
+
+  --height-84: 21rem;
+  --width-25: 6.25rem;
+
+  --default-font-family: var(--font-poppins);
+
+  --grid-template-columns-auto-fit-100: repeat(
+    auto-fit,
+    minmax(min(100%, 18.75rem), 1fr)
+  );
+  --grid-template-columns-auto-fit-250: repeat(
+    auto-fit,
+    minmax(min(100%, 15.625rem), 1fr)
+  );
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body,
   html {
     height: 100%;
-  }
-
-  body {
-    @apply bg-background text-foreground;
   }
 }
 
@@ -55,6 +76,10 @@
 
 .section {
   @apply py-10;
+}
+
+section[data-padding='lg'] {
+  @apply lg:py-20
 }
 
 .bound-clip {

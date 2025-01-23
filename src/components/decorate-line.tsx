@@ -12,7 +12,7 @@ export default function Underline({
   variant = "primary",
   size = "lg",
   impact = "bold",
-  align = "center",
+  align,
   className,
 }: Props) {
   const classnames = cn("h-0.5", {
@@ -22,9 +22,10 @@ export default function Underline({
     "w-16": size === "md",
     "w-[115px]": size === "lg",
     "h-1": impact === "bold",
+    'mx-auto': align === 'center',
   });
   return (
-    <span className={cn("flex", align, className)}>
+    <span className={cn("flex", className)}>
       <span className={classnames}></span>
     </span>
   );

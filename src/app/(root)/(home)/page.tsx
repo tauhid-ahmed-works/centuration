@@ -21,7 +21,7 @@ export default function Page() {
           <CompanyResume />
           {/* <Invitation /> */}
           <Innovation />
-          <div className="flex min-h-screen items-end">
+          <div className="flex min-h-screen items-end bg-secondary-500">
             <Footer />
           </div>
         </ScrollSnap.Group>

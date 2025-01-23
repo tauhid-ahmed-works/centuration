@@ -30,7 +30,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <link rel="icon" href="/favicon.webp" />
       <body
-        className={`${poppins.className} font-body antialiased flex flex-col min-h-screen  overflow-x-hidden w-full`}
+        className={`${poppins.className} ${poppins.variable} font-body antialiased flex flex-col min-h-screen  overflow-x-hidden w-full`}
       >
         <NextIntlClientProvider messages={messages}>
           <ConfigProvider>

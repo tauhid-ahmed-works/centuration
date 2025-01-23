@@ -38,7 +38,7 @@ const buttonVariants: ButtonVariants = {
 
 const buttonSizes: ButtonSizes = {
   sm: "h-8 px-6",
-  md: "h-9 lg:h-12 px-4 lg:px-8",
+  md: "h-8 lg:h-12 px-4 lg:px-8",
   lg: "h-12 lg:h-14 px-8 lg:px-10",
 };
 
@@ -51,7 +51,7 @@ const buttonShapes: ButtonShapes = {
 };
 
 const baseClasses =
-  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85";
+  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 text-sm lg:text-lg";
 
 export function Button({
   variant = "primary",
