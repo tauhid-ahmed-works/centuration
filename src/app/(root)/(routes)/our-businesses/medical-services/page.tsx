@@ -12,67 +12,66 @@ export default function MedicalServicePage() {
     <>
       <Hero data={bannerData} />
       {/* Scanner Section */}
-      <section className="section mt-10 md:mt-20 lg:mt-30">
+      <section className="section" data-padding="lg">
         <div className="container">
-          <div className="md:grid md:grid-cols-[300px_1fr] lg:grid-cols-[480px_1fr] md:gap-6 lg:gap-10">
-            <div className="md:bg-primary-500 md:flex md:items-center md:py-5 md:px-12">
-              <Heading
-                size="5xl"
-                className="text-primary-500 text-center md:text-left text-pretty md:text-white md:!leading-relaxed"
-                as="h2"
-              >
-                {data.rentScanner.title}
+          <div className="space-y-10 lg:space-y-20">
+            <div className="md:grid md:grid-cols-[300px_1fr] lg:grid-cols-[480px_1fr] md:gap-6 lg:gap-10">
+              <div className="md:bg-primary-500 md:flex md:items-center md:py-5 md:px-12">
+                <Heading
+                  size="5xl"
+                  className="text-primary-500 text-center md:text-left text-pretty md:text-white"
+                  as="h2"
+                >
+                  {data.rentScanner.title}
+                </Heading>
+              </div>
+              <Underline align="center" className="mt-8 md:hidden" />
+              <div className="mt-6 md:mt-0 flex flex-col justify-center items-center md:items-start">
+                <p className="text-secondary-300 text-sm md:text-base text-pretty">
+                  {data.rentScanner.description}
+                </p>
+                <Button
+                  variant="primary"
+                  contrast="outline"
+                  className="mt-7 border-primary-500 text-primary-500 font-bold w-48"
+                >
+                  Contact
+                </Button>
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <Heading className="text-secondary-400" as="h2" size="4xl">
+                {data.rentScanner.subtitle}
               </Heading>
             </div>
-            <Underline align="center" className="mt-8 md:hidden" />
-            <div className="mt-6 md:mt-0 flex flex-col justify-center items-center md:items-start">
-              <p className="text-secondary-300 text-sm md:text-base text-pretty">
-                {data.rentScanner.description}
-              </p>
-              <Button
-                variant="primary"
-                contrast="outline"
-                className="mt-7 border-primary-500 text-primary-500 font-bold w-48"
-              >
-                Contact
-              </Button>
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
+              {data.rentScanner.content.map((item, i) => (
+                <li
+                  className="bg-primary-50 text-secondary-300 p-2 rounded-full text-sm flex items-center gap-3"
+                  key={i}
+                >
+                  <span className="size-12 inline-flex items-center justify-center text-white rounded-full bg-primary-500 shrink-0">
+                    <LucideArrowRight />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div>
+              <Image
+                src={data.rentScanner.videoLink}
+                width={1920}
+                height={500}
+                alt="Image"
+                className="size-full object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
-      <section className="section bg-gray-300 md:bg-transparent">
-        <div className="container">
-          <div className="py-6 text-center md:text-left">
-            <Heading className="text-secondary-400" as="h2" size="4xl">
-              {data.rentScanner.subtitle}
-            </Heading>
-          </div>
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
-            {data.rentScanner.content.map((item, i) => (
-              <li
-                className="bg-primary-50 text-secondary-300 p-2 rounded-full text-sm flex items-center gap-3"
-                key={i}
-              >
-                <span className="size-12 inline-flex items-center justify-center text-white rounded-full bg-primary-500 shrink-0">
-                  <LucideArrowRight />
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-14">
-            <Image
-              src={data.rentScanner.videoLink}
-              width={1920}
-              height={600}
-              alt="Image"
-              className="size-full object-cover"
-            />
-          </div>
-        </div>
-      </section>
+
       {/* Amenities */}
-      <section className="section relative">
+      <section className="section relative" data-padding="md">
         <div className="absolute inset-0">
           <Image
             src="/assets/images/business/medical-service/amenities/image-01.png"
@@ -82,7 +81,7 @@ export default function MedicalServicePage() {
             className="object-cover size-full hidden md:block"
           />
         </div>
-        <div className="container relative py-20">
+        <div className="container relative">
           <div className="grid grid-cols-1 md:grid-cols-[300px_30px_1fr] lg:grid-cols-[480px_40px_1fr] md:grid-rows-[290px_100px_1fr] gap-4">
             <div className="md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-3 hidden md:block relative z-20">
               <Image
@@ -99,9 +98,9 @@ export default function MedicalServicePage() {
                 width="400"
                 height="400"
                 alt="section-image"
-                className="object-cover size-full"
+                className="object-cover size-full mt-20 lg:mt-0"
               />
-              <div className="absolute h-full top-0 -inset-x-6 -z-10 -mt-20">
+              <div className="absolute h-full top-0 -inset-x-6 -z-10">
                 <Image
                   src="/assets/images/business/medical-service/amenities/image-01.png"
                   width="1920"
@@ -145,7 +144,7 @@ export default function MedicalServicePage() {
         </div>
       </section>
       {/* Models */}
-      <section className="section md:mt-28">
+      <section className="section" data-padding="lg">
         <div className="container">
           <Image
             width={1920}
@@ -225,9 +224,9 @@ export default function MedicalServicePage() {
             ))}
           </div>
         </div>
-    </section>
+      </section>
       {/* Contact us */}
-      <section className="section bg-secondary-500 mt-10" data-padding='lg'>
+      <section className="section bg-secondary-500" data-padding="md">
         <div className="container">
           <Underline align="left" variant="secondary" />
           <Heading className="mt-6 !leading-relaxed" size="4xl">
@@ -238,7 +237,7 @@ export default function MedicalServicePage() {
         </div>
       </section>
       {/*  */}
-      <section className="section mt-10 lg:mt-16">
+      <section className="section" data-padding="lg">
         <div className="container">
           <div className="max-w-sm mx-auto text-center">
             <Heading className="text-secondary-400" size="4xl">
@@ -249,7 +248,10 @@ export default function MedicalServicePage() {
           <div className="overflow-hidden mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px">
               {data.ourSolutions.features.map((item, i) => (
-                <div className="space-y-4 text-center p-8 border border-gray-600" key={i}>
+                <div
+                  className="space-y-4 text-center p-8 border border-gray-600"
+                  key={i}
+                >
                   <Image
                     className="size-10 mx-auto"
                     src={item.icon}
@@ -265,7 +267,7 @@ export default function MedicalServicePage() {
               ))}
             </div>
           </div>
-          <div className="py-20">
+          <div className="mt-14 md:mt-28 lg:mt-40">
             <Image
               src={data.ourSolutions.image}
               width={1920}
@@ -276,7 +278,10 @@ export default function MedicalServicePage() {
         </div>
       </section>
       {/* Infection */}
-      <section className="section bg-secondary-500 text-center md:py-14 lg:py-20">
+      <section
+        className="section bg-secondary-500 text-center"
+        data-padding="md"
+      >
         <div className="container">
           <Heading className="text-primary-500 lg:px-48" size="4xl">
             {data.infectionPrevention.title}

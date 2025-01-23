@@ -78,8 +78,11 @@
   @apply py-10;
 }
 
-section[data-padding='lg'] {
-  @apply lg:py-20
+.section[data-padding='md'] {
+  @apply md:py-14 lg:py-20
+}
+.section[data-padding='lg'] {
+  @apply md:py-28 lg:py-40
 }
 
 .bound-clip {
