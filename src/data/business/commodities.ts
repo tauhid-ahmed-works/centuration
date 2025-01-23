@@ -22,8 +22,7 @@ export const bannerData = [
 ];
 
 export const aboutNutriagro = {
-  section: 2,
-  data: {
+
     title: "About Nutriagro",
     subtitle: 'We Believe In Our Strength, & Our Strength Is "QUALITY"',
     content: [
@@ -38,69 +37,54 @@ export const aboutNutriagro = {
       "We are professionally managed firm powered by a team of committed  professionals who understand the diverse taste and demands of our esteem clients across the Globe.",
     ],
 
-    cta: [{ id: 1, name: "Know more", href: "#" }],
-  },
+    ctaLink: "#"
+
 };
 
-export const ourServices = {
-  section: 3,
-  data: {
-    content: [
+export const ourServices = [
       {
         id: 1,
-        icon: "",
+        icon: "/assets/icons/truck.svg",
         title: "Delivery",
         content: "Sea/Air/Land",
       },
       {
         id: 2,
-        icon: "",
+        icon: "/assets/icons/basket.svg",
         title: "Procuring",
         content: "Fresh From Farm/Mill",
       },
       {
         id: 3,
-        icon: "",
+        icon: "/assets/icons/headset.svg",
         title: "Available for You",
         content: "Monday - Saturday, 10:00am-6:00pm",
       },
       {
         id: 4,
-        icon: "",
+        icon: "/assets/icons/phone.svg",
         title: "Know more",
         content: "Contact Us",
       },
-    ],
-  },
-};
+    ]
 
 export const popularProducts = {
-  section: 4,
-  data: {
-    title: "Most Popular Products",
+  title: "Most Popular Products",
     products: [
       { id: 1, image: "#", title: "Yellow Corn", href: "#" },
       { id: 1, image: "#", title: "Urea N46", href: "#" },
       { id: 1, image: "#", title: "ICUMSA 45", href: "#" },
-    ],
-    cta: [{ id: 1, name: "Sell all products", href: "#" }],
-  },
+  ],
+    ctaLink: "#"
 };
 
 export const ourOffer = {
-  section: 5,
-  data: {
-    title: "Save Time & Money",
-    subtitle: "Place Your Shipment Today",
-    content: [
-      "Quote Changes Everyday.",
-      "You can rent the CT-CUBE for your clinic or practice worldwide and according to your needs. The rental period is flexible – from just two weeks to over a year and longer.",
-    ],
-    media: {
-      images: [""],
-    },
-    cta: [{ id: 1, name: "Contact now", href: "#" }],
-  },
+  title: "Save Time & Money",
+  subtitle: "Place Your Shipment Today",
+    subtitle2:  "Quote Changes Everyday.",
+    description:       "You can rent the CT-CUBE for your clinic or practice worldwide and according to your needs. The rental period is flexible – from just two weeks to over a year and longer.",
+    imageLink: "",
+    ctaLink: "#",
 };
 
 export const whyChooseUs = {
