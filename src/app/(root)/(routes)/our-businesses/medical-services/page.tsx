@@ -246,10 +246,10 @@ export default function MedicalServicePage() {
             <Underline align="center" className="mt-8" />
           </div>
           <div className="overflow-hidden mt-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px -space-x-px -space-y-px">
               {data.ourSolutions.features.map((item, i) => (
                 <div
-                  className="space-y-4 text-center p-8 border border-gray-600"
+                  className="space-y-4 text-center p-8 border border-secondary-50"
                   key={i}
                 >
                   <Image
