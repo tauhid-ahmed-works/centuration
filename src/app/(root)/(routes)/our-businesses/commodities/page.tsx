@@ -67,8 +67,57 @@ export default function CommoditiesPage() {
               </Heading>
               <Underline align="center" />
             </div>
-            {/* TODO: Carousel to be implemented */}
-            <div className="h-72"></div>
+
+            <div className="flex gap-8">
+              <div className="flex-1 group">
+                <div className="relative w-full aspect-square group-hover:bg-primary-100">
+                  <Image
+                    src="/assets/images/business/commodities/products/corn.png"
+                    alt="image of product"
+                    fill
+                  />
+                </div>
+                <Heading
+                  className="text-secondary-400 group-hover:text-primary-500 mt-6"
+                  as="h3"
+                  size="3xl"
+                >
+                  Yellow Corn
+                </Heading>
+              </div>
+              <div className="flex-1 group">
+                <div className="relative w-full aspect-square group-hover:bg-primary-100">
+                  <Image
+                    src="/assets/images/business/commodities/products/salt.png"
+                    alt="image of product"
+                    fill
+                  />
+                </div>
+                <Heading
+                  className="text-secondary-400 group-hover:text-primary-500 mt-6"
+                  as="h3"
+                  size="3xl"
+                >
+                  Yellow Corn
+                </Heading>
+              </div>
+              <div className="flex-1 group">
+                <div className="relative w-full aspect-square group-hover:bg-primary-100">
+                  <Image
+                    src="/assets/images/business/commodities/products/sugar.png"
+                    alt="image of product"
+                    fill
+                  />
+                </div>
+                <Heading
+                  className="text-secondary-400 group-hover:text-primary-500 mt-6"
+                  as="h3"
+                  size="3xl"
+                >
+                  Yellow Corn
+                </Heading>
+              </div>
+            </div>
             <div className="text-center">
               <Button>See all products</Button>
             </div>
