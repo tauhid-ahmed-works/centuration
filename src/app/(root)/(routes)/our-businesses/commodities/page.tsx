@@ -155,6 +155,61 @@ export default function CommoditiesPage() {
           </div>
         </div>
       </section>
+      <section className="section relative" data-padding="lg">
+        <div className="absolute size-full inset-0 after:absolute after:inset-0 after:bg-secondary-500/80">
+          <Image
+            fill
+            src="/assets/images/business/commodities/why-choose-us.png"
+            alt="why-choose-us"
+            className="object-cover"
+          />
+        </div>
+        <div className="container relative">
+          <div className="flex gap-28">
+            <div className="relative flex-1 h-auto">
+              <Image
+                fill
+                src="/assets/images/business/commodities/why-choose-us.png"
+                alt="why-choose-us"
+                className="object-cover"
+              />
+            </div>
+            <div className="flex-1 text-white space-y-8">
+              <Heading as="h2" size="4xl">
+                Why Choose Us ?
+              </Heading>
+              <ul className="space-y-6">
+                <li className="flex gap-6 items-start">
+                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                  Nutriagro Overseas OPC PVT LTD has the quality products you
+                  need at target prices you want.
+                </li>
+                <li className="flex gap-6 items-start">
+                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                  We also have extensive experience in Procurement.
+                </li>
+                <li className="flex gap-6 items-start">
+                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                  Quotation, evaluation and choice of suppliers.
+                </li>
+                <li className="flex gap-6 items-start">
+                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                  Transport, logistics and order taking.
+                </li>
+                <li className="flex gap-6 items-start">
+                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                  Management and coordination of all shipment procedures.
+                </li>
+                <li className="flex gap-6 items-start">
+                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                  Performance analysis and feedback on deliveries and suppliers.
+                </li>
+              </ul>
+              <Button variant="secondary">Learn More</Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
