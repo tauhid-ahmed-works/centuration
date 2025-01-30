@@ -124,7 +124,7 @@ export default function CommoditiesPage() {
           </div>
         </div>
       </section>
-      <section className="section" data-padding="lg">
+      <section className="section">
         <div className="container">
           <div className="flex flex-col gap-10 md:flex-row items-center justify-center">
             <div className="space-y-6 md:space-y-10 max-w-sm">
@@ -144,13 +144,14 @@ export default function CommoditiesPage() {
                 <Button>Contact Now</Button>
               </div>
             </div>
-            {/* <Image
-              width="300"
-              height="600"
-              src="/assets/images/business/commodities/banner/mobile.png"
-              alt="mobile"
-              className="-mb-60 block"
-            /> */}
+            <div className="relative w-72 h-[450px] -mb-10">
+              <Image
+                fill
+                src="/assets/images/business/commodities/banner/mobile.png"
+                alt="mobile"
+                className="object-fill"
+              />
+            </div>
           </div>
         </div>
       </section>
