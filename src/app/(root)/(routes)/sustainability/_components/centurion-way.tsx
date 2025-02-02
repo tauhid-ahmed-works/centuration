@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Icons } from "../../../../../components/icons";
-import AnimatedCard from "../../../../../components/animate-card";
+import { Icons } from "@/components/icons";
+import AnimatedCard from "@/components/animate-card";
 
 export default function CenturionWay() {
   const t = useTranslations("HomePage");

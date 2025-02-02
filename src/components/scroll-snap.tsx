@@ -138,7 +138,7 @@ function Indicators() {
     // window.scrollTo({ top: 0, behavior: "smooth" });
   }, [activeIndex, handleScrollIntoView]);
   return (
-    <div className="fixed right-0 md:right-4 inset-y-0 flex flex-col justify-center z-50">
+    <div className="fixed right-0 md:right-4 inset-y-0 flex flex-col justify-center z-20">
       <div className="flex flex-col justify-center gap-1 rounded-full p-2">
         {[...Array(sectionCount)].map((_, index) => (
           <button

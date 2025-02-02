@@ -6,6 +6,7 @@ import { useLocale } from "next-intl";
 import * as Icons from "./icons";
 import { LucideChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 const lang = {
   en: "en",
@@ -35,7 +36,11 @@ export default function IntlSwitch({ className }: { className?: string }) {
         />
       </button>
       {open && (
-        <ul className="absolute top-full right-0 xl:translate-x-1/2 size-24 bg-secondary-500 p-2 space-y-4 rounded-bl rounded-br">
+        <motion.ul
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="absolute top-full right-0 xl:translate-x-1/2 size-24 bg-secondary-500 p-2 space-y-4 rounded-bl rounded-br"
+        >
           <li>
             <button
               className="cursor-pointer flex gap-1 pl-2 hover:text-primary-500"
@@ -52,7 +57,7 @@ export default function IntlSwitch({ className }: { className?: string }) {
               {<Icons.France className="size-5" />} Fr
             </button>
           </li>
-        </ul>
+        </motion.ul>
       )}
     </li>
   );
