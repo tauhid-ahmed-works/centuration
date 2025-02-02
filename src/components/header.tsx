@@ -49,9 +49,11 @@ export function Header() {
               {link.name}
             </NavLink>
           ))}
-          <IntlSwitch />
         </ul>
-        <MobileNavigationMenu />
+        <IntlSwitch />
+        <div className="lg:hidden">
+          <MobileNavigationMenu />
+        </div>
       </nav>
     </header>
   );
