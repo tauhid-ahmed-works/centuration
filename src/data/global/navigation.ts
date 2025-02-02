@@ -43,10 +43,6 @@ export const businessPaths = [
     name: "Petrochemicals",
     href: path.businessPetrochemicals(),
   },
-  {
-    name: "All Businesses",
-    href: path.ourBusinesses(),
-  },
 ];
 
 export const navigationLinks: NavigationLink[] = [

@@ -6,18 +6,24 @@ type NavLinkProps = {
   href: string;
   children: React.ReactNode;
   className?: string;
+  exact?: boolean; // Optional exact match
 };
 
-export function NavLink({ href, children, className = "" }: NavLinkProps) {
+export function ActiveLink({
+  href,
+  children,
+  className = "",
+  exact = false,
+}: NavLinkProps) {
   const pathname = usePathname();
 
-  const isActive = pathname === href;
+  const isActive = exact ? pathname === href : pathname.startsWith(href);
 
   return (
     <Link
       className={cn(
         "hover:text-primary-500 transition-colors cursor-pointer",
-        { "text-primary-500": isActive },
+        { "!text-primary-500": isActive },
         className
       )}
       href={href}

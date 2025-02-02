@@ -138,13 +138,13 @@ function Indicators() {
     // window.scrollTo({ top: 0, behavior: "smooth" });
   }, [activeIndex, handleScrollIntoView]);
   return (
-    <div className="fixed right-0 md:right-4 inset-y-0 flex flex-col justify-center ">
+    <div className="fixed right-0 md:right-4 inset-y-0 flex flex-col justify-center z-50">
       <div className="flex flex-col justify-center gap-1 rounded-full p-2">
         {[...Array(sectionCount)].map((_, index) => (
           <button
             key={index}
             className={cn(
-              "block shrink-0 size-2.5 font-semibold rounded-full m-1 bg-brand-500 cursor-pointer scale-[0.50] shadow transition-transform duration-300 relative before:size-5 before:block before:absolute before:inset-0 before:rounded-full",
+              "block shrink-0 size-2.5 font-semibold rounded-full m-1 bg-primary-500 cursor-pointer scale-[0.50] shadow transition-transform duration-300 relative before:size-5 before:block before:absolute before:inset-0 before:rounded-full",
               index === activeIndex ? "scale-125" : "hover:scale-100"
             )}
             onClick={() => handleScrollIntoView(index)}
