@@ -7,11 +7,14 @@ import { navigationLinks, type NavigationLink } from "@/data/global/navigation";
 import * as path from "@/paths";
 import { ActiveLink } from "./active-link";
 import IntlSwitch from "./intl-switch";
+import { LucideChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 type NavLinkProps = {
   children: React.ReactNode;
   href: string;
-  dropdownLinks?: NavigationLink[]; // Used `dropdownLinks` here
+  dropdownLinks?: NavigationLink[];
+  className?: string;
 };
 
 function Logo() {
@@ -24,6 +27,31 @@ function Logo() {
         alt="centurion"
       />
     </Link>
+  );
+}
+
+// Header component
+export function Header() {
+  return (
+    <header className="bg-secondary-500 text-white z-300 fixed inset-x-0">
+      <nav className="flex gap-4 items-center justify-between container">
+        <div className="w-32 mr-auto relative z-30 bg-inherit">
+          <Logo />
+        </div>
+        <ul className="lg:items-center lg:gap-4 hidden lg:flex">
+          {navigationLinks.map((link) => (
+            <NavLink
+              key={link.name}
+              href={link.href}
+              dropdownLinks={link.children}
+            >
+              {link.name}
+            </NavLink>
+          ))}
+          <IntlSwitch />
+        </ul>
+      </nav>
+    </header>
   );
 }
 
@@ -41,38 +69,24 @@ function NavLink({ children, href, dropdownLinks }: NavLinkProps) {
       onPointerLeave={handlePointerLeave}
     >
       <ActiveLink
-        className="py-6 inline-block align-middle relative"
+        className={cn(
+          "py-6 inline-block align-middle relative",
+          dropdownLinks && "flex gap-0.5 items-center"
+        )}
         href={href}
       >
         {children}
+        {dropdownLinks && (
+          <LucideChevronRight
+            className={cn(
+              "size-4 transition-transform duration-300",
+              isOpen ? "rotate-90" : "rotate-0"
+            )}
+          />
+        )}
       </ActiveLink>
       {isOpen && dropdownLinks && <DropdownMenu links={dropdownLinks} />}
     </li>
-  );
-}
-
-// Header component
-export function Header() {
-  return (
-    <header className="bg-secondary-500 text-white z-300 fixed inset-x-0">
-      <nav className="flex gap-4 items-center justify-between container">
-        <div className="w-32 mr-auto relative z-30 bg-inherit">
-          <Logo />
-        </div>
-        <ul className="lg:items-center lg:gap-4 hidden lg:flex">
-          {navigationLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              href={link.href}
-              dropdownLinks={link.children} // Passing the children to NavLink
-            >
-              {link.name}
-            </NavLink>
-          ))}
-          <IntlSwitch />
-        </ul>
-      </nav>
-    </header>
   );
 }
 
