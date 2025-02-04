@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 export const bannerData = [
   {
     id: "1",

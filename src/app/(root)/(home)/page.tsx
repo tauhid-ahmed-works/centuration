@@ -8,6 +8,7 @@ import Innovation from "@/app/(root)/(home)/_components/innovation";
 import CompanyResume from "@/app/(root)/(home)/_components/resume";
 import { bannerData } from "@/data/homepage";
 import { Hero } from "@/components/hero";
+import { Banner } from "./_components/banner";
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <ScrollSnap>
         <ScrollSnap.Group>
           <Hero data={bannerData} />
+          {/* <Banner /> */}
           <BusinessCards />
           <Sustainability />
           {/* <Video /> */}
