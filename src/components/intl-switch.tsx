@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import * as Select from "@radix-ui/react-select";
 import { setLocale } from "@/actions/i18n";
 import { useLocale } from "next-intl";
 import * as Icons from "./icons";
