@@ -1,56 +1,102 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import AnimatedCard from "@/components/animate-card";
-
-import { businessCategory } from "@/data/business/our-businesses";
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
-import { ourBusinesses } from "@/paths";
+import { useTranslations } from "next-intl";
+import AnimatedCard from "@/components/animate-card";
+import { ourBusinessesPath } from "@/paths";
+import * as path from "@/paths";
+
+const businessCategories = [
+  {
+    title: "Technologies",
+    image: "/assets/images/business/business-card/technology.png",
+    path: path.businessTechnologiesPath(),
+  },
+
+  {
+    title: "Medical Services",
+    image: "/assets/images/business/business-card/medical-service.png",
+    path: path.businessMedicalServicesPath(),
+  },
+  {
+    image: "/assets/images/business/business-card/launderettes.png",
+    path: path.businessLaunderettesPath(),
+  },
+
+  {
+    image: "/assets/images/business/business-card/ice-ivoire.png",
+    path: path.businessIceIvoirePath(),
+  },
+  {
+    image: "/assets/images/business/business-card/commodities.png",
+    path: path.businessCommoditiesPath(),
+  },
+
+  {
+    image: "/assets/images/business/business-card/real-state.png",
+    path: path.businessRealEstatePath(),
+  },
+  {
+    image: "/assets/images/business/business-card/fertilizer.png",
+    path: path.businessFertilizerPath(),
+  },
+  {
+    image: "/assets/images/business/business-card/logistics.png",
+    path: path.businessLogisticsPath(),
+  },
+  {
+    image: "/assets/images/business/business-card/logistics.png",
+    path: path.businessPetrochemicalsPath(),
+  },
+];
 
 export default function BusinessCards() {
+  const t = useTranslations("home");
+  const text = useTranslations("text");
+  const data = businessCategories.slice(0, 6).map((d, index) => ({
+    ...d,
+    id: index + 1,
+    title: t.raw("business.categories")[index],
+  }));
   return (
-    <div className="min-h-screen py-16 grid place-items-center">
-      <div className="container px-10 md:px-20">
-        <div className="mb-8">
-          <div className="max-w-[60ch] mx-auto text-center">
-            <Heading as="h2" className="mb-10">
-              Our Businesses
+    <section className="section" data-padding="lg">
+      <div className="container">
+        <div className="space-y-10 text-center mt-20 lg:mt-0">
+          <div className="max-w-lg mx-auto text-center space-y-4">
+            <Heading as="h2" size="3xl">
+              {t("business.title")}
             </Heading>
-            <p>
-              As a diversified conglomerate, our interest in multiple sectors
-              indicates our determination to cater to our vision of providing
-              basic needs.
-            </p>
+            <p>{t("business.description")}</p>
           </div>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {businessCategory.category.slice(0, 6).map((card, index) => (
-            <AnimatedCard key={card.id} index={index}>
-              <div className="hover:shadow hover:-translate-y-1 transition-all duration-300 rounded overflow-hidden">
-                <Link href={card.path}>
-                  <div className="h-44">
-                    <Image
-                      src={card.imageLink}
-                      width={400}
-                      height={250}
-                      alt="image"
-                      className="size-full object-cover"
-                    />
-                  </div>
-                  <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">
-                    {card.title}
-                  </h3>
-                </Link>
-              </div>
-            </AnimatedCard>
-          ))}
-        </div>
-        <div className="text-center pt-10">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {data.map((card, index) => (
+              <AnimatedCard key={card.id} index={index}>
+                <div className="hover:shadow hover:-translate-y-1 transition-all duration-300 rounded overflow-hidden">
+                  <Link href={card.path}>
+                    <div className="relative min-h-52">
+                      <Image
+                        src={card.image}
+                        fill
+                        alt="image"
+                        className="size-full object-cover"
+                      />
+                    </div>
+                    <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">
+                      {card.title}
+                    </h3>
+                  </Link>
+                </div>
+              </AnimatedCard>
+            ))}
+          </div>
           <Button variant="secondary" contrast="bold" asChild>
-            <Link href={ourBusinesses()}>See All</Link>
+            <Link href={ourBusinessesPath()}>{text("see_all")}</Link>
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

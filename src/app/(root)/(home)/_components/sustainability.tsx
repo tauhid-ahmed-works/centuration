@@ -4,89 +4,81 @@ import Link from "next/link";
 import { Heading } from "@/components/heading";
 import * as path from "@/paths";
 import React from "react";
+import { useTranslations } from "next-intl";
 
-interface Feature {
-  name: string;
+type Features = {
   icon: React.ReactNode;
-  href?: string;
-}
+  name: string;
+};
 
-const features: Feature[] = [
-  { name: "Financial", icon: <Icons.Financial /> },
-  { name: "Institutional", icon: <Icons.Institutional /> },
-  { name: "Economic", icon: <Icons.Economic /> },
-  { name: "Operational", icon: <Icons.Operational /> },
-  { name: "Environment", icon: <Icons.Environmental /> },
-  { name: "Social", icon: <Icons.Social /> },
-  { name: "Cultural", icon: <Icons.Cultural /> },
-  {
-    name: "Read more",
-    icon: <Icons.ChevronRight />,
-    href: path.ourBusinesses(),
-  },
+type FeatureItemProps = {
+  item: Features;
+};
+
+const features = [
+  { icon: <Icons.Financial /> },
+  { icon: <Icons.Institutional /> },
+  { icon: <Icons.Economic /> },
+  { icon: <Icons.Operational /> },
+  { icon: <Icons.Environmental /> },
+  { icon: <Icons.Social /> },
+  { icon: <Icons.Cultural /> },
 ];
 
 export default function Sustainability() {
+  const t = useTranslations("home");
+  const featuresData: Features[] = features.map((item, index) => ({
+    ...item,
+    name: t.raw("sustainability.features")[index],
+  }));
   return (
-    <div className="h-screen relative flex items-center justify-center before:absolute before:inset-0 before:bg-black/70 text-white before:z-10">
+    <section className="h-screen relative flex items-center justify-center before:absolute before:inset-0 before:bg-black/60 text-white before:z-10">
       <Image
         fill
         src="/assets/images/homepage/sustainability.webp"
         alt="sustainability"
       />
-      <div className="max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-8">
-        <div className="max-w-[80ch] max-md:border-b border-white pb-4 pr-4 md:border-r space-y-4 shrink-0 flex-1">
+      <div className="max-w-lg md:max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-8">
+        <div className="max-md:border-b border-white pb-4 pr-4 md:border-r space-y-4 shrink-0 flex-1">
           <Heading as="h2" size="base">
-            Sustainability
+            {t("sustainability.title")}
           </Heading>
           <Heading size="3xl" as="h3">
-            Building prosperity & self-sufficiency
+            {t("sustainability.subtitle")}
           </Heading>
-          <p>
-            In a rapidly changing post-Covid world, and with the challenges of
-            climate change, we all need to react and adapt. Employees,
-            customers, partners, and investors want companies to get involved
-            and demonstrate their value to society. We are aware of our
-            responsibilities and the Group is determined to meet these new
-            challenges.
-          </p>
+          <p>{t("sustainability.description")}</p>
         </div>
-        <div className="text-white flex items-center flex-col shrink-0 flex-1">
-          <h4 className="mb-4 text-md self-start">7 SUSTAINABILITY PILLARS</h4>
-          <ul className="flex flex-wrap gap-6 [&>*]:shrink-0 [&>*]:basis-16 whitespace-nowrap">
-            {features.map((item) =>
-              item.href ? (
-                <Link key={item.name} href={item.href}>
-                  <FeatureItem item={item} />
-                </Link>
-              ) : (
-                <FeatureItem key={item.name} item={item} />
-              )
-            )}
+        <div className="text-white flex flex-col flex-1">
+          <Heading className="px-4" as="h3" size="base">
+            {t("sustainability.feature_title")}
+          </Heading>
+          <ul className="flex flex-wrap">
+            {featuresData.map((item) => (
+              <FeatureItem key={item.name} item={item} />
+            ))}
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
-
-interface FeatureItemProps {
-  item: Feature;
 }
 
 function FeatureItem({ item }: FeatureItemProps) {
   return (
-    <li className="text-xs flex flex-col items-center">
-      {React.isValidElement(item.icon)
-        ? React.cloneElement(
-            item.icon as React.ReactElement<{ className?: string }>, // Explicitly typing props
-            {
-              className:
-                "size-16 rounded border flex items-center justify-center",
-            }
-          )
-        : item.icon}
-      <span className="mt-2">{item.name}</span>
+    <li className="relative p-2 sm:p-4">
+      <span className="flex items-center justify-center size-16 border rounded">
+        {React.isValidElement(item.icon)
+          ? React.cloneElement(
+              item.icon as React.ReactElement<{ className?: string }>, // Explicitly typing props
+              {
+                className: "size-12 flex items-center justify-center",
+              }
+            )
+          : item.icon}
+      </span>
+      <span className="absolute -bottom-0 left-4 text-xs hidden sm:block">
+        {item.name}
+      </span>
     </li>
   );
 }

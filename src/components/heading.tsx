@@ -25,16 +25,16 @@ export function Heading({
 }: HeadingProps) {
   const Comp = as ? as : "h2";
   const classnames = cn(
-    "font-semibold",
+    "font-semibold leading-[1.5]",
     {
       "text-sm": size === "sm",
       "text-base": size === "base",
       "text-base lg:text-xl": size === "xl",
-      "text-base lg:text-2xl": size === "2xl",
-      "text-xl md:text-2xl lg:text-3xl": size === "3xl",
-      "text-xl md:text-2xl lg:text-4xl": size === "4xl",
-      "text-xl md:text-3xl lg:text-5xl": size === "5xl",
-      "text-2xl md:text-5xl lg:text-6xl": size === "6xl",
+      "text-[clamp(1rem,5vw,1.5rem)]": size === "2xl",
+      "text-[clamp(1rem,5vw,2rem)]": size === "3xl",
+      "text-[clamp(1.25rem,5vw,2.5rem)]": size === "4xl",
+      "text-[clamp(1.25rem,5vw,3rem)]": size === "5xl",
+      "text-[clamp(1.5rem,5vw,4rem)]": size === "6xl",
     },
     className
   );

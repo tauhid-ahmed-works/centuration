@@ -1,6 +1,11 @@
 import { homeEn } from "./locales/home";
 
 const data = {
+  text: {
+    see_all: "See All",
+    learn_more: "Learn More",
+    try_more: "Try More",
+  },
   home: { ...homeEn },
   HomePage: {
     about_main: "About Page",

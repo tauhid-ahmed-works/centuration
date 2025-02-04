@@ -9,70 +9,70 @@ export type NavigationLink = {
 export const businessPaths = [
   {
     name: "Technologies",
-    href: path.businessTechnologies(),
+    href: path.businessTechnologiesPath(),
   },
   {
     name: "Medical Services",
-    href: path.businessMedicalServices(),
+    href: path.businessMedicalServicesPath(),
   },
   {
     name: "Launderettes",
-    href: path.businessLaunderettes(),
+    href: path.businessLaunderettesPath(),
   },
   {
     name: "Ice Ivoire",
-    href: path.businessIceIvoire(),
+    href: path.businessIceIvoirePath(),
   },
   {
     name: "Commodities",
-    href: path.businessCommodities(),
+    href: path.businessCommoditiesPath(),
   },
   {
     name: "Real Estate",
-    href: path.businessRealEstate(),
+    href: path.businessRealEstatePath(),
   },
   {
     name: "Fertilizer",
-    href: path.businessFertilizer(),
+    href: path.businessFertilizerPath(),
   },
   {
     name: "Logistics",
-    href: path.businessLogistics(),
+    href: path.businessLogisticsPath(),
   },
   {
     name: "Petrochemicals",
-    href: path.businessPetrochemicals(),
+    href: path.businessPetrochemicalsPath(),
   },
 ];
 
 export const navigationLinks: NavigationLink[] = [
   {
     name: "About Us",
-    href: path.aboutUs(),
+    href: path.aboutUsPath(),
   },
   {
     name: "Our Businesses",
-    href: path.ourBusinesses(),
+    href: path.ourBusinessesPath(),
     children: businessPaths,
   },
   {
     name: "Sustainability",
-    href: path.sustainability(),
+    href: path.sustainabilityPath(),
   },
   {
     name: "Centurion Foundation",
-    href: path.centurionFoundation(),
+    href: path.centurionFoundationPath(),
   },
   {
     name: "Media",
-    href: path.media(),
+    href: path.mediaPath(),
   },
   {
     name: "Career",
-    href: path.career(),
+    href: path.careerPath(),
   },
   {
     name: "Contact",
-    href: path.contact(),
+    href: path.contactPath(),
   },
 ];

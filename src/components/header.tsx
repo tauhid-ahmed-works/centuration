@@ -20,7 +20,7 @@ type NavLinkProps = {
 
 function Logo() {
   return (
-    <Link href={path.home()}>
+    <Link href={path.homePath()}>
       <Image
         src="/assets/icons/logo.svg"
         width={200}

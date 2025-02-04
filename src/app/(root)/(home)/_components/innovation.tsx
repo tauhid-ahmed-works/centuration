@@ -1,46 +1,42 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
+import { useTranslations } from "next-intl";
 
 export default function Invitation() {
+  const t = useTranslations("home");
+  const text = useTranslations("text");
   return (
-    <div className="py-16 grid place-items-center bg-gray-50 min-h-screen">
-      <div className="container space-y-6">
-        <Heading as="h2" className="mb-14 leading-tight">
-          Join Our World of Innovation
-        </Heading>
-        <div className="md:flex md:gap-10 items-center">
-          <div className="md:flex-1 w-full">
-            <Image
-              src="/assets/images/homepage/invitation.webp"
-              alt="image"
-              width={590}
-              height={590}
-              className="rounded aspect-square w-full h-full object-cover"
-            />
-          </div>
-          <div className="md:flex-1 mt-10 md:mt-0">
-            <h3 className="text-xl lg:text-3xl font-semibold leading-tight font-title">
-              A Digital Agency That Broadens Your Horizons
-            </h3>
-            <div className="text-sm mt-4 space-y-2">
-              <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum
-              </p>
-              <p>
-                opposed to using &apos;Content here, content her making look
-                like readable English. Many desktop publishing packages web page
-                editors now use.
-              </p>
+    <section className="section bg-gray-50 min-h-screen grid place-items-center">
+      <div className="container">
+        <div className="space-y-8">
+          <Heading size="3xl" as="h2">
+            {t("innovation.title")}
+          </Heading>
+          <div className="md:flex md:gap-10 items-center space-y-4">
+            <div className="md:flex-1 relative w-full h-72 md:h-96">
+              <Image
+                src="/assets/images/homepage/invitation.webp"
+                alt="image"
+                fill
+                className="rounded aspect-square w-full h-full object-cover"
+              />
             </div>
-            <Button className="mt-4" variant="primary">
-              Read More
-            </Button>
+
+            <div className="md:flex-1 space-y-4">
+              <Heading size="2xl">{t("innovation.subtitle")}</Heading>
+              <p className="text-sm mt-4 space-y-2">
+                {t("innovation.description")}
+              </p>
+              <Button size="md" className="mt-4" variant="primary">
+                {text("learn_more")}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

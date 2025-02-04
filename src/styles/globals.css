@@ -37,16 +37,14 @@
   --text-tiny--letter-spacing: 0.125rem;
   --text-tiny--font-weight: 500;
 
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
   --text-3xl: 2rem;
   --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
   --text-6xl: 4rem;
-
-  --text-xl--line-height: 1.5;
-  --text-2xl--line-height: 1.5;
-  --text-3xl--line-height: 1.5;
-  --text-4xl--line-height: 1.5;
-  --text-5xl--line-height: 1.5;
-  --text-6xl--line-height: 1.5;
 
   --height-84: 21rem;
   --width-25: 6.25rem;
@@ -64,25 +62,24 @@
 }
 
 @layer base {
-  body,
-  html {
-    height: 100%;
+  body {
+    @apply text-sm md:text-base;
   }
 }
 
 .container {
-  @apply max-w-[1200px] px-4 md:px-6 mx-auto w-full;
+  @apply max-w-[75rem] px-6 mx-auto w-full;
 }
 
 .section {
   @apply py-10;
 }
 
-.section[data-padding='md'] {
-  @apply md:py-14 lg:py-20
+.section[data-padding="md"] {
+  @apply md:py-14 lg:py-20;
 }
-.section[data-padding='lg'] {
-  @apply md:py-28 lg:py-40
+.section[data-padding="lg"] {
+  @apply md:py-28 lg:py-40;
 }
 
 .bound-clip {

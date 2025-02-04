@@ -1,32 +1,34 @@
-export const home = () => "/";
+export const homePath = () => "/";
 
-export const aboutUs = () => "/about-us";
+export const aboutUsPath = () => "/about-us";
 
-export const ourBusinesses = () => "/our-businesses";
-export const businessTechnologies = () => "/our-businesses/technologies";
-export const businessMedicalServices = () => "/our-businesses/medical-services";
-export const businessLaunderettes = () => "/our-businesses/launderettes";
-export const businessIceIvoire = () => "/our-businesses/ice-ivoire";
-export const businessCommodities = () => "/our-businesses/commodities";
-export const businessRealEstate = () => "/our-businesses/real-estate";
-export const businessFertilizer = () => "/our-businesses/fertilizer";
-export const businessLogistics = () => "/our-businesses/logistics";
-export const businessPetrochemicals = () => "/our-businesses/petrochemicals";
+export const ourBusinessesPath = () => "/our-businesses";
+export const businessTechnologiesPath = () => "/our-businesses/technologies";
+export const businessMedicalServicesPath = () =>
+  "/our-businesses/medical-services";
+export const businessLaunderettesPath = () => "/our-businesses/launderettes";
+export const businessIceIvoirePath = () => "/our-businesses/ice-ivoire";
+export const businessCommoditiesPath = () => "/our-businesses/commodities";
+export const businessRealEstatePath = () => "/our-businesses/real-estate";
+export const businessFertilizerPath = () => "/our-businesses/fertilizer";
+export const businessLogisticsPath = () => "/our-businesses/logistics";
+export const businessPetrochemicalsPath = () =>
+  "/our-businesses/petrochemicals";
 
-export const sustainability = () => "/sustainability";
+export const sustainabilityPath = () => "/sustainability";
 
-export const centurionFoundation = () => "/centurion-foundation";
+export const centurionFoundationPath = () => "/centurion-foundation";
 
-export const media = () => "/media";
+export const mediaPath = () => "/media";
 
-export const career = () => "/career";
+export const careerPath = () => "/career";
 
-export const contact = () => "/contact";
+export const contactPath = () => "/contact";
 
-export const privacyPolicy = () => "/privacy-policy";
+export const privacyPolicyPath = () => "/privacy-policy";
 
-export const facebook = () => "https://facebook.com/groupcenturion";
-export const instagram = () => "https://facebook.com/groupcenturion";
-export const linkedin = () => "https://facebook.com/in/groupcenturion";
-export const twitter = () => "https://facebook.com/groupcenturion";
-export const youtube = () => "https://facebook.com/groupcenturion";
+export const facebookPath = () => "https://facebook.com/groupcenturion";
+export const instagramPath = () => "https://facebook.com/groupcenturion";
+export const linkedinPath = () => "https://facebook.com/in/groupcenturion";
+export const twitterPath = () => "https://facebook.com/groupcenturion";
+export const youtubePath = () => "https://facebook.com/groupcenturion";
