@@ -39,7 +39,7 @@ export default function Sustainability() {
           <Heading as="h2" size="base">
             Sustainability
           </Heading>
-          <Heading size="3.5xl" as="h3">
+          <Heading size="3xl" as="h3">
             Building prosperity & self-sufficiency
           </Heading>
           <p>
@@ -76,11 +76,17 @@ interface FeatureItemProps {
 
 function FeatureItem({ item }: FeatureItemProps) {
   return (
-    <li className="text-xs">
-      {React.cloneElement(item.icon, {
-        className: "size-16 rounded border flex items-center justify-center",
-      })}
-      {item.name}
+    <li className="text-xs flex flex-col items-center">
+      {React.isValidElement(item.icon)
+        ? React.cloneElement(
+            item.icon as React.ReactElement<{ className?: string }>, // Explicitly typing props
+            {
+              className:
+                "size-16 rounded border flex items-center justify-center",
+            }
+          )
+        : item.icon}
+      <span className="mt-2">{item.name}</span>
     </li>
   );
 }

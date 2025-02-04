@@ -12,7 +12,7 @@ const lang = {
   fr: "fr",
 };
 
-export default function IntlSwitch({ className }: { className?: string }) {
+export default function IntlSwitch({}: { className?: string }) {
   const [open, setOpen] = React.useState(false);
   const locale = useLocale();
   const Flag =

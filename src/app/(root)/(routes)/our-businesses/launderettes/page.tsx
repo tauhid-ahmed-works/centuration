@@ -57,12 +57,12 @@ export default function LaunderettesPage() {
               as="h3"
               size="2xl"
             >
-              Revolution And it's cheaper.
+              Revolution And it&apos;s cheaper.
             </Heading>
             <Underline align="center" />
             <p className="font-medium text-secondary-300">
               Automatic laundry service available at all times throughout Côte
-              d’Ivoire.
+              d&apos;Ivoire.
             </p>
             <p className="font-normal text-secondary-300">
               Open 24 hours a day, 7 days a week.
@@ -291,8 +291,8 @@ export default function LaunderettesPage() {
                 Chap-Chap Laundry App
               </Heading>
               <p className="mt-6">
-                Place an order in 2 minutes chrono, don't move anymore, we take
-                care of everything
+                Place an order in 2 minutes chrono, don&apos;t move anymore, we
+                take care of everything
               </p>
               <p className="text-primary-500 text-3xl mt-6">Soon available</p>
               <div className="flex gap-4 mt-10">
@@ -325,11 +325,11 @@ export default function LaunderettesPage() {
               Professionals
             </Heading>
             <p className="md:px-52">
-              You're a professional, you have laundry to wash, enjoy the PARTNER
-              CHAP formula and don't get tired anymore.Entrust us with your
-              laundry, we take care of it, and it is less expensive.Companies
-              (Hotels, Residences, Guesthouses, Restaurant, Hospitals, Beauty
-              Institute, Hairdressing Room, Spa etc.)
+              You&apos;re a professional, you have laundry to wash, enjoy the
+              PARTNER CHAP formula and don&apos;t get tired anymore. Entrust us
+              with your laundry, we take care of it, and it is less
+              expensive.Companies (Hotels, Residences, Guesthouses, Restaurant,
+              Hospitals, Beauty Institute, Hairdressing Room, Spa etc.)
             </p>
             <div className="mt-10 relative w-full aspect-video">
               <Image
@@ -339,7 +339,7 @@ export default function LaunderettesPage() {
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <Heading as="h3" className="text-white" size="3xl">
-                  You're a professional.
+                  You&apos;re a professional.
                   <br />
                   contact us for a more personalised order.
                 </Heading>
