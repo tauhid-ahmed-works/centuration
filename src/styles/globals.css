@@ -71,6 +71,10 @@
   @apply max-w-[75rem] px-6 mx-auto w-full;
 }
 
+.container[data-size="md"] {
+  @apply max-w-[75rem] px-6 mx-auto w-full;
+}
+
 .section {
   @apply py-10;
 }

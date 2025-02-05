@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 export default function NewsLetter() {
   const text = useTranslations("text");
   return (
-    <div className="h-60 md:h-84 relative flex items-center justify-center text-center">
+    <section className="h-60 md:h-84 relative flex items-center justify-center text-center">
       <div className="h-full w-full relative">
         <Image
           fill
@@ -35,6 +35,6 @@ export default function NewsLetter() {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 }

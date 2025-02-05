@@ -73,26 +73,28 @@ export default function BusinessCards() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {data.map((card, index) => (
-              <AnimatedCard key={card.id} index={index}>
-                <div className="hover:shadow hover:-translate-y-1 transition-all duration-300 rounded overflow-hidden">
-                  <Link href={card.path}>
-                    <div className="relative min-h-52">
-                      <Image
-                        src={card.image}
-                        fill
-                        alt="image"
-                        className="size-full object-cover"
-                      />
-                    </div>
-                    <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">
-                      {card.title}
-                    </h3>
-                  </Link>
-                </div>
-              </AnimatedCard>
+              <div key={card.id} className="max-w-96 w-full mx-auto">
+                <AnimatedCard index={index}>
+                  <div className="hover:shadow hover:-translate-y-1 transition-transform duration-200 rounded overflow-hidden">
+                    <Link href={card.path}>
+                      <div className="relative min-h-52">
+                        <Image
+                          src={card.image}
+                          fill
+                          alt="image"
+                          className="size-full object-cover"
+                        />
+                      </div>
+                      <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">
+                        {card.title}
+                      </h3>
+                    </Link>
+                  </div>
+                </AnimatedCard>
+              </div>
             ))}
           </div>
-          <Button variant="secondary" contrast="bold" asChild>
+          <Button variant="primary" size="md" asChild>
             <Link href={ourBusinessesPath()}>{text("see_all")}</Link>
           </Button>
         </div>
