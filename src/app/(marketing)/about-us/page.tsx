@@ -78,7 +78,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="container">
+        <div className="container" data-size="md">
           <div className="-mr-4 md:flex flex-wrap">
             {[...Array(8)].map((_, i) => (
               <div key={i} className="basis-1/2 lg:basis-1/4 pr-4 pb-4">

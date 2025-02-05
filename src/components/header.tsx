@@ -150,7 +150,7 @@ function MobileNavigationMenu() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
-            className="fixed inset-0 -z-10 pt-20"
+            className="fixed bg-secondary-500 inset-0 -z-10 pt-20"
           >
             <div className="container">
               <ul className="space-y-2">
