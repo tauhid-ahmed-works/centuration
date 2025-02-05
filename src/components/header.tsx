@@ -132,10 +132,14 @@ function DropdownMenu({ links }: { links: NavigationLink[] }) {
 
 function MobileNavigationMenu() {
   const [open, setOpen] = React.useState(false);
+  const handleOpenClick = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
       <button
-        onClick={() => setOpen(!open)}
+        onClick={handleOpenClick}
         className="cursor-pointer py-6 hover:text-primary-500 relative z-50"
       >
         {!open ? <LucideMenu /> : <LucideX />}
@@ -146,7 +150,7 @@ function MobileNavigationMenu() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
-            className="fixed inset-0 bg-secondary-500 -z-10 pt-20"
+            className="fixed inset-0 -z-10 pt-20"
           >
             <div className="container">
               <ul className="space-y-2">

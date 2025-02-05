@@ -25,7 +25,7 @@ export default function IntlSwitch({}: { className?: string }) {
       onPointerLeave={() => setOpen(false)}
       className="py-6 inline-block align-middle relative"
     >
-      <button className="cursor-pointer flex items-center gap-0.5">
+      <button className="cursor-pointer flex items-center gap-0.5 brightness-150">
         {<Flag className="size-5" />}
         <LucideChevronRight
           className={cn(
@@ -42,7 +42,7 @@ export default function IntlSwitch({}: { className?: string }) {
         >
           <li>
             <button
-              className="cursor-pointer flex gap-1 pl-2 hover:text-primary-500"
+              className="cursor-pointer flex gap-1 pl-2 hover:text-primary-500 brightness-150"
               onClick={() => setLocale("en")}
             >
               <Icons.UnitedStates className="size-5" /> En
@@ -50,7 +50,7 @@ export default function IntlSwitch({}: { className?: string }) {
           </li>
           <li>
             <button
-              className="cursor-pointer flex gap-1 pl-2 hover:text-primary-500"
+              className="cursor-pointer flex gap-1 pl-2 hover:text-primary-500 brightness-150"
               onClick={() => setLocale("fr")}
             >
               {<Icons.France className="size-5" />} Fr
