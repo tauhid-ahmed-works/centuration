@@ -10,12 +10,12 @@ export default function Footer() {
   return (
     <div className="bg-secondary-500 w-full">
       <NewsLetter />
-      <footer className="container text-white grid sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-10 py-10">
+      <footer className="container text-white grid grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-10 py-10">
         <div className="space-y-4 max-w-60 -mt-2">
           <Link href="/">
-            <BrandLogo width={200} />
+            <BrandLogo width={180} />
           </Link>
-          <p>
+          <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed
             neque ultricies, venenatis leo vel, ullamcorper est. Morbi nec
             tincidunt erat, id blandit arcu. Mauris nec maximus augue.
@@ -45,7 +45,7 @@ export default function Footer() {
           <Heading size="sm" as="h3" className="mb-2 text-brand-500 uppercase">
             General Inquiries
           </Heading>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-xs md:text-base">
             <li>{footerData["General Inquiries"].email}</li>
             <li>{footerData["General Inquiries"].street}</li>
             <li>{footerData["General Inquiries"].city}</li>
@@ -80,9 +80,10 @@ function Copyright() {
   return (
     <div className="text-gray-400 gap-1  py-7 border-t border-t-white/20 text-sm">
       <div className="container flex items-center justify-between">
-        <span className="inline-flex">
+        <span className="inline-flex text-xs md:text-md">
           Copyright <Icons.Copyright className="size-4" />
-          {new Date().getFullYear()} - Centurions
+          {new Date().getFullYear()}{" "}
+          <span className="hidden md:block">- Centurions</span>
         </span>
         <span className="flex gap-4">
           {footerData.socialLinks.map((item) => (
