@@ -1,3 +1,4 @@
+import { aboutUsFr } from "./locales/about-us";
 import { homeFr } from "./locales/home";
 const data = {
   text: {
@@ -6,6 +7,7 @@ const data = {
     try_more: "Essayer plus",
   },
   home: homeFr,
+  about_us: aboutUsFr,
   HomePage: {
     id: 3,
     home_name: "Nom",

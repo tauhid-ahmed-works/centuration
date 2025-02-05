@@ -1,3 +1,4 @@
+import { aboutUsEn } from "./locales/about-us";
 import { homeEn } from "./locales/home";
 
 const data = {
@@ -6,7 +7,8 @@ const data = {
     learn_more: "Learn More",
     try_more: "Try More",
   },
-  home: { ...homeEn },
+  home: homeEn,
+  about_us: aboutUsEn,
   HomePage: {
     about_main: "About Page",
     about_ceo_title: "Aliko Dangote, GCON",
