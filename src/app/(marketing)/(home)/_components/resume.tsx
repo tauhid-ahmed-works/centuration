@@ -20,7 +20,7 @@ export default function CompanyResume({ ...props }) {
       />
       <div className="md:p-10 w-full h-[600px] relative flex items-center">
         <div className="container">
-          <div className="container" data-size="sm">
+          <div className="px-6 max-w-2xl">
             <div className="py-14 px-10 md:px-20 bg-gray-100 backdrop-blur space-y-4">
               <BrandLogo width={140} className="text-gray-900" />
               <Heading as="h2" size="3xl">
