@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { navigationLinks, type NavigationLink } from "@/data/global/navigation";
 import * as path from "@/paths";
@@ -9,7 +8,14 @@ import { ActiveLink } from "./active-link";
 import IntlSwitch from "./intl-switch";
 import { LucideChevronRight, LucideMenu, LucideX } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  // useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
+import { BrandLogo } from "./brand-logo";
 
 type NavLinkProps = {
   children: React.ReactNode;
@@ -18,44 +24,52 @@ type NavLinkProps = {
   className?: string;
 };
 
-function Logo() {
-  return (
-    <Link href={path.homePath()}>
-      <Image
-        src="/assets/icons/logo.svg"
-        width={200}
-        height={60}
-        alt="centurion"
-      />
-    </Link>
-  );
-}
+const MAX_SCROLL_AMOUNT = 50;
 
 // Header component
 export function Header() {
+  const [visible, setVisible] = React.useState(true);
+  const { scrollY } = useScroll();
+  const previousScrollY = React.useRef<number>(0);
+
+  useMotionValueEvent(scrollY, "change", (value) => {
+    const difference = value - previousScrollY.current;
+
+    if (Math.abs(difference) >= MAX_SCROLL_AMOUNT) {
+      setVisible(difference < 0);
+      previousScrollY.current = value;
+    }
+  });
+
   return (
-    <header className="bg-secondary-500 text-white z-50 fixed inset-x-0">
-      <nav className="flex gap-4 items-center justify-between container">
-        <div className="w-32 mr-auto relative z-30 bg-inherit">
-          <Logo />
-        </div>
-        <ul className="lg:items-center lg:gap-4 hidden lg:flex">
-          {navigationLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              href={link.href}
-              dropdownLinks={link.children}
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </ul>
-        <IntlSwitch />
-        <div className="lg:hidden">
-          <MobileNavigationMenu />
+    <motion.header
+      animate={{ y: visible ? 0 : "-100%" }}
+      transition={{ type: "tween", ease: "easeInOut" }}
+      className="bg-secondary-500 text-white z-50 fixed inset-x-0 top-0"
+    >
+      <nav className="container">
+        <div className="flex gap-4 items-center justify-between">
+          <Link className="mr-auto" href={path.homePath()}>
+            <BrandLogo width={140} />
+          </Link>
+          <ul className="lg:items-center lg:gap-4 hidden lg:flex">
+            {navigationLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                href={link.href}
+                dropdownLinks={link.children}
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </ul>
+          <IntlSwitch />
+          <div className="lg:hidden">
+            <MobileNavigationMenu />
+          </div>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

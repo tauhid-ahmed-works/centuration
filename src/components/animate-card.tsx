@@ -21,7 +21,7 @@ export default function AnimatedCard({
       ref={ref}
       className={cn(className)}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
+      transition={{ duration: 0.25, delay: index * 0.05 }}
     >
       {children}
     </motion.div>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Icons } from "@/components/icons";
-import Link from "next/link";
+// import Link from "next/link";
 import { Heading } from "@/components/heading";
-import * as path from "@/paths";
+// import * as path from "@/paths";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -25,19 +25,25 @@ const features = [
   { icon: <Icons.Cultural /> },
 ];
 
-export default function Sustainability() {
+export default function Sustainability({ ...props }) {
   const t = useTranslations("home");
   const featuresData: Features[] = features.map((item, index) => ({
     ...item,
     name: t.raw("sustainability.features")[index],
   }));
   return (
-    <section className="h-screen relative flex items-center justify-center before:absolute before:inset-0 before:bg-black/60 text-white before:z-10">
-      <Image
-        fill
-        src="/assets/images/homepage/sustainability.webp"
-        alt="sustainability"
-      />
+    <section
+      className="h-screen section relative flex items-center justify-center text-white before:z-10"
+      {...props}
+    >
+      <div className="absolute inset-x-0 inset-y-14 brightness-50">
+        <Image
+          fill
+          src="/assets/images/homepage/sustainability.jpeg"
+          alt="sustainability"
+          className="object-cover"
+        />
+      </div>
       <div className="max-w-lg md:max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-8">
         <div className="max-md:border-b border-white pb-4 pr-4 md:border-r space-y-4 shrink-0 flex-1">
           <Heading as="h2" size="base">

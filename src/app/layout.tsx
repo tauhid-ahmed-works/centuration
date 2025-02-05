@@ -3,9 +3,10 @@ import "@/styles/globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
-import ConfigProvider from "@/context/config-context";
 import { Header } from "@/components/header";
 import { ScrollButton } from "@/components/scroll-button";
+import Footer from "@/components/footer";
+import Lenis from "@/components/lenis";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,15 +31,16 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <link rel="icon" href="/favicon.webp" />
       <body
-        className={`${poppins.className} ${poppins.variable} font-body antialiased flex flex-col min-h-screen  overflow-x-hidden w-full`}
+        className={`${poppins.className} ${poppins.variable} font-body antialiased overflow-x-hidden`}
       >
-        <NextIntlClientProvider messages={messages}>
-          <ConfigProvider>
+        <Lenis>
+          <NextIntlClientProvider messages={messages}>
             <Header />
             <ScrollButton />
-            <main className="flex-1">{children}</main>
-          </ConfigProvider>
-        </NextIntlClientProvider>
+            <main>{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
+        </Lenis>
       </body>
     </html>
   );

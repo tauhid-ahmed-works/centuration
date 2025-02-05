@@ -4,6 +4,7 @@ import { Icons } from "@/components/icons";
 import { footerData } from "@/data/footer-navigation";
 import NewsLetter from "@/components/news-letter";
 import { Heading } from "@/components/heading";
+import { BrandLogo } from "./brand-logo";
 
 export default function Footer() {
   return (
@@ -12,12 +13,7 @@ export default function Footer() {
       <footer className="container text-white grid sm:grid-cols-2 lg:grid-cols-4 gap-x-20 gap-y-10 py-10">
         <div className="space-y-4 max-w-60 -mt-2">
           <Link href="/">
-            <Image
-              src="/assets/icons/logo.webp"
-              width={200}
-              height={100}
-              alt="Centurion"
-            />
+            <BrandLogo width={200} />
           </Link>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed

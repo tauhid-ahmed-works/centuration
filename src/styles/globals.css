@@ -75,8 +75,12 @@
   @apply max-w-[75rem] px-6 mx-auto w-full;
 }
 
+.container[data-size="sm"] {
+  @apply max-w-[37.5rem] m-0;
+}
+
 .section {
-  @apply py-10;
+  @apply py-10 overflow-x-hidden;
 }
 
 .section[data-padding="md"] {
@@ -84,8 +88,4 @@
 }
 .section[data-padding="lg"] {
   @apply md:py-28 lg:py-40;
-}
-
-.bound-clip {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }

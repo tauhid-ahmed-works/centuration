@@ -53,7 +53,7 @@ const businessCategories = [
   },
 ];
 
-export default function BusinessCards() {
+export default function BusinessCards({ ...props }) {
   const t = useTranslations("home");
   const text = useTranslations("text");
   const data = businessCategories.slice(0, 6).map((d, index) => ({
@@ -62,9 +62,9 @@ export default function BusinessCards() {
     title: t.raw("business.categories")[index],
   }));
   return (
-    <section className="section" data-padding="lg">
+    <section className="section" data-padding="lg" {...props}>
       <div className="container">
-        <div className="space-y-10 text-center mt-20 lg:mt-0">
+        <div className="space-y-10 text-center">
           <div className="max-w-lg mx-auto text-center space-y-4">
             <Heading as="h2" size="3xl">
               {t("business.title")}

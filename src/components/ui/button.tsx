@@ -37,7 +37,7 @@ const buttonVariants: ButtonVariants = {
 };
 
 const buttonSizes: ButtonSizes = {
-  sm: "h-8 px-6",
+  sm: "h-10 px-6",
   md: "h-12 px-8 text-sm md:text-base",
   lg: "h-12 md:h-14 px-8 text-base",
 };

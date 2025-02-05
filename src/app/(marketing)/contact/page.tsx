@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Form from "@/app/(root)/(routes)/contact/_components/form";
-import GeneralInquiries from "@/app/(root)/(routes)/contact/_components/general-inquiries";
-import HeadOffice from "@/app/(root)/(routes)/contact/_components/head-office";
-import Map from "@/app/(root)/(routes)/contact/_components/map";
+import Form from "@/app/(marketing)/contact/_components/form";
+import GeneralInquiries from "@/app/(marketing)/contact/_components/general-inquiries";
+import HeadOffice from "@/app/(marketing)/contact/_components/head-office";
+import Map from "@/app/(marketing)/contact/_components/map";
 import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {

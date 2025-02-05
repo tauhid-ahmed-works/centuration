@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 };
 
 // import { useTranslations } from "next-intl";
-import MediaCard from "@/app/(root)/(routes)/media/_components/media-card";
-import MediaGallery from "@/app/(root)/(routes)/media/_components/media-gallery";
+import MediaCard from "@/app/(marketing)/media/_components/media-card";
+import MediaGallery from "@/app/(marketing)/media/_components/media-gallery";
 import { bannerData } from "@/data/media";
 import { Hero } from "@/components/hero";
 

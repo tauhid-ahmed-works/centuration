@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 // import { useTranslations } from "next-intl";
-import CareerWork from "@/app/(root)/(routes)/career/_components/career-work";
+import CareerWork from "@/app/(marketing)/career/_components/career-work";
 import JustCareer from "./_components/just-career";
 import Accordion from "./_components/accordion";
 import { bannerData } from "@/data/career";
