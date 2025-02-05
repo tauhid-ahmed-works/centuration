@@ -1,71 +1,45 @@
 import { useTranslations } from "next-intl";
 import { Icons } from "@/components/icons";
 import AnimatedCard from "@/components/animate-card";
+import { Heading } from "@/components/heading";
+
+const centurionWayData = [
+  <Icons.Financial className="size-32 mx-auto text-rose-500" />,
+  <Icons.Institution className="size-32 mx-auto text-sky-500" />,
+  <Icons.Values className="size-32 mx-auto text-orange-500" />,
+  <Icons.Environmental className="size-32 mx-auto text-green-500" />,
+  <Icons.LearningEnvironment className="size-32 mx-auto text-violet-500" />,
+];
 
 export default function CenturionWay() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("sustainability");
   return (
-    <section className="bg-gray-50 py-10 sm:px-10 md:px-0 md:py-10 md:mb-20">
+    <section className="section" data-padding="md">
       <div className="container">
         <AnimatedCard index={0}>
           <div className="md:flex md:gap-10 items-center py-10">
-            <div className="md:flex-1 justify-center space-y-6">
-              <h3 className="text-center text-2xl md:text-5xl font-medium font-title">
-                {t("sustainability_cen_way_title")}
-              </h3>
-              <p className="text-base text-center w-9/12 mx-auto">
-                {t("sustainability_cen_way_title_text_1")}
-              </p>
+            <div className="md:flex-1 justify-center space-y-6 text-center md:px-32">
+              <Heading size="3xl" as="h2">
+                {t("centurion_way.title")}
+              </Heading>
+              <p>{t("centurion_way.description")}</p>
             </div>
           </div>
         </AnimatedCard>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 place-items-center mt-8">
-          <AnimatedCard index={2}>
-            <div className="max-w-96">
-              <Icons.Financial className="size-32 mx-auto text-rose-500" />
+        <div className="flex flex-wrap justify-center">
+          {centurionWayData.map((icon, index) => (
+            <AnimatedCard
+              className="basis-1/2 px-4 min-h-60"
+              key={index}
+              index={2}
+            >
+              {icon}
               <p className="text-center">
-                {t("sustainability_cen_way_currency_text")}
+                {t.raw("centurion_way.features")[index]}
               </p>
-            </div>
-          </AnimatedCard>
-
-          <AnimatedCard index={3}>
-            <div className="max-w-96">
-              <Icons.Inititution className="size-32 mx-auto text-sky-500" />
-              <p className="text-center">
-                {t("sustainability_cen_way_build_text")}
-              </p>
-            </div>
-          </AnimatedCard>
-
-          <AnimatedCard index={3}>
-            <div className="max-w-96">
-              <Icons.Values className="size-32 mx-auto text-orange-500" />
-              <p className="text-center">
-                {t("sustainability_cen_way_cultural_text")}
-              </p>
-            </div>
-          </AnimatedCard>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 place-items-center my-16">
-          <AnimatedCard index={4}>
-            <div className="max-w-96">
-              <Icons.Environmental className="size-32 mx-auto text-green-500" />
-              <p className="text-center">
-                {t("sustainability_cen_way_environmental_text")}
-              </p>
-            </div>
-          </AnimatedCard>
-          <AnimatedCard index={5}>
-            <div className="max-w-96">
-              <Icons.LearningEnvionment className="size-32 mx-auto text-violet-500" />
-              <p className="text-center">
-                {t("sustainability_cen_way_unity_text")}
-              </p>
-            </div>
-          </AnimatedCard>
+            </AnimatedCard>
+          ))}
         </div>
       </div>
     </section>

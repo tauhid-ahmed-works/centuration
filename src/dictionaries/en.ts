@@ -1,5 +1,6 @@
 import { aboutUsEn } from "./locales/about-us";
 import { homeEn } from "./locales/home";
+import { sustainabilityEn } from "./locales/sustainability";
 
 const data = {
   text: {
@@ -9,6 +10,7 @@ const data = {
   },
   home: homeEn,
   about_us: aboutUsEn,
+  sustainability: sustainabilityEn,
   HomePage: {
     about_main: "About Page",
     about_ceo_title: "Aliko Dangote, GCON",

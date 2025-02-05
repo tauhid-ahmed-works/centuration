@@ -1,5 +1,6 @@
 import { aboutUsFr } from "./locales/about-us";
 import { homeFr } from "./locales/home";
+import { sustainabilityFr } from "./locales/sustainability";
 const data = {
   text: {
     see_all: "Voir tout",
@@ -8,6 +9,8 @@ const data = {
   },
   home: homeFr,
   about_us: aboutUsFr,
+  sustainability: sustainabilityFr,
+
   HomePage: {
     id: 3,
     home_name: "Nom",

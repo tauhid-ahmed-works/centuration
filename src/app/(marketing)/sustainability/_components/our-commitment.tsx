@@ -1,22 +1,17 @@
+import { Heading } from "@/components/heading";
 import { useTranslations } from "next-intl";
 
 export default function OurCommitment() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("sustainability");
   return (
-    <section className="py-10 sm:px-10 md:px-0 md:py-10 md:mb-20">
-      <div className="container">
-        <div className="md:flex md:gap-20 items-center">
-          <h3 className="text-3xl md:text-5xl font-medium font-title flex-1">
-            {t("sustainability_commitment_towards_title")}
-          </h3>
-          <div className="flex-1">
-            <p className="text-base mb-5">
-              {t("sustainability_commitment_towards_text_1")}
-            </p>
-            <p className="text-base italic">
-              {t("sustainability_commitment_towards_text_2")}
-            </p>
-          </div>
+    <section className="section" data-padding="md">
+      <div className="container" data-size="md">
+        <div className="space-y-4 text-center">
+          <Heading size="3xl" as="h2">
+            {t("commitments.title")}
+          </Heading>
+          <p>{t("commitments.content").split("\t")[0]}</p>
+          <p>{t("commitments.content").split("\t")[1]}</p>
         </div>
       </div>
     </section>
