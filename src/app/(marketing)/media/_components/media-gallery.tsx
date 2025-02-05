@@ -108,14 +108,16 @@ export default function MediaGallery() {
   );
 
   return (
-    <div className="py-10 relative">
+    <section className="section relative" data-padding="md">
       <div className="container">
-        <div className="rounded relative">
-          <Heading className="mb-6">Gallery</Heading>
-          <ul className="flex gap-2 justify-center mb-14 sticky lg:static top-20 z-20 backdrop-blur-3xl py-4 rounded text-xs sm:text-md md:text-base">
+        <div className="rounded relative text-center space-y-4">
+          <Heading size="3xl" as="h2">
+            Gallery
+          </Heading>
+          <ul className="flex gap-2 justify-center py-4 rounded sm:text-md md:text-base sticky">
             <li>
               <button
-                className={`relative before:inset-x-px before:h-0.5 before:absolute before:bottom-0 before:bg-brand-500 before:rounded ${
+                className={`relative before:inset-x-px before:h-0.5 before:absolute before:bottom-0 before:bg-brand-500 before:rounded px-2 rounded border cursor-pointer ${
                   activeTab === ""
                     ? "before:block before:bg-brand-500"
                     : "before:hidden"
@@ -128,7 +130,7 @@ export default function MediaGallery() {
             {tabs.map((tab) => (
               <li key={tab}>
                 <button
-                  className={`relative before:inset-x-px before:h-0.5 before:absolute before:bottom-0 before:bg-brand-500 before:rounded ${
+                  className={`px-2 rounded border cursor-pointer ${
                     activeTab === tab
                       ? "before:block before:bg-brand-500"
                       : "before:hidden"
@@ -140,30 +142,29 @@ export default function MediaGallery() {
               </li>
             ))}
           </ul>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <AnimatePresence initial={false} mode="popLayout">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <AnimatePresence initial={false}>
               {filteredData.map((data) => (
                 <motion.div
                   key={data.id}
                   className="rounded overflow-hidden min-h-72"
-                  animate={{ opacity: 1 }}
-                  initial={{ opacity: 0 }}
-                  exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
+                  layoutId={`image-${data.id}`}
                 >
-                  <Image
-                    className="w-full block object-cover"
-                    src={data.imageUrl}
-                    alt="image"
-                    width={400}
-                    height={400}
-                  />
+                  <div className="relative w-full h-72 aspect-video">
+                    <Image
+                      className="w-full block object-cover"
+                      src={data.imageUrl}
+                      alt="image"
+                      fill
+                    />
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
