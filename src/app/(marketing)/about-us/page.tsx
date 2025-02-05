@@ -10,18 +10,19 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
 import { bannerData } from "@/data/about";
 import { Hero } from "@/components/hero";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <>
       <Hero data={bannerData} />
-      <section className="mt-20 mb-40 md:mb-0">
-        <div className="container">
-          <div className="text-center">
+      <section className="section" data-padding="md">
+        <div className="container" data-size="md">
+          <div className="text-center space-y-4">
             <Heading as="h2" size="4xl">
               Our Mission & Vision
             </Heading>
-            <p className="mt-4 max-w-[60ch] mx-auto">
+            <p>
               Centurion Group continues to grow its focus of becoming the
               leading provider of essential needs in Services, Technologies,
               Food and Shelter in Sub-Saharan Africa. Our vision is to be a
@@ -35,21 +36,22 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="h-[80vh] flex items-end lg:items-center justify-center relative mt-20">
-        <Image
-          src="/assets/images/about/ceo.webp"
-          className="w-full h-full object-cover object-center absolute inset-0"
-          alt="about team"
-          width="400"
-          height="400"
-        />
+      <section className="section relative" data-padding="md">
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/images/about/ceo.webp"
+            className="size-full object-cover"
+            alt="about team"
+            fill
+          />
+        </div>
         <div className="container">
-          <div className="bg-transparent ml-auto max-w-[60ch] p-10 relative z-10 rounded backdrop-blur-3xl mb-20 md:mb-0">
-            <div className="text-white w-full relative">
-              <Heading as="h2" size="4xl">
+          <div className="flex justify-end min-h-96 items-center">
+            <div className="p-10 max-w-md relative z-10 rounded inline-block text-white space-y-4 backdrop-blur-sm">
+              <Heading className="text-white" as="h2" size="4xl">
                 CEO Biography
               </Heading>
-              <p className="mt-4">
+              <p>
                 Mr Bandeira is the CEO of Centurion Group, leading the
                 organization with a vision for growth and innovation. With years
                 of experience in the industry, He has successfully driven
@@ -63,22 +65,19 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center">
+      <section className="section space-y-12" data-padding="md">
+        <div className="container" data-size="md">
+          <div className="text-center space-y-4">
             <Heading as="h2" size="4xl">
               Centurion group leadership
             </Heading>
-            <p className="mt-4 px-6">
+            <p>
               Our senior executives bring tremendous experience, visionary
               thinking and a shared commitment to excellence, creativity, and
               innovation to the day to day operation of the company.
             </p>
           </div>
         </div>
-      </section>
-
-      <section className="mt-20">
         <div className="container">
           <div className="-mr-4 md:flex flex-wrap">
             {[...Array(8)].map((_, i) => (
@@ -99,57 +98,66 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="bg-secondary-500 text-white h-80 p-10 md:p-20 text-center mt-10 flex items-center">
-        <div className="max-w-3xl mx-auto">
-          <Heading as="h2" size="4xl">
-            Strategic Tech Partner for Productivity and Growth
-          </Heading>
-          <p className="text-md leading-tight mt-10">
-            We are a company that is at the forefront of technology, becoming a
-            strategic ally for your company or business, providing you with the
-            best solutions and services that ensure your productivity,
-            competitiveness, permanence and excellent service for your clients.
-          </p>
+
+      <section className="bg-secondary-500 section" data-padding="md">
+        <div className="container" data-size="sm">
+          <div className="text-center text-white space-y-6">
+            <Heading as="h2" size="3xl">
+              Strategic Tech Partner for Productivity and Growth
+            </Heading>
+            <p>
+              We are a company that is at the forefront of technology, becoming
+              a strategic ally for your company or business, providing you with
+              the best solutions and services that ensure your productivity,
+              competitiveness, permanence and excellent service for your
+              clients.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="my-20">
-        <div className="container text-center space-y-2">
-          <Heading as="h2" size="4xl">
-            OUR VALUES
-          </Heading>
-          <p>
-            Our values are the foundation of our company and define who we are
-            and how we work.
-          </p>
+      <section className="section" data-padding="md">
+        <div className="container">
+          <div className="text-center">
+            <Heading as="h2" size="4xl">
+              OUR VALUES
+            </Heading>
+            <p>
+              Our values are the foundation of our company and define who we are
+              and how we work.
+            </p>
+          </div>
         </div>
 
-        <div className="container mt-14 space-y-10">
-          {aboutCards.map((card, index) => (
-            <div
-              key={card.title}
-              className={`flex flex-col gap-10 ${
-                index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-              }`}
-            >
-              <div className="md:flex-1 max-w-[60ch] space-y-6 self-center">
-                <Heading as="h3" size="4xl">
-                  {card.title}
-                </Heading>
-                <p>{card.description}</p>
-                <Button>About Me</Button>
+        <div className="container">
+          <div className="pt-12 space-y-10">
+            {aboutCards.map((card, index) => (
+              <div
+                key={card.title}
+                className={`flex flex-col gap-10 ${
+                  index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
+              >
+                <div className="md:flex-1 space-y-4 self-center">
+                  <Heading as="h3" size="2xl">
+                    {card.title}
+                  </Heading>
+                  <p>{card.description}</p>
+                  <Link href="#">
+                    <Button size="sm">About Me</Button>
+                  </Link>
+                </div>
+                <div className="md:flex-1 h-96 md:aspect-square overflow-hidden rounded relative">
+                  <Image
+                    src="/assets/images/about/about-card.webp"
+                    alt="about-card"
+                    fill
+                    className="size-full object-cover"
+                  />
+                </div>
               </div>
-              <div className="md:flex-1 overflow-hidden rounded">
-                <Image
-                  src="/assets/images/about/about-card.webp"
-                  alt="about-card"
-                  width={300}
-                  height={300}
-                  className="size-full object-cover"
-                />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </>

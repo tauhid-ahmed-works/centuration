@@ -72,11 +72,11 @@
 }
 
 .container[data-size="md"] {
-  @apply max-w-[75rem] px-6 mx-auto w-full;
+  @apply max-w-[60rem];
 }
 
 .container[data-size="sm"] {
-  @apply max-w-[37.5rem] m-0;
+  @apply max-w-[37.5rem];
 }
 
 .section {
