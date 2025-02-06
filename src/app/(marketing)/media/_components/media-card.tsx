@@ -7,6 +7,47 @@ import { mediaData } from "@/data/media";
 import AnimatedCard from "@/components/animate-card";
 import { Button } from "@/components/ui/button";
 
+export const bannerData = [
+  {
+    id: "1",
+    title: "Stay Informed with Centurion",
+    content:
+      "Explore the latest insights, news, and developments from Centurion. Stay up-to-date with industry trends, business innovations, and our journey towards excellence.",
+    detailsLink: "/",
+    imageLink: "/assets/images/media/banner/image-01.webp",
+    videLink: "/",
+    slide: "image",
+    href: "#",
+  },
+];
+
+export const mediaImages = [
+  {
+    id: 1,
+    imageSrc: "/assets/images/media/card-images/card-1.webp",
+  },
+  {
+    id: 2,
+    imageSrc: "/assets/images/media/card-images/card-2.webp",
+  },
+  {
+    id: 3,
+    imageSrc: "/assets/images/media/card-images/card-3.webp",
+  },
+  {
+    id: 4,
+    imageSrc: "/assets/images/media/card-images/card-4.webp",
+  },
+  {
+    id: 5,
+    imageSrc: "/assets/images/media/card-images/card-5.webp",
+  },
+  {
+    id: 6,
+    imageSrc: "/assets/images/media/card-images/card-6.webp",
+  },
+];
+
 export default function MediaCard() {
   const t = useTranslations("HomePage");
   return (

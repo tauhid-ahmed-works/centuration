@@ -2,9 +2,11 @@ import Image from "next/image";
 import { Icons } from "@/components/icons";
 import { Heading } from "@/components/heading";
 
+const careerData = [];
+
 export default function JustCareer() {
   return (
-    <section className="section" data-padding="md">
+    <section className="section" data-padding="sm">
       <div className="container">
         <div className="md:flex md:gap-10 items-center space-y-4">
           <div className="md:flex-1 w-full relative h-72">
@@ -26,7 +28,7 @@ export default function JustCareer() {
 
             <div className="sm:flex-row flex gap-10 justify-center items-center">
               <div className="flex flex-col items-center">
-                <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20 h-20">
+                <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20">
                   <Icons.FlexibleWork className="size-16 text-brand-500" />
                 </div>
                 <span className="text-xl block font-medium">Flexible Work</span>

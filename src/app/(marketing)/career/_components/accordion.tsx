@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp } from "@/components/icons";
 import { useTranslations } from "next-intl";
+import { Heading } from "@/components/heading";
 
 export default function Accordion() {
   const t = useTranslations("HomePage");
@@ -30,50 +31,40 @@ export default function Accordion() {
   const [openAccordion, setOpenAccordion] = useState(1);
 
   return (
-    <div className="container">
-      <div className="max-w-3xl w-full mx-auto my-10 [&>:not(:last-child)]:border-b-2 border-gray-100">
-        {accordionsData.map((accordion) => (
-          <div className="" key={accordion.id}>
-            <div
-              onClick={() =>
-                openAccordion === accordion.id
-                  ? setOpenAccordion(-1)
-                  : setOpenAccordion(accordion.id)
-              }
-              className={cn(
-                `flex items-center px-5 transition-colors bg-transparent duration-300`,
-                openAccordion === accordion.id && "bg-gray-100 text-brand-500"
-              )}
-            >
-              <h3 className="text-xl font-medium pt-3 pb-5 w-full cursor-pointer">
+    <section className="section" data-padding="sm">
+      <div className="container" data-size="md">
+        <div className="divide-y-1">
+          {accordionsData.map((accordion) => (
+            <div className="w-full" key={accordion.id}>
+              <button
+                onClick={() =>
+                  openAccordion === accordion.id
+                    ? setOpenAccordion(-1)
+                    : setOpenAccordion(accordion.id)
+                }
+                className={cn(
+                  `flex justify-between w-full md:text-xl py-3 cursor-pointer font-medium hover:bg-gray-500`,
+                  openAccordion === accordion.id && "bg-gray-100 text-brand-500"
+                )}
+              >
                 {accordion.title}
-              </h3>
 
-              <div>
-                {openAccordion === accordion.id ? (
-                  <ChevronUp className="size-5 cursor-pointer" />
-                ) : (
-                  <ChevronDown className="size-5 cursor-pointer" />
-                )}
-              </div>
-            </div>
+                <span>
+                  {openAccordion === accordion.id ? (
+                    <ChevronUp className="size-5" />
+                  ) : (
+                    <ChevronDown className="size-5" />
+                  )}
+                </span>
+              </button>
 
-            <div className="py-3 px-5">
-              <AnimatePresence mode="sync">
-                {openAccordion === accordion.id && (
-                  <motion.p
-                    initial={{ height: 0 }}
-                    animate={{ height: "auto" }}
-                    exit={{ height: 0 }}
-                  >
-                    {accordion.description}
-                  </motion.p>
-                )}
-              </AnimatePresence>
+              {openAccordion === accordion.id && (
+                <p className="py-4">{accordion.description}</p>
+              )}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

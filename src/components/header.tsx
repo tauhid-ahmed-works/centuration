@@ -42,11 +42,7 @@ export function Header() {
   });
 
   return (
-    <motion.header
-      animate={{ y: visible ? 0 : "-100%" }}
-      transition={{ type: "tween", ease: "easeInOut" }}
-      className="bg-secondary-500 text-white z-50 fixed inset-x-0 top-0"
-    >
+    <header className="bg-secondary-500 text-white z-50 fixed inset-x-0 top-0">
       <nav className="container">
         <div className="flex gap-4 items-center justify-between">
           <Link className="mr-auto" href={path.homePath()}>
@@ -69,7 +65,7 @@ export function Header() {
           </div>
         </div>
       </nav>
-    </motion.header>
+    </header>
   );
 }
 
