@@ -21,11 +21,17 @@ export default function MedicalServicePage() {
                   size="5xl"
                   className="text-primary-500 text-center md:text-left text-pretty md:text-white"
                   as="h2"
+                  underline={
+                    <Underline
+                      align="center"
+                      variant="primary"
+                      className="md:hidden"
+                    />
+                  }
                 >
                   {data.rentScanner.title}
                 </Heading>
               </div>
-              <Underline align="center" className="mt-8 md:hidden" />
               <div className="mt-6 md:mt-0 flex flex-col justify-center items-center md:items-start">
                 <p className="text-secondary-300 text-sm md:text-base text-pretty">
                   {data.rentScanner.description}
@@ -154,11 +160,16 @@ export default function MedicalServicePage() {
             className="h-[350px] md:h-[450px] object-cover size-full"
           />
           <div className="mx-auto text-center max-w-lg mt-10 md:mt-20">
-            <Heading className="text-secondary-400" as="h2" size="5xl">
+            <Heading
+              className="text-secondary-400"
+              as="h2"
+              size="5xl"
+              underline={<Underline align="center" variant="primary" />}
+            >
               {data.ctCubeModels.title}
             </Heading>
           </div>
-          <Underline align="center" className="mt-10" />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-10 place-items-center">
             {data.ctCubeModels.models.map((item, i) => (
               <div key={i}>
@@ -240,10 +251,13 @@ export default function MedicalServicePage() {
       <section className="section" data-padding="lg">
         <div className="container">
           <div className="max-w-sm mx-auto text-center">
-            <Heading className="text-secondary-400" size="4xl">
+            <Heading
+              className="text-secondary-400"
+              size="4xl"
+              underline={<Underline align="center" variant="primary" />}
+            >
               {data.ourSolutions.title}
             </Heading>
-            <Underline align="center" className="mt-8" />
           </div>
           <div className="overflow-hidden mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px -space-x-px -space-y-px">
@@ -283,10 +297,13 @@ export default function MedicalServicePage() {
         data-padding="md"
       >
         <div className="container">
-          <Heading className="text-primary-500 lg:px-48" size="4xl">
+          <Heading
+            className="text-primary-500 lg:px-48"
+            size="4xl"
+            underline={<Underline align="center" className="md:hidden" />}
+          >
             {data.infectionPrevention.title}
           </Heading>
-          <Underline align="center" className="mt-8 md:hidden" />
           <p className="text-white mt-10">{data.infectionPrevention.content}</p>
         </div>
       </section>

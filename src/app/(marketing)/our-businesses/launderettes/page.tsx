@@ -9,7 +9,7 @@ export default function LaunderettesPage() {
   return (
     <>
       <Hero data={bannerData} />
-      <section className="py-8 bg-secondary-500 text-center text-white">
+      <section className="section bg-secondary-500 text-center text-white">
         <Heading size="4xl" as="h2">
           <span>DROP YOUR</span>&nbsp;
           <span className="text-primary-500">DROP YOUR</span>
@@ -48,25 +48,23 @@ export default function LaunderettesPage() {
       {/*  */}
       <section className="section bg-gray-300" data-padding="lg">
         <div className="container">
-          <div className="text-center space-y-6">
+          <div className="text-center space-y-6 text-secondary-300">
             <Heading as="h2" size="4xl" className="text-primary-500">
               LA LAVERIE DONE HIS
             </Heading>
             <Heading
-              className="text-secondary-300 font-medium"
+              className="font-medium"
               as="h3"
               size="2xl"
+              underline={<Underline align="center" variant="primary" />}
             >
               Revolution And it&apos;s cheaper.
             </Heading>
-            <Underline align="center" />
-            <p className="font-medium text-secondary-300">
+            <p className="font-medium">
               Automatic laundry service available at all times throughout Côte
               d&apos;Ivoire.
             </p>
-            <p className="font-normal text-secondary-300">
-              Open 24 hours a day, 7 days a week.
-            </p>
+            <p className="font-normal">Open 24 hours a day, 7 days a week.</p>
           </div>
           <div className="flex flex-col lg:flex-row gap-4 text-center text-primary-500 mt-10 lg:mt-20">
             <div className="font-semibold text-[150px] xl:text-[200px] aspect-square bg-white flex-1 px-16 py-10 flex justify-center flex-col leading-none">
@@ -113,10 +111,16 @@ export default function LaunderettesPage() {
         <div className="container">
           <div className="space-y-20">
             <div className="text-center">
-              <Heading as="h2" className="text-primary-500" size="4xl">
+              <Heading
+                as="h2"
+                className="text-primary-500"
+                size="4xl"
+                underline={
+                  <Underline align="center" size="lg" variant="primary" />
+                }
+              >
                 An innovative concept near you
               </Heading>
-              <Underline align="center" size="md" />
             </div>
 
             <div className="aspect-video w-full">
@@ -129,10 +133,14 @@ export default function LaunderettesPage() {
             </div>
 
             <div className="text-center">
-              <Heading size="3xl" className="text-secondary-400">
+              <Heading
+                size="3xl"
+                className="text-secondary-400"
+                underline={<Underline align="center" variant="primary" />}
+              >
                 Your laundry always fresh
               </Heading>
-              <Underline align="center" className="mt-6" />
+
               <p className="text-secondary-300 mt-6">
                 Wash and dry large amounts of linen or bulky items all at once.
                 Chap-chap laundries are fully self-service, accessible 24 hours

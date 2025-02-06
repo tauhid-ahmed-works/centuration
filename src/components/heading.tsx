@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import React, { ElementType } from "react";
 
 type HeadingProps = {
   size?:
@@ -13,17 +14,18 @@ type HeadingProps = {
     | "5xl"
     | "6xl";
   className?: string;
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  as?: ElementType;
   children: React.ReactNode;
+  underline?: React.ReactElement<{ className?: string }>;
 };
 
 export function Heading({
   size = "5xl",
-  as,
+  as: Comp = "h2",
   className,
   children,
+  underline,
 }: HeadingProps) {
-  const Comp = as ? as : "h2";
   const classnames = cn(
     "font-semibold leading-[1.5]",
     {
@@ -38,5 +40,15 @@ export function Heading({
     },
     className
   );
-  return <Comp className={classnames}>{children}</Comp>;
+
+  return (
+    <Comp className={classnames}>
+      {children}
+      {underline &&
+        React.isValidElement(underline) &&
+        React.cloneElement(underline, {
+          className: cn("", underline.props.className),
+        })}
+    </Comp>
+  );
 }

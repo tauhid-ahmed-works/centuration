@@ -1,32 +1,42 @@
 import { cn } from "@/lib/utils";
 
-type Props = {
+type UnderlineProps = {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   className?: string;
-  impact?: "bold";
+  weight?: "bold" | "normal";
   align?: "left" | "right" | "center";
 };
 
 export default function Underline({
-  variant = "primary",
+  variant = "secondary",
   size = "lg",
-  impact = "bold",
-  align,
+  weight = "bold",
+  align = "left",
   className,
-}: Props) {
-  const classnames = cn("h-0.5", {
+}: UnderlineProps) {
+  const classnames = cn({
     "bg-primary-500": variant === "primary",
     "bg-white": variant === "secondary",
-    "w-12": size === "sm",
+    "w-11": size === "sm",
     "w-16": size === "md",
     "w-[115px]": size === "lg",
-    "h-1": impact === "bold",
-    'mx-auto': align === 'center',
+    "h-0.5": weight === "normal",
+    "h-1": weight === "bold",
   });
   return (
-    <span className={cn("flex", className)}>
-      <span className={classnames}></span>
+    <span
+      className={cn(
+        "flex mt-4 lg:mt-6",
+        {
+          "justify-start": align === "left",
+          "justify-center": align === "center",
+          "justify-end": align === "right",
+        },
+        className
+      )}
+    >
+      <span className={classnames} />
     </span>
   );
 }
