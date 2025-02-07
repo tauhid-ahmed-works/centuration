@@ -170,9 +170,9 @@ export default function MedicalServicePage() {
             </Heading>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-10 place-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-4 mt-10 place-items-center">
             {data.ctCubeModels.models.map((item, i) => (
-              <div key={i}>
+              <div className="w-fit" key={i}>
                 <Image src={item.image} width={400} height={300} alt="model" />
                 <Heading size="2xl" className="text-primary-500 mt-4">
                   {item.title}

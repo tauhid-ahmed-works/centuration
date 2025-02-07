@@ -4,6 +4,7 @@ import GeneralInquiries from "@/app/(marketing)/contact/_components/general-inqu
 import HeadOffice from "@/app/(marketing)/contact/_components/head-office";
 import Map from "@/app/(marketing)/contact/_components/map";
 import { useTranslations } from "next-intl";
+import { Banner } from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "Contact - Centurions",
@@ -13,28 +14,31 @@ export const metadata: Metadata = {
 export default function Contact() {
   const t = useTranslations("HomePage");
   return (
-    <section className="pt-28 sm:px-10 md:px-0 md:pt-28 md:mb-20">
-      <div className="container">
-        <div className="md:flex md:gap-10 items-center py-10">
-          <div className="md:flex-1 justify-center space-y-6">
-            <h3 className="text-center text-2xl md:text-5xl font-medium font-title">
-              {t("contact_us_page_main_title")}
-            </h3>
-            <p className="md:text-base text-sm text-center w-9/12 mx-auto">
-              {t("contact_us_page_main_title_txt")}
-            </p>
+    <>
+      <Banner />
+      <section className="pt-28 sm:px-10 md:px-0 md:pt-28 md:mb-20">
+        <div className="container">
+          <div className="md:flex md:gap-10 items-center py-10">
+            <div className="md:flex-1 justify-center space-y-6">
+              <h3 className="text-center text-2xl md:text-5xl font-medium font-title">
+                {t("contact_us_page_main_title")}
+              </h3>
+              <p className="md:text-base text-sm text-center w-9/12 mx-auto">
+                {t("contact_us_page_main_title_txt")}
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="md:flex gap-10">
-          <Form />
-          <div className="flex-1">
-            <GeneralInquiries />
-            <HeadOffice />
-            <Map />
+          <div className="md:flex gap-10">
+            <Form />
+            <div className="flex-1">
+              <GeneralInquiries />
+              <HeadOffice />
+              <Map />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -12,13 +12,13 @@ import CompanyResume from "@/app/(marketing)/(home)/_components/resume";
 import { bannerData } from "@/data/homepage";
 import { Hero } from "@/components/hero";
 import ScrollDots from "./_components/scroll-dots";
-// import { Banner } from "./_components/banner";
+import { Banner } from "@/components/banner";
 
 export default function Page() {
   return (
     <>
       <section data-section="1">
-        <Hero data={bannerData} />
+        <Banner />
       </section>
       {/* <Banner /> */}
       <BusinessCards data-section="2" />
