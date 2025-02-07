@@ -32,12 +32,14 @@ type BannerProps = {
     mediaSrc: string;
     mediaType: "video" | "image";
     learn_more: string;
+    duration?: number;
   }[];
 };
 
 const NEXT = "NEXT";
 const PREV = "PREV";
 const SWIPE_AMOUNT = 30;
+const DURATION = 5;
 
 const variants = {
   initial: (direction: string) => ({
@@ -51,16 +53,17 @@ const variants = {
   }),
 };
 
-export function Banner({ duration = 5, data }: BannerProps) {
+export function Banner({ duration, data }: BannerProps) {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [prevIndex, setPrevIndex] = React.useState<[number, number]>([-1, 0]);
   const [isPaused, setIsPaused] = React.useState(false);
   const SLIDES = data || [
     {
-      title: "Hello World",
-      content: "lorem ipsum dolor sit amet.",
+      title: "Africans Solutions to Africans Challenges",
+      content: "",
       mediaSrc: "/assets/images/homepage/resume.png",
       learn_more: "#",
+      duration: 20,
     },
     {
       title: "Hello World",
@@ -75,6 +78,10 @@ export function Banner({ duration = 5, data }: BannerProps) {
   }
   const currentIndex = Math.abs(activeIndex) % SLIDES.length;
   const currentSlide = SLIDES[currentIndex];
+  const nextSlide = SLIDES[currentIndex + 1] ?? SLIDES[0];
+  const prevSlide = SLIDES[currentIndex - 1] ?? SLIDES[SLIDES.length - 1];
+
+  duration = currentSlide.duration || DURATION;
 
   const carouselRef = React.useRef(null);
   const x = useMotionValue(0);
@@ -109,9 +116,6 @@ export function Banner({ duration = 5, data }: BannerProps) {
   const handlePointerPresence = (presence: true | false) =>
     setIsPaused(presence);
 
-  const nextSlide = SLIDES[currentIndex + 1] ?? SLIDES[0];
-  const prevSlide = SLIDES[currentIndex - 1] ?? SLIDES[SLIDES.length - 1];
-
   return (
     <div className="h-screen pt-16">
       <motion.div
@@ -123,10 +127,22 @@ export function Banner({ duration = 5, data }: BannerProps) {
         dragElastic={0.1}
       >
         <div className="h-screen inset-0 absolute -translate-x-full text-white text-9xl">
-          {/* {prevSlide} */}
+          <Media>
+            <Image
+              className="object-cover"
+              fill
+              src={prevSlide.mediaSrc}
+              alt="media"
+            />
+          </Media>
         </div>
         <div className="h-screen inset-0 absolute translate-x-full text-white text-9xl">
-          {/* {nextSlide} */}
+          <Image
+            className="object-cover"
+            fill
+            src={nextSlide.mediaSrc}
+            alt="media"
+          />
         </div>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -157,7 +173,7 @@ export function Banner({ duration = 5, data }: BannerProps) {
                 onPointerLeave={handlePointerPresence.bind(null, false)}
                 className="container"
               >
-                <div className="space-y-4 max-w-lg text-white">
+                <div className="space-y-4 max-w-2xl text-white">
                   <Heading
                     as="h2"
                     size="6xl"
@@ -203,7 +219,7 @@ function Content({ children }: { children: React.ReactNode }) {
 }
 function Media({ children }: { children: React.ReactNode }) {
   return (
-    <div className="size-full absolute after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-70">
+    <div className="size-full absolute after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-70 after:backdrop-blur-xs">
       {children}
     </div>
   );
