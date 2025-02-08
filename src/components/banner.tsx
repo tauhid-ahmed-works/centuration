@@ -276,7 +276,7 @@ function CarouselNumberPagination({
       onPointerEnter={handlePointerPresence.bind(null, true)}
       onPointerLeave={handlePointerPresence.bind(null, false)}
       className={cn(
-        "absolute inset-y-0 pl-6 pr-4 z-50 xl:grid place-items-center hidden",
+        "absolute inset-y-0 left-0 2xl:left-6 z-50 xl:grid place-items-center hidden",
         className
       )}
     >
