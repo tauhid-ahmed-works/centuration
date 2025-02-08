@@ -8,13 +8,41 @@ export const metadata: Metadata = {
 import SustainabilityCommitment from "@/app/(marketing)/sustainability/_components/sustainability-commitment";
 import CenturionWay from "@/app/(marketing)/sustainability/_components/centurion-way";
 import OurCommitment from "@/app/(marketing)/sustainability/_components/our-commitment";
-import { bannerData } from "@/data/sustainability";
-import { Hero } from "@/components/hero";
+import { Banner, BannerType } from "@/components/banner";
+import { useTranslations } from "next-intl";
 
 export default function Sustainability() {
+  const t = useTranslations("career");
+  const bannerIntl = t.raw("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/sustainability/banner/sustainability-banner-1.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/sustainability/banner/sustainability-banner-2.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/sustainability/banner/sustainability-banner-3.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      <Hero data={bannerData} />
+      <Banner data={bannerData} />
       <SustainabilityCommitment />
       <CenturionWay />
       <OurCommitment />

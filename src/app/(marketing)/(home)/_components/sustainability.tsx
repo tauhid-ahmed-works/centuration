@@ -41,6 +41,7 @@ export default function Sustainability({ ...props }) {
           src="/assets/images/homepage/sustainability.jpeg"
           alt="sustainability"
           className="object-cover"
+          sizes="100vw"
         />
       </div>
       <div className="py-20 md:py-32 lg:py-40 relative">

@@ -19,7 +19,7 @@ export default function Page() {
   const bannerData: BannerType[] = [
     {
       mediaSrc: "/assets/images/homepage/banner/video-01.mp4",
-      mediaType: "image",
+      mediaType: "video",
       duration: 44,
       title: bannerIntl[1].title,
       content: bannerIntl[1].content,
@@ -27,7 +27,7 @@ export default function Page() {
     },
     {
       mediaSrc: "/assets/images/homepage/banner/video-02.mp4",
-      mediaType: "image",
+      mediaType: "video",
       duration: 17,
       title: bannerIntl[2].title,
       content: bannerIntl[2].content,
@@ -35,7 +35,7 @@ export default function Page() {
     },
     {
       mediaSrc: "/assets/images/homepage/banner/video-03.mp4",
-      mediaType: "image",
+      mediaType: "video",
       duration: 33,
       title: bannerIntl[3].title,
       content: bannerIntl[3].content,

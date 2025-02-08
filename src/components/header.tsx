@@ -8,12 +8,7 @@ import { ActiveLink } from "./active-link";
 import IntlSwitch from "./intl-switch";
 import { LucideChevronRight, LucideMenu, LucideX } from "lucide-react";
 import { cn } from "@/lib/utils";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { BrandLogo } from "./brand-logo";
 
 type NavLinkProps = {
@@ -23,23 +18,8 @@ type NavLinkProps = {
   className?: string;
 };
 
-const MAX_SCROLL_AMOUNT = 50;
-
 // Header component
 export function Header() {
-  const [visible, setVisible] = React.useState(true);
-  const { scrollY } = useScroll();
-  const previousScrollY = React.useRef<number>(0);
-
-  useMotionValueEvent(scrollY, "change", (value) => {
-    const difference = value - previousScrollY.current;
-
-    if (Math.abs(difference) >= MAX_SCROLL_AMOUNT) {
-      setVisible(difference < 0);
-      previousScrollY.current = value;
-    }
-  });
-
   return (
     <header className="bg-secondary-500 text-white z-50 fixed inset-x-0 top-0">
       <nav className="container">

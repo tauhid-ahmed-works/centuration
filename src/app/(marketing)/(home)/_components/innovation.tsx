@@ -24,6 +24,7 @@ export default function Invitation({ ...props }) {
                 alt="image"
                 fill
                 className="rounded aspect-square w-full h-full object-cover"
+                sizes="(max-width: 499px) 90vw, 400px"
               />
             </div>
 

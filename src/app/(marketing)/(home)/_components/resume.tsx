@@ -15,6 +15,7 @@ export default function CompanyResume({ ...props }) {
         src="/assets/images/homepage/resume.png"
         alt="image"
         fill
+        sizes="100vw"
       />
       <div className="container">
         <div className="md:p-10 w-full max-w-2xl h-[600px] relative flex items-center">

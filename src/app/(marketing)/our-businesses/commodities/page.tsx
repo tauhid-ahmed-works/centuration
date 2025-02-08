@@ -1,15 +1,43 @@
 import Image from "next/image";
-import { bannerData } from "@/data/business/commodities";
-import { Hero } from "@/components/hero";
 import { Heading } from "@/components/heading";
 import * as data from "@/data/business/commodities";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
+import { Banner, BannerType } from "@/components/banner";
+import { useTranslations } from "next-intl";
 
 export default function CommoditiesPage() {
+  const t = useTranslations("about_us");
+  const bannerIntl = t.raw("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/business/commodities/banner/commodities-banner-01.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/commodities/banner/commodities-banner-02.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/commodities/banner/commodities-banner-03.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      <Hero data={bannerData} />
+      <Banner data={bannerData} />
       <section className="section" data-padding="lg">
         <div className="container">
           <div className="space-y-4 lg:space-y-6 text-center max-w-4xl mx-auto">

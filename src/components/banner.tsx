@@ -142,10 +142,16 @@ export function Banner({
         dragElastic={0.1}
       >
         <div className="h-screen inset-0 absolute -translate-x-full text-white text-9xl">
-          <Media mediaSrc={prevSlide.mediaSrc} mediaType="video" />
+          <Media
+            mediaSrc={prevSlide.mediaSrc}
+            mediaType={currentSlide.mediaType}
+          />
         </div>
         <div className="h-screen inset-0 absolute translate-x-full text-white text-9xl">
-          <Media mediaSrc={nextSlide.mediaSrc} mediaType="video" />
+          <Media
+            mediaSrc={nextSlide.mediaSrc}
+            mediaType={currentSlide.mediaType}
+          />
         </div>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -163,7 +169,10 @@ export function Banner({
             className={cn("absolute inset-0 flex items-center")}
           >
             {/* displaying image or slide */}
-            <Media mediaSrc={currentSlide.mediaSrc} mediaType="video" />
+            <Media
+              mediaSrc={currentSlide.mediaSrc}
+              mediaType={currentSlide.mediaType}
+            />
             {/* displaying text content */}
             <Content>
               <div
@@ -229,7 +238,7 @@ export function Media({
 }: MediaProps) {
   const classnames = "size-full object-cover";
   return (
-    <div className="absolute inset-0 h-full w-full after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-70 after:backdrop-blur-xs">
+    <div className="absolute inset-0 h-full w-full after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-80">
       {mediaType === "video" && (
         <video
           src={mediaSrc}
@@ -244,8 +253,10 @@ export function Media({
         <Image
           src={mediaSrc}
           alt={alt}
-          className={cn(className, "absolute inset-0", className)}
+          className={cn(className, "absolute inset-0 object-cover", className)}
           fill
+          priority
+          sizes="100vw"
         />
       )}
     </div>

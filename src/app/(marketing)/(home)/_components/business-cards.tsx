@@ -80,9 +80,10 @@ export default function BusinessCards({ ...props }) {
                       <div className="relative min-h-52">
                         <Image
                           src={card.image}
-                          fill
                           alt="image"
-                          className="size-full object-cover"
+                          className="min-h-52 max-w-[400px] object-cover"
+                          fill
+                          sizes="(max-width: 400px) 100vw, 400px"
                         />
                       </div>
                       <h3 className="font-semibold font-title text-sm text-center py-4 text-gray-850">

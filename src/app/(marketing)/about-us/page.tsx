@@ -9,13 +9,37 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Banner } from "@/components/banner";
+import { Banner, type BannerType } from "@/components/banner";
 
 export default function Page() {
   const t = useTranslations("about_us");
+  const bannerIntl = t.raw("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc: "/assets/images/about/banner/about-us-banner-1.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc: "/assets/images/about/banner/about-us-banner-2.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc: "/assets/images/about/banner/about-us-banner-3.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      <Banner data={[]} />
+      <Banner data={bannerData} />
       <section className="section" data-padding="md">
         <div className="container" data-size="md">
           <div className="text-center space-y-4">
