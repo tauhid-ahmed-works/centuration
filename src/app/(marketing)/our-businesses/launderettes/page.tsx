@@ -1,14 +1,42 @@
 import Image from "next/image";
-import { bannerData } from "@/data/business/launderettes";
-import { Hero } from "@/components/hero";
 import { Heading } from "@/components/heading";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
+import { Banner, BannerType } from "@/components/banner";
+import { useTranslations } from "next-intl";
 
 export default function LaunderettesPage() {
+  const t = useTranslations("business_launderettes");
+  const bannerIntl = t.raw("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/business/launderettes/banner/launderette-banner-1.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/launderettes/banner/launderette-banner-2.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/launderettes/banner/launderette-banner-3.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      <Hero data={bannerData} />
+      <Banner data={bannerData} />
       <section className="section bg-secondary-500 text-center text-white">
         <Heading size="4xl" as="h2">
           <span>DROP YOUR</span>&nbsp;

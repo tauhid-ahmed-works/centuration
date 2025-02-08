@@ -1,4 +1,5 @@
 import { aboutUsEn } from "./locales/about-us";
+import { launderettesEn } from "./locales/business-launderettes";
 import { careerEn } from "./locales/career";
 import { homeEn } from "./locales/home";
 import { sustainabilityEn } from "./locales/sustainability";
@@ -13,6 +14,7 @@ const data = {
   about_us: aboutUsEn,
   sustainability: sustainabilityEn,
   career: careerEn,
+  business_launderettes: launderettesEn,
   HomePage: {
     about_main: "About Page",
     about_ceo_title: "Aliko Dangote, GCON",

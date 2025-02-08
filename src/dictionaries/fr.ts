@@ -1,4 +1,5 @@
 import { aboutUsFr } from "./locales/about-us";
+import { launderettesFr } from "./locales/business-launderettes";
 import { careerFr } from "./locales/career";
 import { homeFr } from "./locales/home";
 import { sustainabilityFr } from "./locales/sustainability";
@@ -12,6 +13,7 @@ const data = {
   about_us: aboutUsFr,
   sustainability: sustainabilityFr,
   career: careerFr,
+  business_launderettes: launderettesFr,
 
   HomePage: {
     id: 3,
