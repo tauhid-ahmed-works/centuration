@@ -83,7 +83,7 @@ function NavLink({ children, href, dropdownLinks }: NavLinkProps) {
     >
       <ActiveLink
         className={cn(
-          "py-6 inline-block align-middle relative",
+          "py-5 lg:py-6 inline-block align-middle relative",
           dropdownLinks && "flex gap-0.5 items-center"
         )}
         href={href}
@@ -135,7 +135,7 @@ function MobileNavigationMenu() {
     <>
       <button
         onClick={handleOpenClick}
-        className="cursor-pointer py-6 hover:text-primary-500 relative z-50"
+        className="cursor-pointer py-5 lg:py-6 hover:text-primary-500 relative z-50"
       >
         {!open ? <LucideMenu /> : <LucideX />}
       </button>
