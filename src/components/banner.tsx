@@ -13,6 +13,7 @@ import Underline from "./decorate-line";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
+// default pagination type
 type CarouselPaginationProps = {
   currentIndex: number;
   activeIndex?: number;
@@ -24,16 +25,32 @@ type CarouselPaginationProps = {
   className?: string;
 };
 
+// banner data type. what banner data accepts.
+export type BannerType = {
+  title: string;
+  content: string;
+  mediaSrc: string;
+  mediaType: "video" | "image";
+  duration?: number;
+  learn_more?: string;
+};
+
+// banner props type;
 type BannerProps = {
   duration?: number;
-  data: {
-    title: string;
-    content: string;
-    mediaSrc: string;
-    mediaType: "video" | "image";
-    learn_more: string;
-    duration?: number;
-  }[];
+  data: BannerType[];
+};
+
+// image and video prop types
+type MediaProps = {
+  mediaType: "video" | "image";
+  mediaSrc: string;
+  alt?: string;
+  children?: React.ReactNode;
+  className?: string;
+  loop?: boolean;
+  autoPlay?: boolean;
+  learn_more?: string;
 };
 
 const NEXT = "NEXT";
@@ -41,6 +58,7 @@ const PREV = "PREV";
 const SWIPE_AMOUNT = 30;
 const DURATION = 5;
 
+// determining directions variants for slide.
 const variants = {
   initial: (direction: string) => ({
     x: direction === NEXT ? "100%" : "-100%",
@@ -53,39 +71,35 @@ const variants = {
   }),
 };
 
-export function Banner({ duration, data }: BannerProps) {
+// main banner container
+export function Banner({
+  duration,
+  data = [],
+
+  ...props
+}: BannerProps) {
+  if (data.length < 1) return;
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [prevIndex, setPrevIndex] = React.useState<[number, number]>([-1, 0]);
   const [isPaused, setIsPaused] = React.useState(false);
-  const SLIDES = data || [
-    {
-      title: "Africans Solutions to Africans Challenges",
-      content: "",
-      mediaSrc: "/assets/images/homepage/resume.png",
-      learn_more: "#",
-      duration: 20,
-    },
-    {
-      title: "Hello World",
-      content: "lorem ipsum dolor sit amet.",
-      mediaSrc: "/assets/images/homepage/resume.png",
-      learn_more: "#",
-    },
-  ];
+  const SLIDES = data;
 
   if (activeIndex !== prevIndex[1]) {
     setPrevIndex([prevIndex[1], activeIndex]);
   }
   const currentIndex = Math.abs(activeIndex) % SLIDES.length;
   const currentSlide = SLIDES[currentIndex];
+  // fake slides for infinite loop like
   const nextSlide = SLIDES[currentIndex + 1] ?? SLIDES[0];
   const prevSlide = SLIDES[currentIndex - 1] ?? SLIDES[SLIDES.length - 1];
 
+  // default duration or video specific duration
   duration = currentSlide.duration || DURATION;
 
   const carouselRef = React.useRef(null);
   const x = useMotionValue(0);
 
+  // detecting direction for identifying from where slide comes
   const direction = prevIndex[0] > prevIndex[1] ? PREV : NEXT;
   const intervalId = React.useRef<NodeJS.Timeout | null>(null);
   React.useEffect(() => {
@@ -100,6 +114,7 @@ export function Banner({ duration, data }: BannerProps) {
     };
   }, [activeIndex, isPaused]);
 
+  // drag handler
   const onDragEnd = () => {
     const dragAmount = x.get();
     if (Math.abs(dragAmount) > SWIPE_AMOUNT) {
@@ -117,7 +132,7 @@ export function Banner({ duration, data }: BannerProps) {
     setIsPaused(presence);
 
   return (
-    <div className="h-screen pt-16">
+    <section className="h-screen pt-16 overflow-hidden" {...props}>
       <motion.div
         dragConstraints={{ left: 0, right: 0 }}
         drag="x"
@@ -127,22 +142,10 @@ export function Banner({ duration, data }: BannerProps) {
         dragElastic={0.1}
       >
         <div className="h-screen inset-0 absolute -translate-x-full text-white text-9xl">
-          <Media>
-            <Image
-              className="object-cover"
-              fill
-              src={prevSlide.mediaSrc}
-              alt="media"
-            />
-          </Media>
+          <Media mediaSrc={prevSlide.mediaSrc} mediaType="video" />
         </div>
         <div className="h-screen inset-0 absolute translate-x-full text-white text-9xl">
-          <Image
-            className="object-cover"
-            fill
-            src={nextSlide.mediaSrc}
-            alt="media"
-          />
+          <Media mediaSrc={nextSlide.mediaSrc} mediaType="video" />
         </div>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -159,14 +162,9 @@ export function Banner({ duration, data }: BannerProps) {
             }}
             className={cn("absolute inset-0 flex items-center")}
           >
-            <Media>
-              <Image
-                className="object-cover"
-                fill
-                src={currentSlide.mediaSrc}
-                alt="media"
-              />
-            </Media>
+            {/* displaying image or slide */}
+            <Media mediaSrc={currentSlide.mediaSrc} mediaType="video" />
+            {/* displaying text content */}
             <Content>
               <div
                 onPointerEnter={handlePointerPresence.bind(null, true)}
@@ -183,7 +181,9 @@ export function Banner({ duration, data }: BannerProps) {
                   </Heading>
                   {currentSlide.content && <p>{currentSlide.content}</p>}
                   <Button asChild variant="secondary">
-                    <Link href={currentSlide.learn_more}>Learn More</Link>
+                    <Link href={currentSlide.learn_more as string}>
+                      Learn More
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -210,21 +210,49 @@ export function Banner({ duration, data }: BannerProps) {
           duration={duration}
         />
       )}
-    </div>
+    </section>
   );
 }
 
+// displaying text content
 function Content({ children }: { children: React.ReactNode }) {
   return <div className="relative w-full">{children}</div>;
 }
-function Media({ children }: { children: React.ReactNode }) {
+
+// Display image and video
+export function Media({
+  mediaType = "image",
+  mediaSrc = "",
+  alt = "Media content",
+  className = "",
+  ...props
+}: MediaProps) {
+  const classnames = "size-full object-cover";
   return (
-    <div className="size-full absolute after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-70 after:backdrop-blur-xs">
-      {children}
+    <div className="absolute inset-0 h-full w-full after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-70 after:backdrop-blur-xs">
+      {mediaType === "video" && (
+        <video
+          src={mediaSrc}
+          className={cn(classnames, "absolute inset-0", className)}
+          loop
+          autoPlay
+          muted
+          {...props}
+        />
+      )}
+      {mediaType === "image" && (
+        <Image
+          src={mediaSrc}
+          alt={alt}
+          className={cn(className, "absolute inset-0", className)}
+          fill
+        />
+      )}
     </div>
   );
 }
 
+// number pagination with animation
 function CarouselNumberPagination({
   handleActiveIndex,
   handlePointerPresence,
@@ -269,9 +297,9 @@ function CarouselNumberPagination({
                 <motion.circle
                   cx="50"
                   cy="50"
-                  r="49"
-                  stroke="white"
-                  strokeWidth="2"
+                  r="48"
+                  stroke="gray"
+                  strokeWidth="4"
                   fill="none"
                 />
                 {currentIndex === i && !isPaused && (
@@ -279,9 +307,9 @@ function CarouselNumberPagination({
                     className="absolute"
                     cx="50"
                     cy="50"
-                    r="49"
+                    r="48"
                     stroke="#98c73d"
-                    strokeWidth="2"
+                    strokeWidth="4"
                     fill="none"
                     key={`${currentIndex}-${isPaused}`}
                     initial={{
@@ -302,7 +330,7 @@ function CarouselNumberPagination({
             {currentIndex === i && (
               <motion.div
                 layoutId="1"
-                className="h-18 w-px mx-auto relative z-10 bg-gray-100"
+                className="h-14 w-0.5 mx-auto relative z-10 bg-gray-100"
               >
                 <motion.div
                   className={cn("absolute inset-0", {
@@ -323,6 +351,7 @@ function CarouselNumberPagination({
   );
 }
 
+// bullet pagination
 function CarouselBulletPagination({
   paginationLength,
   handlePointerPresence,
