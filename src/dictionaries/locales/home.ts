@@ -1,16 +1,21 @@
 export const homeEn = {
-  banner: [
-    {
-      id: "1",
-      imageLink: "",
-      videoLink: "/assets/images/homepage/banner/video-01.mp4",
-      title: "African solutions to African challenges.",
+  banner: {
+    1: {
+      title: "African Solutions for African Challenges",
       content:
-        "As an African diversified conglomerate, our interest in multiple industries indicates our determination to cater to our vision of providing basic needs.",
-      href: "#",
-      slide: "video",
+        "We believe in homegrown solutions—designed, developed, and executed by Africans, for Africa.",
     },
-  ],
+    2: {
+      title: "Investing in Africa’s Growth",
+      content:
+        "From agriculture to technology, we invest in industries that build a self-sufficient and thriving Africa.",
+    },
+    3: {
+      title: "Transforming Communities, Changing Lives",
+      content:
+        "Providing essential services and infrastructure to uplift African communities and empower the next generation.",
+    },
+  },
   business: {
     title: "Our Businesses",
     description:
@@ -55,18 +60,23 @@ export const homeEn = {
 };
 
 export const homeFr = {
-  banner: [
-    {
-      id: "1",
-      imageLink: "",
-      videoLink: "/assets/images/homepage/banner/video-01.mp4",
-      title: "Des solutions africaines aux défis africains.",
+  banner: {
+    1: {
+      title: "Des solutions africaines pour des défis africains",
       content:
-        "En tant que conglomérat africain diversifié, notre intérêt pour plusieurs industries témoigne de notre détermination à répondre à notre vision de fournir les besoins essentiels.",
-      href: "#",
-      slide: "video",
+        "Nous croyons en des solutions locales – conçues, développées et mises en œuvre par des Africains, pour l'Afrique.",
     },
-  ],
+    2: {
+      title: "Investir dans la croissance de l’Afrique",
+      content:
+        "De l’agriculture à la technologie, nous investissons dans des secteurs qui construisent une Afrique autonome et prospère.",
+    },
+    3: {
+      title: "Transformer les communautés, changer des vies",
+      content:
+        "Fournir des services essentiels et des infrastructures pour améliorer les communautés africaines et autonomiser la prochaine génération.",
+    },
+  },
   business: {
     title: "Nos Activités",
     description:

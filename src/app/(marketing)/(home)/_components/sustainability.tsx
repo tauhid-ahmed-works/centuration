@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { Icons } from "@/components/icons";
-// import Link from "next/link";
 import { Heading } from "@/components/heading";
-// import * as path from "@/paths";
 import React from "react";
 import { useTranslations } from "next-intl";
 
@@ -33,8 +31,9 @@ export default function Sustainability({ ...props }) {
   }));
   return (
     <section
-      className="h-screen section relative flex items-center justify-center text-white before:z-10"
+      className="section relative text-white"
       {...props}
+      data-padding="lg"
     >
       <div className="absolute inset-x-0 inset-y-14 brightness-50">
         <Image
@@ -44,25 +43,29 @@ export default function Sustainability({ ...props }) {
           className="object-cover"
         />
       </div>
-      <div className="max-w-lg md:max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-8">
-        <div className="max-md:border-b border-white pb-4 pr-4 md:border-r space-y-4 shrink-0 flex-1">
-          <Heading as="h2" size="base">
-            {t("sustainability.title")}
-          </Heading>
-          <Heading size="3xl" as="h3">
-            {t("sustainability.subtitle")}
-          </Heading>
-          <p>{t("sustainability.description")}</p>
-        </div>
-        <div className="text-white flex flex-col flex-1">
-          <Heading className="px-4" as="h3" size="base">
-            {t("sustainability.feature_title")}
-          </Heading>
-          <ul className="flex flex-wrap">
-            {featuresData.map((item) => (
-              <FeatureItem key={item.name} item={item} />
-            ))}
-          </ul>
+      <div className="py-20 md:py-32 lg:py-40 relative">
+        <div className="container">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="max-md:border-b border-white pb-4 pr-4 md:border-r space-y-4 shrink-0 flex-1">
+              <Heading as="h2" size="base">
+                {t("sustainability.title")}
+              </Heading>
+              <Heading size="3xl" as="h3">
+                {t("sustainability.subtitle")}
+              </Heading>
+              <p>{t("sustainability.description")}</p>
+            </div>
+            <div className="text-white flex flex-col flex-1">
+              <Heading className="px-4" as="h3" size="base">
+                {t("sustainability.feature_title")}
+              </Heading>
+              <ul className="flex flex-wrap">
+                {featuresData.map((item) => (
+                  <FeatureItem key={item.name} item={item} />
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -62,7 +62,7 @@ export default function BusinessCards({ ...props }) {
     title: t.raw("business.categories")[index],
   }));
   return (
-    <section className="section" data-padding="lg" {...props}>
+    <section className="section" data-padding="md" {...props}>
       <div className="container">
         <div className="space-y-10 text-center">
           <div className="max-w-lg mx-auto text-center space-y-4">

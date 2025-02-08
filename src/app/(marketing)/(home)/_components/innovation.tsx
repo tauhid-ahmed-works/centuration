@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
@@ -9,7 +7,11 @@ export default function Invitation({ ...props }) {
   const t = useTranslations("home");
   const text = useTranslations("text");
   return (
-    <section className="section bg-gray-50 grid place-items-center" {...props}>
+    <section
+      className="section bg-gray-50 grid place-items-center"
+      {...props}
+      data-padding="lg"
+    >
       <div className="container">
         <div className="space-y-8">
           <Heading size="3xl" as="h2">
