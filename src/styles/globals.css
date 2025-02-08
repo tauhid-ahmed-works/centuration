@@ -68,15 +68,15 @@
 }
 
 .container {
-  @apply xl:max-w-[75rem] px-6 mx-auto w-full;
+  @apply max-w-[75rem] px-6 mx-auto w-full;
 }
 
 .container[data-size="md"] {
-  @apply xl:max-w-[60rem];
+  @apply max-w-[60rem];
 }
 
 .container[data-size="sm"] {
-  @apply xl:max-w-[37.5rem];
+  @apply max-w-[37.5rem];
 }
 
 .section {

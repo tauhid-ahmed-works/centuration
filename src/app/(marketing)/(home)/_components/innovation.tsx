@@ -32,7 +32,12 @@ export default function Invitation({ ...props }) {
               <p className="text-sm mt-4 space-y-2">
                 {t("innovation.description")}
               </p>
-              <Button size="md" className="mt-4" variant="primary">
+              <Button
+                size="md"
+                contrast="default"
+                className="mt-4"
+                variant="primary"
+              >
                 {text("learn_more")}
               </Button>
             </div>

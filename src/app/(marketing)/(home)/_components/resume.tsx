@@ -43,7 +43,7 @@ export default function CompanyResume({ ...props }) {
                 {t("resume.tags").split(" ")[3]}
               </span>
             </p>
-            <Button asChild size="md" variant="secondary">
+            <Button asChild size="md" contrast="default" variant="primary">
               <Link className="inline-block" href="/">
                 {text("learn_more")}
               </Link>

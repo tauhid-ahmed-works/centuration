@@ -32,9 +32,9 @@ export default function NewsLetter() {
             <Button
               asChild
               variant="primary"
+              contrast="default"
               shape="pill"
-              size="lg"
-              className="md:h-12"
+              size="md"
             >
               <Link href="#">{text("try_more")}</Link>
             </Button>

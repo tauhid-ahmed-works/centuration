@@ -94,7 +94,7 @@ export default function BusinessCards({ ...props }) {
               </div>
             ))}
           </div>
-          <Button variant="primary" size="md" asChild>
+          <Button variant="primary" contrast="default" size="md" asChild>
             <Link href={ourBusinessesPath()}>{text("see_all")}</Link>
           </Button>
         </div>

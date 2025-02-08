@@ -239,9 +239,9 @@ export function CTA({
   children,
   className,
   route = "#",
-  contrast = "bold",
+  contrast = "default",
   size = "lg",
-  shape = "square",
+  shape = "md",
   variant = "secondary",
   asChild = true,
 }: ButtonProps & { route?: string; asChild?: boolean }) {

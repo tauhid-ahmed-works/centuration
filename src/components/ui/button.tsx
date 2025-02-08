@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 // Make all custom props optional by adding ? to each property
 export type ButtonProps = ComponentProps<"button"> & {
   variant?: "primary" | "secondary" | "danger";
-  contrast?: "bold" | "medium" | "light" | "outline" | "ghost";
+  contrast?: "default" | "medium" | "light" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   shape?: "square" | "sm" | "md" | "lg" | "pill";
 };
@@ -25,25 +25,25 @@ export type ButtonShapes = Partial<
 
 const buttonVariants: ButtonVariants = {
   primary: {
-    bold: "bg-primary-500 text-white",
-    medium: "bg-white text-green-900",
+    default: "bg-primary-500 text-white",
     outline: "text-primary-500 border border-primary-500",
   },
   secondary: {
-    bold: "bg-white text-black relative before:absolute before:inset-px xbefore:border-2 xbefore:border-black",
-    medium: "bg-white text-black",
+    medium:
+      "bg-white text-black relative before:absolute before:inset-px before:border-2 before:border-black",
+    default: "bg-white text-black",
     outline: "text-white border border-white",
   },
 };
 
 const buttonSizes: ButtonSizes = {
-  sm: "h-10 px-6",
-  md: "h-8 md:h-12 px-8",
-  lg: "h-10 md:h-14 px-8 text-base",
+  sm: "h-10 px-6 text-sm",
+  md: "h-10 md:h-12 px-6",
+  lg: "h-12 md:h-14 px-8",
 };
 
 const buttonShapes: ButtonShapes = {
-  square: "rounded",
+  square: "rounded-none",
   sm: "rounded-sm",
   md: "rounded",
   lg: "rounded-lg",
@@ -51,13 +51,13 @@ const buttonShapes: ButtonShapes = {
 };
 
 const baseClasses =
-  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 border border-transparent text-sm md:text-base";
+  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 border border-transparent text-sm md:text-base hover:shadow cursor-pointer";
 
 export function Button({
   variant = "primary",
-  contrast = "bold",
+  contrast = "default",
   size = "lg",
-  shape = "square",
+  shape = "md",
   className,
   asChild,
   ...props
