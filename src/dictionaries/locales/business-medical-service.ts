@@ -1,24 +1,19 @@
 export const medicalServiceEn = {
-  banner: [
-    {
-      id: "1",
+  banner: {
+    1: {
       title: "CT-Cube: Mobile CT Solutions for Clinics & Practices",
       content: "Advanced Medical Imaging On-Demand",
-      detailsLink: "/",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
     },
-    {
-      id: "2",
+    2: {
       title: "CT-Cube: Flexible, Reliable, and Efficient",
       content: "Optimized Diagnostic Solutions for Healthcare",
-      detailsLink: "/",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
     },
-  ],
+    3: {
+      title: "SIMPLY RENT – CT SCANNER IN A CONTAINER",
+      content:
+        "Offering Convenient and Scalable Solutions for Medical Practices",
+    },
+  },
 
   rentScanner: {
     title: "SIMPLY RENT – CT SCANNER IN A CONTAINER",
@@ -129,26 +124,21 @@ export const medicalServiceEn = {
 };
 
 export const medicalServiceFr = {
-  banner: [
-    {
-      id: "1",
-      title: "CT-Cube : Solutions CT Mobiles pour Cliniques & Cabinets",
+  banner: {
+    1: {
+      title: "CT-Cube : Solutions CT Mobiles pour Cliniques et Pratiques",
       content: "Imagerie Médicale Avancée à la Demande",
-      detailsLink: "/",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
     },
-    {
-      id: "2",
+    2: {
       title: "CT-Cube : Flexible, Fiable et Efficace",
-      content: "Solutions Diagnostiques Optimisées pour la Santé",
-      detailsLink: "/",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
+      content: "Solutions Diagnostiques Optimisées pour les Soins de Santé",
     },
-  ],
+    3: {
+      title: "LOUEZ SIMPLEMENT – SCANNER CT DANS UN CONTENEUR",
+      content:
+        "Offrant des Solutions Pratiques et Evolutives pour les Pratiques Médicales",
+    },
+  },
 
   rentScanner: {
     title: "LOCATION SIMPLIFIÉE – SCANNER CT EN CONTAINER",

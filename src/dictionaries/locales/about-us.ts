@@ -1,4 +1,21 @@
 export const aboutUsEn = {
+  banner: {
+    1: {
+      title: "Innovating for a Better Tomorrow",
+      content:
+        "We create cutting-edge solutions that drive progress across industries and improve lives.",
+    },
+    2: {
+      title: "Empowering Businesses Worldwide",
+      content:
+        "Through expertise and technology, we help companies grow, scale, and succeed in a dynamic world.",
+    },
+    3: {
+      title: "Sustainable Growth, Lasting Impact",
+      content:
+        "Our commitment to sustainability ensures responsible business practices for a better future.",
+    },
+  },
   destiny: {
     title: "Our Mission & Vision",
     description:
@@ -49,6 +66,23 @@ export const aboutUsEn = {
 };
 
 export const aboutUsFr = {
+  banner: {
+    1: {
+      title: "Innover pour un Avenir Meilleur",
+      content:
+        "Nous concevons des solutions de pointe qui favorisent le progrès et améliorent la vie quotidienne.",
+    },
+    2: {
+      title: "Accompagner la Croissance des Entreprises",
+      content:
+        "Grâce à notre expertise et à la technologie, nous aidons les entreprises à se développer et à réussir.",
+    },
+    3: {
+      title: "Croissance Durable, Impact Positif",
+      content:
+        "Notre engagement pour la durabilité garantit des pratiques responsables pour un avenir meilleur.",
+    },
+  },
   destiny: {
     title: "Notre Mission & Vision",
     description:

@@ -1,4 +1,21 @@
 export const sustainabilityEn = {
+  banner: {
+    1: {
+      title: "Commitment to a Greener Future",
+      content:
+        "We prioritize eco-friendly practices to reduce our carbon footprint and protect the environment.",
+    },
+    2: {
+      title: "Sustainable Innovation for Impact",
+      content:
+        "Our solutions integrate sustainability, ensuring long-term benefits for businesses and communities.",
+    },
+    3: {
+      title: "Empowering Change Through Responsibility",
+      content:
+        "We advocate for ethical business practices that drive social and environmental progress.",
+    },
+  },
   commitment: {
     title: "Our Sustainability Commitment",
     description:
@@ -24,6 +41,23 @@ export const sustainabilityEn = {
 };
 
 export const sustainabilityFr = {
+  banner: {
+    1: {
+      title: "Engagés pour un Avenir Plus Vert",
+      content:
+        "Nous privilégions des pratiques écologiques pour réduire notre empreinte carbone et protéger l’environnement.",
+    },
+    2: {
+      title: "Innovation Durable pour un Impact Positif",
+      content:
+        "Nos solutions intègrent la durabilité, assurant des bénéfices à long terme pour les entreprises et les communautés.",
+    },
+    3: {
+      title: "Favoriser le Changement par la Responsabilité",
+      content:
+        "Nous défendons des pratiques éthiques qui favorisent le progrès social et environnemental.",
+    },
+  },
   commitment: {
     title: "Notre Engagement en matière de Durabilité",
     description:

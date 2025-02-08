@@ -1,4 +1,21 @@
 export const careerEn = {
+  banner: {
+    1: {
+      title: "Join Centurion and Shape the Future",
+      content:
+        "Be part of a dynamic team driving innovation, growth, and impact across industries.",
+    },
+    2: {
+      title: "Empowering Talent, Building Leaders",
+      content:
+        "We invest in our people, providing opportunities for professional growth and career success.",
+    },
+    3: {
+      title: "A Workplace That Inspires Excellence",
+      content:
+        "At Centurion, we foster a culture of collaboration, creativity, and continuous learning.",
+    },
+  },
   motivation: {
     title: "Impacting Lives",
     subtitle: "Be a Part of Something Bigger",
@@ -28,6 +45,23 @@ export const careerEn = {
 };
 
 export const careerFr = {
+  banner: {
+    1: {
+      title: "Rejoignez Centurion et Façonnez l’Avenir",
+      content:
+        "Faites partie d’une équipe dynamique qui stimule l’innovation, la croissance et l’impact.",
+    },
+    2: {
+      title: "Valoriser les Talents, Former des Leaders",
+      content:
+        "Nous investissons dans nos collaborateurs en leur offrant des opportunités de développement et de réussite.",
+    },
+    3: {
+      title: "Un Environnement qui Inspire l’Excellence",
+      content:
+        "Chez Centurion, nous cultivons un esprit de collaboration, de créativité et d’apprentissage continu.",
+    },
+  },
   motivation: {
     title: "Changer des vies",
     subtitle: "Faites partie de quelque chose de plus grand",

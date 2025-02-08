@@ -1,26 +1,21 @@
 export const commoditiesEn = {
-  bannerData: [
-    {
-      id: "1",
-      title: "Nutriagro Overseas",
-      content: "Heritage of Quality · Purity · Trust",
-      detailsLink: "/",
-      imageLink: "/assets/images/business/commodities/banner/image-01.png",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
+  banner: {
+    1: {
+      title: "Reliable Supply Chain Solutions",
+      content:
+        "Centurion ensures the seamless sourcing and distribution of essential commodities worldwide.",
     },
-    {
-      id: "2",
-      title: "Nutriagro Overseas",
-      content: "Heritage of Quality · Purity · Trust",
-      detailsLink: "/",
-      imageLink: "/assets/images/business/commodities/banner/image-01.png",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
+    2: {
+      title: "Quality and Sustainability in Every Trade",
+      content:
+        "We prioritize ethical sourcing and high-quality standards to deliver sustainable and impactful solutions.",
     },
-  ],
+    3: {
+      title: "Powering Global Markets",
+      content:
+        "Our expertise in commodities helps businesses navigate market demands and achieve long-term success.",
+    },
+  },
   aboutNutriagro: {
     title: "About Nutriagro",
     subtitle: 'We Believe In Our Strength, & Our Strength Is "QUALITY"',
@@ -95,28 +90,23 @@ export const commoditiesEn = {
 };
 
 export const commoditiesFr = {
-  bannerData: [
-    {
-      id: "1",
-      title: "Nutriagro Overseas",
-      content: "Héritage de Qualité · Pureté · Confiance",
-      detailsLink: "/",
-      imageLink: "/assets/images/business/commodities/banner/image-01.png",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
+  banner: {
+    1: {
+      title: "Des Solutions Fiables pour la Chaîne d’Approvisionnement",
+      content:
+        "Centurion garantit l’approvisionnement et la distribution fluide des produits essentiels à travers le monde.",
     },
-    {
-      id: "2",
-      title: "Nutriagro Overseas",
-      content: "Héritage de Qualité · Pureté · Confiance",
-      detailsLink: "/",
-      imageLink: "/assets/images/business/commodities/banner/image-01.png",
-      videoLink: "/",
-      slide: "image",
-      href: "#",
+    2: {
+      title: "Qualité et Durabilité dans Chaque Échange",
+      content:
+        "Nous privilégions des sources éthiques et des normes de qualité élevées pour des solutions durables et impactantes.",
     },
-  ],
+    3: {
+      title: "Dynamiser les Marchés Mondiaux",
+      content:
+        "Notre expertise en matières premières aide les entreprises à répondre aux demandes du marché et à assurer leur succès à long terme.",
+    },
+  },
   aboutNutriagro: {
     title: "À propos de Nutriagro",
     subtitle: 'Nous croyons en notre force, et notre force est "QUALITÉ"',

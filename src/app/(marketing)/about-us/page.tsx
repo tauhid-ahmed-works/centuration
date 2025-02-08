@@ -7,17 +7,15 @@ export const metadata: Metadata = {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
-import { bannerData } from "@/data/about";
-import { Hero } from "@/components/hero";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { Banner } from "@/components/banner";
 
 export default function Page() {
   const t = useTranslations("about_us");
-
   return (
     <>
-      <Hero data={bannerData} />
+      <Banner data={[]} />
       <section className="section" data-padding="md">
         <div className="container" data-size="md">
           <div className="text-center space-y-4">
@@ -28,7 +26,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section className="section relative" data-padding="md">
         <div className="absolute inset-0">
           <Image
@@ -49,7 +46,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section className="section space-y-12" data-padding="md">
         <div className="container" data-size="md">
           <div className="text-center space-y-4">
@@ -79,7 +75,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section className="bg-secondary-500 section" data-padding="md">
         <div className="container" data-size="sm">
           <div className="text-center text-white space-y-6">
@@ -90,7 +85,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       <section className="section" data-padding="md">
         <div className="container">
           <div className="text-center">

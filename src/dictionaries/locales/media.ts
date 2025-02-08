@@ -1,4 +1,21 @@
 export const mediaEn = {
+  banner: {
+    1: {
+      title: "Stay Informed with Our Latest Updates",
+      content:
+        "Explore news, insights, and announcements about our projects and achievements.",
+    },
+    2: {
+      title: "Showcasing Innovation and Impact",
+      content:
+        "Discover stories that highlight our commitment to excellence and positive change.",
+    },
+    3: {
+      title: "Connecting with the World",
+      content:
+        "Engage with our media coverage and industry insights to stay ahead in a fast-changing world.",
+    },
+  },
   "1": {
     title: "Centurion Greater Investment in Women Empowerment",
     content:
@@ -32,6 +49,23 @@ export const mediaEn = {
 };
 
 export const mediaFr = {
+  banner: {
+    1: {
+      title: "Restez Informé avec Nos Dernières Actualités",
+      content:
+        "Découvrez les nouvelles, analyses et annonces sur nos projets et réalisations.",
+    },
+    2: {
+      title: "Mettre en Avant l’Innovation et l’Impact",
+      content:
+        "Explorez des histoires qui illustrent notre engagement envers l’excellence et le changement positif.",
+    },
+    3: {
+      title: "Se Connecter au Monde",
+      content:
+        "Suivez notre couverture médiatique et nos analyses sectorielles pour rester à la pointe du changement.",
+    },
+  },
   "1": {
     title: "Investissement accru de Centurion dans l'autonomisation des femmes",
     content:
