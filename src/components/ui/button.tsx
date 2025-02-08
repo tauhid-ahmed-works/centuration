@@ -30,7 +30,7 @@ const buttonVariants: ButtonVariants = {
     outline: "text-primary-500 border border-primary-500",
   },
   secondary: {
-    bold: "bg-white text-black relative before:absolute before:inset-px before:border-2 before:border-black",
+    bold: "bg-white text-black relative before:absolute before:inset-px xbefore:border-2 xbefore:border-black",
     medium: "bg-white text-black",
     outline: "text-white border border-white",
   },
@@ -38,12 +38,12 @@ const buttonVariants: ButtonVariants = {
 
 const buttonSizes: ButtonSizes = {
   sm: "h-10 px-6",
-  md: "h-12 px-8 text-sm md:text-base",
-  lg: "h-12 md:h-14 px-8 text-base",
+  md: "h-8 md:h-12 px-8",
+  lg: "h-10 md:h-14 px-8 text-base",
 };
 
 const buttonShapes: ButtonShapes = {
-  square: "rounded-none",
+  square: "rounded",
   sm: "rounded-sm",
   md: "rounded",
   lg: "rounded-lg",
@@ -51,7 +51,7 @@ const buttonShapes: ButtonShapes = {
 };
 
 const baseClasses =
-  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 border border-transparent";
+  "inline-flex justify-center items-center gap-3 align-middle font-semibold focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 border border-transparent text-sm md:text-base";
 
 export function Button({
   variant = "primary",
