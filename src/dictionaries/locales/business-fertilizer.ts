@@ -1,4 +1,4 @@
-const fertilizerEn = {
+export const fertilizerEn = {
   1: {
     title: "High-Quality Fertilizers for Agricultural Growth",
     content:
@@ -16,7 +16,7 @@ const fertilizerEn = {
   },
 };
 
-const fertilizerFr = {
+export const fertilizerFr = {
   1: {
     title: "Fertilisants de Haute Qualité pour la Croissance Agricole",
     content:

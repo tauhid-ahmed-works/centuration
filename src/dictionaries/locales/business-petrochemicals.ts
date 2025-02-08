@@ -1,4 +1,4 @@
-const petrochemicalsEn = {
+export const petrochemicalsEn = {
   1: {
     title: "Innovative Petrochemical Solutions for a Sustainable Future",
     content:
@@ -16,7 +16,7 @@ const petrochemicalsEn = {
   },
 };
 
-const petrochemicalsFr = {
+export const petrochemicalsFr = {
   1: {
     title: "Solutions Petrochimiques Innovantes pour un Avenir Durable",
     content:

@@ -1,4 +1,4 @@
-const logisticsEn = {
+export const logisticsEn = {
   1: {
     title: "Efficient and Reliable Logistics Solutions",
     content:
@@ -16,7 +16,7 @@ const logisticsEn = {
   },
 };
 
-const logisticsFr = {
+export const logisticsFr = {
   1: {
     title: "Solutions Logistiques Efficaces et Fiables",
     content:

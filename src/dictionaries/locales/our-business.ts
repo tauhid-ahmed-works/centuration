@@ -1,4 +1,4 @@
-const businessEn = {
+export const businessEn = {
   1: {
     title: "Transforming Industries for a Sustainable Future",
     content:
@@ -16,7 +16,7 @@ const businessEn = {
   },
 };
 
-const businessFr = {
+export const businessFr = {
   1: {
     title: "Transformer les Industries pour un Avenir Durable",
     content:

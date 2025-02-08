@@ -1,4 +1,4 @@
-const realEstateEn = {
+export const realEstateEn = {
   1: {
     title: "Innovative Real Estate Solutions for Sustainable Living",
     content:
@@ -16,7 +16,7 @@ const realEstateEn = {
   },
 };
 
-const realEstateFr = {
+export const realEstateFr = {
   1: {
     title: "Solutions Immobilières Innovantes pour un Logement Durable",
     content:
