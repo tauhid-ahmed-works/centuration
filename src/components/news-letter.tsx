@@ -23,7 +23,7 @@ export default function NewsLetter() {
           Get started to up your business <br /> with personal AI manager
         </Heading>
         <form className="mt-6">
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col items-center sm:flex-row gap-4">
             <input
               placeholder="Enter your email"
               type="text"

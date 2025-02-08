@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   description: "",
 };
 
-import BusinessCards from "@/app/(marketing)/(home)/_components/business-cards";
-import Sustainability from "@/app/(marketing)/(home)/_components/sustainability";
-import Innovation from "@/app/(marketing)/(home)/_components/innovation";
-import CompanyResume from "@/app/(marketing)/(home)/_components/resume";
+import BusinessCards from "./_components/business-cards";
+import Sustainability from "./_components/sustainability";
+import Innovation from "./_components/innovation";
+import CompanyResume from "./_components/resume";
 import ScrollDots from "./_components/scroll-dots";
 import { Banner, type BannerType } from "@/components/banner";
 import { useTranslations } from "next-intl";

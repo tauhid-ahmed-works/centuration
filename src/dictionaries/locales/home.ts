@@ -19,14 +19,14 @@ export const homeEn = {
   business: {
     title: "Our Businesses",
     description:
-      "As a diversified conglomerate, our interest in multiple sectors indicates our determination to cater to our vision of providing basic needs.",
+      "As a diversified conglomerate, our strategic investments across multiple sectors reflect our unwavering commitment to meeting essential needs and driving sustainable growth aligned with our long-term vision.",
     categories: [
       "Technologies",
-      "Medical Service",
+      "Healthcare Services",
       "Launderettes",
       "Ice Ivoire",
       "Commodities",
-      "Real Rstate",
+      "Real Estate",
     ],
   },
   sustainability: {
@@ -78,15 +78,15 @@ export const homeFr = {
     },
   },
   business: {
-    title: "Nos Activités",
+    title: "Nos Entreprises",
     description:
-      "En tant que conglomérat diversifié, notre intérêt pour plusieurs secteurs témoigne de notre détermination à répondre à notre vision de fournir les besoins essentiels.",
+      "En tant que conglomérat diversifié, nos investissements stratégiques dans plusieurs secteurs reflètent notre engagement indéfectible à répondre aux besoins essentiels et à favoriser une croissance durable, en accord avec notre vision à long terme.",
     categories: [
       "Technologies",
-      "Service médical",
+      "Services de Santé",
       "Laveries",
       "Ice Ivoire",
-      "Produits de base",
+      "Produits de Base",
       "Immobilier",
     ],
   },

@@ -3,39 +3,43 @@ import Link from "next/link";
 import * as Icons from "@/components/icons";
 import Image from "next/image";
 import BusinessCard from "./_components/business-card";
-import { businessCategory } from "@/data/business/our-businesses";
-import { bannerData } from "@/data/business/our-businesses";
-import * as Banner from "@/components/carousel/carousel";
-import { ExternalLinkIcon } from "@/components/icons";
+
 import { Heading } from "@/components/heading";
+import { Banner, BannerType } from "@/components/banner";
+import { useTranslations } from "next-intl";
 
 export default function Businesses() {
+  const t = useTranslations("businesses");
+  const bannerIntl = t.raw("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/business/commodities/banner/commodities-banner-01.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/launderettes/banner/launderette-banner-2.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc: "/assets/images/business/medical-service/banner/image-01.png",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      <Banner.Carousel
-        data={bannerData}
-        duration={3}
-        render={(bannerData: Record<string, string>) => (
-          <Banner.Item>
-            {bannerData.slide === "video" ? (
-              <Banner.MediaVideo mediaLink={bannerData.videoLink} />
-            ) : (
-              <Banner.MediaImage
-                alt={bannerData.title}
-                mediaLink={bannerData.imageLink}
-              />
-            )}
-            <Banner.Container>
-              <Banner.Title>{bannerData.title}</Banner.Title>
-              <Banner.Description>{bannerData.content}</Banner.Description>
-              <Banner.CTA route={bannerData.href}>
-                Learn More <ExternalLinkIcon className="!size-3" />
-              </Banner.CTA>
-            </Banner.Container>
-          </Banner.Item>
-        )}
-      />
-      <div className="w-full overflow-x-hidden">
+      <Banner data={bannerData} />
+      {/* <div className="w-full overflow-x-hidden">
         <section className="pb-10 lg:pb-20">
           <div className="px-4 text-center max-w-4xl mx-auto py-10 md:py-20">
             <Heading as="h2" className="mb-4">
@@ -75,7 +79,7 @@ export default function Businesses() {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
     </>
   );
 }

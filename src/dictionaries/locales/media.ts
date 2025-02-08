@@ -1,4 +1,12 @@
 export const mediaEn = {
+  gallery: {
+    title: "Gallery",
+    all: "all",
+    most_recent: "Most Recent",
+    company_news: "Company News",
+    events: "Events",
+    nature: "Nature",
+  },
   banner: {
     1: {
       title: "Stay Informed with Our Latest Updates",
@@ -16,39 +24,49 @@ export const mediaEn = {
         "Engage with our media coverage and industry insights to stay ahead in a fast-changing world.",
     },
   },
-  "1": {
-    title: "Centurion Greater Investment in Women Empowerment",
-    content:
-      "It is a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-  },
-  "2": {
-    title: "Sustainable Energy Initiatives in Rural Areas",
-    content:
-      "Renewable energy projects in rural regions have created significant job opportunities and have helped reduce the carbon footprint. Communities in these areas are increasingly benefiting from solar and wind projects, which also contribute to local economic development. These initiatives highlight the importance of sustainable solutions for long-term environmental impact.",
-  },
-  "3": {
-    title: "Tech Innovations in Education Sector",
-    content:
-      "The education sector has seen tremendous growth in technology adoption, with virtual classrooms and digital platforms becoming the norm. This trend is accelerating the way educators and students interact, creating a more accessible and flexible learning environment. The use of AI in personalized learning is also becoming an exciting development in this space.",
-  },
-  "4": {
-    title: "The Rise of Remote Work: Benefits and Challenges",
-    content:
-      "Remote work has become a significant part of today's business landscape, offering employees flexibility and work-life balance. However, it also poses challenges such as maintaining productivity and managing collaboration in virtual teams. Companies are now exploring hybrid models to address these challenges while continuing to offer the benefits of remote working.",
-  },
-  "5": {
-    title: "Healthcare Reforms and Digital Health Technologies",
-    content:
-      "The healthcare industry is undergoing rapid transformation, driven by digital health technologies that improve patient outcomes and streamline healthcare services. From telemedicine to wearable health devices, technology is playing a critical role in modernizing healthcare. Reforms in policy are also paving the way for better access and efficiency in healthcare delivery.",
-  },
-  "6": {
-    title: "Climate Change and Corporate Responsibility",
-    content:
-      "Corporate responsibility in tackling climate change has gained momentum as more businesses commit to reducing their environmental impact. Companies are adopting greener practices, from sustainable sourcing to reducing carbon emissions. These efforts are not only helping the planet but also enhancing brand reputation and consumer trust.",
+  latest: {
+    "1": {
+      title: "Centurion's Commitment to Women's Empowerment",
+      content:
+        "Centurion has long been committed to empowering women by promoting equal opportunities and fostering an inclusive environment. Through targeted initiatives, we aim to dismantle barriers and provide women with the necessary tools to succeed in their careers and beyond.",
+    },
+    "2": {
+      title: "Promoting Sustainable Energy in Rural Communities",
+      content:
+        "Our renewable energy initiatives in rural areas have created meaningful job opportunities while significantly reducing the carbon footprint. By implementing solar and wind energy solutions, we are helping local communities thrive and ensuring sustainable growth for the future.",
+    },
+    "3": {
+      title: "Innovation in the Education Sector through Technology",
+      content:
+        "The education sector is experiencing a transformation with the integration of technology, such as virtual classrooms and AI-driven learning platforms. These innovations are enhancing accessibility, flexibility, and the overall learning experience, fostering a more interactive and personalized educational environment.",
+    },
+    "4": {
+      title: "The Growth of Remote Work: Opportunities and Challenges",
+      content:
+        "Remote work is reshaping the business world by providing employees with greater flexibility and a healthier work-life balance. However, it also introduces challenges in maintaining productivity and effective collaboration. Hybrid work models are now being explored to strike the right balance between flexibility and teamwork.",
+    },
+    "5": {
+      title: "Digital Health Technologies and Healthcare Reform",
+      content:
+        "The healthcare industry is rapidly evolving with the introduction of digital health technologies, which are enhancing patient care and streamlining services. From telehealth to wearable devices, these innovations are revolutionizing healthcare, while policy reforms are ensuring wider access and greater efficiency in healthcare delivery.",
+    },
+    "6": {
+      title: "Addressing Climate Change: Corporate Accountability",
+      content:
+        "As the climate crisis intensifies, corporate responsibility in addressing environmental challenges has never been more crucial. Many companies are adopting sustainable practices to reduce their carbon footprint, from eco-friendly sourcing to innovative carbon-reduction strategies. These actions are not only benefiting the planet but also building trust and loyalty with consumers.",
+    },
   },
 };
 
 export const mediaFr = {
+  gallery: {
+    title: "Galerie",
+    all: "Tous",
+    most_recent: "Les Plus Récentes",
+    company_news: "Actualités de l'Entreprise",
+    events: "Événements",
+    nature: "Nature",
+  },
   banner: {
     1: {
       title: "Restez Informé avec Nos Dernières Actualités",
@@ -66,34 +84,39 @@ export const mediaFr = {
         "Suivez notre couverture médiatique et nos analyses sectorielles pour rester à la pointe du changement.",
     },
   },
-  "1": {
-    title: "Investissement accru de Centurion dans l'autonomisation des femmes",
-    content:
-      "Il est un fait établi qu'un lecteur sera distrait par le contenu lisible d'une page en regardant sa mise en page. Le but d'utiliser Lorem Ipsum est qu'il a une distribution plus ou moins normale des lettres, contrairement à l'utilisation de 'Contenu ici, contenu ici', ce qui le fait ressembler à de l'anglais lisible.",
-  },
-  "2": {
-    title: "Initiatives d'énergie durable dans les zones rurales",
-    content:
-      "Les projets d'énergie renouvelable dans les régions rurales ont créé des opportunités d'emploi importantes et ont contribué à réduire l'empreinte carbone. Les communautés de ces zones bénéficient de plus en plus des projets solaires et éoliens, qui contribuent également au développement économique local. Ces initiatives soulignent l'importance des solutions durables pour un impact environnemental à long terme.",
-  },
-  "3": {
-    title: "Innovations technologiques dans le secteur de l'éducation",
-    content:
-      "Le secteur de l'éducation a connu une croissance impressionnante dans l'adoption de la technologie, avec des salles de classe virtuelles et des plateformes numériques devenant la norme. Cette tendance accélère la manière dont les éducateurs et les étudiants interagissent, créant un environnement d'apprentissage plus accessible et flexible. L'utilisation de l'IA dans l'apprentissage personnalisé devient également un développement passionnant dans ce domaine.",
-  },
-  "4": {
-    title: "L'essor du travail à distance : avantages et défis",
-    content:
-      "Le travail à distance est devenu une partie importante du paysage commercial actuel, offrant aux employés flexibilité et équilibre entre vie professionnelle et personnelle. Cependant, cela présente également des défis tels que le maintien de la productivité et la gestion de la collaboration dans les équipes virtuelles. Les entreprises explorent maintenant des modèles hybrides pour relever ces défis tout en continuant à offrir les avantages du télétravail.",
-  },
-  "5": {
-    title: "Réformes de la santé et technologies numériques de la santé",
-    content:
-      "L'industrie de la santé subit une transformation rapide, grâce aux technologies numériques qui améliorent les résultats pour les patients et rationalisent les services de santé. De la télémédecine aux dispositifs de santé connectés, la technologie joue un rôle clé dans la modernisation des soins de santé. Les réformes des politiques ouvrent également la voie à un meilleur accès et une plus grande efficacité dans la prestation des soins de santé.",
-  },
-  "6": {
-    title: "Changement climatique et responsabilité des entreprises",
-    content:
-      "La responsabilité des entreprises face au changement climatique a pris de l'ampleur à mesure que de plus en plus d'entreprises s'engagent à réduire leur impact environnemental. Les entreprises adoptent des pratiques plus écologiques, allant de l'approvisionnement durable à la réduction des émissions de carbone. Ces efforts non seulement aident la planète, mais améliorent également la réputation des marques et la confiance des consommateurs.",
+  latest: {
+    "1": {
+      title: "L'engagement de Centurion pour l'autonomisation des femmes",
+      content:
+        "Centurion s'engage depuis longtemps à autonomiser les femmes en promouvant l'égalité des chances et en favorisant un environnement inclusif. À travers des initiatives ciblées, nous visons à éliminer les obstacles et à fournir aux femmes les outils nécessaires pour réussir dans leur carrière et au-delà.",
+    },
+    "2": {
+      title: "Promotion de l'énergie durable dans les communautés rurales",
+      content:
+        "Nos initiatives en matière d'énergie renouvelable dans les zones rurales ont créé des opportunités d'emploi significatives tout en réduisant considérablement l'empreinte carbone. Grâce à la mise en place de solutions solaires et éoliennes, nous aidons les communautés locales à prospérer et assurons une croissance durable pour l'avenir.",
+    },
+    "3": {
+      title:
+        "L'innovation dans le secteur de l'éducation grâce à la technologie",
+      content:
+        "Le secteur de l'éducation connaît une transformation avec l'intégration de la technologie, comme les classes virtuelles et les plateformes d'apprentissage alimentées par l'IA. Ces innovations améliorent l'accessibilité, la flexibilité et l'expérience d'apprentissage dans son ensemble, favorisant un environnement éducatif plus interactif et personnalisé.",
+    },
+    "4": {
+      title: "La croissance du travail à distance : opportunités et défis",
+      content:
+        "Le travail à distance transforme le monde des affaires en offrant aux employés une plus grande flexibilité et un meilleur équilibre entre vie professionnelle et personnelle. Cependant, il présente également des défis en termes de productivité et de collaboration efficace. Les modèles hybrides sont désormais explorés pour trouver un équilibre entre flexibilité et travail d'équipe.",
+    },
+    "5": {
+      title:
+        "Les technologies de la santé numérique et la réforme des soins de santé",
+      content:
+        "Le secteur de la santé évolue rapidement avec l'introduction de technologies de santé numériques, qui améliorent les soins aux patients et rationalisent les services. De la télémédecine aux dispositifs portables, ces innovations révolutionnent les soins de santé, tandis que les réformes politiques garantissent un meilleur accès et une plus grande efficacité dans la prestation des soins.",
+    },
+    "6": {
+      title:
+        "Lutte contre le changement climatique : responsabilité des entreprises",
+      content:
+        "À mesure que la crise climatique s'intensifie, la responsabilité des entreprises face aux défis environnementaux n'a jamais été aussi cruciale. De nombreuses entreprises adoptent des pratiques durables pour réduire leur empreinte carbone, allant de l'approvisionnement écologique aux stratégies innovantes de réduction des émissions de carbone. Ces actions bénéficient non seulement à la planète, mais renforcent également la confiance et la fidélité des consommateurs.",
+    },
   },
 };

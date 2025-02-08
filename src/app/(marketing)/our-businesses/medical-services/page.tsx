@@ -1,18 +1,15 @@
-import * as data from "@/data/business/medical-services";
 import { Heading } from "@/components/heading";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { LucideArrowRight, LucideFileDown } from "lucide-react";
 import Image from "next/image";
-import { bannerData } from "@/data/business/medical-services";
-import { Hero } from "@/components/hero";
 
 export default function MedicalServicePage() {
   return (
     <>
-      <Hero data={bannerData} />
+      {/* <Hero data={bannerData} /> */}
       {/* Scanner Section */}
-      <section className="section" data-padding="lg">
+      {/* <section className="section" data-padding="lg">
         <div className="container">
           <div className="space-y-10 lg:space-y-20">
             <div className="md:grid md:grid-cols-[300px_1fr] lg:grid-cols-[480px_1fr] md:gap-6 lg:gap-10">
@@ -74,10 +71,10 @@ export default function MedicalServicePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Amenities */}
-      <section className="section relative" data-padding="md">
+      {/* <section className="section relative" data-padding="md">
         <div className="absolute inset-0">
           <Image
             src="/assets/images/business/medical-service/amenities/image-01.png"
@@ -148,9 +145,9 @@ export default function MedicalServicePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Models */}
-      <section className="section" data-padding="lg">
+      {/* <section className="section" data-padding="lg">
         <div className="container">
           <Image
             width={1920}
@@ -235,9 +232,9 @@ export default function MedicalServicePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Contact us */}
-      <section className="section bg-secondary-500" data-padding="md">
+      {/* <section className="section bg-secondary-500" data-padding="md">
         <div className="container">
           <Underline align="left" variant="secondary" />
           <Heading className="mt-6 !leading-relaxed" size="4xl">
@@ -246,9 +243,9 @@ export default function MedicalServicePage() {
             <span className="text-primary-500">{data.contactUs.title[1]}</span>
           </Heading>
         </div>
-      </section>
+      </section> */}
       {/*  */}
-      <section className="section" data-padding="lg">
+      {/* <section className="section" data-padding="lg">
         <div className="container">
           <div className="max-w-sm mx-auto text-center">
             <Heading
@@ -290,9 +287,9 @@ export default function MedicalServicePage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Infection */}
-      <section
+      {/* <section
         className="section bg-secondary-500 text-center"
         data-padding="md"
       >
@@ -306,7 +303,7 @@ export default function MedicalServicePage() {
           </Heading>
           <p className="text-white mt-10">{data.infectionPrevention.content}</p>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

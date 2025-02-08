@@ -65,8 +65,8 @@ export default function BusinessCards({ ...props }) {
     <section className="section" data-padding="md" {...props}>
       <div className="container">
         <div className="space-y-10 text-center">
-          <div className="max-w-lg mx-auto text-center space-y-4">
-            <Heading as="h2" size="3xl">
+          <div className="max-w-2xl mx-auto text-center space-y-4">
+            <Heading as="h2" size="4xl">
               {t("business.title")}
             </Heading>
             <p>{t("business.description")}</p>
@@ -77,7 +77,7 @@ export default function BusinessCards({ ...props }) {
                 <AnimatedCard index={index}>
                   <div className="hover:shadow hover:-translate-y-1 transition-transform duration-200 rounded overflow-hidden">
                     <Link href={card.path}>
-                      <div className="relative min-h-52">
+                      <div className="relative min-h-60">
                         <Image
                           src={card.image}
                           alt="image"

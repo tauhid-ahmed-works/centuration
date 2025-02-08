@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Heading } from "@/components/heading";
-import * as data from "@/data/business/commodities";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
@@ -38,7 +37,7 @@ export default function CommoditiesPage() {
   return (
     <>
       <Banner data={bannerData} />
-      <section className="section" data-padding="lg">
+      {/* <section className="section" data-padding="lg">
         <div className="container">
           <div className="space-y-4 lg:space-y-6 text-center max-w-4xl mx-auto">
             <Heading className="text-primary-500" as="h2" size="2xl">
@@ -237,7 +236,7 @@ export default function CommoditiesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
