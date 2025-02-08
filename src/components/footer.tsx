@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { Icons } from "@/components/icons";
 import { footerData } from "@/data/footer-navigation";
 import NewsLetter from "@/components/news-letter";
@@ -11,8 +10,8 @@ export default function Footer() {
   return (
     <div className="bg-secondary-500 w-full">
       <NewsLetter />
-      <footer className="container text-white grid grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-10 py-10">
-        <div className="space-y-4 max-w-60 -mt-2">
+      <footer className="container text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-8 gap-y-10 py-10">
+        <div className="space-y-4 max-w-52 -mt-2">
           <Link href="/">
             <BrandLogo width={180} />
           </Link>
@@ -69,10 +68,10 @@ export function SocialIcon({ icon }: SocialIconProps) {
 
   return (
     <Link
-      className="flex items-center justify-center rounded-full border border-gray-300 size-8 hover:bg-brand-500/50"
+      className="flex items-center justify-center rounded-full border border-gray-300 size-5 md:size-8 hover:bg-brand-500/50"
       href="/"
     >
-      <Icon className="size-5 text-gray-300" />
+      <Icon className="size-3 md:size-5 text-gray-300" />
     </Link>
   );
 }
@@ -86,7 +85,7 @@ function Copyright() {
           {new Date().getFullYear()}{" "}
           <span className="hidden md:block">- Centurions</span>
         </span>
-        <span className="flex gap-4">
+        <span className="flex gap-2 md:gap-4">
           {footerData.socialLinks.map((item) => (
             <SocialIcon
               key={item.name}
