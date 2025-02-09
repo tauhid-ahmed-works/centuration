@@ -11,30 +11,32 @@ export default function JustCareer({
   data: { title: string; description: string; additional: string[] };
 }) {
   return (
-    <section className="section" data-padding="sm">
+    <section className="section" data-padding="md">
       <div className="container">
-        <div className="md:flex md:gap-10 items-center space-y-4">
-          <div className="md:flex-1 w-full relative h-72">
+        <div className="flex md:items-center flex-col md:flex-row gap-6">
+          <div className="flex-1 shrink-0 relative aspect-video md:aspect-square rounded overflow-hidden">
             <Image
               src="/assets/images/career/career-sec.webp"
               alt="image"
               fill
+              sizes="40vw"
               className="rounded aspect-square w-full h-full object-cover"
             />
           </div>
-          <div className="md:flex-1 space-y-10">
-            <Heading size="2xl" as="h2">
-              {data.title}
-            </Heading>
-            <p>{data.description}</p>
-
-            <div className="sm:flex-row flex gap-10 justify-center items-center">
+          <div className="flex-1 shrink-0 space-y-10">
+            <div className="space-y-4">
+              <Heading className="text-secondary-400" size="3xl" as="h2">
+                {data.title}
+              </Heading>
+              <p>{data.description}</p>
+            </div>
+            <div className="flex gap-6">
               {data.additional.map((benefit, index) => (
                 <div className="flex flex-col items-center gap-4" key={benefit}>
                   {React.cloneElement(icons[index], {
-                    className: "size-14",
+                    className: "size-10 lg:size-14",
                   })}
-                  <span className="text-2xl">{benefit}</span>
+                  <span className="text-sm lg:text-base">{benefit}</span>
                 </div>
               ))}
             </div>
