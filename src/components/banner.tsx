@@ -28,7 +28,7 @@ type CarouselPaginationProps = {
 // banner data type. what banner data accepts.
 export type BannerType = {
   title: string;
-  content: string;
+  content?: string;
   mediaSrc: string;
   mediaType: "video" | "image";
   duration?: number;

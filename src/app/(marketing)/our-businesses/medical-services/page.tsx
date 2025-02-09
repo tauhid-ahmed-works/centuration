@@ -3,13 +3,55 @@ import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { LucideArrowRight, LucideFileDown } from "lucide-react";
 import Image from "next/image";
+import { Banner, BannerType } from "@/components/banner";
+import { getIntl } from "@/lib/get-intl";
+
+const ourSolutionsIcons = [
+  "/assets/images/business/medical-service/icons/wall.png",
+  "/assets/images/business/medical-service/icons/oreo.png",
+  "/assets/images/business/medical-service/icons/horn.png",
+  "/assets/images/business/medical-service/icons/zoom.png",
+  "/assets/images/business/medical-service/icons/search.png",
+  "/assets/images/business/medical-service/icons/cart.png",
+];
 
 export default function MedicalServicePage() {
+  const medicalServiceIntl = getIntl("business_medical_service");
+  const bannerIntl: BannerType[] = medicalServiceIntl("banner");
+  const rentScannerIntl = medicalServiceIntl("rent_scanner");
+  const amenitiesIntl = medicalServiceIntl("amenities");
+  const modelsIntl = medicalServiceIntl("ctCubeModels");
+  const contactUsIntl = medicalServiceIntl("contactUs");
+  const ourSolutionsIntl = medicalServiceIntl("ourSolutions");
+  const infectionPreventionIntl = medicalServiceIntl("infectionPrevention");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/business/medical-service/banner/banner-image-1.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/medical-service/banner/banner-image-2.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/medical-service/banner/banner-image-3.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      {/* <Hero data={bannerData} /> */}
+      <Banner data={bannerData} />
       {/* Scanner Section */}
-      {/* <section className="section" data-padding="lg">
+      <section className="section" data-padding="lg">
         <div className="container">
           <div className="space-y-10 lg:space-y-20">
             <div className="md:grid md:grid-cols-[300px_1fr] lg:grid-cols-[480px_1fr] md:gap-6 lg:gap-10">
@@ -26,12 +68,12 @@ export default function MedicalServicePage() {
                     />
                   }
                 >
-                  {data.rentScanner.title}
+                  {rentScannerIntl.title}
                 </Heading>
               </div>
               <div className="mt-6 md:mt-0 flex flex-col justify-center items-center md:items-start">
                 <p className="text-secondary-300 text-sm md:text-base text-pretty">
-                  {data.rentScanner.description}
+                  {rentScannerIntl.description}
                 </p>
                 <Button
                   variant="primary"
@@ -44,11 +86,11 @@ export default function MedicalServicePage() {
             </div>
             <div className="text-center md:text-left">
               <Heading className="text-secondary-400" as="h2" size="4xl">
-                {data.rentScanner.subtitle}
+                {rentScannerIntl.subtitle}
               </Heading>
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
-              {data.rentScanner.content.map((item, i) => (
+              {rentScannerIntl.features.map((item: string, i: number) => (
                 <li
                   className="bg-primary-50 text-secondary-300 p-2 rounded-full text-sm flex items-center gap-3"
                   key={i}
@@ -60,21 +102,21 @@ export default function MedicalServicePage() {
                 </li>
               ))}
             </ul>
-            <div>
+            <div className="relative h-96 lg:h-[500px]">
               <Image
-                src={data.rentScanner.videoLink}
-                width={1920}
-                height={500}
+                src="/assets/images/business/medical-service/rentScanner/image-01.webp"
+                sizes="(max-width:600px) 50vw, 80vw"
                 alt="Image"
+                fill
                 className="size-full object-cover"
               />
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Amenities */}
-      {/* <section className="section relative" data-padding="md">
+      <section className="section relative" data-padding="md">
         <div className="absolute inset-0">
           <Image
             src="/assets/images/business/medical-service/amenities/image-01.png"
@@ -127,10 +169,10 @@ export default function MedicalServicePage() {
                 className="text-primary-500 text-center md:text-left md:mt-8 md:ml-4"
                 size="4xl"
               >
-                Amenities
+                {amenitiesIntl.title}
               </Heading>
               <ul className="flex flex-col gap-6 md:gap-0 lg:flex-row md:flex-wrap mt-4 md:mt-8">
-                {data.amenities.content.map((item, i) => (
+                {amenitiesIntl.features.map((item: string, i: number) => (
                   <li
                     className="bg-primary-500 text-white py-2 px-4 flex gap-4 items-center md:bg-transparent md:basis-1/2"
                     key={i}
@@ -145,14 +187,14 @@ export default function MedicalServicePage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
       {/* Models */}
-      {/* <section className="section" data-padding="lg">
+      <section className="section" data-padding="lg">
         <div className="container">
           <Image
             width={1920}
             height={400}
-            src={data.ctCubeModels.image}
+            src="/assets/images/business/medical-service/model/model-01.webp"
             alt="featured-model"
             className="h-[350px] md:h-[450px] object-cover size-full"
           />
@@ -163,89 +205,106 @@ export default function MedicalServicePage() {
               size="5xl"
               underline={<Underline align="center" variant="primary" />}
             >
-              {data.ctCubeModels.title}
+              {modelsIntl.title}
             </Heading>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-4 mt-10 place-items-center">
-            {data.ctCubeModels.models.map((item, i) => (
-              <div className="w-fit" key={i}>
-                <Image src={item.image} width={400} height={300} alt="model" />
-                <Heading size="2xl" className="text-primary-500 mt-4">
-                  {item.title}
-                </Heading>
+            {modelsIntl.models.map(
+              (
+                item: { title: string; specifications: Record<string, string> },
+                i: number
+              ) => (
+                <div className="w-fit" key={i}>
+                  <Image
+                    src="/assets/images/business/medical-service/model/model-01.webp"
+                    width={400}
+                    height={300}
+                    alt="model"
+                  />
+                  <Heading size="2xl" className="text-primary-500 mt-4">
+                    {item.title}
+                  </Heading>
 
-                <ul className="space-y-1 mt-4">
-                  <li>
-                    <strong className="text-secondary-400 font-semibold">
-                      Size:
-                    </strong>
-                    &nbsp;
-                    <span className="text-secondary-300">
-                      {item.point.size}
-                    </span>
-                  </li>
-                  <li>
-                    <strong className="text-secondary-400 font-semibold">
-                      Rooms:
-                    </strong>
-                    &nbsp;
-                    <span className="text-secondary-300">
-                      {item.point.rooms}
-                    </span>
-                  </li>
-                  <li>
-                    <strong className="text-secondary-400 font-semibold">
-                      CT Scanner:
-                    </strong>
-                    &nbsp;
-                    <span className="text-secondary-300">
-                      {item.point["ct-scanner"]}
-                    </span>
-                  </li>
-                  <li>
-                    <strong className="text-secondary-400 font-semibold">
-                      Availability:
-                    </strong>
-                    &nbsp;
-                    <span className="text-secondary-300">
-                      {item.point.availability}
-                    </span>
-                  </li>
-                </ul>
-                <div className="flex gap-2 lg:gap-4 mt-4">
-                  <Button variant="primary" size="md">
-                    Details
-                  </Button>
-                  <Button
-                    className="before:inset-0 font-normal"
-                    variant="secondary"
-                    size="md"
-                  >
-                    Inquire
-                  </Button>
-                  <button className="size-9 lg:size-12 bg-secondary-500 shrink-0 rounded inline-flex items-center justify-center">
-                    <LucideFileDown className="text-white size-5 md:size-6" />
-                  </button>
+                  <ul className="space-y-1 mt-4">
+                    <li>
+                      <strong className="text-secondary-400 font-semibold">
+                        Size:
+                      </strong>
+                      &nbsp;
+                      <span className="text-secondary-300">
+                        {item.specifications.size}
+                      </span>
+                    </li>
+                    <li>
+                      <strong className="text-secondary-400 font-semibold">
+                        Rooms:
+                      </strong>
+                      &nbsp;
+                      <span className="text-secondary-300">
+                        {item.specifications.rooms}
+                      </span>
+                    </li>
+                    <li>
+                      <strong className="text-secondary-400 font-semibold">
+                        CT Scanner:
+                      </strong>
+                      &nbsp;
+                      <span className="text-secondary-300">
+                        {item.specifications["scanner"]}
+                      </span>
+                    </li>
+                    <li>
+                      <strong className="text-secondary-400 font-semibold">
+                        Availability:
+                      </strong>
+                      &nbsp;
+                      <span className="text-secondary-300">
+                        {item.specifications.availability}
+                      </span>
+                    </li>
+                  </ul>
+                  <div className="flex gap-2 lg:gap-4 mt-4">
+                    <Button variant="primary" size="md">
+                      Details
+                    </Button>
+                    <Button
+                      className="before:inset-0 font-normal"
+                      variant="secondary"
+                      size="md"
+                    >
+                      Inquire
+                    </Button>
+                    <button className="size-9 lg:size-12 bg-secondary-500 shrink-0 rounded inline-flex items-center justify-center">
+                      <LucideFileDown className="text-white size-5 md:size-6" />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
-      </section> */}
+      </section>
       {/* Contact us */}
-      {/* <section className="section bg-secondary-500" data-padding="md">
+      <section className="section bg-secondary-500" data-padding="md">
         <div className="container">
-          <Underline align="left" variant="secondary" />
-          <Heading className="mt-6 !leading-relaxed" size="4xl">
-            <span className="text-white">{data.contactUs.title[0]}</span>
+          <Heading
+            className="mt-6 !leading-relaxed"
+            size="4xl"
+            underline={<Underline align="left" variant="secondary" />}
+          >
+            <span className="text-white">
+              {contactUsIntl.title.split("\t")[0]}
+            </span>
             <br />
-            <span className="text-primary-500">{data.contactUs.title[1]}</span>
+            <span className="text-primary-500">
+              {contactUsIntl.title.split("\t")[1]}
+            </span>
           </Heading>
         </div>
-      </section> */}
+      </section>
       {/*  */}
-      {/* <section className="section" data-padding="lg">
+      <section className="section" data-padding="lg">
         <div className="container">
           <div className="max-w-sm mx-auto text-center">
             <Heading
@@ -253,43 +312,46 @@ export default function MedicalServicePage() {
               size="4xl"
               underline={<Underline align="center" variant="primary" />}
             >
-              {data.ourSolutions.title}
+              {ourSolutionsIntl.title}
             </Heading>
           </div>
           <div className="overflow-hidden mt-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px -space-x-px -space-y-px">
-              {data.ourSolutions.features.map((item, i) => (
-                <div
-                  className="space-y-4 text-center p-8 border border-secondary-50"
-                  key={i}
-                >
-                  <Image
-                    className="size-10 mx-auto"
-                    src={item.icon}
-                    width={40}
-                    height={40}
-                    alt="icon"
-                  />
-                  <Heading className="text-secondary-400" as="h3" size="2xl">
-                    {item.title}
-                  </Heading>
-                  <p className="text-secondary-300">{item.content}</p>
-                </div>
-              ))}
+              {ourSolutionsIntl.reasons.map(
+                (item: { title: string; content: string }, i: number) => (
+                  <div
+                    className="space-y-4 text-center p-8 border border-secondary-50"
+                    key={i}
+                  >
+                    <Image
+                      className="size-10 mx-auto"
+                      src={ourSolutionsIcons[i]}
+                      width={40}
+                      height={40}
+                      alt="icon"
+                    />
+                    <Heading className="text-secondary-400" as="h3" size="2xl">
+                      {item.title}
+                    </Heading>
+                    <p className="text-secondary-300">{item.content}</p>
+                  </div>
+                )
+              )}
             </div>
           </div>
-          <div className="mt-14 md:mt-28 lg:mt-40">
+          <div className="mt-14 md:mt-28 lg:mt-40 relative h-96 lg:h-[550px]">
             <Image
-              src={data.ourSolutions.image}
-              width={1920}
-              height={500}
+              src="/assets/images/business/medical-service/our-solutions/solution-01.webp"
+              fill
+              sizes="80vw"
               alt="image"
+              className="object-cover"
             />
           </div>
         </div>
-      </section> */}
+      </section>
       {/* Infection */}
-      {/* <section
+      <section
         className="section bg-secondary-500 text-center"
         data-padding="md"
       >
@@ -299,11 +361,11 @@ export default function MedicalServicePage() {
             size="4xl"
             underline={<Underline align="center" className="md:hidden" />}
           >
-            {data.infectionPrevention.title}
+            {infectionPreventionIntl.title}
           </Heading>
-          <p className="text-white mt-10">{data.infectionPrevention.content}</p>
+          <p className="text-white mt-10">{infectionPreventionIntl.content}</p>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }

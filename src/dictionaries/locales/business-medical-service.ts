@@ -15,7 +15,7 @@ export const medicalServiceEn = {
     },
   },
 
-  rentScanner: {
+  rent_scanner: {
     title: "SIMPLY RENT – CT SCANNER IN A CONTAINER",
     subtitle: "Your Benefits",
     description:
@@ -73,11 +73,23 @@ export const medicalServiceEn = {
         queryLink: "#",
         downloadLink: "#",
       },
+      {
+        title: "CT-CUBE 3",
+        specifications: {
+          size: "40 sqm",
+          rooms: "Operator room, examination room, corridor",
+          scanner: "Somatom Emotion 6",
+          availability: "On request",
+        },
+        detailsLink: "#",
+        queryLink: "#",
+        downloadLink: "#",
+      },
     ],
   },
 
   contactUs: {
-    title: "Need a Custom Solution? Contact Us!",
+    title: "Need a Custom Solution?\tCONTACT US FOR OUR INDIVIDUAL SOLUTIONS!!",
   },
 
   ourSolutions: {
@@ -140,7 +152,7 @@ export const medicalServiceFr = {
     },
   },
 
-  rentScanner: {
+  rent_scanner: {
     title: "LOCATION SIMPLIFIÉE – SCANNER CT EN CONTAINER",
     subtitle: "Vos Avantages",
     description:
@@ -198,11 +210,24 @@ export const medicalServiceFr = {
         queryLink: "#",
         downloadLink: "#",
       },
+      {
+        title: "CT-CUBE 3",
+        specifications: {
+          size: "40 m²",
+          rooms: "Salle de commande, salle d’examen, couloir",
+          scanner: "Somatom Emotion 6",
+          availability: "Sur demande",
+        },
+        detailsLink: "#",
+        queryLink: "#",
+        downloadLink: "#",
+      },
     ],
   },
 
   contactUs: {
-    title: "Besoin d'une Solution Personnalisée ? Contactez-nous !",
+    title:
+      "Besoin d'une solution sur mesure ?\tCONTACTEZ-NOUS POUR NOS SOLUTIONS PERSONNALISÉES !!",
   },
 
   ourSolutions: {
