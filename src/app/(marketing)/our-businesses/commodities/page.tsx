@@ -3,11 +3,16 @@ import { Heading } from "@/components/heading";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
-import { useTranslations } from "next-intl";
+import { getIntl } from "@/lib/get-intl";
 
 export default function CommoditiesPage() {
-  const t = useTranslations("about_us");
-  const bannerIntl = t.raw("banner");
+  const commoditiesData = getIntl("business_commodities");
+  const bannerIntl = commoditiesData("banner");
+  const aboutIntl = commoditiesData("aboutNutriagro");
+  const ourServicesIntl = commoditiesData("ourServices");
+  const popularProductsIntl = commoditiesData("popularProducts");
+  const ourOfferIntl = commoditiesData("ourOffer");
+  const whyChooseUsIntl = commoditiesData("whyChooseUs");
   const bannerData: BannerType[] = [
     {
       mediaSrc:
@@ -37,19 +42,23 @@ export default function CommoditiesPage() {
   return (
     <>
       <Banner data={bannerData} />
-      {/* <section className="section" data-padding="lg">
+      <section className="section" data-padding="lg">
         <div className="container">
           <div className="space-y-4 lg:space-y-6 text-center max-w-4xl mx-auto">
             <Heading className="text-primary-500" as="h2" size="2xl">
-              {data.aboutNutriagro.title}
+              {aboutIntl.title}
             </Heading>
-            <Heading as="h3" size="5xl">
-              {data.aboutNutriagro.subtitle}
+            <Heading
+              className="text-secondary-400"
+              as="h3"
+              size="5xl"
+              underline={<Underline align="center" variant="primary" />}
+            >
+              {aboutIntl.subtitle}
             </Heading>
-            <Underline align="center" variant="primary" />
           </div>
           <div className="mt-10 text-center space-y-4">
-            {data.aboutNutriagro.content.map((item, i) => (
+            {aboutIntl.content.map((item: string, i: number) => (
               <p key={i}>{item}</p>
             ))}
           </div>
@@ -61,23 +70,30 @@ export default function CommoditiesPage() {
       <section className="bg-secondary-500 section">
         <div className="container">
           <ul className="grid grid-cols-2 gap-4 lg:grid-cols-[auto_auto_auto_auto] justify-between">
-            {data.ourServices.map((item) => (
-              <li className="flex items-center gap-4" key={item.id}>
-                <Image
-                  src={item.icon}
-                  className="size-12"
-                  width={48}
-                  height={48}
-                  alt="icon"
-                />
-                <span className="flex flex-col">
-                  <span className="font-semibold text-white text-xl">
-                    {item.title}
+            {ourServicesIntl.map(
+              (item: {
+                id: number;
+                icon: string;
+                title: string;
+                content: "string";
+              }) => (
+                <li className="flex items-center gap-4" key={item.id}>
+                  <Image
+                    src={item.icon}
+                    className="size-12"
+                    width={48}
+                    height={48}
+                    alt="icon"
+                  />
+                  <span className="flex flex-col">
+                    <span className="font-semibold text-white text-xl">
+                      {item.title}
+                    </span>
+                    <span className="text-primary-500">{item.content}</span>
                   </span>
-                  <span className="text-primary-500">{item.content}</span>
-                </span>
-              </li>
-            ))}
+                </li>
+              )
+            )}
           </ul>
         </div>
       </section>
@@ -90,7 +106,7 @@ export default function CommoditiesPage() {
                 size="5xl"
                 as="h2"
               >
-                {data.popularProducts.title}
+                {popularProductsIntl.title}
               </Heading>
               <Underline align="center" />
             </div>
@@ -157,16 +173,16 @@ export default function CommoditiesPage() {
             <div className="space-y-6 md:space-y-10 max-w-sm">
               <div className="space-y-6">
                 <Heading className="text-primary-500" as="h2" size="2xl">
-                  {data.ourOffer.title}
+                  {ourOfferIntl.title}
                 </Heading>
                 <Heading as="h3" size="4xl">
-                  {data.ourOffer.subtitle}
+                  {ourOfferIntl.subtitle}
                 </Heading>
                 <div className="spacey-6">
                   <Heading as="h3" size="xl">
-                    {data.ourOffer.subtitle2}
+                    {ourOfferIntl.subtitle2}
                   </Heading>
-                  <p>{data.ourOffer.description}</p>
+                  <p>{ourOfferIntl.description}</p>
                 </div>
                 <Button>Contact Now</Button>
               </div>
@@ -203,40 +219,23 @@ export default function CommoditiesPage() {
             </div>
             <div className="flex-1 text-white space-y-8">
               <Heading as="h2" size="4xl">
-                Why Choose Us ?
+                {whyChooseUsIntl.title}
               </Heading>
               <ul className="space-y-6">
-                <li className="flex gap-6 items-start">
-                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
-                  Nutriagro Overseas OPC PVT LTD has the quality products you
-                  need at target prices you want.
-                </li>
-                <li className="flex gap-6 items-start">
-                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
-                  We also have extensive experience in Procurement.
-                </li>
-                <li className="flex gap-6 items-start">
-                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
-                  Quotation, evaluation and choice of suppliers.
-                </li>
-                <li className="flex gap-6 items-start">
-                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
-                  Transport, logistics and order taking.
-                </li>
-                <li className="flex gap-6 items-start">
-                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
-                  Management and coordination of all shipment procedures.
-                </li>
-                <li className="flex gap-6 items-start">
-                  <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
-                  Performance analysis and feedback on deliveries and suppliers.
-                </li>
+                {whyChooseUsIntl.content.map((item: string, index: number) => (
+                  <li className="flex gap-6 items-start" key={index}>
+                    <div className="size-5 rounded-full border-primary-500 border-2 shrink-0"></div>
+                    {item}
+                  </li>
+                ))}
               </ul>
-              <Button variant="secondary">Learn More</Button>
+              <Button size="md" variant="secondary">
+                Learn More
+              </Button>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }

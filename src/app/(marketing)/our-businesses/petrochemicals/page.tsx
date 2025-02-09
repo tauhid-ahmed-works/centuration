@@ -1,17 +1,38 @@
-import { Heading } from "@/components/heading";
-import Link from "next/link";
+import { BannerType, Banner } from "@/components/banner";
+import { getIntl } from "@/lib/get-intl";
 
 export default function PetrochemicalsPage() {
+  const commoditiesData = getIntl("business_petrochemicals");
+  const bannerIntl = commoditiesData("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/business/petrochemicals/banner/banner-image-01.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/petrochemicals/banner/banner-image-02.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/petrochemicals/banner/banner-image-03.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
-    <div className="h-screen bg-gray-950 grid place-items-center">
-      <div className="text-white text-center space-y-6">
-        <Heading as="h2" className="text-5xl">
-          Coming Soon
-        </Heading>
-        <Link href="/" className="inline-block">
-          Go Home
-        </Link>
-      </div>
-    </div>
+    <>
+      <Banner data={bannerData} />
+    </>
   );
 }

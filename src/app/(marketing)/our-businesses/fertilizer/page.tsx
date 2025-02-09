@@ -1,24 +1,38 @@
-import { Heading } from "@/components/heading";
+import { Banner, BannerType } from "@/components/banner";
+import { getIntl } from "@/lib/get-intl";
 
-export default function FertilizerPage() {
+export default function LogisticsPage() {
+  const commoditiesData = getIntl("business_fertilizer");
+  const bannerIntl = commoditiesData("banner");
+  const bannerData: BannerType[] = [
+    {
+      mediaSrc:
+        "/assets/images/business/fertilizer/banner/banner-image-01.webp",
+      mediaType: "image",
+      title: bannerIntl[1].title,
+      content: bannerIntl[1].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/fertilizer/banner/banner-image-02.webp",
+      mediaType: "image",
+      title: bannerIntl[2].title,
+      content: bannerIntl[2].content,
+      learn_more: "/",
+    },
+    {
+      mediaSrc:
+        "/assets/images/business/fertilizer/banner/banner-image-03.webp",
+      mediaType: "image",
+      title: bannerIntl[3].title,
+      content: bannerIntl[3].content,
+      learn_more: "/",
+    },
+  ];
   return (
     <>
-      <section className="section">
-        <div className="container">
-          <div className="text-center space-y-4 md:space-y-8 text-sm">
-            <Heading as="h2">
-              Unlock the Power of Growth with Fertilizer
-            </Heading>
-
-            <p>
-              Enhance your soil&apos;s nutrients and boost plant vitality with
-              the right fertilizer. From nurturing roots to promoting lush,
-              healthy greenery, fertilizers are the key to flourishing gardens
-              and thriving crops.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Banner data={bannerData} />
     </>
   );
 }
