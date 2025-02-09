@@ -76,12 +76,13 @@ export default function businesses() {
       <Banner data={bannerData} />
 
       <CareerWork data={careerMotivationIntl} />
-      <JustCareer data={careerBenefitIntl} />
+      <JustCareer data={careerBenefitIntl}>
+        <Accordion data={qnaIntl} />
+      </JustCareer>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Accordion data={qnaIntl} />
     </>
   );
 }
