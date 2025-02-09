@@ -12,6 +12,7 @@ import { careerFr } from "./locales/career";
 import { contactUsFr } from "./locales/contact-us";
 import { homeFr } from "./locales/home";
 import { mediaFr } from "./locales/media";
+import { newsLetterFr } from "./locales/news-letter";
 import { businessFr } from "./locales/our-business";
 import { sustainabilityFr } from "./locales/sustainability";
 
@@ -37,6 +38,7 @@ const data = {
   business_medical_service: medicalServiceFr,
   business_petrochemicals: petrochemicalsFr,
   business_real_estate: realEstateFr,
+  news_letter: newsLetterFr,
 };
 
 export default data;

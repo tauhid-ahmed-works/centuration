@@ -18,8 +18,8 @@ export default function BusinessCards({ ...props }) {
       </div>
       <div className="container">
         <BusinessCard limit={6} />
-        <div className="text-center pt-14">
-          <Button size="md" variant="primary" asChild>
+        <div className="mx-auto pt-14 w-60">
+          <Button size="md" variant="primary" className="w-full" asChild>
             <Link href="">See All</Link>
           </Button>
         </div>

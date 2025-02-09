@@ -25,7 +25,7 @@ export type ButtonShapes = Partial<
 
 const buttonVariants: ButtonVariants = {
   primary: {
-    default: "bg-primary-500 text-white",
+    default: "bg-secondary-500 text-white",
     outline: "text-primary-500 border border-primary-500",
   },
   secondary: {
