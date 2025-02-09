@@ -11,8 +11,8 @@ export default function CareerWork({
   return (
     <section className="section" data-size="lg">
       <div className="container">
-        <div className="flex w-full flex-col sm:flex-row justify-center items-center gap-6">
-          <div className="order-2 space-y-4 flex-1 shrink-0">
+        <div className="flex flex-col sm:flex-row h-full gap-6">
+          <div className="space-y-4 order-2 md:order-1 flex-1 shrink-0 flex flex-col justify-center">
             <div className="space-y-1">
               <Heading className="text-secondary-400" as="h2" size="3xl">
                 {data.title}
@@ -22,11 +22,13 @@ export default function CareerWork({
               </Heading>
             </div>
             <p>{data.description}</p>
-            <Button variant="primary" size="sm">
-              About More
-            </Button>
+            <div className="">
+              <Button variant="primary" size="sm">
+                About More
+              </Button>
+            </div>
           </div>
-          <div className="flex-1 w-full min-h-54 h-full max-h-96 order-1 md:order-2 relative shrink-0 aspect-square">
+          <div className="flex-1 order-1 md:order-2 min-h-72 md:h-[550px] self-stretch relative rounded overflow-hidden">
             <Image
               fill
               sizes="40vw"
