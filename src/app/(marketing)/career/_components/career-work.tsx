@@ -1,35 +1,37 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { Heading } from "@/components/heading";
 
-export default function CareerWork() {
-  const t = useTranslations("HomePage");
+export default function CareerWork({
+  data,
+}: {
+  data: { title: string; subtitle: string; description: string };
+}) {
   return (
     <section className="section" data-size="md">
       <div className="container">
         <div className="md:flex justify-around items-center gap-10 text-center">
-          <div className="space-y-4">
+          <div className="space-y-4 flex-1 shrink-0">
             <Heading as="h2" size="3xl">
-              {t("career_page_tag_line_impacting")}
+              {data.title}
             </Heading>
 
             <Heading as="h3" size="2xl">
-              {t("career_page_why_work_title")}
+              {data.subtitle}
             </Heading>
 
-            <p>{t("career_page_why_work_title_txt_1")}</p>
+            <p>{data.description}</p>
             <Button variant="primary" size="sm">
               About More
             </Button>
           </div>
 
-          <div className="h-96 w-full relative mt-8 md:mt-0">
+          <div className="h-[600px] w-full relative mt-8 md:mt-0 flex-1 shrink-0">
             <Image
               fill
               className="size-full object-cover object-top"
-              src="/assets/images/career/african-businesswoman-smiling.webp"
+              src="/assets/images/career/model.webp"
               alt="african-businesswoman-smiling"
             />
           </div>

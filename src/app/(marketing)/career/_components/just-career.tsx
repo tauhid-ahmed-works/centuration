@@ -1,10 +1,15 @@
 import Image from "next/image";
 import { Icons } from "@/components/icons";
 import { Heading } from "@/components/heading";
+import React from "react";
 
-const careerData = [];
+const icons = [<Icons.FlexibleWork />, <Icons.Tour />, <Icons.Holiday />];
 
-export default function JustCareer() {
+export default function JustCareer({
+  data,
+}: {
+  data: { title: string; description: string; additional: string[] };
+}) {
   return (
     <section className="section" data-padding="sm">
       <div className="container">
@@ -17,38 +22,21 @@ export default function JustCareer() {
               className="rounded aspect-square w-full h-full object-cover"
             />
           </div>
-          <div className="md:flex-1 space-y-4">
+          <div className="md:flex-1 space-y-10">
             <Heading size="2xl" as="h2">
-              More than just a career
+              {data.title}
             </Heading>
-            <p>
-              Working with the Centurion Group is more than just a career; it’s
-              meaningful work that improves the lives of millions of people.
-            </p>
+            <p>{data.description}</p>
 
             <div className="sm:flex-row flex gap-10 justify-center items-center">
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20">
-                  <Icons.FlexibleWork className="size-16 text-brand-500" />
+              {data.additional.map((benefit, index) => (
+                <div className="flex flex-col items-center gap-4" key={benefit}>
+                  {React.cloneElement(icons[index], {
+                    className: "size-14",
+                  })}
+                  <span className="text-2xl">{benefit}</span>
                 </div>
-                <span className="text-xl block font-medium">Flexible Work</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20 h-20">
-                  <Icons.Tour className="size-16 text-brand-500" />
-                </div>
-                <span className="text-xl mt-5 block font-medium">
-                  Yearly Tour
-                </span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="flex items-center justify-center bg-gray-100 p-5 rounded-full w-20 h-20">
-                  <Icons.Holiday className="size-16 text-brand-500" />
-                </div>
-                <span className="text-xl mt-5 block font-medium">
-                  Free Holiday
-                </span>
-              </div>
+              ))}
             </div>
           </div>
         </div>

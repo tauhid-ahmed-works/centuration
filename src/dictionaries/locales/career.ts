@@ -30,16 +30,20 @@ export const careerEn = {
   },
   qna: [
     {
-      q: "We win and lose as teams",
-      a: "At our company, teamwork is at the heart of everything we do. We win and lose together, learning from every challenge and celebrating every success as one. As a market leader known for quality equipment and excellent service, we recognize that our employees are the driving force behind our achievements. Their dedication, collaboration, and shared commitment are what make our success possible.",
+      q: "What makes teamwork essential in our company?",
+      a: "At our company, teamwork is more than just collaboration—it is the foundation of our success. We believe that working together allows us to overcome challenges, innovate, and achieve remarkable results. Every individual plays a crucial role, and our collective efforts drive our company forward.",
     },
     {
-      q: "We are proud to sign our names on our products",
-      a: "We take immense pride in the quality and craftsmanship of our products. Each item we create is a testament to our dedication, innovation, and attention to detail. Signing our names on our products symbolizes our unwavering commitment to excellence, ensuring that every product meets the highest standards. When you join our team, you become part of a culture that values responsibility, integrity, and pride in delivering the best to our customers.",
+      q: "How do we ensure quality in our products and services?",
+      a: "Quality is at the core of everything we do. From meticulous design to rigorous testing, we uphold the highest standards to deliver reliable and innovative solutions. Our commitment to excellence ensures that every product and service reflects our dedication to customer satisfaction and industry leadership.",
     },
     {
-      q: "We win and lose as teams",
-      a: "Success at our company is a collective effort. We believe in teamwork, where every contribution matters. Whether we win or face challenges, we do so together—supporting, learning, and growing as a team. Our strong reputation as a market leader is built not only on quality equipment and excellent service but also on the dedication and collaboration of our employees. Every team member plays a vital role in our shared success.",
+      q: "Why is innovation a key part of our success?",
+      a: "Innovation drives our growth and keeps us ahead of the competition. We embrace new technologies, creative thinking, and continuous improvement to provide cutting-edge solutions. By fostering a culture of innovation, we empower our employees to contribute ideas that shape the future of our industry.",
+    },
+    {
+      q: "How do we support employee growth and development?",
+      a: "We believe that our employees are our greatest asset. Through training, mentorship, and career development programs, we provide opportunities for professional growth. Our commitment to fostering talent ensures that every team member has the tools and support needed to thrive in their careers.",
     },
   ],
 };
@@ -76,16 +80,20 @@ export const careerFr = {
   },
   qna: [
     {
-      q: "Nous gagnons et perdons en équipe",
-      a: "Dans notre entreprise, le travail d'équipe est au cœur de tout ce que nous faisons. Nous gagnons et perdons ensemble, en tirant des enseignements de chaque défi et en célébrant chaque succès comme un seul. En tant que leader du marché reconnu pour la qualité de nos équipements et notre excellent service, nous savons que nos employés sont la force motrice de nos réussites. Leur dévouement, leur collaboration et leur engagement partagé sont ce qui rend notre succès possible.",
+      q: "Pourquoi le travail d'équipe est-il essentiel dans notre entreprise?",
+      a: "Dans notre entreprise, le travail d'équipe ne se limite pas à la collaboration, il est le pilier de notre succès. Nous croyons qu'en travaillant ensemble, nous pouvons surmonter les défis, innover et atteindre des résultats exceptionnels. Chaque individu joue un rôle crucial, et nos efforts collectifs nous permettent d'aller de l'avant.",
     },
     {
-      q: "Nous sommes fiers de signer nos produits",
-      a: "Nous sommes extrêmement fiers de la qualité et du savoir-faire de nos produits. Chaque article que nous créons témoigne de notre engagement, de notre innovation et de notre souci du détail. Signer nos produits symbolise notre engagement indéfectible envers l'excellence, garantissant que chaque produit répond aux normes les plus élevées. En rejoignant notre équipe, vous faites partie d'une culture qui valorise la responsabilité, l'intégrité et la fierté de fournir le meilleur à nos clients.",
+      q: "Comment garantissons-nous la qualité de nos produits et services?",
+      a: "La qualité est au cœur de tout ce que nous faisons. De la conception minutieuse aux tests rigoureux, nous respectons les normes les plus élevées pour offrir des solutions fiables et innovantes. Notre engagement envers l'excellence garantit que chaque produit et service reflète notre dévouement à la satisfaction client et au leadership industriel.",
     },
     {
-      q: "Nous gagnons et perdons en équipe",
-      a: "Le succès de notre entreprise est un effort collectif. Nous croyons au travail d'équipe, où chaque contribution compte. Que nous remportions des victoires ou rencontrions des défis, nous le faisons ensemble – en nous soutenant, en apprenant et en évoluant en équipe. Notre solide réputation en tant que leader du marché repose non seulement sur la qualité de nos équipements et notre excellent service, mais aussi sur le dévouement et la collaboration de nos employés. Chaque membre de l'équipe joue un rôle essentiel dans notre réussite commune.",
+      q: "Pourquoi l'innovation est-elle un élément clé de notre succès?",
+      a: "L'innovation est le moteur de notre croissance et nous permet de rester en tête de la concurrence. Nous adoptons les nouvelles technologies, encourageons la pensée créative et cherchons à nous améliorer continuellement pour proposer des solutions de pointe. En favorisant une culture d'innovation, nous permettons à nos employés de contribuer à façonner l'avenir de notre industrie.",
+    },
+    {
+      q: "Comment soutenons-nous la croissance et le développement des employés?",
+      a: "Nous considérons que nos employés sont notre plus grand atout. Grâce à des formations, du mentorat et des programmes de développement de carrière, nous offrons des opportunités de croissance professionnelle. Notre engagement à valoriser les talents garantit que chaque membre de l'équipe dispose des outils et du soutien nécessaires pour s'épanouir dans sa carrière.",
     },
   ],
 };
