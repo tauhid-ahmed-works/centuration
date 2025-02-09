@@ -3,7 +3,7 @@ import Image from "next/image";
 import { mediaData } from "@/data/media";
 import { Heading } from "@/components/heading";
 
-export default function Media(props: { params: Promise<{ slug: string }> }) {
+export default function Media(props: { params: { slug: string } }) {
   const locale = useLocale();
   const media = mediaData(locale as "en" | "fr");
   const latestNews = media.find(
@@ -11,16 +11,17 @@ export default function Media(props: { params: Promise<{ slug: string }> }) {
       d.id ===
       Number(props.params.slug.slice(props.params.slug.lastIndexOf("-") + 1))
   );
-  console.log(latestNews);
   return (
-    <section className="section" data-padding="sm">
-      <div className="container" data-size="sm">
-        <div className="py-10">
-          <span className="block">Posted by: By Admin</span>
-          <span className="block">Posted on: 02 June, 2022</span>
+    <section className="section" data-padding="lg">
+      <div className="container" data-size="md">
+        <div className="py-10 space-y-4">
           <Heading as="h1" size="3xl">
             {latestNews?.title}
           </Heading>
+          <div className="text-secondary-400">
+            <span className="block">Posted by: By Admin</span>
+            <span className="block">Posted on: 02 June, 2022</span>
+          </div>
           <div className="relative h-96">
             <Image
               src={latestNews?.imageSrc as string}

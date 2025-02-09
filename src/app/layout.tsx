@@ -4,7 +4,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import { Header } from "@/components/header";
-import { ScrollButton } from "@/components/scroll-button";
 import Footer from "@/components/footer";
 import Lenis from "@/components/lenis";
 
@@ -36,7 +35,6 @@ export default async function RootLayout({
         <Lenis>
           <NextIntlClientProvider messages={messages}>
             <Header />
-            <ScrollButton />
             <main>{children}</main>
             <Footer />
           </NextIntlClientProvider>
