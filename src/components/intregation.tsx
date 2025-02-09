@@ -21,7 +21,7 @@ export function Integration() {
             alt="whatsapp"
             className="size-1/2"
           />
-          <span className="absolute px-4 py-2 bg-white drop-shadow-md whitespace-nowrap rounded right-full mr-7 font-semibold after:border-[8px] after:border-r-transparent after:border-t-transparent after:border-b-transparent after:absolute after:left-full after:top-1/2 after:-translate-y-1/2 after:border-white hidden group-hover:block">
+          <span className="absolute px-4 py-2 bg-white drop-shadow-md whitespace-nowrap rounded right-full mr-7 font-semibold after:border-[8px] after:border-r-transparent after:border-t-transparent after:border-b-transparent after:absolute after:left-full after:top-1/2 after:-translate-y-1/2 after:border-white hidden group-hover:block text-sm">
             Contact Us
           </span>
         </button>
