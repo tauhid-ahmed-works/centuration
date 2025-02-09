@@ -1,10 +1,10 @@
 import { BusinessCard } from "@/components/business-card";
 import { Heading } from "@/components/heading";
 import { Banner, BannerType } from "@/components/banner";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
 export default function Businesses() {
-  const businessData = getIntl("businesses");
+  const businessData = useIntl("businesses");
   const bannerIntl = businessData("banner");
   const businessIntl = businessData("business");
   const bannerData: BannerType[] = [

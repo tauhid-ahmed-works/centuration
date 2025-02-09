@@ -4,11 +4,14 @@ import AnimatedCard from "@/components/animate-card";
 import { Heading } from "@/components/heading";
 
 const centurionWayData = [
-  <Icons.Financial className="size-32 mx-auto text-rose-500" />,
-  <Icons.Institution className="size-32 mx-auto text-sky-500" />,
-  <Icons.Values className="size-32 mx-auto text-orange-500" />,
-  <Icons.Environmental className="size-32 mx-auto text-green-500" />,
-  <Icons.LearningEnvironment className="size-32 mx-auto text-violet-500" />,
+  <Icons.Financial key={1} className="size-32 mx-auto text-rose-500" />,
+  <Icons.Institution key={2} className="size-32 mx-auto text-sky-500" />,
+  <Icons.Values key={3} className="size-32 mx-auto text-orange-500" />,
+  <Icons.Environmental key={4} className="size-32 mx-auto text-green-500" />,
+  <Icons.LearningEnvironment
+    key={5}
+    className="size-32 mx-auto text-violet-500"
+  />,
 ];
 
 export default function CenturionWay() {

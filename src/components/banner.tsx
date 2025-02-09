@@ -78,7 +78,6 @@ export function Banner({
 
   ...props
 }: BannerProps) {
-  if (data.length < 1) return;
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [prevIndex, setPrevIndex] = React.useState<[number, number]>([-1, 0]);
   const [isPaused, setIsPaused] = React.useState(false);
@@ -112,7 +111,7 @@ export function Banner({
         clearInterval(intervalId.current);
       }
     };
-  }, [activeIndex, isPaused]);
+  }, [activeIndex, isPaused, SLIDES.length, duration]);
 
   // drag handler
   const onDragEnd = () => {

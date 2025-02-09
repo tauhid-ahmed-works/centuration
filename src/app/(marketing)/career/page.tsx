@@ -8,10 +8,10 @@ import CareerWork from "./_components/career-work";
 import JustCareer from "./_components/just-career";
 import Accordion from "./_components/accordion";
 import { Banner, BannerType } from "@/components/banner";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
-export default function businesses() {
-  const careerData = getIntl("career");
+export default function Businesses() {
+  const careerData = useIntl("career");
   const bannerIntl = careerData("banner");
   const careerMotivationIntl = careerData("motivation");
   const careerBenefitIntl = careerData("benefit");

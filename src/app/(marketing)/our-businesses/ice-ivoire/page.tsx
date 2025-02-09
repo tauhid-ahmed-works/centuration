@@ -1,8 +1,8 @@
 import { Banner, BannerType } from "@/components/banner";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
 export default function IceIvoirePage() {
-  const commoditiesData = getIntl("business_iceVending");
+  const commoditiesData = useIntl("business_iceVending");
   const bannerIntl = commoditiesData("banner");
   const bannerData: BannerType[] = [
     {

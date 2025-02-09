@@ -34,13 +34,9 @@ export const mediaImages = [
   },
 ];
 
-export default function MediaCard({
-  data,
-}: {
-  data: { [key: number]: { title: string; content: string } };
-}) {
+export default function MediaCard() {
   const locale = useLocale();
-  const dataw = mediaData(locale);
+  const data = mediaData(locale as "en" | "fr");
 
   return (
     <>
@@ -51,7 +47,7 @@ export default function MediaCard({
               Media
             </Heading>
             <div className="grid gap-4 grid-cols-auto-fit-100 gap-y-20">
-              {dataw.map((data, index) => (
+              {data.map((data, index) => (
                 <AnimatedCard key={data.title} index={index}>
                   <div className="bg-white p-2 h-full relative shadow-xl">
                     <div className="relative h-72 aspect-video w-full rounded overflow-hidden">

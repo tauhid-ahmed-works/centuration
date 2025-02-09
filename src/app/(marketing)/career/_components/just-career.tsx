@@ -3,7 +3,11 @@ import { Icons } from "@/components/icons";
 import { Heading } from "@/components/heading";
 import React from "react";
 
-const icons = [<Icons.FlexibleWork />, <Icons.Tour />, <Icons.Holiday />];
+const icons = [
+  <Icons.FlexibleWork key={1} />,
+  <Icons.Tour key={2} />,
+  <Icons.Holiday key={3} />,
+];
 
 export default function JustCareer({
   data,

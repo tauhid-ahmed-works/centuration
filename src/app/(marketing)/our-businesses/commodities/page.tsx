@@ -3,10 +3,10 @@ import { Heading } from "@/components/heading";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
 export default function CommoditiesPage() {
-  const commoditiesData = getIntl("business_commodities");
+  const commoditiesData = useIntl("business_commodities");
   const bannerIntl = commoditiesData("banner");
   const aboutIntl = commoditiesData("aboutNutriagro");
   const ourServicesIntl = commoditiesData("ourServices");

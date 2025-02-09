@@ -4,10 +4,10 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading } from "./heading";
 import Link from "next/link";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
 export default function NewsLetter() {
-  const newsLetterData = getIntl("news_letter");
+  const newsLetterData = useIntl("news_letter");
   return (
     <section className="h-72 md:h-96 relative flex items-center justify-center text-center">
       <div className="h-full w-full relative">

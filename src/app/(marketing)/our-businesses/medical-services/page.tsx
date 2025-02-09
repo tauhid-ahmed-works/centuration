@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LucideArrowRight, LucideFileDown } from "lucide-react";
 import Image from "next/image";
 import { Banner, BannerType } from "@/components/banner";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
 const ourSolutionsIcons = [
   "/assets/images/business/medical-service/icons/wall.png",
@@ -16,7 +16,7 @@ const ourSolutionsIcons = [
 ];
 
 export default function MedicalServicePage() {
-  const medicalServiceIntl = getIntl("business_medical_service");
+  const medicalServiceIntl = useIntl("business_medical_service");
   const bannerIntl: BannerType[] = medicalServiceIntl("banner");
   const rentScannerIntl = medicalServiceIntl("rent_scanner");
   const amenitiesIntl = medicalServiceIntl("amenities");

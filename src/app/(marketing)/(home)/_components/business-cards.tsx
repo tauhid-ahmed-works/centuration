@@ -1,11 +1,11 @@
 import { BusinessCard } from "@/components/business-card";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function BusinessCards({ ...props }) {
-  const businessData = getIntl("businesses");
+  const businessData = useIntl("businesses");
   const businessIntl = businessData("business");
 
   return (

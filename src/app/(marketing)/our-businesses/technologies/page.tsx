@@ -1,8 +1,8 @@
 import { Banner, BannerType } from "@/components/banner";
-import { getIntl } from "@/lib/get-intl";
+import { useIntl } from "@/lib/get-intl";
 
 export default function TechnologyPage() {
-  const commoditiesData = getIntl("business_technology");
+  const commoditiesData = useIntl("business_technology");
   const bannerIntl = commoditiesData("banner");
   const bannerData: BannerType[] = [
     {
