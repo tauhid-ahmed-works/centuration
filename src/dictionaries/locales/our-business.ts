@@ -16,7 +16,7 @@ export const businessEn = {
         "At Centurion, we are dedicated to providing the highest quality services and pioneering new solutions to drive success in every industry we operate in.",
     },
   },
-  businesses: {
+  business: {
     title: "Our Businesses",
     description:
       "As a diversified African conglomerate, we have a strategic presence across various industries, reflecting our commitment to addressing the fundamental needs of society and advancing our vision for sustainable development.",
@@ -41,7 +41,7 @@ export const businessFr = {
         "Chez Centurion, nous sommes dédiés à fournir des services de la plus haute qualité et à innover pour réussir dans chaque secteur dans lequel nous opérons.",
     },
   },
-  businesses: {
+  business: {
     title: "Nos Entreprises",
     description:
       "En tant que conglomérat africain diversifié, nous avons une présence stratégique dans plusieurs secteurs, ce qui reflète notre engagement à répondre aux besoins fondamentaux de la société et à promouvoir notre vision du développement durable.",
