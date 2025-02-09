@@ -6,6 +6,7 @@ import { Poppins } from "next/font/google";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
 import Lenis from "@/components/lenis";
+import { Integration } from "@/components/intregation";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default async function RootLayout({
             <Header />
             <main>{children}</main>
             <Footer />
+            <Integration />
           </NextIntlClientProvider>
         </Lenis>
       </body>
