@@ -90,6 +90,17 @@ export default function Customization({ data }: CustomizationProps) {
             </div>
           </div>
         </section>
+        <section className="section h-screen relative bg-white -mt-20">
+          <div className="absolute inset-0">
+            <Image
+              src="/assets/images/business/technology/circle shape.png"
+              fill
+              alt="shape"
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+        </section>
       </section>
     </>
   );
