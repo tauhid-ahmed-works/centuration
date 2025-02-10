@@ -45,20 +45,20 @@ export const launderettesEn = {
   },
   Walkthrough: {
     title: "How it Walk?",
-    features: {
-      1: {
+    features: [
+      {
         title: "Step 1",
         content: "Choose your machine and load your laundry.",
       },
-      2: {
+      {
         title: "Step 2",
         content: "Select the wash cycle and add detergent if needed.",
       },
-      3: {
+      {
         title: "Step 3",
         content: "Make the payment in cash, by card, or via mobile money.",
       },
-    },
+    ],
   },
   easy_ordering: {
     title: "How to place an order chap-chap?",

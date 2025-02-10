@@ -94,42 +94,36 @@ export default function LaunderettesPage() {
             </p>
             <p className="font-normal">Open 24 hours a day, 7 days a week.</p>
           </div>
-          <div className="flex flex-col lg:flex-row gap-4 text-center text-primary-500 mt-10 lg:mt-20">
-            <div className="font-semibold text-[150px] xl:text-[200px] aspect-square bg-white flex-1 px-16 py-10 flex justify-center flex-col leading-none">
-              <span className="relative">
+          <div className="flex flex-row gap-4 text-center text-primary-500 mt-10 lg:mt-20">
+            <div className="font-semibold aspect-square bg-white flex-1 p-8 flex justify-center flex-col leading-none">
+              <span className=" text-2xl">
                 09
                 <span className="size-10 bg-white inline-block rounded-full absolute right-0 top-0 text-2xl">
                   kg
                 </span>
               </span>
               <div className="h-2 bg-primary-500"></div>
-              <span className="uppercase font-medium text-4xl xl:text-6xl">
-                Lave
-              </span>
+              <span className="uppercase font-medium">Lave</span>
             </div>
-            <div className="font-semibold text-[150px] xl:text-[200px] aspect-square bg-white flex-1 px-16 py-10 flex justify-center flex-col leading-none">
-              <span className="relative">
+            <div className="font-semibold aspect-square bg-white flex-1 p-8 flex justify-center flex-col leading-none">
+              <span className=" text-2xl">
                 20
                 <span className="size-10 bg-white inline-block rounded-full absolute right-0 top-0 text-2xl">
                   kg
                 </span>
               </span>
               <div className="h-2 bg-primary-500"></div>
-              <span className="uppercase font-medium text-4xl xl:text-6xl">
-                Lave
-              </span>
+              <span className="uppercase font-medium">Lave</span>
             </div>
-            <div className="font-semibold text-[150px] xl:text-[200px] aspect-square bg-white flex-1 px-16 py-10 flex justify-center flex-col leading-none">
-              <span className="relative">
+            <div className="font-semibold aspect-square bg-white flex-1 p-8 flex justify-center flex-col leading-none">
+              <span className=" text-2xl">
                 20
                 <span className="size-10 bg-white inline-block rounded-full absolute right-0 top-0 text-2xl">
                   kg
                 </span>
               </span>
               <div className="h-2 bg-primary-500"></div>
-              <span className="uppercase font-medium text-4xl xl:text-6xl">
-                SECHE
-              </span>
+              <span className="uppercase font-medium">SECHE</span>
             </div>
           </div>
         </div>

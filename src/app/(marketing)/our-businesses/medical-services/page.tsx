@@ -171,7 +171,7 @@ export default function MedicalServicePage() {
               >
                 {amenitiesIntl.title}
               </Heading>
-              <ul className="flex flex-col gap-6 md:gap-0 lg:flex-row md:flex-wrap mt-4 md:mt-8">
+              <ul className="flex flex-col gap-6 md:gap-0 lg:flex-row md:flex-wrap mt-4 md:mt-8 relative z-10">
                 {amenitiesIntl.features.map((item: string, i: number) => (
                   <li
                     className="bg-primary-500 text-white py-2 px-4 flex gap-4 items-center md:bg-transparent md:basis-1/2"
@@ -209,18 +209,19 @@ export default function MedicalServicePage() {
             </Heading>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-4 mt-10 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-4 mt-10 place-items-center">
             {modelsIntl.models.map(
               (
                 item: { title: string; specifications: Record<string, string> },
                 i: number
               ) => (
-                <div className="w-fit" key={i}>
+                <div className="max-w-md w-full mx-auto" key={i}>
                   <Image
                     src="/assets/images/business/medical-service/model/model-01.webp"
                     width={400}
                     height={300}
                     alt="model"
+                    className="w-full"
                   />
                   <Heading size="2xl" className="text-primary-500 mt-4">
                     {item.title}
@@ -264,7 +265,7 @@ export default function MedicalServicePage() {
                       </span>
                     </li>
                   </ul>
-                  <div className="flex gap-2 lg:gap-4 mt-4">
+                  <div className="flex items-center gap-2 lg:gap-4 mt-4">
                     <Button variant="primary" size="md">
                       Details
                     </Button>
@@ -275,7 +276,7 @@ export default function MedicalServicePage() {
                     >
                       Inquire
                     </Button>
-                    <button className="size-9 lg:size-12 bg-secondary-500 shrink-0 rounded inline-flex items-center justify-center">
+                    <button className="aspect-square h-10 md:h-12 bg-secondary-500 shrink-0 rounded inline-flex items-center justify-center">
                       <LucideFileDown className="text-white size-5 md:size-6" />
                     </button>
                   </div>
