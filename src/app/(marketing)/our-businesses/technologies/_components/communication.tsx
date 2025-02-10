@@ -42,9 +42,7 @@ export function Communication({ data }: CommunicationProps) {
               <Heading size="2xl">
                 {communicationCall.key_features[0].title}
               </Heading>
-              <p className="text-lg">
-                {communicationCall.key_features[0].description}
-              </p>
+              <p>{communicationCall.key_features[0].description}</p>
             </div>
           </div>
           <div className="flex justify-center mt-10">
