@@ -179,10 +179,10 @@ export function Banner({
                 onPointerLeave={handlePointerPresence.bind(null, false)}
                 className="container"
               >
-                <div className="space-y-4 max-w-2xl text-white">
+                <div className="space-y-4 max-w-[45ch] lg:max-w-[70ch] w-full text-white">
                   <Heading
                     as="h2"
-                    size="6xl"
+                    size="5xl"
                     underline={<Underline size="md" />}
                   >
                     {currentSlide.title}
@@ -237,7 +237,7 @@ export function Media({
 }: MediaProps) {
   const classnames = "size-full object-cover";
   return (
-    <div className="absolute inset-0 h-full w-full after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-80">
+    <div className="absolute inset-0 h-full w-full after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-90">
       {mediaType === "video" && (
         <video
           src={mediaSrc}

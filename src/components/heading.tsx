@@ -29,14 +29,14 @@ export function Heading({
   const classnames = cn(
     "font-semibold leading-[1.5]",
     {
-      "text-sm": size === "sm",
-      "text-base": size === "base",
-      "text-base lg:text-xl": size === "xl",
-      "text-[clamp(1rem,5vw,1.5rem)]": size === "2xl",
-      "text-[clamp(1rem,5vw,2rem)]": size === "3xl",
-      "text-[clamp(1.25rem,5vw,2.5rem)]": size === "4xl",
-      "text-[clamp(1.25rem,5vw,3rem)]": size === "5xl",
-      "text-[clamp(1.5rem,5vw,4rem)]": size === "6xl",
+      "text-sm md:text-lg font-normal": size === "sm",
+      "text-base md:text-lg font-normal": size === "base",
+      "text-base md:text-lg lg:text-xl": size === "xl",
+      "text-base md:text-xl lg:text-2xl": size === "2xl",
+      "text-lg md:text-2xl lg:text-3.5xl": size === "3xl",
+      "text-xl md:text-3xl lg:text-5xl": size === "4xl",
+      "text-xl md:text-3.5xl lg:text-5xl": size === "5xl",
+      "text-2xl md:text-4.5xl lg:text-6.5xl": size === "6xl",
     },
     className
   );

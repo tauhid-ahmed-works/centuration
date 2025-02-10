@@ -11,10 +11,10 @@ export default function BusinessCards({ ...props }) {
   return (
     <section className="section" data-padding="md" {...props}>
       <div className="px-4 text-center max-w-4xl mx-auto py-10 md:py-20">
-        <Heading as="h2" size="4xl" className="mb-4">
+        <Heading as="h2" size="5xl" className="mb-4 text-secondary-500">
           {businessIntl.title}
         </Heading>
-        <p>{businessIntl.description}</p>
+        <p className="text-secondary-400">{businessIntl.description}</p>
       </div>
       <div className="container">
         <BusinessCard limit={6} />

@@ -35,12 +35,12 @@ export default function Businesses() {
   return (
     <>
       <Banner data={bannerData} />
-      <section className="section" data-padding="sm">
-        <div className="px-4 text-center max-w-4xl mx-auto py-10 md:py-20">
-          <Heading as="h2" size="4xl" className="mb-4">
+      <section className="section space-y-10 lg:space-y-20" data-padding="lg">
+        <div className="px-4 text-center max-w-4xl mx-auto">
+          <Heading as="h2" size="4xl" className="mb-4 text-secondary-500">
             {businessIntl.title}
           </Heading>
-          <p>{businessIntl.description}</p>
+          <p className="text-secondary-400">{businessIntl.description}</p>
         </div>
         <div className="container">
           <BusinessCard />

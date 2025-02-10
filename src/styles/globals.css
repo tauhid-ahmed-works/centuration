@@ -41,10 +41,11 @@
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
-  --text-3xl: 2rem;
-  --text-4xl: 2.5rem;
+  --text-3_5xl: 2rem;
+  --text-4_5xl: 2.5rem;
   --text-5xl: 3rem;
-  --text-6xl: 4rem;
+  --text-5xl--line-height: 1.5;
+  --text-6_5xl: 4rem;
 
   --height-84: 21rem;
   --width-25: 6.25rem;
@@ -69,14 +70,15 @@
 
 .container {
   @apply max-w-[75rem] px-6 mx-auto w-full;
+  /* @apply w-full max-w-screen-xl px-6 mx-auto; */
 }
 
 .container[data-size="md"] {
-  @apply max-w-[60rem];
+  @apply xl:max-w-[60rem];
 }
 
 .container[data-size="sm"] {
-  @apply max-w-[37.5rem];
+  @apply xl:max-w-[37.5rem];
 }
 
 .section {
@@ -88,4 +90,17 @@
 }
 .section[data-padding="lg"] {
   @apply md:py-28 lg:py-40;
+}
+
+.sponsor-animation {
+  animation: animate-sponsors 60s linear infinite both;
+}
+
+@keyframes animate-sponsors {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

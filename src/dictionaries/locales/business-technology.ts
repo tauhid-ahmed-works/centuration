@@ -31,30 +31,47 @@ export const technologyEn = {
     },
   },
   wireless_call_systems: {
-    title: "Wireless Call Systems",
-    key_features: {
-      1: {
-        title: "High Energy Efficiency",
-        content: "3 years of operation without replacing batteries",
-      },
-      2: {
-        title: "Industrial Design",
+    title: "Advanced Wireless Call Systems",
+    subtitle:
+      "Enhancing personnel efficiency with intelligent and seamless communication.",
+    key_features: [
+      {
+        id: "energy",
+        title: "Exceptional Energy Efficiency",
         content:
-          "Resistant to external influence, environmentally friendly materials. Design SAQ Design",
+          "Operates continuously for up to 3 years without battery replacement, ensuring uninterrupted performance.",
       },
-      3: {
-        title: "Stable work",
-        content: "Texas Instruments Industrial Radio Modules",
+      {
+        id: "design",
+        title: "Robust & Modern Industrial Design",
+        content:
+          "Engineered for durability with eco-friendly materials, offering resilience against environmental factors.",
       },
-    },
+      {
+        id: "stability",
+        title: "Uncompromising Signal Stability",
+        content:
+          "Powered by Texas Instruments industrial-grade radio modules, delivering consistent and secure communication.",
+      },
+    ],
   },
   areas_of_use: {
     title: "Scope of application",
-    description:
-      "We sell and operate ice machines to provide easy and convenient access to ice in a wide array of locations, from marinas, to supermarkets, gas stations, camps, and many more.",
-  },
-  product_atalogue: {
-    title: "Catalogue of goods",
+    subtitle: "Catalogue of goods",
+    categories: [
+      {
+        id: "medicine",
+        title: "Medicine",
+      },
+      {
+        id: "restaurants",
+        title: "Restaurants & Services",
+      },
+      {
+        id: "automation",
+        title: "Production & Automation",
+      },
+    ],
   },
   customization: {
     title: "Castomization / Personalization",
@@ -74,54 +91,69 @@ export const technologyEn = {
     title: "Video about the system",
   },
   innovative_iron_solutions: {
-    title: "High-tech iron for building progressive engineering Decisions",
-    key_features: {
-      1: {
-        title: "Terms of production",
-        description:
-          "SOLT is a South Korean company.\tIndependent, non-singly contract production.\tCall systems are a profile product of the company.",
-      },
-      2: {
-        title: "Quality and stability",
-        description:
-          "GFSK Radio Signal Modulation.\t+ multiple duplication of transmission.\t+ Dear Texas Instruments Radio module.\t= The most reliable button in the industry",
-      },
-      3: {
-        title: "Terms of operation",
-        description:
-          "Models with rugging and UF protection are provided.\t Models with increased quantity and capacity of batteries.\t Options for industrial buildings.",
-      },
-      4: {
-        title: "Scalability",
-        content: [
-          "The unlicensed radio frequency imposes power limitations.\tTo increase The coatings are implemented by radio signal repeaters.\tRadio mode mics for integration into systems Monitoring and Analytics",
+    title: "Cutting-Edge Iron Solutions for Advanced Engineering",
+    key_features: [
+      {
+        id: "manufacturing",
+        title: "Manufacturing Excellence",
+        features: [
+          "SOLT is a leading South Korean company specializing in independent production.",
+          "Ensures high-quality, contract-free manufacturing for enhanced reliability.",
+          "Call systems are a flagship product designed with precision engineering.",
         ],
       },
-    },
+      {
+        id: "quality_stability",
+        title: "Unmatched Quality & Stability",
+        features: [
+          "Utilizes advanced GFSK radio signal modulation for superior transmission.",
+          "Incorporates multiple redundancy layers to prevent signal loss.",
+          "Powered by premium Texas Instruments radio modules for industry-leading reliability.",
+        ],
+      },
+      {
+        id: "durability",
+        title: "Engineered for Durability",
+        features: [
+          "Constructed with rugged materials and UV protection for long-term resilience.",
+          "Enhanced battery capacity for extended operation in demanding environments.",
+          "Tailored solutions for industrial buildings requiring high-performance systems.",
+        ],
+      },
+      {
+        id: "scalability",
+        title: "Scalability & Smart Integration",
+        features: [
+          "Operates on an unlicensed radio frequency with power optimization.",
+          "Employs signal repeaters to expand coverage for large-scale applications.",
+          "Seamlessly integrates with monitoring and analytics platforms for enhanced oversight.",
+        ],
+      },
+    ],
   },
   staff_call_kit: {
-    title: "Staff call kit – functionality and efficiency",
+    title: "Staff Call Kit – Efficiency & Seamless Communication",
     subtitle:
-      "Welcome to the Feature Section of Nutritionist, your ultimate destination for all things nutrition and wellness.",
-    key_features: {
-      1: {
-        title: "Personalized Nutrition Plans",
+      "A cutting-edge solution designed for hospitality and healthcare institutions, ensuring smooth and effective interaction between staff and visitors.",
+    key_features: [
+      {
+        title: "Smart & Responsive Personnel Call System",
         description:
-          "Wireless personnel call system – a modern solution focused on all institutions Catering and Institutions health care. It has already been appreciated by many restaurants and cafes with a large number of visitors. Staff call kit in health care helped to ensure close Interaction between patients and medical staff. In both cases, the device can be used differently depending on the goals pursued and the existing need.",
+          "The wireless staff call kit is an advanced system widely adopted in restaurants cafes, and healthcare institutions. In the hospitality sector, it enhances service efficiency in high-traffic environments. In healthcare, it facilitates immediate communication between patients and medical staff, ensuring timely assistance. The system is adaptable to different operational needs, making it an essential tool for optimizing service and responsiveness.",
       },
-    },
+    ],
   },
   staff_wireless_call_zones: {
-    title: "Where is the wireless call of staff",
+    title: "Optimized Staff Call Zones",
     subtitle:
-      "Such devices are an effective tool used to optimize staff. Located at some distance from visitors, it can be difficult to bring information and get the necessary information. To help come the systems of call staff, which can be bought in our company.",
-    key_features: {
-      1: "Wireless ward alarms designed to provide informational communication between medical employees and patients, as well as between employees of the health care institution. Using the system call of staff, the patient can inform the nurse about the difficulties encountered.",
-      2: "The call system in the office, with which visitors are notified of the possibility of entering the office specific doctor.",
-      3: "Ability to organize a free environment by installing a call button. Price of the call system staff make such a device accessible not only to the health care institution, but also to any other institution interested in servicing people with physical characteristics.",
-      4: "The waitress call system, with which visitors can send a message The employee serving their table.",
-      5: "A device for calling a waiter from the kitchen, issued to each guest at the time of the formation of the order. With his information about the readiness of the ordered dishes is provided. Information is transmitted to pager Automatically. Significantly reduced the risk of confusion, which may occur when issuing ordered dishes.",
-    },
+      "Wireless call systems improve efficiency by providing instant communication between staff and visitors, even at a distance. These solutions are available for various industries to streamline operations.",
+    key_features: [
+      "Wireless ward alarms enhance communication between patients and medical staff, allowing immediate assistance requests.",
+      "Doctor’s office call systems notify patients when it is their turn to enter, improving organization and reducing waiting time.",
+      "Optimized service flow with call buttons that create a hassle-free environment for both staff and visitors.",
+      "Waiter call systems enable customers to request service instantly, enhancing the dining experience.",
+      "Kitchen-to-table communication devices ensure seamless food service by notifying waitstaff when orders are ready, minimizing errors and improving efficiency.",
+    ],
   },
 };
 
@@ -158,30 +190,47 @@ export const technologyFr = {
     },
   },
   wireless_call_systems: {
-    title: "Systèmes d'appel sans fil",
-    key_features: {
-      1: {
-        title: "Haute efficacité énergétique",
-        content: "3 ans d'opération sans remplacement des batteries",
-      },
-      2: {
-        title: "Design industriel",
+    title: "Systèmes d'appel sans fil avancés",
+    subtitle:
+      "Améliorez l'efficacité du personnel grâce à une communication intelligente et fluide.",
+    key_features: [
+      {
+        id: "energy",
+        title: "Efficacité énergétique exceptionnelle",
         content:
-          "Résistant aux influences externes, matériaux écologiques. Design SAQ Design",
+          "Fonctionne en continu jusqu'à 3 ans sans remplacement de batterie, garantissant des performances ininterrompues.",
       },
-      3: {
-        title: "Travail stable",
-        content: "Modules radio industriels Texas Instruments",
+      {
+        id: "design",
+        title: "Design industriel robuste et moderne",
+        content:
+          "Conçu pour une durabilité optimale avec des matériaux écologiques, offrant une résistance accrue aux facteurs environnementaux.",
       },
-    },
+      {
+        id: "stability",
+        title: "Stabilité du signal inégalée",
+        content:
+          "Propulsé par des modules radio industriels Texas Instruments, assurant une communication fiable et sécurisée.",
+      },
+    ],
   },
   areas_of_use: {
     title: "Portée d'application",
-    description:
-      "Nous vendons et exploitons des machines à glace pour fournir un accès facile et pratique à la glace dans une large gamme de lieux, des marinas aux supermarchés, stations-service, camps et bien plus encore.",
-  },
-  product_atalogue: {
-    title: "Catalogue de biens",
+    subtitle: "Catalogue de biens",
+    categories: [
+      {
+        id: "medicine",
+        title: "Médecine",
+      },
+      {
+        id: "restaurants",
+        title: "Restaurants & Services",
+      },
+      {
+        id: "automation",
+        title: "Production & Automatisation",
+      },
+    ],
   },
   customization: {
     title: "Personnalisation / Adaptation",
@@ -200,55 +249,71 @@ export const technologyFr = {
   video_system: {
     title: "Vidéo sur le système",
   },
+
   innovative_iron_solutions: {
-    title:
-      "Fer haute technologie pour la construction de décisions d'ingénierie progressives",
-    key_features: {
-      1: {
-        title: "Conditions de production",
-        description:
-          "SOLT est une entreprise sud-coréenne.\nProduction indépendante, non sous contrat.\nLes systèmes d'appel sont un produit phare de l'entreprise.",
-      },
-      2: {
-        title: "Qualité et stabilité",
-        description:
-          "Modulation de signal radio GFSK.\n+ Duplication multiple de la transmission.\n+ Module radio Texas Instruments coûteux.\n= Le bouton le plus fiable de l'industrie",
-      },
-      3: {
-        title: "Conditions d'exploitation",
-        description:
-          "Des modèles avec protection contre l'usure et UF sont fournis.\nModèles avec capacité de batterie augmentée.\nOptions pour les bâtiments industriels.",
-      },
-      4: {
-        title: "Scalabilité",
-        content: [
-          "La fréquence radio non licenciée impose des limitations de puissance.\nPour augmenter, des répéteurs de signal radio sont utilisés.\nMiques en mode radio pour l'intégration dans les systèmes de surveillance et d'analyse",
+    title: "Solutions de Fer de Pointe pour une Ingénierie Avancée",
+    key_features: [
+      {
+        id: "manufacturing",
+        title: "Excellence en Fabrication",
+        features: [
+          "SOLT est une entreprise sud-coréenne leader spécialisée dans la production indépendante.",
+          "Garantit une fabrication de haute qualité, sans contrat, pour une fiabilité accrue.",
+          "Les systèmes d’appel sont un produit phare conçu avec une ingénierie de précision.",
         ],
       },
-    },
-  },
-  staff_call_kit: {
-    title: "Kit d'appel du personnel – Fonctionnalité et efficacité",
-    subtitle:
-      "Bienvenue dans la section Fonctionnalités de Nutritionniste, votre destination ultime pour tout ce qui concerne la nutrition et le bien-être.",
-    key_features: {
-      1: {
-        title: "Plans de nutrition personnalisés",
-        description:
-          "Système d'appel sans fil pour le personnel – une solution moderne pour tous les établissements de restauration et de soins de santé. Il a déjà été apprécié par de nombreux restaurants et cafés avec un grand nombre de visiteurs. Le kit d'appel du personnel en soins de santé a contribué à assurer une interaction étroite entre les patients et le personnel médical. Dans les deux cas, l'appareil peut être utilisé différemment en fonction des objectifs poursuivis et des besoins existants.",
+      {
+        id: "quality_stability",
+        title: "Qualité et Stabilité Inégalées",
+        features: [
+          "Utilise une modulation avancée du signal radio GFSK pour une transmission optimale.",
+          "Intègre plusieurs couches de redondance pour éviter toute perte de signal.",
+          "Propulsé par des modules radio Texas Instruments haut de gamme pour une fiabilité exceptionnelle.",
+        ],
       },
-    },
+      {
+        id: "durability",
+        title: "Conçu pour la Durabilité",
+        features: [
+          "Fabriqué avec des matériaux robustes et une protection UV pour une résistance accrue.",
+          "Capacité de batterie améliorée pour un fonctionnement prolongé dans des environnements exigeants.",
+          "Solutions adaptées aux bâtiments industriels nécessitant des systèmes haute performance.",
+        ],
+      },
+      {
+        id: "scalability",
+        title: "Évolutivité et Intégration Intelligente",
+        features: [
+          "Fonctionne sur une fréquence radio non licenciée avec une optimisation de puissance.",
+          "Utilise des répéteurs de signal pour étendre la couverture sur de grandes surfaces.",
+          "S'intègre parfaitement aux plateformes de surveillance et d'analyse pour un meilleur suivi.",
+        ],
+      },
+    ],
+  },
+
+  staff_call_kit: {
+    title: "Kit d’Appel du Personnel – Efficacité et Communication Simplifiée",
+    subtitle:
+      "Une solution avancée conçue pour les établissements de restauration et de santé, garantissant une interaction fluide et efficace entre le personnel et les visiteurs.",
+    key_features: [
+      {
+        title: "Système d’Appel Intelligent et Réactif",
+        description:
+          "Le kit d’appel sans fil du personnel est un système moderne largement adopté par les restaurants, cafés et établissements de santé. Dans le secteur de la restauration, il améliore l’efficacité du service dans les environnements à forte affluence. Dans le domaine médical, il permet une communication immédiate entre les patients et le personnel soignant, assurant une assistance rapide. Le système est adaptable aux besoins opérationnels spécifiques, devenant ainsi un outil essentiel pour optimiser le service et la réactivité.",
+      },
+    ],
   },
   staff_wireless_call_zones: {
-    title: "Où se trouve l'appel sans fil du personnel",
+    title: "Zones d’Appel du Personnel Optimisées",
     subtitle:
-      "Ces dispositifs sont un outil efficace utilisé pour optimiser le personnel. Situé à une certaine distance des visiteurs, il peut être difficile de transmettre des informations et d'obtenir les informations nécessaires. Les systèmes d'appel du personnel, qui peuvent être achetés dans notre entreprise, viennent en aide.",
-    key_features: {
-      1: "Les alarmes sans fil de service sont conçues pour fournir une communication informative entre les employés médicaux et les patients, ainsi qu'entre les employés de l'institution de santé. Grâce au système d'appel du personnel, le patient peut informer l'infirmière des difficultés rencontrées.",
-      2: "Le système d'appel dans le bureau, avec lequel les visiteurs sont informés de la possibilité d'entrer dans le bureau d'un médecin spécifique.",
-      3: "La possibilité d'organiser un environnement sans contrainte en installant un bouton d'appel. Le prix du système d'appel du personnel rend ce dispositif accessible non seulement aux établissements de santé, mais aussi à toute autre institution intéressée par le service des personnes ayant des caractéristiques physiques.",
-      4: "Le système d'appel de serveuse, avec lequel les visiteurs peuvent envoyer un message à l'employé servant leur table.",
-      5: "Un dispositif pour appeler un serveur depuis la cuisine, attribué à chaque invité lors de la commande. Il informe automatiquement sur la disponibilité des plats commandés. Les informations sont transmises au pager automatiquement, réduisant ainsi considérablement le risque de confusion lors de la distribution des plats commandés.",
-    },
+      "Les systèmes d’appel sans fil améliorent l’efficacité en permettant une communication instantanée entre le personnel et les visiteurs, même à distance. Ces solutions sont adaptées à divers secteurs pour rationaliser les opérations.",
+    key_features: [
+      "Les alarmes sans fil pour les services hospitaliers facilitent la communication entre les patients et le personnel médical, permettant une assistance immédiate.",
+      "Les systèmes d’appel de cabinet médical informent les patients lorsqu’ils peuvent entrer, améliorant ainsi l’organisation et réduisant le temps d’attente.",
+      "Un flux de service optimisé grâce aux boutons d’appel, créant un environnement fluide et sans stress pour le personnel et les visiteurs.",
+      "Les systèmes d’appel pour serveurs permettent aux clients de demander un service instantanément, améliorant l’expérience en salle.",
+      "Les dispositifs de communication entre la cuisine et la salle garantissent un service efficace en informant le personnel lorsque les plats sont prêts, réduisant les erreurs et optimisant la gestion des commandes.",
+    ],
   },
 };
