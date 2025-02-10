@@ -6,6 +6,7 @@ import { Communication } from "./_components/communication";
 import { Catalogue } from "./_components/catalogue";
 import Solutions from "./_components/solutions";
 import { OurClients } from "./_components/our-clients";
+import Customization from "./_components/customization";
 
 export default function TechnologyPage() {
   const technologyData = useIntl("business_technology");
@@ -15,6 +16,7 @@ export default function TechnologyPage() {
   const communicationKit = technologyData("staff_call_kit");
   const communicationZone = technologyData("staff_wireless_call_zones");
   const innovativeSolutions = technologyData("innovative_iron_solutions");
+  const customization = technologyData("customization");
   const textIntl = technologyData("text");
   const bannerData: BannerType[] = [
     {
@@ -47,6 +49,7 @@ export default function TechnologyPage() {
       <Banner data={bannerData} />
       <WirelessSystem data={wirelessCallSystemsIntl} />
       <ApplicationScope data={areasOfUseIntl} />
+      <Customization data={customization} />
       <Solutions data={innovativeSolutions} />
       <Communication
         data={{

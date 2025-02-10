@@ -12,6 +12,7 @@ export const technologyEn = {
     medical_catalogue: "Medical Catalogue",
     solt_products_catalog: "SOLT products catalog",
     download_pdf: "Download Pdf",
+    customization: "Customization & Personalization",
   },
   banner: {
     1: {
@@ -74,18 +75,21 @@ export const technologyEn = {
     ],
   },
   customization: {
-    title: "Castomization / Personalization",
-    key_features: {
-      1: {
-        title: "Manufacture of individual Shitlides and Holders",
+    title: "Customization & Personalization",
+    key_features: [
+      {
+        id: "custom_slides_holders",
+        title: "Manufacturing of Custom Slides & Holders",
       },
-      2: {
-        title: "Special scenarios of equipment",
+      {
+        id: "special_equipment_scenarios",
+        title: "Tailored Equipment Scenarios",
       },
-      3: {
-        title: "Software Adaptation",
+      {
+        id: "software_adaptation",
+        title: "Software Customization & Adaptation",
       },
-    },
+    ],
   },
   video_system: {
     title: "Video about the system",
@@ -171,6 +175,7 @@ export const technologyFr = {
     medical_catalogue: "Catalogue Médical",
     solt_products_catalog: "Catalogue de produits SOLT",
     download_pdf: "Télécharger le PDF",
+    customization: "Personnalisation & Adaptation",
   },
   banner: {
     1: {
@@ -233,18 +238,21 @@ export const technologyFr = {
     ],
   },
   customization: {
-    title: "Personnalisation / Adaptation",
-    key_features: {
-      1: {
-        title: "Fabrication de slides et supports individuels",
+    title: "Personnalisation & Adaptation",
+    key_features: [
+      {
+        id: "custom_slides_holders",
+        title: "Fabrication de supports et glissières sur mesure",
       },
-      2: {
-        title: "Scénarios spéciaux d'équipement",
+      {
+        id: "special_equipment_scenarios",
+        title: "Scénarios d’équipement adaptés",
       },
-      3: {
-        title: "Adaptation logicielle",
+      {
+        id: "software_adaptation",
+        title: "Personnalisation et adaptation logicielle",
       },
-    },
+    ],
   },
   video_system: {
     title: "Vidéo sur le système",

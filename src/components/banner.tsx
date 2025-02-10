@@ -143,13 +143,13 @@ export function Banner({
         <div className="h-screen inset-0 absolute -translate-x-full text-white text-9xl">
           <Media
             mediaSrc={prevSlide.mediaSrc}
-            mediaType={currentSlide.mediaType}
+            mediaType={prevSlide.mediaType}
           />
         </div>
         <div className="h-screen inset-0 absolute translate-x-full text-white text-9xl">
           <Media
             mediaSrc={nextSlide.mediaSrc}
-            mediaType={currentSlide.mediaType}
+            mediaType={nextSlide.mediaType}
           />
         </div>
         <AnimatePresence initial={false} custom={direction}>
@@ -229,7 +229,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 // Display image and video
 export function Media({
-  mediaType = "image",
+  mediaType,
   mediaSrc = "",
   alt = "Media content",
   className = "",
@@ -238,7 +238,7 @@ export function Media({
   const classnames = "size-full object-cover";
   return (
     <div className="absolute inset-0 h-full w-full after:absolute after:inset-0 after:bg-[linear-gradient(120deg,#000,transparent)] after:opacity-90">
-      {mediaType === "video" && (
+      {mediaType === "video" ? (
         <video
           src={mediaSrc}
           className={cn(classnames, "absolute inset-0", className)}
@@ -247,8 +247,7 @@ export function Media({
           muted
           {...props}
         />
-      )}
-      {mediaType === "image" && (
+      ) : (
         <Image
           src={mediaSrc}
           alt={alt}
