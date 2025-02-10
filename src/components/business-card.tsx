@@ -63,11 +63,11 @@ export function BusinessCard({
   limit?: number;
 }) {
   return (
-    <div className="grid md:grid-cols-2 gap-4 lg:grid-cols-3">
+    <div className="grid sm:grid-cols-2 gap-4 md:grid-cols-3">
       {businessCardData
         .slice(0, limit)
         .map((item: { title: string; mediaSrc: string; path: string }) => (
-          <div className="h-60 md:h-72" key={item.title}>
+          <div className="h-60 lg:h-72" key={item.title}>
             <Link
               href={item.path}
               className="relative block size-full rounded overflow-hidden after:absolute after:inset-0 after:bg-black/50 text-white max-w-96 mx-auto"
