@@ -11,6 +11,7 @@ import React from "react";
 
 type CustomizationDataType = {
   title: string;
+  title2: string;
   key_features: {
     id: string;
     title: string;
@@ -90,7 +91,7 @@ export default function Customization({ data }: CustomizationProps) {
             </div>
           </div>
         </section>
-        <section className="section h-screen relative bg-white -mt-20">
+        <section className="section relative bg-white -mt-20">
           <div className="absolute inset-0">
             <Image
               src="/assets/images/business/technology/circle shape.png"
@@ -99,6 +100,49 @@ export default function Customization({ data }: CustomizationProps) {
               sizes="100vw"
               className="object-cover"
             />
+          </div>
+          <div className="container" data-size="smx">
+            <div className="md:py-12 lg:py-24 flex">
+              <div className="relative flex-1 shrink-0 h-[455px]">
+                <Image
+                  src="/assets/images/business/technology/mobile.webp"
+                  fill
+                  sizes="60vw"
+                  alt="desktop"
+                  className="size-full object-contain"
+                />
+              </div>
+              <div className="relative flex-1 shrink-0 h-[455px]">
+                <Image
+                  src="/assets/images/business/technology/desktop.webp"
+                  fill
+                  sizes="60vw"
+                  alt="desktop"
+                  className="size-full object-contain"
+                />
+              </div>
+            </div>
+            <div className="text-center relative">
+              <Heading className="text-secondary-400" size="5xl">
+                {data.title2}
+              </Heading>
+            </div>
+            <div className="relative">
+              <div className="absolute top-1/2 -inset-x-8 lg:-inset-x-10 flex justify-between -translate-y-1/2">
+                <button className="text-secondary-100 cursor-pointer hover:text-primary-500">
+                  <LucideChevronLeft className="size-10" />
+                </button>
+                <button className="text-secondary-100 cursor-pointer hover:text-primary-500">
+                  <LucideChevronRight className="size-10" />
+                </button>
+              </div>
+              <div className="flex flex-nowrap mt-10 md:mt-14 lg:mt-20 overflow-hidden">
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
+              </div>
+            </div>
           </div>
         </section>
       </section>

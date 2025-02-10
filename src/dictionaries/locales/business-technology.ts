@@ -76,6 +76,7 @@ export const technologyEn = {
   },
   customization: {
     title: "Customization & Personalization",
+    title2: "Video about the system",
     key_features: [
       {
         id: "custom_slides_holders",
@@ -90,9 +91,6 @@ export const technologyEn = {
         title: "Software Customization & Adaptation",
       },
     ],
-  },
-  video_system: {
-    title: "Video about the system",
   },
   innovative_iron_solutions: {
     title: "Cutting-Edge Iron Solutions for Advanced Engineering",
@@ -239,6 +237,7 @@ export const technologyFr = {
   },
   customization: {
     title: "Personnalisation & Adaptation",
+    title2: "Vidéo sur le système",
     key_features: [
       {
         id: "custom_slides_holders",
@@ -254,10 +253,6 @@ export const technologyFr = {
       },
     ],
   },
-  video_system: {
-    title: "Vidéo sur le système",
-  },
-
   innovative_iron_solutions: {
     title: "Solutions de Fer de Pointe pour une Ingénierie Avancée",
     key_features: [
