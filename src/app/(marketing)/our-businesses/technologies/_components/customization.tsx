@@ -136,11 +136,43 @@ export default function Customization({ data }: CustomizationProps) {
                   <LucideChevronRight className="size-10" />
                 </button>
               </div>
-              <div className="flex flex-nowrap mt-10 md:mt-14 lg:mt-20 overflow-hidden">
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60 border"></div>
+              <div className="flex flex-nowrap mt-10 md:mt-14 lg:mt-20 overflow-hidden gap-1">
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
+                  <Image
+                    alt="customization"
+                    width={300}
+                    height={300}
+                    src="/assets/images/business/technology/customization/carousel/customization-01.webp"
+                    className="size-full object-cover"
+                  />
+                </div>
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
+                  <Image
+                    alt="customization"
+                    width={300}
+                    height={300}
+                    src="/assets/images/business/technology/customization/carousel/customization-02.webp"
+                    className="size-full object-cover"
+                  />
+                </div>
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
+                  <Image
+                    alt="customization"
+                    width={300}
+                    height={300}
+                    src="/assets/images/business/technology/customization/carousel/customization-03.webp"
+                    className="size-full object-cover"
+                  />
+                </div>
+                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
+                  <Image
+                    alt="customization"
+                    width={300}
+                    height={300}
+                    src="/assets/images/business/technology/customization/carousel/customization-04.webp"
+                    className="size-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
