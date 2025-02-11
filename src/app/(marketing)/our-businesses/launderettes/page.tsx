@@ -5,35 +5,36 @@ import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
 import { useTranslations } from "next-intl";
 
+const bannerMedia = [
+  {
+    mediaSrc:
+      "/assets/images/business/launderettes/banner/launderette-banner-1.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc:
+      "/assets/images/business/launderettes/banner/launderette-banner-2.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc:
+      "/assets/images/business/launderettes/banner/launderette-banner-3.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+];
+
 export default function LaunderettesPage() {
   const t = useTranslations("business_launderettes");
   const bannerIntl = t.raw("banner");
-  const bannerData: BannerType[] = [
-    {
-      mediaSrc:
-        "/assets/images/business/launderettes/banner/launderette-banner-1.webp",
-      mediaType: "image",
-      title: bannerIntl[1].title,
-      content: bannerIntl[1].content,
-      learn_more: "/",
-    },
-    {
-      mediaSrc:
-        "/assets/images/business/launderettes/banner/launderette-banner-2.webp",
-      mediaType: "image",
-      title: bannerIntl[2].title,
-      content: bannerIntl[2].content,
-      learn_more: "/",
-    },
-    {
-      mediaSrc:
-        "/assets/images/business/launderettes/banner/launderette-banner-3.webp",
-      mediaType: "image",
-      title: bannerIntl[3].title,
-      content: bannerIntl[3].content,
-      learn_more: "/",
-    },
-  ];
+  const bannerData: BannerType[] = bannerIntl.map(
+    (item: Record<string, string>, index: number) => ({
+      ...item,
+      ...bannerMedia[index],
+    })
+  );
   return (
     <>
       <Banner data={bannerData} />

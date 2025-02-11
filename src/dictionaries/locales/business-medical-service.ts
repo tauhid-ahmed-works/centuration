@@ -1,19 +1,24 @@
 export const medicalServiceEn = {
-  banner: {
-    1: {
-      title: "CT-Cube: Mobile CT Solutions for Clinics & Practices",
-      content: "Advanced Medical Imaging On-Demand",
-    },
-    2: {
-      title: "CT-Cube: Flexible, Reliable, and Efficient",
-      content: "Optimized Diagnostic Solutions for Healthcare",
-    },
-    3: {
-      title: "SIMPLY RENT – CT SCANNER IN A CONTAINER",
+  banner: [
+    {
+      title:
+        "Comprehensive Medical Services with Expert Care, Advanced Technology, and Personalized Treatment",
       content:
-        "Offering Convenient and Scalable Solutions for Medical Practices",
+        "Our medical services offer a wide range of solutions, from primary care to specialized treatments, to ensure the best possible patient outcomes.",
     },
-  },
+    {
+      title:
+        "Innovative Healthcare Solutions with Cutting-Edge Medical Technology and Expertise",
+      content:
+        "We provide advanced healthcare services powered by the latest technology to deliver exceptional patient care and improve overall well-being.",
+    },
+    {
+      title:
+        "Leading the Way in Patient-Centered Medical Care with Professional and Compassionate Services",
+      content:
+        "Our patient-focused approach combines medical expertise with empathy to ensure personalized care that addresses both physical and emotional needs.",
+    },
+  ],
 
   rent_scanner: {
     title: "SIMPLY RENT – CT SCANNER IN A CONTAINER",
@@ -136,21 +141,26 @@ export const medicalServiceEn = {
 };
 
 export const medicalServiceFr = {
-  banner: {
-    1: {
-      title: "CT-Cube : Solutions CT Mobiles pour Cliniques et Pratiques",
-      content: "Imagerie Médicale Avancée à la Demande",
-    },
-    2: {
-      title: "CT-Cube : Flexible, Fiable et Efficace",
-      content: "Solutions Diagnostiques Optimisées pour les Soins de Santé",
-    },
-    3: {
-      title: "LOUEZ SIMPLEMENT – SCANNER CT DANS UN CONTENEUR",
+  banner: [
+    {
+      title:
+        "Services Médicaux Complet avec Soins Experts, Technologie Avancée et Traitement Personnalisé",
       content:
-        "Offrant des Solutions Pratiques et Evolutives pour les Pratiques Médicales",
+        "Nos services médicaux offrent une large gamme de solutions, des soins primaires aux traitements spécialisés, pour garantir les meilleurs résultats possibles pour les patients.",
     },
-  },
+    {
+      title:
+        "Solutions Innovantes de Soins de Santé avec Technologie Médicale de Pointe et Expertise",
+      content:
+        "Nous fournissons des services de soins de santé avancés, propulsés par les dernières technologies, pour offrir des soins exceptionnels aux patients et améliorer le bien-être global.",
+    },
+    {
+      title:
+        "Être à la Pointe des Soins Médicaux Centrés sur le Patient avec des Services Professionnels et Compatissants",
+      content:
+        "Notre approche centrée sur le patient combine expertise médicale et empathie pour garantir des soins personnalisés qui répondent aux besoins physiques et émotionnels.",
+    },
+  ],
 
   rent_scanner: {
     title: "LOCATION SIMPLIFIÉE – SCANNER CT EN CONTAINER",

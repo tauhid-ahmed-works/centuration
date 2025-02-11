@@ -5,6 +5,28 @@ import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
 import { useIntl } from "@/lib/get-intl";
 
+const bannerMedia = [
+  {
+    mediaSrc:
+      "/assets/images/business/commodities/banner/commodities-banner-01.webp",
+    mediaType: "image",
+
+    learn_more: "/",
+  },
+  {
+    mediaSrc:
+      "/assets/images/business/commodities/banner/commodities-banner-02.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc:
+      "/assets/images/business/commodities/banner/commodities-banner-03.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+];
+
 export default function CommoditiesPage() {
   const commoditiesData = useIntl("business_commodities");
   const bannerIntl = commoditiesData("banner");
@@ -13,32 +35,13 @@ export default function CommoditiesPage() {
   const popularProductsIntl = commoditiesData("popularProducts");
   const ourOfferIntl = commoditiesData("ourOffer");
   const whyChooseUsIntl = commoditiesData("whyChooseUs");
-  const bannerData: BannerType[] = [
-    {
-      mediaSrc:
-        "/assets/images/business/commodities/banner/commodities-banner-01.webp",
-      mediaType: "image",
-      title: bannerIntl[1].title,
-      content: bannerIntl[1].content,
-      learn_more: "/",
-    },
-    {
-      mediaSrc:
-        "/assets/images/business/commodities/banner/commodities-banner-02.webp",
-      mediaType: "image",
-      title: bannerIntl[2].title,
-      content: bannerIntl[2].content,
-      learn_more: "/",
-    },
-    {
-      mediaSrc:
-        "/assets/images/business/commodities/banner/commodities-banner-03.webp",
-      mediaType: "image",
-      title: bannerIntl[3].title,
-      content: bannerIntl[3].content,
-      learn_more: "/",
-    },
-  ];
+
+  const bannerData: BannerType[] = bannerIntl.map(
+    (item: Record<string, string>, index: number) => ({
+      ...item,
+      ...bannerMedia[index],
+    })
+  );
   return (
     <>
       <Banner data={bannerData} />

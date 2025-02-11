@@ -14,23 +14,26 @@ export const technologyEn = {
     download_pdf: "Download Pdf",
     customization: "Customization & Personalization",
   },
-  banner: {
-    1: {
-      title: "Innovative Technology Solutions for a Digital Future",
+  banner: [
+    {
+      title:
+        "Innovative Digital Solutions Transforming Businesses with AI, Automation, and Scalable Smart Technologies",
       content:
-        "We provide cutting-edge technology solutions that empower businesses to thrive in the digital age.",
+        "We specialize in AI-driven automation, cloud computing, and enterprise software to enhance business efficiency and digital transformation.",
     },
-    2: {
-      title: "Transforming Businesses with AI and Automation",
+    {
+      title:
+        "Smart, Secure IT Solutions to Boost Productivity, Innovation, and Competitive Edge",
       content:
-        "Harnessing the power of artificial intelligence and automation to streamline processes and drive growth.",
+        "Our cutting-edge technology solutions help businesses streamline operations, improve security, and stay ahead of industry trends.",
     },
-    3: {
-      title: "Cybersecurity Excellence",
+    {
+      title:
+        "Empowering Businesses with Next-Gen Tech, AI-Powered Systems, and Scalable Digital Infrastructure",
       content:
-        "We ensure the safety and integrity of your data with state-of-the-art cybersecurity measures and protocols.",
+        "From startups to large enterprises, we build future-proof technology that drives long-term growth and market leadership.",
     },
-  },
+  ],
   wireless_call_systems: {
     title: "Advanced Wireless Call Systems",
     subtitle:
@@ -175,23 +178,26 @@ export const technologyFr = {
     download_pdf: "Télécharger le PDF",
     customization: "Personnalisation & Adaptation",
   },
-  banner: {
-    1: {
-      title: "Solutions technologiques innovantes pour un avenir numérique",
+  banner: [
+    {
+      title:
+        "Solutions numériques innovantes transformant les entreprises avec l'IA, l'automatisation et des technologies évolutives",
       content:
-        "Nous fournissons des solutions technologiques de pointe qui permettent aux entreprises de prospérer à l'ère numérique.",
+        "Nous nous spécialisons dans l'automatisation alimentée par l'IA, l'informatique en nuage et les logiciels d'entreprise pour améliorer l'efficacité des entreprises et la transformation numérique.",
     },
-    2: {
-      title: "Transformer les entreprises avec l'IA et l'automatisation",
+    {
+      title:
+        "Solutions informatiques intelligentes pour améliorer la productivité, l'innovation et la compétitivité",
       content:
-        "Exploiter la puissance de l'intelligence artificielle et de l'automatisation pour rationaliser les processus et stimuler la croissance.",
+        "Nos solutions technologiques de pointe aident les entreprises à rationaliser leurs opérations, à améliorer leur sécurité et à rester à l'avant-garde des tendances du secteur.",
     },
-    3: {
-      title: "Excellence en cybersécurité",
+    {
+      title:
+        "Autonomiser les entreprises avec des technologies avancées, IA et infrastructures évolutives",
       content:
-        "Nous assurons la sécurité et l'intégrité de vos données avec des mesures et protocoles de cybersécurité de pointe.",
+        "Des startups aux grandes entreprises, nous construisons des technologies à l'épreuve du futur qui favorisent la croissance à long terme et le leadership sur le marché.",
     },
-  },
+  ],
   wireless_call_systems: {
     title: "Systèmes d'appel sans fil avancés",
     subtitle:

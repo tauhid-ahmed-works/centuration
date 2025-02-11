@@ -1,21 +1,24 @@
 export const commoditiesEn = {
-  banner: {
-    1: {
-      title: "Reliable Supply Chain Solutions",
+  banner: [
+    {
+      title:
+        "Global Commodity Trading with Reliable Supply Chains for Agriculture and Raw Materials",
       content:
-        "Centurion ensures the seamless sourcing and distribution of essential commodities worldwide.",
+        "We facilitate seamless trade and distribution of essential commodities, ensuring quality, efficiency, and market stability.",
     },
-    2: {
-      title: "Quality and Sustainability in Every Trade",
+    {
+      title:
+        "Efficient Sourcing and Distribution of Goods for Businesses and Industries",
       content:
-        "We prioritize ethical sourcing and high-quality standards to deliver sustainable and impactful solutions.",
+        "Our extensive global network connects suppliers and buyers, delivering high-value commodities with transparency and trust.",
     },
-    3: {
-      title: "Powering Global Markets",
+    {
+      title:
+        "Your Trusted Partner in Commodity Trade with Sustainable, High-Quality Supply",
       content:
-        "Our expertise in commodities helps businesses navigate market demands and achieve long-term success.",
+        "We ensure smooth logistics, competitive pricing, and consistent delivery of premium-grade commodities worldwide.",
     },
-  },
+  ],
   aboutNutriagro: {
     title: "About Nutriagro",
     subtitle: 'We Believe In Our Strength, & Our Strength Is "QUALITY"',
@@ -90,23 +93,26 @@ export const commoditiesEn = {
 };
 
 export const commoditiesFr = {
-  banner: {
-    1: {
-      title: "Des Solutions Fiables pour la Chaîne d’Approvisionnement",
+  banner: [
+    {
+      title:
+        "Commerce Mondial de Matières Premières avec des Chaînes d'Approvisionnement Fiables pour l'Agriculture et les Matières Brutes",
       content:
-        "Centurion garantit l’approvisionnement et la distribution fluide des produits essentiels à travers le monde.",
+        "Nous facilitons le commerce et la distribution de matières premières essentielles, garantissant qualité, efficacité et stabilité du marché.",
     },
-    2: {
-      title: "Qualité et Durabilité dans Chaque Échange",
+    {
+      title:
+        "Sourcing Efficace et Distribution de Marchandises pour les Entreprises et les Industries",
       content:
-        "Nous privilégions des sources éthiques et des normes de qualité élevées pour des solutions durables et impactantes.",
+        "Notre vaste réseau mondial relie les fournisseurs et les acheteurs, livrant des matières premières de grande valeur avec transparence et confiance.",
     },
-    3: {
-      title: "Dynamiser les Marchés Mondiaux",
+    {
+      title:
+        "Votre Partenaire de Confiance dans le Commerce des Matières Premières avec une Fourniture Durable et de Haute Qualité",
       content:
-        "Notre expertise en matières premières aide les entreprises à répondre aux demandes du marché et à assurer leur succès à long terme.",
+        "Nous garantissons une logistique fluide, des prix compétitifs et une livraison constante de matières premières de qualité supérieure à travers le monde.",
     },
-  },
+  ],
   aboutNutriagro: {
     title: "À propos de Nutriagro",
     subtitle: 'Nous croyons en notre force, et notre force est "QUALITÉ"',

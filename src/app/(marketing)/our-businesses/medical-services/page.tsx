@@ -15,38 +15,42 @@ const ourSolutionsIcons = [
   "/assets/images/business/medical-service/icons/cart.png",
 ];
 
+const bannerMedia = [
+  {
+    mediaSrc:
+      "/assets/images/business/medical-service/banner/banner-image-1.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc:
+      "/assets/images/business/medical-service/banner/banner-image-2.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc:
+      "/assets/images/business/medical-service/banner/banner-image-3.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+];
+
 export default function MedicalServicePage() {
   const medicalServiceIntl = useIntl("business_medical_service");
-  const bannerIntl: BannerType[] = medicalServiceIntl("banner");
+  const bannerIntl = medicalServiceIntl("banner");
   const rentScannerIntl = medicalServiceIntl("rent_scanner");
   const amenitiesIntl = medicalServiceIntl("amenities");
   const modelsIntl = medicalServiceIntl("ctCubeModels");
   const contactUsIntl = medicalServiceIntl("contactUs");
   const ourSolutionsIntl = medicalServiceIntl("ourSolutions");
   const infectionPreventionIntl = medicalServiceIntl("infectionPrevention");
-  const bannerData: BannerType[] = [
-    {
-      mediaSrc:
-        "/assets/images/business/medical-service/banner/banner-image-1.webp",
-      mediaType: "image",
-      title: bannerIntl[1].title,
-      learn_more: "/",
-    },
-    {
-      mediaSrc:
-        "/assets/images/business/medical-service/banner/banner-image-2.webp",
-      mediaType: "image",
-      title: bannerIntl[2].title,
-      learn_more: "/",
-    },
-    {
-      mediaSrc:
-        "/assets/images/business/medical-service/banner/banner-image-3.webp",
-      mediaType: "image",
-      title: bannerIntl[3].title,
-      learn_more: "/",
-    },
-  ];
+  const bannerData: BannerType[] = bannerIntl.map(
+    (item: Record<string, string>, index: number) => ({
+      ...item,
+      ...bannerMedia[index],
+    })
+  );
   return (
     <>
       <Banner data={bannerData} />

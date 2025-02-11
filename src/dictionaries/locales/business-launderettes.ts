@@ -5,23 +5,26 @@ export const launderettesEn = {
     dryer: "sèche",
     step: "step",
   },
-  banner: {
-    1: {
-      title: "Convenient Self-Service Laundromats",
+  banner: [
+    {
+      title:
+        "Professional Laundry Services with Eco-Friendly, Deep Cleaning for Freshness and Hygiene",
       content:
-        "Our launderettes offer convenient, 24/7 self-service laundry solutions, designed to meet the needs of busy individuals.",
+        "We provide expert garment care, stain removal, and sustainable washing techniques to ensure your clothes stay fresh and clean.",
     },
-    2: {
-      title: "State-of-the-Art Washing Machines",
+    {
+      title:
+        "Fast and Reliable Laundry Pickup and Delivery with Premium Fabric Care",
       content:
-        "Equipped with the latest technology, our machines provide efficient and eco-friendly washing and drying services.",
+        "Our hassle-free laundry service offers doorstep pickup, high-quality cleaning, and timely delivery to fit your busy lifestyle.",
     },
-    3: {
-      title: "Affordable, Fast, and Reliable",
+    {
+      title:
+        "Eco-Conscious, High-Quality Laundry Services for Homes, Hotels, and Businesses",
       content:
-        "We prioritize convenience, affordability, and reliability, ensuring a seamless laundry experience for all our customers.",
+        "We use advanced cleaning technology and eco-friendly detergents to deliver superior laundry results with convenience.",
     },
-  },
+  ],
   message: {
     title: "DROP YOUR\tDIRTY LAUNDRY?",
     description: "We wash, dry, go back and deliver all over Abidjan.",
@@ -98,23 +101,26 @@ export const launderettesFr = {
     dryer: "sèche",
     step: "étape",
   },
-  banner: {
-    1: {
-      title: "Laveries en libre-service pratiques",
+  banner: [
+    {
+      title:
+        "Services de Blanchisserie Professionnels avec un Nettoyage en Profondeur Écologique pour la Fraîcheur et l'Hygiène",
       content:
-        "Nos laveries offrent des solutions de blanchisserie en libre-service pratiques et disponibles 24/7, conçues pour répondre aux besoins des personnes occupées.",
+        "Nous offrons un entretien expert des vêtements, un retrait des taches, et des techniques de lavage durables pour garantir que vos vêtements restent frais et propres.",
     },
-    2: {
-      title: "Lave-linge à la pointe de la technologie",
+    {
+      title:
+        "Ramassage et Livraison de Blanchisserie Rapides et Fiables avec un Entretien Premium des Tissus",
       content:
-        "Équipées des dernières technologies, nos machines offrent des services de lavage et de séchage efficaces et écologiques.",
+        "Notre service de blanchisserie sans tracas offre un ramassage à domicile, un nettoyage de haute qualité et une livraison ponctuelle pour s'adapter à votre emploi du temps chargé.",
     },
-    3: {
-      title: "Abordable, rapide et fiable",
+    {
+      title:
+        "Services de Blanchisserie Écologiques et de Haute Qualité pour les Maisons, Hôtels et Entreprises",
       content:
-        "Nous priorisons la commodité, l'accessibilité et la fiabilité, garantissant une expérience de blanchisserie fluide pour tous nos clients.",
+        "Nous utilisons des technologies de nettoyage avancées et des détergents écologiques pour offrir des résultats supérieurs en matière de blanchisserie avec commodité.",
     },
-  },
+  ],
   message: {
     title: "DÉPOSEZ VOS LINGE SALE?",
     description:
