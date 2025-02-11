@@ -36,7 +36,7 @@ export function Heading({
       "text-lg md:text-2xl lg:text-3.5xl": size === "3xl",
       "text-xl md:text-3xl lg:text-5xl": size === "4xl",
       "text-xl md:text-3.5xl lg:text-5xl": size === "5xl",
-      "text-2xl md:text-4.5xl lg:text-[54px]": size === "6xl",
+      "text-2xl md:text-4.5xl lg:text-[56px]": size === "6xl",
     },
     className
   );

@@ -213,7 +213,7 @@ export default function MedicalServicePage() {
             </Heading>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-4 mt-10 place-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-4 mt-10 place-items-center">
             {modelsIntl.models.map(
               (
                 item: { title: string; specifications: Record<string, string> },
@@ -321,7 +321,7 @@ export default function MedicalServicePage() {
             </Heading>
           </div>
           <div className="overflow-hidden mt-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 -m-px -space-x-px -space-y-px">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 -m-px -space-x-px -space-y-px">
               {ourSolutionsIntl.reasons.map(
                 (item: { title: string; content: string }, i: number) => (
                   <div

@@ -1,3 +1,5 @@
+"use client";
+
 import { Heading } from "@/components/heading";
 import Image from "next/image";
 import {
@@ -8,6 +10,7 @@ import {
   LucideShieldCheck,
 } from "lucide-react";
 import React from "react";
+import { EmblaCarousel } from "@/components/swiper";
 
 type CustomizationDataType = {
   title: string;
@@ -22,11 +25,47 @@ type CustomizationProps = {
   data: CustomizationDataType;
 };
 
+const items = [
+  {
+    id: 1,
+    imageUrl: "https://via.placeholder.com/800x400?text=Slide+1",
+    title: "Slide 1",
+  },
+  {
+    id: 2,
+    imageUrl: "https://via.placeholder.com/800x400?text=Slide+2",
+    title: "Slide 2",
+  },
+  {
+    id: 3,
+    imageUrl: "https://via.placeholder.com/800x400?text=Slide+3",
+    title: "Slide 3",
+  },
+];
+
 const featureIcons = {
   custom_slides_holders: <LucideTimer />,
   special_equipment_scenarios: <LucideSlidersVertical />,
   software_adaptation: <LucideShieldCheck />,
 };
+
+const customizationContent = [
+  {
+    id: 1,
+    mediaSrc:
+      "/assets/images/business/technology/customization/carousel/customization-01.webp",
+  },
+  {
+    id: 2,
+    mediaSrc:
+      "/assets/images/business/technology/customization/carousel/customization-02.webp",
+  },
+  {
+    id: 3,
+    mediaSrc:
+      "/assets/images/business/technology/customization/carousel/customization-03.webp",
+  },
+];
 
 export default function Customization({ data }: CustomizationProps) {
   return (
@@ -34,32 +73,29 @@ export default function Customization({ data }: CustomizationProps) {
       <section className="section bg-secondary-600 !p-0">
         <section className="section" data-padding="md">
           <div className="container">
-            <div className="max-w-3xl mx-auto w-full flex flex-col items-center relative">
-              <div className="absolute top-1/2 -inset-x-3 md:inset-x-0 flex justify-between -translate-y-1/2">
-                <button className="text-gray-100 cursor-pointer hover:text-primary-500">
-                  <LucideChevronLeft className="size-10" />
-                </button>
-                <button className="text-gray-100 cursor-pointer hover:text-primary-500">
-                  <LucideChevronRight className="size-10" />
-                </button>
-              </div>
-              <div className="max-w-sm md:max-w-md w-full mx-10 md:mx-20 h-84 relative before:absolute before:inset-x-0 before:inset-y-10 before:bg-primary-500/10 before:blur-2xl before:opacity-30">
-                <Image
-                  src="/assets/images/business/technology/customization/image-01.png"
-                  fill
-                  sizes="30vw"
-                  alt="Image"
-                  className="size-full object-contain"
-                />
-              </div>
-              <div className="flex gap-1.5 justify-center [&>*:nth-child(2)]:bg-primary-500 [&>*:nth-child(2)]:before:bg-primary-500 [&>*:nth-child(2)]:before:blur-xl">
-                {[...Array(6)].map((_, i) => (
-                  <button
-                    key={i}
-                    className="size-4 rounded-full bg-secondary-700 inline-block align-middle relative before:absolute before:inset-0 before:rounded-full cursor-pointer"
-                  ></button>
-                ))}
-              </div>
+            <div className="max-w-xl mx-auto">
+              <EmblaCarousel
+                items={[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]}
+                renderItem={(item, index) => (
+                  <div key={item.id} className="">
+                    <Image
+                      alt="customization"
+                      width={300}
+                      height={300}
+                      src={
+                        "/assets/images/business/technology/customization/image-01.png"
+                      }
+                      className="size-full object-cover"
+                    />
+                  </div>
+                )}
+                autoplay={false} // Enable autoplay
+                autoplayInterval={3000} // Set autoplay interval to 3 seconds
+                loop={true} // Enable infinite loop
+                arrows={true} // Show navigation arrows
+                className="my-custom-class" // Add custom class for
+                slidesToShow={1}
+              />
             </div>
           </div>
         </section>
@@ -127,53 +163,27 @@ export default function Customization({ data }: CustomizationProps) {
                 {data.title2}
               </Heading>
             </div>
-            <div className="relative">
-              <div className="absolute top-1/2 -inset-x-8 lg:-inset-x-10 flex justify-between -translate-y-1/2">
-                <button className="text-secondary-100 cursor-pointer hover:text-primary-500">
-                  <LucideChevronLeft className="size-10" />
-                </button>
-                <button className="text-secondary-100 cursor-pointer hover:text-primary-500">
-                  <LucideChevronRight className="size-10" />
-                </button>
-              </div>
-              <div className="flex flex-nowrap mt-10 md:mt-14 lg:mt-20 overflow-hidden gap-1">
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
-                  <Image
-                    alt="customization"
-                    width={300}
-                    height={300}
-                    src="/assets/images/business/technology/customization/carousel/customization-01.webp"
-                    className="size-full object-cover"
-                  />
-                </div>
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
-                  <Image
-                    alt="customization"
-                    width={300}
-                    height={300}
-                    src="/assets/images/business/technology/customization/carousel/customization-02.webp"
-                    className="size-full object-cover"
-                  />
-                </div>
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
-                  <Image
-                    alt="customization"
-                    width={300}
-                    height={300}
-                    src="/assets/images/business/technology/customization/carousel/customization-03.webp"
-                    className="size-full object-cover"
-                  />
-                </div>
-                <div className="w-full sm:w-1/2 md:w-1/3 shrink-0 h-60">
-                  <Image
-                    alt="customization"
-                    width={300}
-                    height={300}
-                    src="/assets/images/business/technology/customization/carousel/customization-04.webp"
-                    className="size-full object-cover"
-                  />
-                </div>
-              </div>
+            <div className="mt-10 md:mt-14 lg:mt-20">
+              <EmblaCarousel
+                items={customizationContent}
+                renderItem={(item, index) => (
+                  <div key={item.id} className="text-center border">
+                    <Image
+                      alt="customization"
+                      width={300}
+                      height={300}
+                      src={item.mediaSrc}
+                      className="size-full object-cover"
+                    />
+                  </div>
+                )}
+                autoplay={false} // Enable autoplay
+                autoplayInterval={3000} // Set autoplay interval to 3 seconds
+                loop={true} // Enable infinite loop
+                arrows={true} // Show navigation arrows
+                className="my-custom-class" // Add custom class for styling
+                slidesToShow={3}
+              />
             </div>
           </div>
         </section>

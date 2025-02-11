@@ -179,7 +179,7 @@ export function Banner({
                 onPointerLeave={handlePointerPresence.bind(null, false)}
                 className="container"
               >
-                <div className="space-y-4 max-w-[45ch] lg:max-w-[70ch] w-full text-white">
+                <div className="space-y-4 max-w-[45ch] lg:max-w-[70ch] w-full text-white leading-[1.4]">
                   <Heading
                     as="h2"
                     size="5xl"
