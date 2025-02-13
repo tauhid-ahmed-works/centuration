@@ -21,17 +21,13 @@ export const commoditiesEn = {
   ],
   aboutNutriagro: {
     title: "About Nutriagro",
-    subtitle: 'We Believe In Our Strength, & Our Strength Is "QUALITY"',
+    subtitle: "Global Agricultural Excellence with Uncompromised Quality",
     content: [
-      "Nutriagro Overseas OPC PVT LTD is a global agribusiness based in India, specializing in premium grains, fresh fruits, and vegetables. We serve customers in over 30 countries worldwide.",
+      "Nutriagro Overseas OPC PVT LTD is a leading agribusiness based in India, specializing in premium agricultural commodities. With a presence in over 30 countries, we connect farmers with global markets, ensuring quality, sustainability, and reliability in every transaction.",
 
-      "Our commitment to excellence sets us apart. Located in Northern India, a region rich in natural resources and consistent raw material supply, we ensure the highest standards in agricultural products.",
+      "Strategically located in Northern India, we have direct access to top-quality raw materials, allowing us to uphold the highest industry standards. Our diverse portfolio includes grains, fresh fruits, vegetables, animal feed, sugar, rice, fertilizers, and petroleum products.",
 
-      "We export a variety of commodities, including fresh fruits, vegetables, animal feed (corn, soybean), sugar (S30, ICUMSA 45), rice, fertilizers (Urea N46), petroleum products, and more.",
-
-      "Headquartered in Gurugram, a city named after Guru Dronacharya, we embody a blend of heritage and modernity, representing India's evolving global trade landscape.",
-
-      "Our professional team, driven by expertise and dedication, understands the diverse needs of our esteemed clients across the globe.",
+      "With a commitment to innovation and efficiency, our expert team leverages advanced logistics, market intelligence, and strategic partnerships to drive global trade success. Whether you're seeking a reliable supplier or a strategic partner, Nutriagro is dedicated to delivering value-driven solutions.",
     ],
     ctaLink: "#",
   },
@@ -114,21 +110,18 @@ export const commoditiesFr = {
     },
   ],
   aboutNutriagro: {
-    title: "À propos de Nutriagro",
-    subtitle: 'Nous croyons en notre force, et notre force est "QUALITÉ"',
+    title: "À Propos de Nutriagro",
+    subtitle: "Excellence Agricole Mondiale avec une Qualité Intransigeante",
     content: [
-      "Nutriagro Overseas OPC PVT LTD est une entreprise agroalimentaire mondiale basée en Inde, spécialisée dans les céréales de qualité, les fruits et légumes frais. Nous desservons plus de 30 pays à travers le monde.",
+      "Nutriagro Overseas OPC PVT LTD est une entreprise agroalimentaire de premier plan basée en Inde, spécialisée dans les produits agricoles de haute qualité. Présente dans plus de 30 pays, nous connectons les agriculteurs aux marchés internationaux, garantissant qualité, durabilité et fiabilité à chaque transaction.",
 
-      "Notre engagement envers l'excellence nous distingue. Situés dans le nord de l'Inde, une région riche en ressources naturelles et en matières premières, nous garantissons des produits agricoles de la plus haute qualité.",
+      "Situés stratégiquement dans le nord de l'Inde, nous avons un accès direct aux meilleures matières premières, nous permettant de respecter les normes les plus élevées du secteur. Notre portefeuille comprend des céréales, des fruits et légumes frais, des aliments pour animaux, du sucre, du riz, des engrais et des produits pétroliers.",
 
-      "Nous exportons divers produits, notamment des fruits frais, des légumes, des aliments pour animaux (maïs, soja), du sucre (S30, ICUMSA 45), du riz, des engrais (Urée N46), des produits pétroliers et bien plus encore.",
-
-      "Basés à Gurugram, une ville nommée en hommage au Guru Dronacharya, nous représentons un mélange d'héritage et de modernité, incarnant l'évolution du commerce mondial en Inde.",
-
-      "Notre équipe de professionnels expérimentés comprend parfaitement les besoins variés de nos clients à l’échelle internationale.",
+      "Grâce à notre engagement envers l'innovation et l'efficacité, notre équipe d'experts utilise des technologies avancées en logistique, en intelligence de marché et en partenariats stratégiques pour assurer le succès du commerce mondial. Que vous recherchiez un fournisseur fiable ou un partenaire stratégique, Nutriagro s'engage à offrir des solutions à forte valeur ajoutée.",
     ],
     ctaLink: "#",
   },
+
   ourServices: [
     {
       id: 1,
