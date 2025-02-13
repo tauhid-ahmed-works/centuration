@@ -47,6 +47,21 @@ export default function CommoditiesPage() {
     <>
       <Banner data={bannerData} />
       <section className="section" data-padding="lg">
+        <div className="hidden lg:block absolute top-0 inset-x-0">
+          <div className="container">
+            <div className="flex justify-end items-center">
+              <div className="h-44 w-40">
+                <Image
+                  className="size-full object-contain block"
+                  width={160}
+                  height={176}
+                  src="/assets/images/business/commodities/tag.svg"
+                  alt="tag"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container" data-size="md">
           <div className="space-y-4 lg:space-y-6 text-center max-w-4xl mx-auto">
             <Heading className="text-primary-500" as="h2" size="2xl">
@@ -205,10 +220,10 @@ export default function CommoditiesPage() {
       </section>
       {/*  */}
       <section className="section relative" data-padding="lg">
-        <div className="absolute size-full inset-0 after:absolute after:inset-0 after:bg-secondary-500/80">
+        <div className="absolute size-full inset-0 after:absolute after:inset-0 after:bg-secondary-500/60">
           <Image
             fill
-            src="/assets/images/business/commodities/why-choose-us.png"
+            src="/assets/images/business/commodities/banner/commodities-banner-01.webp"
             alt="why-choose-us"
             className="object-cover"
           />
@@ -218,9 +233,9 @@ export default function CommoditiesPage() {
             <div className="relative h-72 sm:flex-1 sm:h-auto">
               <Image
                 fill
-                src="/assets/images/business/commodities/why-choose-us.png"
+                src="/assets/images/business/commodities/banner/commodities-banner-01.webp"
                 alt="why-choose-us"
-                className="object-cover rounded"
+                className="object-cover rounded contrast-75"
               />
             </div>
             <div className="flex-1 text-white space-y-8">

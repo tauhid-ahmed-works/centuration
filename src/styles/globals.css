@@ -82,7 +82,7 @@
 }
 
 .section {
-  @apply py-10 overflow-x-hidden;
+  @apply py-10 overflow-x-hidden relative;
 }
 
 .section[data-padding="md"] {
