@@ -25,7 +25,8 @@ export default function Businesses() {
       learn_more: "/",
     },
     {
-      mediaSrc: "/assets/images/business/medical-service/banner/image-01.png",
+      mediaSrc:
+        "/assets/images/business/medical-service/banner/banner-image-1.webp",
       mediaType: "image",
       title: bannerIntl[3].title,
       content: bannerIntl[3].content,
