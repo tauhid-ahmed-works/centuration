@@ -3,8 +3,6 @@
 import { Heading } from "@/components/heading";
 import Image from "next/image";
 import {
-  LucideChevronLeft,
-  LucideChevronRight,
   LucideSlidersVertical,
   LucideTimer,
   LucideShieldCheck,
@@ -24,24 +22,6 @@ type CustomizationDataType = {
 type CustomizationProps = {
   data: CustomizationDataType;
 };
-
-const items = [
-  {
-    id: 1,
-    imageUrl: "https://via.placeholder.com/800x400?text=Slide+1",
-    title: "Slide 1",
-  },
-  {
-    id: 2,
-    imageUrl: "https://via.placeholder.com/800x400?text=Slide+2",
-    title: "Slide 2",
-  },
-  {
-    id: 3,
-    imageUrl: "https://via.placeholder.com/800x400?text=Slide+3",
-    title: "Slide 3",
-  },
-];
 
 const featureIcons = {
   custom_slides_holders: <LucideTimer />,
@@ -76,7 +56,7 @@ export default function Customization({ data }: CustomizationProps) {
             <div className="max-w-xl mx-auto">
               <EmblaCarousel
                 items={[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]}
-                renderItem={(item, index) => (
+                renderItem={(item) => (
                   <div key={item.id} className="">
                     <Image
                       alt="customization"
@@ -166,7 +146,7 @@ export default function Customization({ data }: CustomizationProps) {
             <div className="mt-10 md:mt-14 lg:mt-20">
               <EmblaCarousel
                 items={customizationContent}
-                renderItem={(item, index) => (
+                renderItem={(item) => (
                   <div key={item.id} className="text-center border">
                     <Image
                       alt="customization"

@@ -1,4 +1,4 @@
-const business = {
+export const business = {
   technology: {
     en: [
       {
@@ -379,7 +379,7 @@ const business = {
   },
 };
 
-const pagesContent = {
+export const pagesContent = {
   sustainability: [
     {
       title:

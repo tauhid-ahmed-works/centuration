@@ -36,11 +36,10 @@ export default function MediaPage() {
       learn_more: "/",
     },
   ];
-  const latestData = t.raw("latest");
   return (
     <>
       <Banner data={bannerData} />
-      <MediaCard data={latestData} />
+      <MediaCard />
       <MediaGallery />
     </>
   );

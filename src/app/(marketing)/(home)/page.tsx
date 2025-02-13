@@ -13,24 +13,6 @@ import ScrollDots from "./_components/scroll-dots";
 import { Banner, type BannerType } from "@/components/banner";
 import { useTranslations } from "next-intl";
 
-const bannerMedia = [
-  {
-    mediaSrc: "/assets/images/homepage/banner/video-01.mp4",
-    mediaType: "video",
-    duration: 44,
-  },
-  {
-    mediaSrc: "/assets/images/homepage/banner/video-02.mp4",
-    mediaType: "video",
-    duration: 17,
-  },
-  {
-    mediaSrc: "/assets/images/homepage/banner/video-03.mp4",
-    mediaType: "video",
-    duration: 33,
-  },
-];
-
 export default function Page() {
   const t = useTranslations("home");
   const bannerIntl = t.raw("banner");
