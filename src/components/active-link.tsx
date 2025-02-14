@@ -21,6 +21,7 @@ export function ActiveLink({
 
   return (
     <Link
+      prefetch
       className={cn(
         "hover:text-primary-500 transition-colors cursor-pointer",
         { "!text-primary-500": isActive },
