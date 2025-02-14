@@ -255,6 +255,8 @@ export function Media({
           fill
           priority
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={mediaSrc}
         />
       )}
     </div>
