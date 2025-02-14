@@ -132,6 +132,7 @@ export function Banner({
 
   return (
     <section className="h-screen pt-16 overflow-hidden" {...props}>
+      <h1 className="sr-only">{currentSlide.title}</h1>
       <motion.div
         dragConstraints={{ left: 0, right: 0 }}
         drag="x"
