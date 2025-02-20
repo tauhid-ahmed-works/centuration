@@ -97,13 +97,13 @@ export const launderettesEn = {
       "Place an order in 2 minutes chrono, don't move anymore, we take care of everything",
     status: "Soon available",
   },
-  professionals: {
-    title: "collaborate with Chap-Chap laundry",
-    subtitle: "Professionals",
+  professional: {
+    title: "Partner with Chap-Chap Laundry",
+    subtitle: "Tailored Solutions for Professionals",
     description:
-      "You're a professional, you have laundry to wash, enjoy the PARTNER CHAP formula and don't get tired anymore. Entrust us with your laundry, we take care of it, and it is less expensive. Companies (Hotels, Residences, Guesthouses, Restaurant, Hospitals, Beauty Institute, Hairdressing Room, Spa etc.)",
+      "As a professional, your time is valuable. With the PARTNER CHAP formula, you can save time and reduce stress by letting us handle your laundry needs. Our services are designed for businesses like hotels, residences, guesthouses, restaurants, hospitals, beauty institutes, salons, spas, and more—all at an affordable price.",
     headline:
-      "You're a professional. contact us for a more personalised order.",
+      "You’re a professional.\tReach out to us for a personalized laundry solution.",
   },
   partners: {
     title: "Our partners",
@@ -214,13 +214,13 @@ export const launderettesFr = {
       "Passez une commande en 2 minutes chrono, ne bougez plus, nous nous occupons de tout.",
     status: "Bientôt disponible",
   },
-  professionals: {
+  professional: {
     title: "Collaborez avec Chap-Chap Laundry",
-    subtitle: "Professionnels",
+    subtitle: "Solutions sur-mesure pour les Professionnels",
     description:
-      "Vous êtes professionnel et avez du linge à laver ? Profitez de la formule PARTENAIRE CHAP et ne vous fatiguez plus. Confiez-nous votre linge, nous nous en chargeons et c'est moins cher. Entreprises (Hôtels, Résidences, Chambres d'hôtes, Restaurants, Hôpitaux, Instituts de beauté, Salons de coiffure, Spas, etc.)",
+      "En tant que professionnel, votre temps est précieux. Avec la formule PARTNER CHAP, gagnez du temps et réduisez votre stress en nous confiant vos besoins en blanchisserie. Nos services sont conçus pour des entreprises telles que des hôtels, résidences, maisons d'hôtes, restaurants, hôpitaux, instituts de beauté, salons de coiffure, spas, et bien plus, le tout à un prix abordable.",
     headline:
-      "Vous êtes un professionnel. Contactez-nous pour une commande plus personnalisée.",
+      "Vous êtes un professionnel.\tContactez-nous pour une solution de blanchisserie personnalisée.",
   },
   partners: {
     title: "Nos partenaires",
