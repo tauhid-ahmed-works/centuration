@@ -25,6 +25,14 @@ export default function Page() {
       content: bannerIntl[1].content,
       learn_more: "/",
     },
+    // {
+    //   mediaSrc: "https://www.youtube.com/watch?v=NO5yLm8Ggos",
+    //   mediaType: "video",
+    //   duration: 44,
+    //   title: bannerIntl[1].title,
+    //   content: bannerIntl[1].content,
+    //   learn_more: "/",
+    // },
     {
       mediaSrc: "/assets/images/homepage/banner/video-02.mp4",
       mediaType: "video",

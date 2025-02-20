@@ -23,6 +23,7 @@ interface EmblaCarouselProps<T extends CarouselItem> {
   arrows?: boolean;
   className?: string;
   slidesToShow?: number;
+  pagination?: boolean;
 }
 
 export const EmblaCarousel = <T extends CarouselItem>({
@@ -34,6 +35,7 @@ export const EmblaCarousel = <T extends CarouselItem>({
   arrows = true,
   className = "",
   slidesToShow,
+  pagination = true,
 }: EmblaCarouselProps<T>) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState<boolean>(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState<boolean>(true);
@@ -125,7 +127,6 @@ export const EmblaCarousel = <T extends CarouselItem>({
           ))}
         </div>
       </div>
-
       {arrows && (
         <div className="absolute -inset-x-8 top-1/2 -translate-y-1/2 flex justify-between">
           <IconButton
@@ -135,6 +136,7 @@ export const EmblaCarousel = <T extends CarouselItem>({
             disabled={prevBtnDisabled}
             aria-label="Previous slide"
             type="button"
+            className="text-white hover:text-primary-500"
           >
             <LucideChevronLeft />
           </IconButton>
@@ -145,23 +147,26 @@ export const EmblaCarousel = <T extends CarouselItem>({
             type="button"
             variant="primary"
             contrast="ghost"
+            className="text-white hover:text-primary-500"
           >
             <LucideChevronRight />
           </IconButton>
         </div>
       )}
-      <div className="flex gap-2">
-        {[...Array(items.length)].map((_, index) => (
-          <button
-            key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
-            className={cn(
-              "cursor-pointer size-4 border rounded bg-rose-500",
-              index === selectedIndex && "bg-green-500"
-            )}
-          ></button>
-        ))}
-      </div>
+      {pagination && (
+        <div className="flex justify-center gap-2 mt-4">
+          {[...Array(items.length)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => emblaApi?.scrollTo(index)}
+              className={cn(
+                "cursor-pointer size-3 rounded-full bg-secondary-300",
+                index === selectedIndex && "bg-primary-500"
+              )}
+            ></button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

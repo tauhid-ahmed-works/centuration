@@ -14,7 +14,7 @@ export default function NewsLetter() {
         <Image
           fill
           alt="news-letter-bg"
-          src="/assets/images/news-letter.png"
+          src="/assets/images/news-letter.webp"
           className="absolute size-full inset-0 object-cover object-right"
         />
       </div>
@@ -28,18 +28,18 @@ export default function NewsLetter() {
           </span>
         </Heading>
         <form className="mt-6">
-          <div className="flex flex-col items-center sm:flex-row gap-4">
+          <div className="flex flex-col items-center justify-between sm:flex-row gap-4 border border-gray-500 rounded-full focus-within:border-primary-500">
             <input
               placeholder="Enter your email"
               type="text"
-              className="rounded-full h-12 px-4 w-full sm:w-96 text-white bg-transparent border border-gray-500"
+              className="rounded-full h-12 px-4 w-full sm:w-96 text-white bg-transparent focus:ring-0 focus:outline-0"
             />
             <Button
               asChild
               variant="primary"
               contrast="default"
               shape="pill"
-              size="md"
+              size="lg"
               className="bg-primary-500 text-secondary-500"
             >
               <Link href="#">Subscribe Now</Link>

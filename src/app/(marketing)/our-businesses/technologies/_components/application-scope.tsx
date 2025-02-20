@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
 import Underline from "@/components/decorate-line";
+import { AnimateSlideIn } from "@/components/animate-card";
+import { EmblaCarousel } from "@/components/swiper";
 
 const categoryImages = {
   medicine: "/assets/images/business/technology/area-of-scope/medicine.webp",
@@ -36,8 +39,13 @@ export default function ApplicationScope({ data }: ApplicationScopeProps) {
             {data.title}
           </Heading>
           <div className="mt-10 md:mt-14 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8">
-            {data.categories.map((category) => (
-              <div key={category.id} className="max-w-lg w-full mx-auto">
+            {data.categories.map((category, index) => (
+              <AnimateSlideIn
+                className="max-w-lg w-full mx-auto"
+                key={category.id}
+                index={index}
+                from="right"
+              >
                 <Image
                   src={
                     categoryImages[category.id as keyof typeof categoryImages]
@@ -93,7 +101,7 @@ export default function ApplicationScope({ data }: ApplicationScopeProps) {
                     </svg>
                   </button>
                 </div>
-              </div>
+              </AnimateSlideIn>
             ))}
           </div>
         </div>
@@ -109,50 +117,30 @@ export default function ApplicationScope({ data }: ApplicationScopeProps) {
           </Heading>
         </div>
         <div className="mt-10 md:mt-14 lg:mt-20 overflow-hidden">
-          <div className="w-full shrink-0 h-72 flex gap-1">
-            <div className="shrink-0 h-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 relative">
-              <Image
-                src="/assets/images/business/technology/area-of-scope/catalogue/bell.webp"
-                fill
-                sizes="30vw"
-                alt="catalogue"
-                className="object-cover size-full"
-              />
-            </div>
-            <div className="shrink-0 h-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 relative">
-              <Image
-                src="/assets/images/business/technology/area-of-scope/catalogue/watch.webp"
-                fill
-                sizes="30vw"
-                alt="catalogue"
-                className="object-cover size-full"
-              />
-            </div>
-            <div className="shrink-0 h-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 relative">
-              <Image
-                src="/assets/images/business/technology/area-of-scope/catalogue/red.webp"
-                fill
-                sizes="30vw"
-                alt="catalogue"
-                className="object-cover size-full"
-              />
-            </div>
-            <div className="shrink-0 h-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 relative">
-              <Image
-                src="/assets/images/business/technology/area-of-scope/catalogue/pink.webp"
-                fill
-                sizes="30vw"
-                alt="catalogue"
-                className="object-cover size-full"
-              />
-            </div>
-          </div>
-          <div className="mt-8 flex justify-center">
-            <ul className="flex gap-1 [&>*:nth-child(2)]:bg-secondary-500">
-              {[...Array(6)].map((_, i) => (
-                <li key={i} className="size-2.5 rounded-full bg-gray-700"></li>
-              ))}
-            </ul>
+          <div className="w-full flex gap-1">
+            <EmblaCarousel
+              items={[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]}
+              renderItem={(item, index) => (
+                <div
+                  key={index}
+                  className="shrink-0 w-full flex-1 h-72 relative"
+                >
+                  <Image
+                    src="/assets/images/business/technology/area-of-scope/catalogue/bell.webp"
+                    fill
+                    sizes="30vw"
+                    alt="catalogue"
+                    className="object-cover size-full"
+                  />
+                </div>
+              )}
+              autoplay={false} // Enable autoplay
+              autoplayInterval={3000} // Set autoplay interval to 3 seconds
+              loop={true} // Enable infinite loop
+              arrows={false} // Show navigation arrows
+              className="my-custom-class" // Add custom class for
+              slidesToShow={3}
+            />
           </div>
         </div>
       </section>

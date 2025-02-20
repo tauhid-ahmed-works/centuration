@@ -43,7 +43,7 @@ type BannerProps = {
 
 // image and video prop types
 type MediaProps = {
-  mediaType: "video" | "image";
+  mediaType: "video" | "image" | "embed";
   mediaSrc: string;
   alt?: string;
   children?: React.ReactNode;
@@ -56,7 +56,7 @@ type MediaProps = {
 const NEXT = "NEXT";
 const PREV = "PREV";
 const SWIPE_AMOUNT = 30;
-const DURATION = 5;
+const DURATION = 7;
 
 // determining directions variants for slide.
 const variants = {
@@ -248,6 +248,15 @@ export function Media({
           muted
           {...props}
         />
+      ) : mediaType === "embed" ? (
+        <div className="size-full overflow-hidden relative">
+          <iframe
+            src="https://www.youtube.com/embed/NO5yLm8Ggos?autoplay=1&loop=1&mute=1&controls=0"
+            title="YouTube video player"
+            allow="autoplay; encrypted-media"
+            className="w-screen h-screen min-w-[1920px] object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "
+          />
+        </div>
       ) : (
         <Image
           src={mediaSrc}
@@ -256,8 +265,6 @@ export function Media({
           fill
           priority
           sizes="100vw"
-          placeholder="blur"
-          blurDataURL={mediaSrc}
         />
       )}
     </div>

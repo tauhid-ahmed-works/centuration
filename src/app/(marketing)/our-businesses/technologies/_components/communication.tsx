@@ -62,7 +62,7 @@ export function Communication({ data }: CommunicationProps) {
           </div>
           <div className="flex flex-col md:flex-row flex-wrap mt-10 md:mt-14 lg:mt-20 -mx-4 [&>*:last-child]:basis-full">
             {communicationZone.key_features.map((feature, index: number) => (
-              <div className="p-4 basis-1/2" key={index}>
+              <div key={index} className="p-4 basis-1/2">
                 <div className="py-10 px-14 bg-primary-50 space-y-6 rounded-2xl text-secondary-300 border border-primary-500">
                   <Heading size="2xl" as="h3" className="text-secondary-400">
                     0{index + 1}.

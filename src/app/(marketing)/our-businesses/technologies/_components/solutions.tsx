@@ -7,6 +7,7 @@ import {
   LucideLayers,
 } from "lucide-react";
 import React from "react";
+import AnimatedCard from "@/components/animate-card";
 
 type SolutionsDataType = {
   title: string;
@@ -48,8 +49,9 @@ export default function Solutions({ data }: SolutionProps) {
             </Heading>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4 text-white mt-10 md:mt-14 lg:mt-20">
-            {data.key_features.map((item) => (
-              <div
+            {data.key_features.map((item, index) => (
+              <AnimatedCard
+                index={index}
                 className="bg-white/10 backdrop-blur-xs border border-white p-8 space-y-4 max-w-96 mx-auto"
                 key={item.title}
               >
@@ -72,7 +74,7 @@ export default function Solutions({ data }: SolutionProps) {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>

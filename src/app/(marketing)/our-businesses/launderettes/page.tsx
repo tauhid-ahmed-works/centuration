@@ -3,7 +3,10 @@ import { Heading } from "@/components/heading";
 import Underline from "@/components/decorate-line";
 import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
-import { useTranslations } from "next-intl";
+import AnimatedCard, { AnimateSlideIn } from "@/components/animate-card";
+import HowItWorks from "./_components/how-it-works";
+import { useIntl } from "@/lib/get-intl";
+import { OurClients } from "./_components/our-clients";
 
 const bannerMedia = [
   {
@@ -27,14 +30,17 @@ const bannerMedia = [
 ];
 
 export default function LaunderettesPage() {
-  const t = useTranslations("business_launderettes");
-  const bannerIntl = t.raw("banner");
+  const technologyData = useIntl("business_launderettes");
+  const bannerIntl = technologyData("banner");
+  const howItWorksData = technologyData("walkthrough");
+  const partnersData = technologyData("partners");
   const bannerData: BannerType[] = bannerIntl.map(
     (item: Record<string, string>, index: number) => ({
       ...item,
       ...bannerMedia[index],
     })
   );
+
   return (
     <>
       <Banner data={bannerData} />
@@ -52,15 +58,18 @@ export default function LaunderettesPage() {
       <section className="section" data-padding="lg">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-10">
-            <div className="relative min-h-96 flex-1">
+            <AnimateSlideIn className="relative min-h-96 flex-1">
               <Image
                 src="/assets/images/business/launderettes/banner/store-point.jpg"
                 fill
                 alt="store point"
                 className="object-cover"
               />
-            </div>
-            <div className="space-y-10 flex-1 text-center lg:text-left">
+            </AnimateSlideIn>
+            <AnimateSlideIn
+              from="right"
+              className="space-y-10 flex-1 text-center lg:text-left"
+            >
               <Heading as="h2" size="5xl" className="text-primary-500">
                 Save time, save money.
               </Heading>
@@ -70,7 +79,7 @@ export default function LaunderettesPage() {
                 more than 100 locations everywhere in Côte d’Ivoire.
               </p>
               <Button>FIND A CHAP-CHAP POINT</Button>
-            </div>
+            </AnimateSlideIn>
           </div>
         </div>
       </section>
@@ -146,12 +155,13 @@ export default function LaunderettesPage() {
               </Heading>
             </div>
 
-            <div className="aspect-video w-full">
+            <div className="w-full aspect-video relative overflow-hidden group">
               <iframe
-                className="size-full"
-                src="https://www.youtube.com/embed/Q9s4HiaRDaA?si=DyEG-pGvbyG6mYG-"
+                className="absolute pointer-events-none top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/Q9s4HiaRDaA?autoplay=1&mute=1&loop=1&playlist=Q9s4HiaRDaA&controls=1"
                 title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="encrypted-media; fullscreen"
+                data-lenis-prevent={true}
               ></iframe>
             </div>
 
@@ -175,74 +185,9 @@ export default function LaunderettesPage() {
           </div>
         </div>
       </section>
-      {/*  */}
-      <section className="section bg-secondary-500/60" data-padding="md">
-        <div className="text-center">
-          <Heading className="text-white" as="h2" size="4xl">
-            How it Works?
-          </Heading>
-        </div>
-        <div className="container mt-14">
-          <div className="flex gap-4">
-            <div className="border border-white bg-white/10 backdrop-blur p-5 space-y-4">
-              <Image
-                src="/assets/images/business/launderettes/banner/how-it-works/1.png"
-                width="300"
-                height="300"
-                alt="image"
-                className="w-full"
-              />
-              <Heading as="h3" size="3xl">
-                <span className="text-primary-500">ETAPE</span>{" "}
-                <span className="text-white">6</span>
-              </Heading>
-              <p className="text-sm text-white">
-                EFFECTUEZ LE PALEMENT EN ESPECES PARCARTE OU MOBILE MONEY
-              </p>
-            </div>
-            <div className="border border-white bg-white/10 backdrop-blur p-5 space-y-4">
-              <Image
-                src="/assets/images/business/launderettes/banner/how-it-works/2.png"
-                width="300"
-                height="300"
-                alt="image"
-                className="w-full"
-              />
-              <Heading as="h3" size="3xl">
-                <span className="text-primary-500">ETAPE</span>{" "}
-                <span className="text-white">7</span>
-              </Heading>
-              <p className="text-sm text-white">
-                EFFECTUEZ LE PALEMENT EN ESPECES PARCARTE OU MOBILE MONEY
-              </p>
-            </div>
-            <div className="border border-white bg-white/10 backdrop-blur p-5 space-y-4">
-              <Image
-                src="/assets/images/business/launderettes/banner/how-it-works/3.png"
-                width="300"
-                height="300"
-                alt="image"
-                className="w-full"
-              />
-              <Heading as="h3" size="3xl">
-                <span className="text-primary-500">ETAPE</span>{" "}
-                <span className="text-white">1</span>
-              </Heading>
-              <p className="text-sm text-white">
-                EFFECTUEZ LE PALEMENT EN ESPECES PARCARTE OU MOBILE MONEY
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-2 mt-10 justify-center">
-            <div className="size-2 rounded-full bg-secondary-400"></div>
-            <div className="size-2 rounded-full bg-secondary-400"></div>
-            <div className="size-2 rounded-full bg-secondary-400"></div>
-            <div className="size-2 rounded-full bg-secondary-400"></div>
-            <div className="size-2 rounded-full bg-secondary-400"></div>
-            <div className="size-2 rounded-full bg-secondary-400"></div>
-          </div>
-        </div>
-      </section>
+      {/* how it works */}
+      <HowItWorks data={howItWorksData} />
+
       {/*  */}
       <section className="section" data-padding="md">
         <div className="text-center">
@@ -254,7 +199,10 @@ export default function LaunderettesPage() {
         <div className="mt-10 lg:mt-20">
           <div className="container">
             <div className="flex gap-4 md:gap-10 lg:gap-16 xl:gap24">
-              <div className="space-y-6 md:space-y-8 text-center flex-1 px-4">
+              <AnimatedCard
+                index={0}
+                className="space-y-6 md:space-y-8 text-center flex-1 px-4"
+              >
                 <Image
                   width={150}
                   height={150}
@@ -266,8 +214,11 @@ export default function LaunderettesPage() {
                   Step 1: Place your order via our website, choose the formula
                   that suits you and validate your payment via M obile money.
                 </p>
-              </div>
-              <div className="space-y-6 md:space-y-8 text-center flex-1 px-4">
+              </AnimatedCard>
+              <AnimatedCard
+                index={1}
+                className="space-y-6 md:space-y-8 text-center flex-1 px-4"
+              >
                 <Image
                   width={150}
                   height={150}
@@ -280,8 +231,11 @@ export default function LaunderettesPage() {
                   will pick it up at your home or address of your choice, and
                   then bring it to us.
                 </p>
-              </div>
-              <div className="space-y-6 md:space-y-8 text-center flex-1 px-4">
+              </AnimatedCard>
+              <AnimatedCard
+                index={2}
+                className="space-y-6 md:space-y-8 text-center flex-1 px-4"
+              >
                 <Image
                   width={150}
                   height={150}
@@ -294,7 +248,7 @@ export default function LaunderettesPage() {
                   laundry is ready and then receive your own expense within a
                   short period of time, depending on your formula.
                 </p>
-              </div>
+              </AnimatedCard>
             </div>
           </div>
         </div>
@@ -381,26 +335,7 @@ export default function LaunderettesPage() {
         </div>
       </section>
       {/*  */}
-      <section className="section" data-padding="md">
-        <div className="container">
-          <div className="text-center">
-            <Heading className="text-primary-500" size="5xl" as="h2">
-              Our partners
-            </Heading>
-            <Underline align="center" className="mt-6" />
-            <p className="text-secondary-300 mt-10">
-              Present in more than 20 countries with world-renowned partnerships
-            </p>
-            <div className="relative mt-20 h-20">
-              <Image
-                src="/assets/images/business/launderettes/sponsors.png"
-                fill
-                alt="sponsor"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+     <OurClients data={partnersData}/>
     </>
   );
 }

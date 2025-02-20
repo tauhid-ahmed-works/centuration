@@ -5,13 +5,20 @@ import { Button } from "@/components/ui/button";
 import { Banner, BannerType } from "@/components/banner";
 import { useIntl } from "@/lib/get-intl";
 import { LucideCheck } from "lucide-react";
+import { AnimateSlideIn } from "@/components/animate-card";
 
 const bannerMedia = [
-  {
-    mediaSrc:
-      "/assets/images/business/commodities/banner/commodities-banner-01.webp",
-    mediaType: "image",
+  // {
+  //   mediaSrc:
+  //     "/assets/images/business/commodities/banner/commodities-banner-01.webp",
+  //   mediaType: "image",
 
+  //   learn_more: "/",
+  // },
+  {
+    mediaSrc: `<iframe width="560" height="315" src="https://www.youtube.com/embed/NO5yLm8Ggos?si=JRUaha_ip0K5M5rz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+    mediaType: "embed",
+    duration: 700,
     learn_more: "/",
   },
   {
@@ -190,7 +197,7 @@ export default function CommoditiesPage() {
       <section className="section pt-10 sm:pt-14 lg:20 pb-0">
         <div className="container">
           <div className="flex flex-col gap-10 sm:flex-row items-center justify-between">
-            <div className="space-y-6 md:space-y-10 flex-1 shrink-0">
+            <AnimateSlideIn className="space-y-6 md:space-y-10 flex-1 shrink-0">
               <div className="space-y-6">
                 <Heading className="text-primary-500" as="h2" size="2xl">
                   {ourOfferIntl.title}
@@ -206,15 +213,15 @@ export default function CommoditiesPage() {
                 </div>
                 <Button>Contact Now</Button>
               </div>
-            </div>
-            <div className="relative h-96 md:h-[650px] w-96 sm:flex-1 shrink-0 top-10">
+            </AnimateSlideIn>
+            <AnimateSlideIn from="right" className="relative h-96 md:h-[650px] w-96 sm:flex-1 shrink-0 top-10">
               <Image
                 fill
                 src="/assets/images/business/commodities/banner/mobile.png"
                 alt="mobile"
                 className="object-contain size-full"
               />
-            </div>
+            </AnimateSlideIn>
           </div>
         </div>
       </section>

@@ -46,18 +46,21 @@ export const launderettesEn = {
     description:
       "Wash and dry large amounts of linen or bulky items all at once.  Chap-chap laundries are fully self-service, accessible 24 hours a day, 7 days a week, and have free access to the car parks of our partner  sites.",
   },
-  Walkthrough: {
-    title: "How it Walk?",
+  walkthrough: {
+    title: "How it works?",
     features: [
       {
+        id: "1",
         title: "Step 1",
         content: "Choose your machine and load your laundry.",
       },
       {
+        id: "2",
         title: "Step 2",
         content: "Select the wash cycle and add detergent if needed.",
       },
       {
+        id: "3",
         title: "Step 3",
         content: "Make the payment in cash, by card, or via mobile money.",
       },
@@ -143,24 +146,27 @@ export const launderettesFr = {
     description:
       "Lavez et séchez de grandes quantités de linge ou d'articles encombrants en une seule fois. Les laveries Chap-chap sont entièrement en libre-service, accessibles 24 heures sur 24, 7 jours sur 7, avec un accès gratuit aux parkings de nos sites partenaires.",
   },
-  Walkthrough: {
-    title: "Comment ça marche ?",
-    features: {
-      1: {
+  walkthrough: {
+    title: "Comment ça fonctionne?",
+    features: [
+      {
+        id: "1",
         title: "Étape 1",
         content: "Choisissez votre machine et chargez votre linge.",
       },
-      2: {
+      {
+        id: "2",
         title: "Étape 2",
         content:
           "Sélectionnez le cycle de lavage et ajoutez du détergent si nécessaire.",
       },
-      3: {
+      {
+        id: "3",
         title: "Étape 3",
         content:
           "Effectuez le paiement en espèces, par carte ou via Mobile Money.",
       },
-    },
+    ],
   },
   easy_ordering: {
     title: "Comment passer une commande Chap-Chap ?",

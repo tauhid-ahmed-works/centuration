@@ -1,3 +1,4 @@
+import { AnimateSlideIn } from "@/components/animate-card";
 import Underline from "@/components/decorate-line";
 import { Heading } from "@/components/heading";
 import Image from "next/image";
@@ -37,9 +38,10 @@ export function WirelessSystem({ data }: WirelessSystemProps) {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mt-14 lg:mt-20">
           {data.key_features.map((feature, i) => (
-            <div
-              className="max-w-lg size-full text-center mx-auto flex flex-col group"
+            <AnimateSlideIn
               key={i}
+              index={i}
+              className="max-w-lg size-full text-center mx-auto flex flex-col group"
             >
               <div className="size-16 lg:size-24 bg-primary-500 rounded-2xl mx-auto z-10 -mb-8 relative flex justify-center items-center">
                 <Image
@@ -64,7 +66,7 @@ export function WirelessSystem({ data }: WirelessSystemProps) {
                   </p>
                 </div>
               </div>
-            </div>
+            </AnimateSlideIn>
           ))}
         </div>
       </div>

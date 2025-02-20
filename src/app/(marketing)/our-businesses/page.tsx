@@ -16,6 +16,14 @@ export default function Businesses() {
       content: bannerIntl[1].content,
       learn_more: "/",
     },
+    // {
+    //   mediaSrc: "https://www.youtube.com/watch?v=NO5yLm8Ggos",
+    //   mediaType: "video",
+    //   title: bannerIntl[1].title,
+    //   content: bannerIntl[1].content,
+    //   learn_more: "/",
+    //   duration: 50,
+    // },
     {
       mediaSrc:
         "/assets/images/business/launderettes/banner/launderette-banner-2.webp",
