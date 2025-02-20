@@ -29,10 +29,25 @@ export const launderettesEn = {
     title: "DROP YOUR\tDIRTY LAUNDRY?",
     description: "We wash, dry, go back and deliver all over Abidjan.",
   },
-  efficiency: {
-    title: "Save time, save money.",
+  benefits: {
+    title: "Save Time, Reduce Costs",
     description:
-      "Chap-chap is the only self-service industrial industrial washing machine in Côte d’Ivoire. You can find us in Abidjan and soon in more than 100  locations everywhere in Côte d’Ivoire.",
+      "Chap-Chap is the first and only self-service industrial washing solution in Côte d’Ivoire. Conveniently located in Abidjan, with plans to expand to over 100 locations nationwide, we offer a fast, cost-effective, and reliable laundry experience tailored for both businesses and individuals.",
+  },
+  laundry_service: {
+    title: "A Revolution in Laundry—Faster, More Affordable",
+    description:
+      "Chap-Chap brings a new era of self-service laundry in Côte d’Ivoire. Our fully automated laundry stations are accessible 24/7, providing a convenient, cost-effective, and hassle-free washing experience anytime, anywhere.",
+    machine_capacities: [
+      { type: "Washing Machine", capacity: "9\tkg" },
+      { type: "Washing Machine", capacity: "20\tkg" },
+      { type: "Dryer", capacity: "30\tkg" },
+    ],
+  },
+  our_service: {
+    title: "Maximize Efficiency, Minimize Costs",
+    description:
+      "Chap-Chap is the first and only self-service industrial washing solution in Côte d’Ivoire. Conveniently located in Abidjan, with expansion plans to over 100 locations nationwide, we provide businesses and individuals with a fast, cost-effective, and reliable laundry experience.",
   },
   success_story: {
     title: "Success Story",
@@ -129,10 +144,25 @@ export const launderettesFr = {
     description:
       "Nous lavons, séchons, récupérons et livrons partout à Abidjan.",
   },
-  efficiency: {
-    title: "Gagnez du temps, économisez de l'argent.",
+  benefits: {
+    title: "Gagnez du Temps, Réduisez les Coûts",
     description:
-      "Chap-chap est le seul service de laverie industrielle en libre-service en Côte d'Ivoire. Vous pouvez nous trouver à Abidjan et bientôt dans plus de 100 points partout en Côte d'Ivoire.",
+      "Chap-Chap est la première et unique solution de lavage industriel en libre-service en Côte d’Ivoire. Idéalement situé à Abidjan et bientôt disponible dans plus de 100 emplacements à travers le pays, nous offrons aux entreprises et aux particuliers une expérience de lavage rapide, économique et fiable.",
+  },
+  laundry_service: {
+    title: "Une Révolution dans la Blanchisserie—Plus Rapide, Moins Cher",
+    description:
+      "Chap-Chap inaugure une nouvelle ère de la laverie en libre-service en Côte d’Ivoire. Nos stations de lavage entièrement automatisées sont accessibles 24h/24 et 7j/7, offrant une expérience de lavage pratique, économique et sans tracas, à tout moment et en tout lieu.",
+    machine_capacities: [
+      { type: "Lave-linge", capacity: "9\tkg" },
+      { type: "Lave-linge", capacity: "20\tkg" },
+      { type: "Sèche-linge", capacity: "30\tkg" },
+    ],
+  },
+  our_service: {
+    title: "Maximisez l’efficacité, Réduisez les coûts",
+    description:
+      "Chap-Chap est la première et unique solution de lavage industriel en libre-service en Côte d’Ivoire. Idéalement situé à Abidjan et bientôt disponible dans plus de 100 emplacements à travers le pays, nous offrons aux entreprises et aux particuliers une expérience de lavage rapide, économique et fiable.",
   },
   success_story: {
     title: "Histoire de succès",

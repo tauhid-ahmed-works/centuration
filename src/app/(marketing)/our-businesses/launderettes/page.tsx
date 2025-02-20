@@ -7,6 +7,8 @@ import AnimatedCard, { AnimateSlideIn } from "@/components/animate-card";
 import HowItWorks from "./_components/how-it-works";
 import { useIntl } from "@/lib/get-intl";
 import { OurClients } from "./_components/our-clients";
+import CustomerBenefits from "./_components/customer-benefits";
+import OurServices from "./_components/laundry-services";
 
 const bannerMedia = [
   {
@@ -31,9 +33,12 @@ const bannerMedia = [
 
 export default function LaunderettesPage() {
   const technologyData = useIntl("business_launderettes");
+  const text = technologyData("text");
   const bannerIntl = technologyData("banner");
   const howItWorksData = technologyData("walkthrough");
+  const benefitsData = technologyData("benefits");
   const partnersData = technologyData("partners");
+  const ourServiceData = technologyData("laundry_service");
   const bannerData: BannerType[] = bannerIntl.map(
     (item: Record<string, string>, index: number) => ({
       ...item,
@@ -54,90 +59,12 @@ export default function LaunderettesPage() {
           We wash, dry, go back and deliver all over Abidjan.
         </p>
       </section>
-      {/*  */}
-      <section className="section" data-padding="lg">
-        <div className="container">
-          <div className="flex flex-col lg:flex-row gap-10">
-            <AnimateSlideIn className="relative min-h-96 flex-1">
-              <Image
-                src="/assets/images/business/launderettes/banner/store-point.jpg"
-                fill
-                alt="store point"
-                className="object-cover"
-              />
-            </AnimateSlideIn>
-            <AnimateSlideIn
-              from="right"
-              className="space-y-10 flex-1 text-center lg:text-left"
-            >
-              <Heading as="h2" size="5xl" className="text-primary-500">
-                Save time, save money.
-              </Heading>
-              <p>
-                Chap-chap is the only self-service industrial industrial washing
-                machine in Côte d’Ivoire. You can find us in Abidjan and soon in
-                more than 100 locations everywhere in Côte d’Ivoire.
-              </p>
-              <Button>FIND A CHAP-CHAP POINT</Button>
-            </AnimateSlideIn>
-          </div>
-        </div>
-      </section>
-      {/*  */}
-      <section className="section bg-gray-300" data-padding="lg">
-        <div className="container">
-          <div className="text-center space-y-6 text-secondary-300">
-            <Heading as="h2" size="4xl" className="text-primary-500">
-              LA LAVERIE DONE HIS
-            </Heading>
-            <Heading
-              className="font-medium"
-              as="h3"
-              size="2xl"
-              underline={<Underline align="center" variant="primary" />}
-            >
-              Revolution And it&apos;s cheaper.
-            </Heading>
-            <p className="font-medium">
-              Automatic laundry service available at all times throughout Côte
-              d&apos;Ivoire.
-            </p>
-            <p className="font-normal">Open 24 hours a day, 7 days a week.</p>
-          </div>
-          <div className="flex flex-row gap-4 text-center text-primary-500 mt-10 lg:mt-20">
-            <div className="font-semibold aspect-square bg-white flex-1 p-8 flex justify-center flex-col leading-none">
-              <span className=" text-2xl">
-                09
-                <span className="size-10 bg-white inline-block rounded-full absolute right-0 top-0 text-2xl">
-                  kg
-                </span>
-              </span>
-              <div className="h-2 bg-primary-500"></div>
-              <span className="uppercase font-medium">Lave</span>
-            </div>
-            <div className="font-semibold aspect-square bg-white flex-1 p-8 flex justify-center flex-col leading-none">
-              <span className=" text-2xl">
-                20
-                <span className="size-10 bg-white inline-block rounded-full absolute right-0 top-0 text-2xl">
-                  kg
-                </span>
-              </span>
-              <div className="h-2 bg-primary-500"></div>
-              <span className="uppercase font-medium">Lave</span>
-            </div>
-            <div className="font-semibold aspect-square bg-white flex-1 p-8 flex justify-center flex-col leading-none">
-              <span className=" text-2xl">
-                20
-                <span className="size-10 bg-white inline-block rounded-full absolute right-0 top-0 text-2xl">
-                  kg
-                </span>
-              </span>
-              <div className="h-2 bg-primary-500"></div>
-              <span className="uppercase font-medium">SECHE</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Customer Benefits */}
+      <CustomerBenefits
+        data={{ ...benefitsData, text: text.chap_chap_point }}
+      />
+      {/* Our Service */}
+      <OurServices data={ourServiceData} />
       {/*  */}
       <section className="section bg-gray-300" data-padding="lg">
         <div className="container">
@@ -335,7 +262,7 @@ export default function LaunderettesPage() {
         </div>
       </section>
       {/*  */}
-     <OurClients data={partnersData}/>
+      <OurClients data={partnersData} />
     </>
   );
 }
