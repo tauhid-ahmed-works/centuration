@@ -55,11 +55,11 @@ export const launderettesEn = {
     description:
       "Automatic laundry service available at all times throughout Côte d’Ivoire.\tOpen 24 hours a day, 7 days a week.",
   },
-  innovation: {
-    title: "Innovation at Your Doorstep",
-    subtile: "Your laundry always fresh",
+  our_innovation: {
+    title: "Innovation at Your Service",
+    subtitle: "Fresh, Clean, and Hassle-Free Laundry",
     description:
-      "Wash and dry large amounts of linen or bulky items all at once.  Chap-chap laundries are fully self-service, accessible 24 hours a day, 7 days a week, and have free access to the car parks of our partner  sites.",
+      "Wash and dry large loads or bulky items effortlessly. Chap-Chap laundromats are fully self-service, accessible 24/7, and conveniently located with free parking at our partner sites.",
   },
   walkthrough: {
     title: "How it works?",
@@ -83,11 +83,11 @@ export const launderettesEn = {
   },
   easy_ordering: {
     title: "How to place an order chap-chap?",
-    features: {
-      1: "Step 1: Place your order via our website, choose the formula that suits you and validate your payment via M obile money.",
-      2: "Step 2: Prepare your clothes in a bag, one of our  couriers will pick it up at your home or address of your choice, and  then bring it to us.",
-      3: "Step 3: A notification message will be sent to you once your laundry is ready and then receive your own expense within a short  period of time, depending on your formula.",
-    },
+    features: [
+      "Step 1:\tPlace your order via our website, choose the formula that suits you and validate your payment via M obile money.",
+      "Step 2:\tPrepare your clothes in a bag, one of our  couriers will pick it up at your home or address of your choice, and  then bring it to us.",
+      "Step 3:\tA notification message will be sent to you once your laundry is ready and then receive your own expense within a short  period of time, depending on your formula.",
+    ],
   },
   mobile_experience: {
     title: "Mobile Experience",
@@ -170,11 +170,11 @@ export const launderettesFr = {
     description:
       "Service de laverie automatique disponible à tout moment partout en Côte d'Ivoire. Ouvert 24h/24, 7j/7.",
   },
-  innovation: {
-    title: "Innovation à votre porte",
-    subtitle: "Votre linge toujours frais",
+  our_innovation: {
+    title: "L'Innovation à Votre Service",
+    subtitle: "Une Lessive Fraîche, Propre et Sans Contraintes",
     description:
-      "Lavez et séchez de grandes quantités de linge ou d'articles encombrants en une seule fois. Les laveries Chap-chap sont entièrement en libre-service, accessibles 24 heures sur 24, 7 jours sur 7, avec un accès gratuit aux parkings de nos sites partenaires.",
+      "Lavez et séchez de grandes quantités de linge ou des articles volumineux en toute simplicité. Les laveries Chap-Chap sont entièrement en libre-service, accessibles 24h/24 et idéalement situées avec stationnement gratuit sur nos sites partenaires.",
   },
   walkthrough: {
     title: "Comment ça fonctionne?",
@@ -200,11 +200,11 @@ export const launderettesFr = {
   },
   easy_ordering: {
     title: "Comment passer une commande Chap-Chap ?",
-    features: {
-      1: "Étape 1 : Passez votre commande via notre site web, choisissez la formule qui vous convient et validez votre paiement via Mobile Money.",
-      2: "Étape 2 : Préparez vos vêtements dans un sac, l'un de nos livreurs viendra les récupérer chez vous ou à l'adresse de votre choix, puis les apportera à notre laverie.",
-      3: "Étape 3 : Un message de notification vous sera envoyé une fois votre linge prêt, puis vous recevrez vos articles dans un délai court, selon la formule choisie.",
-    },
+    features: [
+      "Étape 1:\tPassez votre commande via notre site web, choisissez la formule qui vous convient et validez votre paiement via Mobile Money.",
+      "Étape 2:\tPréparez vos vêtements dans un sac, l'un de nos livreurs viendra les récupérer chez vous ou à l'adresse de votre choix, puis les apportera à notre laverie.",
+      "Étape 3:\tUn message de notification vous sera envoyé une fois votre linge prêt, puis vous recevrez vos articles dans un délai court, selon la formule choisie.",
+    ],
   },
   mobile_experience: {
     title: "Expérience Mobile",

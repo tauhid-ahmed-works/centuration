@@ -9,6 +9,8 @@ import { useIntl } from "@/lib/get-intl";
 import { OurClients } from "./_components/our-clients";
 import CustomerBenefits from "./_components/customer-benefits";
 import OurServices from "./_components/laundry-services";
+import OurInvention from "./_components/our-invention";
+import OrderingGuide from "./_components/ordering-guide";
 
 const bannerMedia = [
   {
@@ -39,6 +41,8 @@ export default function LaunderettesPage() {
   const benefitsData = technologyData("benefits");
   const partnersData = technologyData("partners");
   const ourServiceData = technologyData("laundry_service");
+  const ourInnovationData = technologyData("our_innovation");
+  const orderingGuideData = technologyData("easy_ordering");
   const bannerData: BannerType[] = bannerIntl.map(
     (item: Record<string, string>, index: number) => ({
       ...item,
@@ -65,121 +69,14 @@ export default function LaunderettesPage() {
       />
       {/* Our Service */}
       <OurServices data={ourServiceData} />
-      {/*  */}
-      <section className="section bg-gray-300" data-padding="lg">
-        <div className="container">
-          <div className="space-y-20">
-            <div className="text-center">
-              <Heading
-                as="h2"
-                className="text-primary-500"
-                size="4xl"
-                underline={
-                  <Underline align="center" size="lg" variant="primary" />
-                }
-              >
-                An innovative concept near you
-              </Heading>
-            </div>
-
-            <div className="w-full aspect-video relative overflow-hidden group">
-              <iframe
-                className="absolute pointer-events-none top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/Q9s4HiaRDaA?autoplay=1&mute=1&loop=1&playlist=Q9s4HiaRDaA&controls=1"
-                title="YouTube video player"
-                allow="encrypted-media; fullscreen"
-                data-lenis-prevent={true}
-              ></iframe>
-            </div>
-
-            <div className="text-center">
-              <Heading
-                size="3xl"
-                className="text-secondary-400"
-                underline={<Underline align="center" variant="primary" />}
-              >
-                Your laundry always fresh
-              </Heading>
-
-              <p className="text-secondary-300 mt-6">
-                Wash and dry large amounts of linen or bulky items all at once.
-                Chap-chap laundries are fully self-service, accessible 24 hours
-                a day, 7 days a week, and have free access to the car parks of
-                our partner sites.
-              </p>
-              <Button className="mt-10">Find a chap-chap point</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Our Invention  */}
+      <OurInvention
+        data={{ ...ourInnovationData, text: text.chap_chap_point }}
+      />
       {/* how it works */}
       <HowItWorks data={howItWorksData} />
-
-      {/*  */}
-      <section className="section" data-padding="md">
-        <div className="text-center">
-          <Heading as="h2" size="4xl" className="text-primary-500">
-            How to place an order chap-chap?
-          </Heading>
-          <Underline className="mt-10" align="center" />
-        </div>
-        <div className="mt-10 lg:mt-20">
-          <div className="container">
-            <div className="flex gap-4 md:gap-10 lg:gap-16 xl:gap24">
-              <AnimatedCard
-                index={0}
-                className="space-y-6 md:space-y-8 text-center flex-1 px-4"
-              >
-                <Image
-                  width={150}
-                  height={150}
-                  src="/assets/images/business/launderettes/order/order.png"
-                  alt="order"
-                  className="mx-auto"
-                />
-                <p>
-                  Step 1: Place your order via our website, choose the formula
-                  that suits you and validate your payment via M obile money.
-                </p>
-              </AnimatedCard>
-              <AnimatedCard
-                index={1}
-                className="space-y-6 md:space-y-8 text-center flex-1 px-4"
-              >
-                <Image
-                  width={150}
-                  height={150}
-                  src="/assets/images/business/launderettes/order/order.png"
-                  alt="order"
-                  className="mx-auto"
-                />
-                <p>
-                  Step 2: Prepare your clothes in a bag, one of our couriers
-                  will pick it up at your home or address of your choice, and
-                  then bring it to us.
-                </p>
-              </AnimatedCard>
-              <AnimatedCard
-                index={2}
-                className="space-y-6 md:space-y-8 text-center flex-1 px-4"
-              >
-                <Image
-                  width={150}
-                  height={150}
-                  src="/assets/images/business/launderettes/order/order.png"
-                  alt="order"
-                  className="mx-auto"
-                />
-                <p>
-                  Step 3: A notification message will be sent to you once your
-                  laundry is ready and then receive your own expense within a
-                  short period of time, depending on your formula.
-                </p>
-              </AnimatedCard>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ordering guide  */}
+      <OrderingGuide data={orderingGuideData} />
       {/*  */}
       <section className="section bg-secondary-500" data-padding="md">
         <div className="container">
