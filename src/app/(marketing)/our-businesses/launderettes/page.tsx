@@ -53,6 +53,7 @@ export default function LaunderettesPage() {
   return (
     <>
       <Banner data={bannerData} />
+      {/* TODO: translation to be done */}
       <section className="section bg-secondary-500 text-center text-white">
         <Heading size="4xl" as="h2">
           <span>DROP YOUR</span>&nbsp;

@@ -2,7 +2,7 @@ import Underline from "@/components/decorate-line";
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
+// TODO: translation to be done
 export default function MobileApps() {
   return (
     <section className="section bg-secondary-500" data-padding="md">
