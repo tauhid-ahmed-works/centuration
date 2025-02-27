@@ -39,6 +39,7 @@ export default function Professionals({
               </Heading>
             </div>
           </div>
+          {/* TODO: translation to be done */}
           <Button className="mt-6">Contact us to clarify the details!</Button>
         </div>
       </div>
