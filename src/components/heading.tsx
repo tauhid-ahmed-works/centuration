@@ -27,7 +27,7 @@ export function Heading({
   underline,
 }: HeadingProps) {
   const classnames = cn(
-    "font-semibold leading-[1.5]",
+    "font-semibold leading-[1.5] balance-text",
     {
       "text-sm md:text-lg font-normal": size === "sm",
       "text-base md:text-lg font-normal": size === "base",
