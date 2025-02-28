@@ -13,7 +13,7 @@ export default function OurInvention({
   };
 }) {
   return (
-    <section className="section bg-gray-300" data-padding="lg">
+    <section className="section bg-gray-300" data-padding="md">
       <div className="container">
         <div className="space-y-20">
           <div className="text-center">

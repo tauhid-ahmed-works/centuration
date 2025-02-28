@@ -11,7 +11,7 @@ export default function LaundryServices({
   };
 }) {
   return (
-    <section className="section bg-gray-300" data-padding="lg">
+    <section className="section bg-gray-300" data-padding="md">
       <div className="container">
         <div className="text-center space-y-6 text-secondary-300">
           <Heading

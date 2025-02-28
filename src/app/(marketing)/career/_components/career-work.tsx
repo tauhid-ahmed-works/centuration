@@ -32,7 +32,7 @@ export default function CareerWork({
             <Image
               fill
               sizes="40vw"
-              className="size-full object-cover object-top"
+              className="size-full object-cover"
               src="/assets/images/career/model.webp"
               alt="african-businesswoman-smiling"
             />
