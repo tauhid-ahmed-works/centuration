@@ -141,7 +141,7 @@ export default function CommoditiesPage() {
               <div className="flex-1 group">
                 <div className="relative w-full aspect-square group-hover:bg-primary-100">
                   <Image
-                    src="/assets/images/business/commodities/products/corn.png"
+                    src="/assets/images/business/commodities/products/corn.webp"
                     alt="image of product"
                     fill
                   />
@@ -157,7 +157,7 @@ export default function CommoditiesPage() {
               <div className="flex-1 group">
                 <div className="relative w-full aspect-square group-hover:bg-primary-100">
                   <Image
-                    src="/assets/images/business/commodities/products/salt.png"
+                    src="/assets/images/business/commodities/products/cornflour.webp"
                     alt="image of product"
                     fill
                   />
@@ -167,13 +167,13 @@ export default function CommoditiesPage() {
                   as="h3"
                   size="3xl"
                 >
-                  Yellow Corn
+                  Corn Flour
                 </Heading>
               </div>
               <div className="flex-1 group">
                 <div className="relative w-full aspect-square group-hover:bg-primary-100">
                   <Image
-                    src="/assets/images/business/commodities/products/sugar.png"
+                    src="/assets/images/business/commodities/products/sugar.webp"
                     alt="image of product"
                     fill
                   />
@@ -183,7 +183,7 @@ export default function CommoditiesPage() {
                   as="h3"
                   size="3xl"
                 >
-                  Yellow Corn
+                  Sugar
                 </Heading>
               </div>
             </div>
@@ -214,7 +214,10 @@ export default function CommoditiesPage() {
                 <Button>Contact Now</Button>
               </div>
             </AnimateSlideIn>
-            <AnimateSlideIn from="right" className="relative h-96 md:h-[650px] w-96 sm:flex-1 shrink-0 top-10">
+            <AnimateSlideIn
+              from="right"
+              className="relative h-96 md:h-[650px] w-96 sm:flex-1 shrink-0 top-10"
+            >
               <Image
                 fill
                 src="/assets/images/business/commodities/banner/mobile.png"
