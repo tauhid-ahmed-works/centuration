@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Integration() {
   return (
-    <div className="fixed right-4 bottom-4">
+    <div className="fixed right-4 bottom-4 z-[200]">
       <div className="inline-flex group flex-col gap-3 bg-white rounded-full p-2 shadow">
         <button
           onClick={() => {
