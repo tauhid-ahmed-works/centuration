@@ -16,20 +16,17 @@ export const technologyEn = {
   },
   banner: [
     {
-      title:
-        "Innovative Digital Solutions Transforming Businesses with AI, Automation, and Scalable Smart Technologies",
+      title: "AI-Driven Digital Solutions for Smarter Business Growth",
       content:
         "We specialize in AI-driven automation, cloud computing, and enterprise software to enhance business efficiency and digital transformation.",
     },
     {
-      title:
-        "Smart, Secure IT Solutions to Boost Productivity, Innovation, and Competitive Edge",
+      title: "Secure & Scalable IT Solutions for Innovation & Growth",
       content:
         "Our cutting-edge technology solutions help businesses streamline operations, improve security, and stay ahead of industry trends.",
     },
     {
-      title:
-        "Empowering Businesses with Next-Gen Tech, AI-Powered Systems, and Scalable Digital Infrastructure",
+      title: "Future-Ready Tech & AI Systems for Market Leadership",
       content:
         "From startups to large enterprises, we build future-proof technology that drives long-term growth and market leadership.",
     },
@@ -180,22 +177,19 @@ export const technologyFr = {
   },
   banner: [
     {
-      title:
-        "Solutions numériques innovantes transformant les entreprises avec l'IA, l'automatisation et des technologies évolutives",
+      title: "Solutions Numériques IA pour une Croissance Intelligente",
       content:
-        "Nous nous spécialisons dans l'automatisation alimentée par l'IA, l'informatique en nuage et les logiciels d'entreprise pour améliorer l'efficacité des entreprises et la transformation numérique.",
+        "Nous sommes spécialisés dans l'automatisation par IA, l'informatique en nuage et les logiciels d'entreprise pour améliorer l'efficacité et la transformation numérique.",
     },
     {
-      title:
-        "Solutions informatiques intelligentes pour améliorer la productivité, l'innovation et la compétitivité",
+      title: "Solutions IT Sécurisées & Évolutives pour l'Innovation",
       content:
-        "Nos solutions technologiques de pointe aident les entreprises à rationaliser leurs opérations, à améliorer leur sécurité et à rester à l'avant-garde des tendances du secteur.",
+        "Nos solutions technologiques avancées aident les entreprises à optimiser leurs opérations, renforcer leur sécurité et anticiper les tendances du marché.",
     },
     {
-      title:
-        "Autonomiser les entreprises avec des technologies avancées, IA et infrastructures évolutives",
+      title: "Technologies et IA Prêtes pour l'Avenir",
       content:
-        "Des startups aux grandes entreprises, nous construisons des technologies à l'épreuve du futur qui favorisent la croissance à long terme et le leadership sur le marché.",
+        "Des startups aux grandes entreprises, nous développons des technologies durables pour une croissance et un leadership à long terme.",
     },
   ],
   wireless_call_systems: {
