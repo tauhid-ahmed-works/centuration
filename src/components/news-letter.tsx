@@ -27,7 +27,7 @@ export default function NewsLetter() {
             {newsLetterData("title").split("\n")[1]}
           </span>
         </Heading>
-        <form className="mt-6">
+        <form className="mt-6 space-y-4">
           <div className="flex flex-col items-center justify-between sm:flex-row gap-4 border border-gray-500 rounded-full focus-within:border-primary-500">
             <input
               placeholder="Enter your email"
@@ -40,11 +40,20 @@ export default function NewsLetter() {
               contrast="default"
               shape="pill"
               size="lg"
-              className="bg-primary-500 text-secondary-500"
+              className="bg-primary-500 text-secondary-500 hidden sm:inline-flex"
             >
               <Link href="#">Subscribe Now</Link>
             </Button>
           </div>
+          <Button
+            asChild
+            variant="primary"
+            contrast="default"
+            shape="pill"
+            className="bg-primary-500 text-secondary-500 w-full sm:hidden"
+          >
+            <Link href="#">Subscribe Now</Link>
+          </Button>
         </form>
       </div>
     </section>
