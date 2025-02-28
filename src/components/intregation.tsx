@@ -1,15 +1,21 @@
+"use client";
 import Image from "next/image";
 
 export function Integration() {
   return (
     <div className="fixed right-4 bottom-4">
       <div className="inline-flex group flex-col gap-3 bg-white rounded-full p-2 shadow">
-        <button className="cursor-pointer flex justify-center items-center size-6 md:size-10 rounded-full border">
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="cursor-pointer flex justify-center items-center size-6 md:size-10 rounded-full border"
+        >
           <Image
             src="/assets/icons/arrow-up.svg"
             width={32}
             height={32}
-            alt="whatsapp"
+            alt="scroll to top"
             className="size-1/2"
           />
         </button>
