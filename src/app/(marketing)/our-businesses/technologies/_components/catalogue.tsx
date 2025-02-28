@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function Catalogue() {
   return (
-    <section className="relative">
+    <section className="section !p-0">
       <div className="container">
         <div className="flex h-60 md:h-[300px] z-10 text-white">
           <div className="flex-1 shrink-0 relative before:absolute before:inset-y-0 before:w-screen before:bg-secondary-500 before:right-0 flex items-center">
