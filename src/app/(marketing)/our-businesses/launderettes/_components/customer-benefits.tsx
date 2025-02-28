@@ -9,7 +9,7 @@ export default function CustomerBenefits({
   data: { title: string; description: string; text: string };
 }) {
   return (
-    <section className="section" data-padding="lg">
+    <section className="section" data-padding="md">
       <div className="container">
         <div className="flex flex-col lg:flex-row gap-10">
           <AnimateSlideIn className="relative min-h-96 flex-1">
