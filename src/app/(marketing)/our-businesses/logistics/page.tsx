@@ -1,35 +1,42 @@
-import { Banner, BannerType } from "@/components/banner";
+import { BannerType, Banner } from "@/components/banner";
 import { useIntl } from "@/lib/get-intl";
+import PageInformation from "@/components/page-information";
 
-export default function LogisticsPage() {
-  const commoditiesData = useIntl("business_logistics");
-  const bannerIntl = commoditiesData("banner");
-  const bannerData: BannerType[] = [
-    {
-      mediaSrc: "/assets/images/business/logistics/banner/image-01.webp",
-      mediaType: "image",
-      title: bannerIntl[1].title,
-      content: bannerIntl[1].content,
-      learn_more: "/",
-    },
-    {
-      mediaSrc: "/assets/images/business/logistics/banner/image-02.webp",
-      mediaType: "image",
-      title: bannerIntl[2].title,
-      content: bannerIntl[2].content,
-      learn_more: "/",
-    },
-    {
-      mediaSrc: "/assets/images/business/logistics/banner/image-03.webp",
-      mediaType: "image",
-      title: bannerIntl[3].title,
-      content: bannerIntl[3].content,
-      learn_more: "/",
-    },
-  ];
+const bannerMedia = [
+  {
+    mediaSrc: "/assets/images/business/logistics/banner/image-01.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc: "/assets/images/business/logistics/banner/image-01.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+  {
+    mediaSrc: "/assets/images/business/logistics/banner/image-01.webp",
+    mediaType: "image",
+    learn_more: "/",
+  },
+];
+
+export default function PetrochemicalsPage() {
+  const petrochemicalsData = useIntl("business_logistics");
+  const bannerIntl = petrochemicalsData("banner");
+  const bannerData: BannerType[] = bannerIntl.map(
+    (item: Record<string, string>, index: number) => ({
+      ...item,
+      ...bannerMedia[index],
+    })
+  );
+  const information = petrochemicalsData("information");
   return (
     <>
       <Banner data={bannerData} />
+      <PageInformation
+        title={information.title}
+        content={information.content}
+      />
     </>
   );
 }
