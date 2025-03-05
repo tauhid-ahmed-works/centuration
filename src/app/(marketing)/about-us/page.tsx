@@ -121,7 +121,7 @@ export default function Page() {
 
         <div className="container">
           <div className="pt-12 space-y-10">
-            {[...Array(3)].map((_, index) => (
+            {[...Array(2)].map((_, index) => (
               <div
                 key={index}
                 className={`flex flex-col gap-10 ${
