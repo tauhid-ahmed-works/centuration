@@ -5,6 +5,7 @@ import { Partners } from "./_components/partners";
 import { TrustedBrands } from "./_components/trusted-brands";
 import { Spotlight } from "./_components/spotlight";
 import { ProvenResult } from "./_components/proven-result";
+import HighlightMachine from "./_components/highlight-machine";
 
 export default function IceIvoirePage() {
   const iceVendingData = useIntl("business_iceVending");
@@ -50,6 +51,7 @@ export default function IceIvoirePage() {
       />
 
       <ProvenResult data={provenResult} />
+      <HighlightMachine />
 
       <TrustedBrands data={{ title: text.trusted_customers_worldwide }} />
       <Spotlight data={productSpotlight} />

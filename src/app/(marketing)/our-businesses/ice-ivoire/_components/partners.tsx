@@ -39,7 +39,7 @@ export function Partners({
         </div>
         <div className="mt-10">
           <Embla.Container>
-            {images.map((image, index) => (
+            {[...images, ...images].map((image, index) => (
               <Embla.Slide key={index}>
                 <Image
                   src={image}

@@ -38,17 +38,38 @@ export function ProvenResult({
               </p>
               <Button>{data.cta}</Button>
             </div>
-            <div className="border-4 border-rose-500 md:col-start-1 md:col-span-2 md:row-start-1">
-              <div className="size-44 border"></div>
+            <div className="md:col-start-1 md:col-span-2 md:row-start-1 min-h-72">
+              <iframe
+                src="https://www.youtube.com/embed/V48AmKrtuO8?si=Ahln4JaMziVG_f2f&amp;controls=0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="size-full"
+              ></iframe>
             </div>
-            <div className="border-4 border-rose-500 md:col-start-1 md:row-start-2">
-              <div className="size-44 border">1</div>
+            <div className="md:col-start-1 md:row-start-2 min-h-72">
+              <iframe
+                src="https://www.youtube.com/embed/vwtdzyfBTlM?si=k0FJq2s0xEqdhZc7&amp;controls=0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="size-full"
+              ></iframe>
             </div>
-            <div className="border-4 border-rose-500 md:col-start-2 md:row-start-2">
-              <div className="size-44 border">2</div>
+            <div className="md:col-start-2 md:row-start-2 min-h-72">
+              <iframe
+                src="https://www.youtube.com/embed/vwtdzyfBTlM?si=k0FJq2s0xEqdhZc7&amp;controls=0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="size-full"
+              ></iframe>{" "}
             </div>
-            <div className="border-4 border-rose-500 md:col-start-3 md:row-start-2">
-              <div className="size-44 border">3</div>
+            <div className="md:col-start-3 md:row-start-2 min-h-72">
+              <iframe
+                src="https://www.youtube.com/embed/vwtdzyfBTlM?si=k0FJq2s0xEqdhZc7&amp;controls=0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="size-full"
+              ></iframe>{" "}
             </div>
           </div>
         </div>

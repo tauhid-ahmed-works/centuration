@@ -56,7 +56,7 @@ const buttonShapes: ButtonShapes = {
 };
 
 const baseClasses =
-  "inline-flex justify-center items-center gap-3 align-middle font-medium focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 border border-transparent text-sm md:text-base hover:shadow cursor-pointer";
+  "inline-flex justify-center items-center gap-3 align-middle font-medium focus-visible:outline-none focus-visible:ring-2 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&>svg]:size-3 shadow-sm disabled:shadow-none overflow-hidden hover:opacity-85 border border-transparent text-sm md:text-base hover:shadow cursor-pointer whitespace-nowrap";
 
 export function Button({
   variant = "primary",
