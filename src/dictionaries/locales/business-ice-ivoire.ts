@@ -3,7 +3,7 @@ export const icevendingEn = {
     station: "station",
     understand_ice_business: "Understand the Ice Business",
     calculate_your_profit: "Calculate your profit",
-    trusted_customers_worldwide: " Trusted customers worldwide",
+    trusted_customers_worldwide: "Trusted customers worldwide",
   },
   banner: {
     1: {
@@ -32,6 +32,7 @@ export const icevendingEn = {
     subtitle: "Find your local distributor.",
     description:
       "We sell and operate ice machines to provide easy and convenient access to ice in a wide array of locations, from marinas, to supermarkets, gas stations, camps, and many more.",
+    cta: "Request offer",
   },
   ease_of_use: {
     title: "Making ice easy for people. Anywhere, anytime",
@@ -99,6 +100,7 @@ export const icevendingFr = {
     subtitle: "Trouvez votre distributeur local.",
     description:
       "Nous vendons et exploitons des machines à glace pour offrir un accès facile et pratique à la glace dans divers endroits : marinas, supermarchés, stations-service, campings, et bien plus encore.",
+    cta: "Faire une demande d'offre",
   },
   ease_of_use: {
     title: "Faciliter l'accès à la glace pour tous. Partout, à tout moment.",

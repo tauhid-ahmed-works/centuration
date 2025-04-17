@@ -4,6 +4,7 @@ import { WhyInvest } from "./_components/why-invest";
 import { Partners } from "./_components/partners";
 import { TrustedBrands } from "./_components/trusted-brands";
 import { Spotlight } from "./_components/spotlight";
+import { ProvenResult } from "./_components/proven-result";
 
 export default function IceIvoirePage() {
   const iceVendingData = useIntl("business_iceVending");
@@ -35,10 +36,21 @@ export default function IceIvoirePage() {
   const whyInvest = iceVendingData("investment_benefits");
   const partners = iceVendingData("partners");
   const productSpotlight = iceVendingData("product_spotlight");
+  const provenResult = iceVendingData("proven_results");
+
   return (
     <>
       <Banner data={bannerData} />
-      <WhyInvest data={whyInvest} />
+      <WhyInvest
+        data={whyInvest}
+        text={{
+          understand_ice_business: text.understand_ice_business,
+          calculate_your_profit: text.calculate_your_profit,
+        }}
+      />
+
+      <ProvenResult data={provenResult} />
+
       <TrustedBrands data={{ title: text.trusted_customers_worldwide }} />
       <Spotlight data={productSpotlight} />
       <Partners data={partners} />

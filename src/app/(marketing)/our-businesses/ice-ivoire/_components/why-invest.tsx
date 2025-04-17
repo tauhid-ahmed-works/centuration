@@ -2,13 +2,20 @@
 import Underline from "@/components/decorate-line";
 import Embla from "@/components/embla";
 import { Heading } from "@/components/heading";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export function WhyInvest({
   data,
+  text,
 }: {
   data: { title: string; subtitle: string; description: string };
+  text: {
+    understand_ice_business: string;
+    calculate_your_profit: string;
+  };
 }) {
+  console.log(text);
   return (
     <>
       <section className="section" data-padding="md">
@@ -77,6 +84,14 @@ export function WhyInvest({
                       <Embla.InlineNavigationControls className="flex justify-center" />
                     </div>
                   </Embla>
+                </div>
+                <div className="flex flex-col  md:flex-row gap-6">
+                  <Button variant="primary">
+                    {text.calculate_your_profit}
+                  </Button>
+                  <Button variant="primary" contrast="outline">
+                    {text.understand_ice_business}
+                  </Button>
                 </div>
               </div>
             </div>

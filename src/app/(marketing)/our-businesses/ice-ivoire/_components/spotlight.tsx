@@ -32,7 +32,7 @@ export function Spotlight({ data }: { data: Spotlight }) {
             />
           </div>
           <div className="flex-1">
-            <div className="space-y-8 divide-y divide-secondary-300 [&>*]:pb-8">
+            <div className="space-y-12 divide-y divide-secondary-300 [&>*]:pb-12">
               <div className="space-y-6">
                 <Heading
                   className="text-primary-500"
