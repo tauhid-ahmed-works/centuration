@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 
 // Make all custom props optional by adding ? to each property
 export type ButtonProps = ComponentProps<"button"> & {
-  variant?: "primary" | "secondary" | "danger";
+  variant?: "primary" | "secondary" | "danger" | "transparent";
   contrast?: "default" | "medium" | "light" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "icon";
   shape?: "square" | "sm" | "md" | "lg" | "pill";
 };
 
@@ -34,12 +34,17 @@ const buttonVariants: ButtonVariants = {
     default: "bg-white text-black",
     outline: "text-white border border-white",
   },
+  transparent: {
+    default:
+      "bg-transparent text-secondary-200 hover:text-primary-500 shadow-none!",
+  },
 };
 
 const buttonSizes: ButtonSizes = {
   sm: "h-10 px-6 text-sm",
   md: "h-10 md:h-12 px-6",
   lg: "h-12 md:h-14 px-8",
+  icon: "[&>svg]:size-12",
 };
 
 const buttonShapes: ButtonShapes = {

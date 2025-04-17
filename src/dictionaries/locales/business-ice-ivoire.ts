@@ -23,9 +23,9 @@ export const icevendingEn = {
     },
   },
   investment_benefits: {
-    title: "Why invest in Ice vending machine?",
+    title: "Why invest in Ice vending machine?",
     subtitle: "Everyone needs ice.",
-    description: "The Ice vending machine business is growing everyday.",
+    description: "The Ice vending machine business is growing everyday.",
   },
   proven_results: {
     title: "Success Ice Vending All Across the Globe",
@@ -39,21 +39,21 @@ export const icevendingEn = {
   },
   product_spotlight: {
     title:
-      "Product SpotlightWelcome to Ice Rebus: Mastering the Art of Ice Vending with CRO450 IceRebus.",
+      "Welcome to Ice Rebus: Mastering the Art of Ice Vending with CRO450 IceRebus.",
     description:
       "At Ice Rebus, we redefine the way you think about ice. As Europe’s leading ice vending machine provider, we are at the forefront of offering convenient, efficient, and high-quality ice solutions. Our innovative machines are more than just ice vendors; they’re a seamless blend of technology and practicality, designed to meet the dynamic needs of different environments – from bustling marinas to vibrant city centers.",
-    key_features: {
-      1: {
+    key_features: [
+      {
         title: "Innovation at the Core:",
         description:
           "Our state-of-the-art machines are a blend of advanced technology and user-friendly design. They are equipped to accept diverse payment methods - from credit cards and coins to various cashless options, ensuring seamless transactions for every user.",
       },
-      2: {
+      {
         title: "Quality you can trust:",
         description:
           "What sets Ice Rebus apart is our commitment to purity and safety. Each cube is formed from purified water, ensuring 100% freshness and hygiene. Our process eliminates the human factor, guaranteeing that the ice you receive is untouched and of the highest standard.",
       },
-    },
+    ],
   },
   partners: {
     title: "Our Partners",
@@ -109,18 +109,18 @@ export const icevendingFr = {
       "Zoom sur le produit : Bienvenue chez Ice Rebus – Maîtrisez l’art du distributeur automatique de glace avec le CRO450 IceRebus.",
     description:
       "Chez Ice Rebus, nous redéfinissons votre vision de la glace. En tant que premier fournisseur européen de distributeurs automatiques de glace, nous sommes à la pointe de solutions pratiques, efficaces et de haute qualité. Nos machines ne sont pas de simples distributeurs ; elles représentent une alliance parfaite entre technologie et praticité, adaptées aux besoins variés des environnements modernes, des marinas animées aux centres-villes dynamiques.",
-    key_features: {
-      1: {
+    key_features: [
+      {
         title: "L’innovation au cœur de notre concept :",
         description:
           "Nos machines de pointe allient technologie avancée et design intuitif. Elles acceptent une grande variété de moyens de paiement – cartes bancaires, pièces, et options sans contact – garantissant des transactions fluides pour chaque utilisateur.",
       },
-      2: {
+      {
         title: "Une qualité sur laquelle vous pouvez compter :",
         description:
           "Ce qui distingue Ice Rebus, c’est notre engagement envers la pureté et la sécurité. Chaque cube de glace est produit à partir d’eau purifiée, garantissant une fraîcheur et une hygiène irréprochables. Notre processus exclut toute intervention humaine, assurant ainsi une qualité optimale.",
       },
-    },
+    ],
   },
   partners: {
     title: "Nos partenaires",

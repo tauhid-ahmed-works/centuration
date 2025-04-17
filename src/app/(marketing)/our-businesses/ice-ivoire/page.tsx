@@ -1,9 +1,14 @@
 import { Banner, BannerType } from "@/components/banner";
 import { useIntl } from "@/lib/get-intl";
+import { WhyInvest } from "./_components/why-invest";
+import { Partners } from "./_components/partners";
+import { TrustedBrands } from "./_components/trusted-brands";
+import { Spotlight } from "./_components/spotlight";
 
 export default function IceIvoirePage() {
-  const commoditiesData = useIntl("business_iceVending");
-  const bannerIntl = commoditiesData("banner");
+  const iceVendingData = useIntl("business_iceVending");
+  const text = iceVendingData("text");
+  const bannerIntl = iceVendingData("banner");
   const bannerData: BannerType[] = [
     {
       mediaSrc: "/assets/images/business/ice-ivoire/banner/banner-image-1.webp",
@@ -27,9 +32,16 @@ export default function IceIvoirePage() {
       learn_more: "/",
     },
   ];
+  const whyInvest = iceVendingData("investment_benefits");
+  const partners = iceVendingData("partners");
+  const productSpotlight = iceVendingData("product_spotlight");
   return (
     <>
       <Banner data={bannerData} />
+      <WhyInvest data={whyInvest} />
+      <TrustedBrands data={{ title: text.trusted_customers_worldwide }} />
+      <Spotlight data={productSpotlight} />
+      <Partners data={partners} />
     </>
   );
 }
