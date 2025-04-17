@@ -51,9 +51,9 @@ export default function IceIvoirePage() {
       />
 
       <ProvenResult data={provenResult} />
+      <TrustedBrands data={{ title: text.trusted_customers_worldwide }} />
       <HighlightMachine />
 
-      <TrustedBrands data={{ title: text.trusted_customers_worldwide }} />
       <Spotlight data={productSpotlight} />
       <Partners data={partners} />
     </>
