@@ -32,9 +32,9 @@ export function ProvenResult({
               </Heading>
               <p className="text-secondary-300">
                 {data.subtitle}
-                <div className="w-fit mx-auto">
+                <span className="w-fit mx-auto">
                   <Underline variant="primary" />
-                </div>
+                </span>
               </p>
               <Button>{data.cta}</Button>
             </div>
