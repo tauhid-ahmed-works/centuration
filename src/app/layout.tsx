@@ -5,7 +5,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
-import Lenis from "@/components/lenis";
+// import Lenis from "@/components/lenis";
 import { Integration } from "@/components/intregation";
 
 const poppins = Poppins({
@@ -33,14 +33,14 @@ export default async function RootLayout({
       <body
         className={`${poppins.className} ${poppins.variable} font-body antialiased overflow-x-hidden`}
       >
-        <Lenis>
-          <NextIntlClientProvider messages={messages}>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-            <Integration />
-          </NextIntlClientProvider>
-        </Lenis>
+        {/* <Lenis> */}
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <Integration />
+        </NextIntlClientProvider>
+        {/* </Lenis> */}
       </body>
     </html>
   );
