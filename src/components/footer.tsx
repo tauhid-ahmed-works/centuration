@@ -16,9 +16,9 @@ export default function Footer() {
             <BrandLogo width={180} />
           </Link>
           <p className="mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed
-            neque ultricies, venenatis leo vel, ullamcorper est. Morbi nec
-            tincidunt erat, id blandit arcu. Mauris nec maximus augue.
+            CENTURION is a trusted company based in Abidjan, delivering
+            reliable, quality-driven solutions with a focus on innovation and
+            customer satisfaction.
           </p>
         </div>
         {footerData.sections.map((section) => (
@@ -42,13 +42,38 @@ export default function Footer() {
         ))}
         {/* Contact Info */}
         <div className="space-y-4">
-          <Heading size="sm" as="h3" className="mb-2 text-brand-500 uppercase">
+          <Heading
+            size="sm"
+            as="h3"
+            className="mb-2 text-brand-500 uppercase text-primary-500"
+          >
             General Inquiries
           </Heading>
           <ul className="space-y-2 text-xs md:text-base">
-            <li>{footerData["General Inquiries"].email}</li>
-            <li>{footerData["General Inquiries"].street}</li>
-            <li>{footerData["General Inquiries"].city}</li>
+            <li>
+              Name:{" "}
+              <span className="font-semibold">
+                {footerData["General Inquiries"].company_name}
+              </span>
+            </li>
+            <li>
+              Address Line:{" "}
+              <span className="font-semibold">
+                {footerData["General Inquiries"].address_line}
+              </span>
+            </li>
+            <li>
+              City:{" "}
+              <span className="font-semibold">
+                {footerData["General Inquiries"].city}
+              </span>
+            </li>
+            <li>
+              Country:{" "}
+              <span className="font-semibold">
+                {footerData["General Inquiries"].country}
+              </span>
+            </li>
           </ul>
         </div>
       </footer>

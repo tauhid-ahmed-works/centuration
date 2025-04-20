@@ -12,8 +12,10 @@ import CompanyResume from "./_components/resume";
 import ScrollDots from "./_components/scroll-dots";
 import { Banner, type BannerType } from "@/components/banner";
 import { useTranslations } from "next-intl";
+import { useIntl } from "@/lib/get-intl";
 
 export default function Page() {
+  // to be fixed below code later
   const t = useTranslations("home");
   const bannerIntl = t.raw("banner");
   const bannerData: BannerType[] = [
@@ -50,12 +52,18 @@ export default function Page() {
       learn_more: "/",
     },
   ];
+  // to be fixed above code later
+
+  // new intl code
+  const homepageData = useIntl("home");
+  const resumeData = homepageData("resume");
+
   return (
     <>
       <Banner data={bannerData} data-section="1" />
       <BusinessCards data-section="2" />
       <Sustainability data-section="3" />
-      <CompanyResume data-section="4" />
+      <CompanyResume data-section="4" data={resumeData} />
       <Innovation data-section="5" />
       <ScrollDots />
     </>

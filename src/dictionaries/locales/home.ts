@@ -48,7 +48,7 @@ export const homeEn = {
   resume: {
     title: "Impacting lives",
     description:
-      "Since its incorporation in 1994, the Aliko Dangote Foundation has worked hard to enhance opportunities for social change through strategic investments that improve health and wellbeing, promote quality education, and broaden economic empowerment opportunities.",
+      "CENTURION is a forward-thinking company headquartered in Abidjan, Côte d’Ivoire, dedicated to providing high-quality, reliable services across various sectors. We combine innovation, expertise, and a customer-first approach to deliver tailored solutions that drive growth and long-term value for our clients. With a reputation built on trust and excellence, CENTURION continues to lead with purpose in a dynamic business landscape.",
     tags: "HEALTH EDUCATION EMPOWERMENT RELIEF",
   },
   innovation: {
@@ -109,7 +109,7 @@ export const homeFr = {
   resume: {
     title: "Impacter des vies",
     description:
-      "Depuis sa création en 1994, la Fondation Aliko Dangote s'efforce d'améliorer les opportunités de changement social grâce à des investissements stratégiques qui renforcent la santé et le bien-être, favorisent une éducation de qualité et élargissent les opportunités d'autonomisation économique.",
+      "CENTURION est une entreprise innovante basée à Abidjan, en Côte d’Ivoire, dédiée à la fourniture de services fiables et de haute qualité dans divers secteurs. Nous allions innovation, expertise et approche centrée sur le client pour offrir des solutions sur mesure qui favorisent la croissance et la création de valeur à long terme. Reconnue pour sa fiabilité et son excellence, CENTURION continue de se démarquer avec ambition dans un environnement commercial en constante évolution.",
     tags: "SANTÉ ÉDUCATION AUTONOMISATION AIDE HUMANITAIRE",
   },
   innovation: {

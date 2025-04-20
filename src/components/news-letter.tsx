@@ -28,11 +28,11 @@ export default function NewsLetter() {
           </span>
         </Heading>
         <form className="mt-6">
-          <div className="flex flex-col items-center justify-between sm:flex-row gap-4 border border-gray-500 rounded-full focus-within:border-primary-500">
+          <div className="flex flex-col items-center justify-between sm:flex-row gap-4 border border-transparent sm:border-gray-500 rounded-full sm:focus-within:border-primary-500">
             <input
               placeholder="Enter your email"
               type="text"
-              className="rounded-full h-12 px-4 w-full sm:w-96 text-white bg-transparent focus:ring-0 focus:outline-0"
+              className="rounded-full h-12 px-4 w-full max-sm:border max-sm:focus-within:border-primary-500 sm:w-96 text-white bg-transparent focus:ring-0 focus:outline-0"
             />
             <Button
               asChild

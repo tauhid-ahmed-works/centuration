@@ -35,7 +35,7 @@ export default function Sustainability({ ...props }) {
       {...props}
       data-padding="lg"
     >
-      <div className="absolute inset-x-0 inset-y-14 brightness-50">
+      <div className="absolute inset-0 brightness-50">
         <Image
           fill
           src="/assets/images/homepage/sustainability.jpeg"

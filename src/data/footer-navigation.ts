@@ -12,9 +12,10 @@ interface FooterSection {
 }
 
 interface GeneralInquiries {
-  email: string;
+  company_name: string;
+  address_line: string;
   city: string;
-  street: string;
+  country: string;
 }
 
 interface FooterData {
@@ -79,8 +80,9 @@ export const footerData: FooterData = {
     },
   ],
   "General Inquiries": {
-    email: "contact@groupcenturions.com",
-    street: "2563 High street",
-    city: "Los Angeles, California",
+    company_name: "CENTURION",
+    address_line: "01 Bp 581",
+    city: "Abidjan",
+    country: "Côte d’Ivoire (Ivory Coast)",
   },
 };
