@@ -88,13 +88,13 @@ export function WhyInvest({
     <>
       <section className="section" data-padding="md">
         <div className="space-y-10">
-          <div className="space-y-2">
+          <div className="space-y-4">
             <Heading className="text-primary-500 text-center" size="5xl">
               {data.title}
             </Heading>
-            <div className="md:hidden text-center">
+            <div className="md:hidden text-center space-y-4">
               <Heading
-                className="text-secondary-300 font-medium"
+                className="text-secondary-300 font-medium leading-1"
                 as="h3"
                 size="xl"
                 underline={
@@ -103,12 +103,14 @@ export function WhyInvest({
               >
                 {data.subtitle}
               </Heading>
-              <p className="font-medium">{data.description}</p>
+              <p className="font-medium text-secondary-500">
+                {data.description}
+              </p>
             </div>
           </div>
           <div className="container">
             <div className="flex flex-col items-center md:flex-row gap-4">
-              <div className="flex-1 w-full sm:max-w-[500px] lg:pr-14 xl:pr-20">
+              <div className="flex-1 w-full sm:max-w-[500px] lg:pr-14 xl:pr-20 max-md:-mb-10">
                 <Image
                   src="/assets/images/business/ice-ivoire/ice-machine/ice-box.png"
                   width={400}

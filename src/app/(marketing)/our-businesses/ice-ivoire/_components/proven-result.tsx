@@ -33,7 +33,7 @@ export function ProvenResult({
               <p className="text-secondary-300">
                 {data.subtitle}
                 <span className="w-fit mx-auto">
-                  <Underline variant="primary" />
+                  <Underline weight="normal" variant="primary" align="center" />
                 </span>
               </p>
               <Button>{data.cta}</Button>
