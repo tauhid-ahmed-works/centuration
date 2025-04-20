@@ -38,7 +38,7 @@ export default function Sustainability({ ...props }) {
       <div className="absolute inset-0 brightness-50">
         <Image
           fill
-          src="/assets/images/homepage/sustainability.jpeg"
+          src="/assets/images/homepage/sustainability.webp"
           alt="sustainability"
           className="object-cover"
           sizes="100vw"
