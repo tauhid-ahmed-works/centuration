@@ -53,7 +53,7 @@ const businessCardData = [
   },
   {
     title: "Real State",
-    mediaSrc: "/assets/images/business/real-state/banner/banner-image-01.webp",
+    mediaSrc: "/assets/images/business/real-estate/banner/banner-image-01.webp",
     path: path.businessRealEstatePath(),
   },
 ];
