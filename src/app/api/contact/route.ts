@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { email } = await req.json();
+  const { email, name, country, phone, organization } = await req.json();
 
   if (!process.env.MAILER_LITE_API_KEY) {
     return new Response(JSON.stringify({ message: "API key not configured" }), {
@@ -18,6 +18,12 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         email,
+        fields: {
+          name,
+          country,
+          phone,
+          organization,
+        },
       }),
     }
   );

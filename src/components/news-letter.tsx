@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heading } from "./heading";
-import Link from "next/link";
 import { useIntl } from "@/lib/get-intl";
 import { useState } from "react";
 
@@ -89,7 +88,7 @@ export default function NewsLetter() {
             </span>
           </Heading>
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-            <div className="flex flex-col items-center justify-between sm:flex-row gap-4 border border-gray-500 rounded-full focus-within:border-primary-500">
+            <div className="flex flex-col items-center justify-between sm:flex-row gap-4 border border-primary-500 rounded-full focus-within:border-primary-500">
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -121,14 +120,29 @@ export default function NewsLetter() {
               {loading ? "Subscribing..." : "Subscribe Now"}
             </Button>
 
-            {error && <div className="text-red-500 mt-2 text-sm">{error}</div>}
-
-            {status && !error && (
-              <div className="text-green-400 mt-2 text-sm">{status}</div>
-            )}
+            <div className="text-sm  rounded max-w-lg mx-auto">
+              {error && <ErrorAlert />}
+              {status && !error && <SuccessAlert />}
+            </div>
           </form>
         </div>
       </div>
     </section>
+  );
+}
+
+function ErrorAlert() {
+  return (
+    <div className="border border-rose-500 bg-rose-500/10 text-rose-500 px-2 py-1 rounded">
+      Unable to complete your request. Please try again.
+    </div>
+  );
+}
+
+function SuccessAlert() {
+  return (
+    <div className="border border-primary-500 bg-primary-500/10 text-primary-500 px-2 py-1 rounded">
+      Submission successful. Please check your email for confirmation.
+    </div>
   );
 }
